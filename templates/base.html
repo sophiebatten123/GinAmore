@@ -38,18 +38,16 @@
   <body>
     <header class="container-fluid fixed-top">
       <div class="row bg-info">
-        <div class="col-6">
+        <div class="col-8">
           <a href="{% url 'home' %}" class="nav-link text-dark">
             <h1>GinAmore</h1>
           </a>
         </div>
-        <div class="col-4">
+        <div class="col-4" id="main-header-icons">
           <form method="GET" action="" class="d-flex mt-3">
             <input class="form-control me-2" type="text" placeholder="Search" name="q" aria-label="Search">
             <button class="btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
           </form>
-        </div>
-        <div class="col-2">
           <ul class="list-inline mb-0">
             <li class="list-inline-item dropdown">
               <a href="" class="d-inline p-2 text-dark nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -87,6 +85,58 @@
             </li>
           </ul>
         </div>
+      </div>
+      <nav class="navbar navbar-expand-lg">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link text-dark mr-5" href="#" id="our-gins-link" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                Gins
+              </a>
+              <div class="dropdown-menu border-0" aria-labelledby="our-gins-link">
+                <a href="" class="dropdown-item">All Gins</a>
+                <a href="" class="dropdown-item ">Sloe Gin</a>
+                <a href="" class="dropdown-item ">Dry Gin</a>
+                <a href="" class="dropdown-item">Botanical Gin</a>
+              </div>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link text-dark mr-5" href="#">Our Story</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link text-dark mr-5" href="#" id="our-shop-link" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                Shop
+              </a>
+              <div class="dropdown-menu border-0" aria-labelledby="our-shop-link">
+                <a href="" class="dropdown-item ">All Products</a>
+                <a href="" class="dropdown-item">Gins</a>
+                <a href="" class="dropdown-item ">Mixers</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link text-dark mr-5" href="#" id="our-cocktails-link" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Cocktails
+              </a>
+              <div class="dropdown-menu border-0" aria-labelledby="our-cocktails-link">
+                <a href="" class="dropdown-item">All Recipes</a>
+                <a href="" class="dropdown-item ">Summer Favourites</a>
+                <a href="" class="dropdown-item ">Winter Warmers</a>
+                <a href="" class="dropdown-item">Boozy Brunches</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark mr-5" href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
       </div>
     </header>
 

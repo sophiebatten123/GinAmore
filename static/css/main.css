@@ -7,3 +7,15 @@ html{
 body {
     font-family: 'Mali', cursive;
 }
+
+#navbarSupportedContent {
+    justify-content: center;
+}
+
+#main-header-icons {
+    text-align: right;
+}
+
+#main-search-area {
+    float: right;
+}
