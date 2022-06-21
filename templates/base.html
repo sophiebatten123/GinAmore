@@ -8,6 +8,9 @@
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="GinAmore is a Luxury Gin shop which produces unique flavours and cocktail recipes.">
+      <meta name="keywords" content="gin, cocktail, mixer, botanical, luxury,">
+      <link rel="shortcut icon" type="image/jpg" href=""/>
     {% endblock %}
 
     {% block extra_meta %}
@@ -40,14 +43,48 @@
           </a>
         </div>
         <div class="col-4">
-          <form class="d-flex mt-3" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <form method="GET" action="" class="d-flex mt-3">
+            <input class="form-control me-2" type="text" placeholder="Search" name="q" aria-label="Search">
             <button class="btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
           </form>
         </div>
         <div class="col-2">
-          <a href="" class="d-inline p-2 text-dark"><i class="fa-solid fa-user mt-4"></i></a>
-          <a href="" class="d-inline p-2 text-dark"><i class="fa-solid fa-bag-shopping mt-4"></i></a>
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item dropdown">
+              <a href="" class="d-inline p-2 text-dark nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <div class="text-center">
+                  <div><i class="fa-solid fa-user"></i></div>
+                  <p class="my-0">My Account</p>
+                </div>
+              </a>
+              <div class="dropdown-menu">
+                {% if request.user.is_authenticated %}
+                  {% if request.user.is_superuser %}
+                    <a href="" class="dropdown-item">Shop Management</a>
+                  {% endif %}
+                  <a href="" class="dropdown-item">My Profile</a>
+                  <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                {% else %}
+                  <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                  <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                {% endif %}
+              </div>
+            </li>
+            <li class="list-inline-item">
+              <a href="" class="{% if grand_total %} text-info {% else %} text-dark {% endif %} nav-link text-dark d-inline">
+                <div class="text-center">
+                  <div><i class="fa-solid fa-bag-shopping"></i></div>
+                  <p class="my-0">
+                    {% if grand_total %}
+                      ${{ grand_total|floatformat:2 }}
+                    {% else %}
+                      £0.00
+                    {% endif %}
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </header>
