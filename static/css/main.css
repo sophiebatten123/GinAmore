@@ -38,5 +38,13 @@ body {
 #bg_circle img {
     height: 100%;
     width: auto;
-    border-radius: 50%;
+}
+
+.background_temp {
+    background-color: #866c89c2;
+    height: 300px;
+}
+
+.bg_nav_color {
+    background-color: #866c89c2;
 }
