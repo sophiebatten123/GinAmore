@@ -1,0 +1,58 @@
+[
+    {
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "sku":"ss23561",
+            "name": "Stockholms Branneri Sloe Gin",
+            "description": "This multi-award winning spirit may be one of the UKs best loved sloe gins, but every hand-waxed bottle is still produced with the same care and attention.",
+            "price": "17.99",
+            "category": 2,
+            "rating": 4.5,
+            "image_url": "https://images.pexels.com/photos/5533418/pexels-photo-5533418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "image": "gin_1.jpg"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+            "sku":"ss23562",
+            "name": "Bombay London Dry Gin",
+            "description": "The Original Bombay London Dry Gin beautifully balances juniper, fresh citrus and warming spice for a smooth and boldly aromatic gin, with a long and refreshing orange and juniper finish.",
+            "price": "28.22",
+            "category": 3,
+            "rating": 4.8,
+            "image_url": "https://images.pexels.com/photos/4329152/pexels-photo-4329152.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "image": "gin_2.jpeg"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+            "sku":"ss23563",
+            "name": "Bombay Sapphire London Dry Gin",
+            "description": "Deep flavoured Dry Gin and well balanced with everything sitting gently on the junipers. It leads with zesty orange citrus combined with warm spice. Chamomile fills the gaps and has an overall smoothing effect. It leaves with a linger of subtle floral and peppery warmth. Refreshing, elegant and friendly.",
+            "price": "20.99",
+            "category": 3,
+            "rating": 4.7,
+            "image_url": "https://images.pexels.com/photos/7851381/pexels-photo-7851381.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "image": "gin_3"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "sku":"ss23564",
+            "name": "Kapriol Flavoured Gin",
+            "description": "The Kapriol Botanist is a flavoured gin made by the Bruichladdich Distillery in Islay. It is one of only two gins made on the Scottish island and is known for its 22 hand-foraged Islay botanicals.",
+            "price": "17.19",
+            "category": 1,
+            "rating": 4.4,
+            "image_url": "https://images.pexels.com/photos/8144462/pexels-photo-8144462.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "image": "gin_5"
+        }
+    }
+]
