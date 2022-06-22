@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Mali:wght@300&display=swap');
 
+
 html{
     height: 100%;
 }
 
 body {
     font-family: 'Mali', cursive;
+    background: url('/media/main_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 #navbarSupportedContent {
@@ -18,4 +23,20 @@ body {
 
 #main-search-area {
     float: right;
+}
+
+#main_image_gin img{
+    height: 180px;
+    width: 100%;
+    border-radius: 50%;
+}
+
+#bg_circle {
+    height: 300px;
+}
+
+#bg_circle img {
+    height: 100%;
+    width: auto;
+    border-radius: 50%;
 }

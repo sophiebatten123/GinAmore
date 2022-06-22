@@ -33,10 +33,10 @@
     {% block extra_js %}
     {% endblock %}
 
-    <title>GinAmore {% block extra_title %}{% endblock %}</title>
+    <title>GinAmore</title>
   </head>
   <body>
-    <header class="container-fluid fixed-top">
+    <header class="container-fluid">
       <div class="row bg-info">
         <div class="col-8">
           <a href="{% url 'home' %}" class="nav-link text-dark">
@@ -86,7 +86,10 @@
           </ul>
         </div>
       </div>
-      <nav class="navbar navbar-expand-lg">
+    </header>
+
+    <div class="container-fluid p-0">
+      <nav class="navbar navbar-expand-lg bg-light">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
@@ -94,8 +97,8 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item dropdown">
-              <a class="nav-link text-dark mr-5" href="#" id="our-gins-link" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false">
+              <a class="nav-link text-dark mr-5" href="#" id="our-gins-link" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 Gins
               </a>
               <div class="dropdown-menu border-0" aria-labelledby="our-gins-link">
@@ -109,8 +112,8 @@
               <a class="nav-link text-dark mr-5" href="#">Our Story</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link text-dark mr-5" href="#" id="our-shop-link" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false">
+              <a class="nav-link text-dark mr-5" href="#" id="our-shop-link" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 Shop
               </a>
               <div class="dropdown-menu border-0" aria-labelledby="our-shop-link">
@@ -137,15 +140,11 @@
           </ul>
         </div>
       </nav>
-      </div>
-    </header>
+    </div>
 
     {% if messages %}
       <div class="message-container"></div>
     {% endif %}
-
-    {% block page_header %}
-    {% endblock %}
   
     {% block content %}
     {% endblock %}
