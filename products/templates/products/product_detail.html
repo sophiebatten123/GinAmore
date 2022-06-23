@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            {% if product.image %}
+            <div class="col gin_image_container">
+                <a href="{{ product.image.url }}" target="_blank">
+                    <img class="gin_image" src="{{product.image.url}}" alt="Image of Gin">
+                </a>
+            </div>
+            {% else %}
+            <div class="col">
+                <p>No Image Available</p>
+            </div>
+            {% endif %}
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <p>{{ product.name }}</p>
+            <p>{{ product.description }}</p>
+            <p>{{ product.price }}</p>
+            <a href=""><p class="text-light shop-btn text-center">Buy Now</p></a>
+        </div>
+    </div>
+</div>
+{% endblock %}
