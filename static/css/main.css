@@ -83,3 +83,7 @@ body {
     border-radius: 5px;
     text-decoration: none;
 }
+
+.sort-btn {
+    justify-content: right;
+}
