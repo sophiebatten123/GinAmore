@@ -44,7 +44,7 @@
           </a>
         </div>
         <div class="col-4" id="main-header-icons">
-          <form method="GET" action="" class="d-flex mt-3">
+          <form method="GET" action="{% url 'products' %}" class="d-flex mt-3">
             <input class="form-control me-2" type="text" placeholder="Search" name="q" aria-label="Search">
             <button class="btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
           </form>
@@ -102,25 +102,14 @@
                 Gins
               </a>
               <div class="dropdown-menu border-0" aria-labelledby="our-gins-link">
-                <a href="" class="dropdown-item">All Gins</a>
-                <a href="" class="dropdown-item ">Sloe Gin</a>
-                <a href="" class="dropdown-item ">Dry Gin</a>
-                <a href="" class="dropdown-item">Botanical Gin</a>
+                <a href="{% url 'products' %}" class="dropdown-item">All Gins</a>
+                <a href="{% url 'products' %}?category=sloe_gin" class="dropdown-item ">Sloe Gin</a>
+                <a href="{% url 'products' %}?category=dry_gin" class="dropdown-item ">Dry Gin</a>
+                <a href="{% url 'products' %}?category=flavoured_gin" class="dropdown-item">Flavoured Gin</a>
               </div>
             </li>
             <li class="nav-item ">
               <a class="nav-link text-dark mr-5" href="#">Our Story</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link text-dark mr-5" href="#" id="our-shop-link" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Shop
-              </a>
-              <div class="dropdown-menu border-0" aria-labelledby="our-shop-link">
-                <a href="{% url 'products' %}" class="dropdown-item ">All Products</a>
-                <a href="" class="dropdown-item">Gins</a>
-                <a href="" class="dropdown-item ">Mixers</a>
-              </div>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link text-dark mr-5" href="#" id="our-cocktails-link" data-toggle="dropdown"
