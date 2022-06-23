@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Mali:wght@300&display=swap');
 
-
+/*......................................................... Main site components */
 html{
     height: 100%;
 }
@@ -13,6 +13,18 @@ body {
     background-attachment: fixed;
 }
 
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: white;
+    z-index: -1;
+}
+
+/*.......................................................Navigation Bar and Header*/
+
 #navbarSupportedContent {
     justify-content: center;
 }
@@ -24,6 +36,8 @@ body {
 #main-search-area {
     float: right;
 }
+
+/*....................................................Homepage Content*/
 
 #main_image_gin img{
     height: 180px;
@@ -40,11 +54,32 @@ body {
     width: auto;
 }
 
+/*........................................................Temporary Formatting*/
+
 .background_temp {
     background-color: #866c89c2;
-    height: 300px;
+    height: 150px;
 }
 
 .bg_nav_color {
     background-color: #866c89c2;
+}
+
+/*.....................................................Gin Shop Cards */
+
+.gin_image_container {
+    height: 200px;
+    text-align: center;
+    margin: 0;
+}
+
+.gin_image {
+    height: 100%;
+    width: auto;
+}
+
+.shop-btn {
+    background-color: #866c89c2;
+    border-radius: 5px;
+    text-decoration: none;
 }
