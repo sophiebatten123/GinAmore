@@ -130,10 +130,18 @@
         </div>
       </nav>
     </div>
+    <div class="container-fluid bg_delivery_color">
+      <div class="row">
+        <div class="col">
+          <h4 class="text-center">Free delivery on orders over ${{ free_delivery_threshold }}</h4>
+        </div>
+      </div>
+    </div>
 
     {% if messages %}
       <div class="message-container"></div>
     {% endif %}
+
   
     {% block content %}
     {% endblock %}
