@@ -21,8 +21,6 @@ def all_products(request):
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
             sort = sortkey
-            current_categories = Product.objects.filter(category=1)
-            print(current_categories)
             
             if sortkey == 'name':
                 sortkey = 'lower_name'
@@ -48,7 +46,7 @@ def all_products(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
-    current_sorting = f'{sort}_{direction}'
+    current_sorting = f'{sort}_{direction}_{categories}'
 
     context = {
         'products': products,
