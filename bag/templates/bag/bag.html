@@ -35,13 +35,32 @@
                                         {% csrf_token %}
                                         <div class="form-group">
                                             <div class="input-group">
-                                                <input class="form-control qty-input" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="50" data-item_id="{{ item.item_id }}" id="id_qty_{{ product.id }}">
+                                                <div class="input-group-prepend">
+                                                    <button class="decrement-qty btn btn-black rounded-0" 
+                                                        data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                                        <span class="icon">
+                                                            <i class="fas fa-minus"></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                <input class="form-control qty_input" type="number"
+                                                    name="quantity" value="{{ item.quantity }}" min="1" max="50"
+                                                    data-item_id="{{ item.item_id }}"
+                                                    id="id_qty_{{ item.item_id }}">
+                                                <div class="input-group-append">
+                                                    <button class="increment-qty btn btn-black rounded-0"
+                                                        data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                                        <span class="icon">
+                                                            <i class="fas fa-plus"></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                     </form>
                                 </td>
                                 <td>
-                                    <a class="update-basket text-info" href=""><i class="fa-solid fa-arrows-rotate"></i></a>
+                                    <a class="update-link text-info" href=""><i class="fa-solid fa-arrows-rotate"></i></a>
                                 </td>
                                 <td>
                                     <p>£{{ item.product.price }}</p>
@@ -75,3 +94,31 @@
     </div>
 </div>
 {% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/quantity_input_script.html' %}
+
+<script type="text/javascript">
+    // Update quantity on click
+    $('.update-link').click(function(e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
+
+    // Remove item and reload on click
+    $('.remove-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var size = $(this).data('size');
+        var url = `/bag/remove/${itemId}`;
+        var data = {'csrfmiddlewaretoken': csrfToken, 'size': size};
+
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
+    })
+</script>
+{% endblock %}
+
