@@ -8,14 +8,55 @@
 <div class="overlay"></div>
 <div class="container">
     <div class="row">
-        <div class="col-6">
+        <div class="col-md-8">
             {% if bag_items %}
                 <div class="table-responsive">
-                    {{ bag_items }}
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Product Image</th>
+                                <th>Product Name</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        {% for item in bag_items %}
+                            <tr>
+                                <td class="w-25">
+                                    <img class="img-fluid" src="{{ item.product.image.url }}">
+                                </td>
+                                <td>
+                                    <p>{{ item.product.name }}</p>
+                                    <p class="text-muted">{{ item.product.sku|upper }}</p>
+                                </td>
+                                <td>
+                                    <p>{{ item.quantity }}</p>
+                                </td>
+                                <td>
+                                    <p>£{{ item.product.price }}</p>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </table>
                 </div>
             {% else %}
                 <p>Your shopping bag is empty!</p>
             {% endif %}
+        </div>
+        <div class="col-md-4 mt-5 pb-2 pt-2 bg_delivery_color h-100">
+            <p>Bag Total: £{{ total|floatformat:2 }}</p>
+            <p>Delivery: £{{ delivery|floatformat:2 }}</p>
+            <hr>
+            <p>Total Cost: £{{ total|floatformat:2 }}</p>
+            {% if free_delivery_delta > 0 %}
+                <p>Spend an extra £{{ free_delivery_delta }} to get FREE DELIVERY!</p>
+            {% endif %}
+            <a href="{% url 'products' %}" class="btn bg-light">
+                <p class="mb-0 text-center">Continue Shopping</p>
+            </a>
+            <a href="" class="btn bg-light">
+                <p class="mb-0 text-center">Secure Checkout <i class="fa-solid fa-lock"></i></p>
+            </a>
         </div>
     </div>
 </div>
