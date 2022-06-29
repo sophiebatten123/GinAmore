@@ -23,6 +23,21 @@ body {
     z-index: -1;
 }
 
+.message-container {
+    position: fixed;
+    top: 75px;
+    right: 10px;
+    z-index: 99999999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
 /*.......................................................Navigation Bar and Header*/
 
 #navbarSupportedContent {
@@ -91,3 +106,4 @@ body {
 .sort-btn {
     justify-content: right;
 }
+
