@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block page_header %}
 {% endblock %}
@@ -17,7 +18,6 @@
                                 <th>Product Image</th>
                                 <th>Product Name</th>
                                 <th>Quantity</th>
-                                <th></th>
                                 <th>Price</th>
                             </tr>
                         </thead>
@@ -31,7 +31,7 @@
                                     <p class="text-muted">{{ item.product.sku|upper }}</p>
                                 </td>
                                 <td>
-                                    <form class="update-form" method="POST" action="">
+                                    <form class="update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                         {% csrf_token %}
                                         <div class="form-group">
                                             <div class="input-group">
@@ -58,15 +58,11 @@
                                             </div>
                                         </div>
                                     </form>
+                                    <a class="update-link text-info"><i class="fa-solid fa-arrows-rotate"></i></a>
+                                    <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"><i class="fa-solid fa-trash-can"></i></a>
                                 </td>
                                 <td>
-                                    <a class="update-link text-info" href=""><i class="fa-solid fa-arrows-rotate"></i></a>
-                                </td>
-                                <td>
-                                    <p>£{{ item.product.price }}</p>
-                                </td>
-                                <td>
-                                    <a class="remove-item text-danger" href="" id="remove_{{ item.item_id }}"><i class="fa-solid fa-trash-can"></i></a>
+                                    <p>£{{ item.product.price | calc_subtotal:item.quantity}}</p>
                                 </td>
                             </tr>
                         {% endfor %}
@@ -111,7 +107,7 @@
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
         var size = $(this).data('size');
-        var url = `/bag/remove/${itemId}`;
+        var url = `/bag/remove/${itemId}/`;
         var data = {'csrfmiddlewaretoken': csrfToken, 'size': size};
 
         $.post(url, data)
