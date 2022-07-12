@@ -1,3 +1,6 @@
+'''
+Imports relevant packages
+'''
 import uuid
 
 from django.db import models
@@ -71,7 +74,7 @@ class OrderLineItem(models.Model):
     '''
     Individual item in the shopping bag
     '''
-    order = models.ForeignKey(Order, 
+    order = models.ForeignKey(Order,
                               null=False,
                               blank=False,
                               on_delete=models.CASCADE,

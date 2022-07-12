@@ -20,7 +20,30 @@
     </div>
     <div class="row">
         <div class="col">
-
+            <p><strong>Order Number:</strong>{{ order.order_number }}</p>
+            <p><strong>Order Date:</strong> {{ order.date }}</p>
+            <p><strong>Order Summary</strong></p>
+            {% for item in order.lineitems.all %}
+                <p>{{ item.product.name }}</p>
+                <p>{{ item.quantity }}</p>
+                <p>{{ item.product.price }}</p>
+            {% endfor %}
+            <h3><strong>Delivery Information:</strong></h3>
+            <p>Full Name: {{ order.full_name }}</p>
+            {% if order.postcode %}
+                <p>Postcode: {{ order.postcode }}</p>
+            {% endif %}
+            <p>Street Address: {{ order.street_address1 }}</p>
+            {% if order.street_address2 %}
+                <p>Street Address: {{ order.street_address2 }}</p>
+            {% endif %}
+            <p>Town/City: {{ order.town_or_city }}</p>
+            <p>County: {{ order.county }}</p>
+            <p>Country: {{ order.country }}</p>
+            <h3><strong>Billing Information:</strong></h3>
+            <p>Order Total: {{ order.order_total }}</p>
+            <p>Delivery: {{ order.delivery_cost }}</p>
+            <p>Order Total: {{ order.grand_total }}</p>
         </div>
     </div>
 </div>
