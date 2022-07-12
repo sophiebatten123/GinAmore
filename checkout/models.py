@@ -30,9 +30,9 @@ class Order(models.Model):
                                       decimal_places=2,
                                       null=False,
                                       default=0)
-    grand_total = models.DecimalField(max_digits=6, 
-                                      decimal_places=2, 
-                                      null=False, 
+    grand_total = models.DecimalField(max_digits=6,
+                                      decimal_places=2,
+                                      null=False,
                                       default=0)
 
     def _generate_order_number(self):
@@ -46,7 +46,7 @@ class Order(models.Model):
         Updates the total each time an items is added, updating
         the delivery costs.
         '''
-        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
         if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
             self.delivery_cost = self.order_total * \
                 settings.STANDARD_DELIVERY_PERCENTAGE/100
