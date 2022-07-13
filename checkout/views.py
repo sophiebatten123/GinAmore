@@ -1,20 +1,21 @@
 '''
 Imports relevant packages
 '''
+import json
+
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
 
 import stripe
-import json
 
 from bag.contexts import bag_content
 from products.models import Product
-from .models import Order, OrderLineItem
-from .forms import OrderForm
 from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
+from .models import Order, OrderLineItem
+from .forms import OrderForm
 
 
 @require_POST
@@ -83,7 +84,8 @@ def checkout(request):
                     return redirect(reverse('view_bag'))
 
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(
+                reverse('checkout_success', args=[order.order_number]))
         else:
             messages.error(request, "There was an error with your form")
     else:
@@ -103,7 +105,7 @@ def checkout(request):
 
         if request.user.is_authenticated:
             try:
-                profile=UserProfile.objects.get(user=request.user)
+                profile = UserProfile.objects.get(user=request.user)
                 order_form = OrderForm(initial={
                     'full_name': profile.user.get_full_name(),
                     'email': profile.user.email,
@@ -139,7 +141,7 @@ def checkout_success(request, order_number):
     '''
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
-    
+
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
         # Attach the user's profile to the order
@@ -161,9 +163,9 @@ def checkout_success(request, order_number):
             if user_profile_form.is_valid():
                 user_profile_form.save()
 
-    messages.success(request, f'Your order has been successfully processed. \
-        Your order number is: {order_number}. A confimation email will be sent to \
-            {order.email}')
+    messages.success(request, f'Your order has been successfully processed.\
+        Your order number is: {order_number}. A confimation email will be sent\
+         to {order.email}')
 
     if 'bag' in request.session:
         del request.session['bag']

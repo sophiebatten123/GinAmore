@@ -17,7 +17,7 @@ class OrderAdmin(admin.ModelAdmin):
                        'original_bag',
                        'stripe_pid',
                        )
-                       
+
     fields = ('full_name',
               'order_number',
               'user_profile',
@@ -44,5 +44,6 @@ class OrderAdmin(admin.ModelAdmin):
                     'grand_total',)
 
     ordering = ('-date',)
+
 
 admin.site.register(Order, OrderAdmin)
