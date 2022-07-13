@@ -46,5 +46,12 @@
             <p>Order Total: {{ order.grand_total }}</p>
         </div>
     </div>
+    <div class="row">
+        <div class="col-12">
+            {% if from_profile %}
+                <a href="{% url 'profile' %}" class="btn">Back to profile page</a>
+            {% endif %}
+        </div>
+    </div>
 </div>
 {% endblock %}

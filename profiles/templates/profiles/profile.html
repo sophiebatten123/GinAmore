@@ -28,7 +28,19 @@
         </div>
         <div class="col-6">
             <p>Your previous orders:</p>
-            {{ orders }}
+            {% for order in orders %}
+                <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}">
+                    {{ order.order_number|truncatechars:6 }}
+                </a>
+                <p>Order Date: {{ order.date }}</p>
+                <ul class="list-unstyled">
+                    {% for item in order.lineitems.all %}
+                        <li>
+                            {{ item.product.name }} x {{ item.quantity }}
+                        </li>
+                </ul>
+                <p>Order Total: {{ order.grand_total }}</p>
+            {% endfor %}
         </div>
     </div>
 </div>
