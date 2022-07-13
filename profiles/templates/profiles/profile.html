@@ -38,13 +38,13 @@
                         <li>
                             {{ item.product.name }} x {{ item.quantity }}
                         </li>
+                    {% endfor %}
                 </ul>
                 <p>Order Total: {{ order.grand_total }}</p>
             {% endfor %}
         </div>
     </div>
 </div>
-{{ profile }}
 {% endblock %}
 
 {% block postloadjs %}
