@@ -34,7 +34,6 @@
                                 </td>
                                 <td>
                                     <p>{{ item.product.name }}</p>
-                                    <p class="text-muted">{{ item.product.sku|upper }}</p>
                                 </td>
                                 <td>
                                     <form class="update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
