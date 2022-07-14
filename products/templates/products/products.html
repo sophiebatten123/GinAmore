@@ -38,13 +38,23 @@
                                 </a>
                             </div>
                         </div>
-                      <p class="mt-3 text-center">{{product.name}}</p>
-                      <p class="text-center">£{{product.price}}</p>
-                      <p class="text-center">{{product.rating}}/5</p>
-                      <a href="{% url 'product_detail' product.id %}"><p class="text-light shop-btn text-center">Shop Now</p></a>
+                        <p class="mt-3 text-center">{{product.name}}</p>
+                        <p class="text-center">£{{product.price}}</p>
+                        <p class="text-center">{{product.rating}}/5</p>
+                        <div class="row">
+                            <div class="col-12 btns">
+                                <a href="{% url 'product_detail' product.id %}"><p class="text-light shop-btn text-center">Shop Now</p></a>
+                            </div>
+                        </div>
                         {% if request.user.is_superuser %}
-                            <a href="{% url 'edit_product' product.id %}">Edit</a>
-                            <a href="{% url 'delete_product' product.id %}">Delete</a>
+                            <div class="row">
+                                <div class="col-6 btns">
+                                    <a href="{% url 'edit_product' product.id %}"><p class="text-light edit-button text-center">Edit</p></a>
+                                </div>
+                                <div class="col-6 btns">
+                                    <a href="{% url 'delete_product' product.id %}"><p class="text-light delete-button text-center">Delete</p></a>
+                                </div>
+                            </div>
                         {% endif %}
                     </div>
                   </div>                  

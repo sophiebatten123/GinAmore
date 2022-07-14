@@ -38,6 +38,10 @@ body {
     height: 2px;
 }
 
+.btns a {
+    text-decoration: none;
+}
+
 /*.......................................................Navigation Bar and Header*/
 
 #navbarSupportedContent {
@@ -107,3 +111,31 @@ body {
     justify-content: right;
 }
 
+/*......................................................Product Form */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"]{
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.edit-button {
+    background-color: #ffa5009c;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.delete-button {
+    background-color: #ed6a6a8a;
+    border-radius: 5px;
+    text-decoration: none;
+}
