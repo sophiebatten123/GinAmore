@@ -42,6 +42,10 @@
                       <p class="text-center">£{{product.price}}</p>
                       <p class="text-center">{{product.rating}}/5</p>
                       <a href="{% url 'product_detail' product.id %}"><p class="text-light shop-btn text-center">Shop Now</p></a>
+                        {% if request.user.is_superuser %}
+                            <a href="{% url 'edit_product' product.id %}">Edit</a>
+                            <a href="{% url 'delete_product' product.id %}">Delete</a>
+                        {% endif %}
                     </div>
                   </div>                  
             </div>
