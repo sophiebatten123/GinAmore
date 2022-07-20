@@ -63,11 +63,15 @@ def product_detail(request, product_id):
     '''
     A view to return the products details
     '''
-
+    liked = False
     product = get_object_or_404(Product, pk=product_id)
+
+    if product.likes.filter(id=request.user.id).exists():
+        liked = True
 
     context = {
         'product': product,
+        'liked': liked,
     }
 
     return render(request, 'products/product_detail.html', context)
