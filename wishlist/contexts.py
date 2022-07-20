@@ -2,7 +2,7 @@
 
 def wishlist_items(request):
 
-    wishlist = []
+    wishlist = request.session.get('wishlist', {})
 
     context = {
         'wishlist': wishlist,

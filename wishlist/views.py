@@ -32,7 +32,7 @@ def add_to_wishlist(request, item_id):
                 request, f'{product.name} to your wishlist'
                 )
             wishlist[item_id] = product.name
-        
+
         request.session['wishlist'] = wishlist
-        print(wishlist)
+
         return redirect(redirect_url)
