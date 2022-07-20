@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-12">
+                <h3>Wishlist</h3>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                {% if wishlist_items %}
+
+                {% else %}
+                    <p>Add some items to your wishlist!</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

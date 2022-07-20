@@ -64,6 +64,7 @@
                     <a href="{% url 'add_product' %}" class="dropdown-item">Shop Management</a>
                   {% endif %}
                   <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                  <a href="{% url 'view_wishlist' %}" class="dropdown-item">Wishlist</a>
                   <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                 {% else %}
                   <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
@@ -105,8 +106,8 @@
               </a>
               <div class="dropdown-menu border-0" aria-labelledby="our-gins-link">
                 <a href="{% url 'products' %}" class="dropdown-item">All Gins</a>
-                <a href="{% url 'products' %}?category=sloe_gin" class="dropdown-item ">Sloe Gin</a>
-                <a href="{% url 'products' %}?category=dry_gin" class="dropdown-item ">Dry Gin</a>
+                <a href="{% url 'products' %}?category=sloe_gin" class="dropdown-item">Sloe Gin</a>
+                <a href="{% url 'products' %}?category=dry_gin" class="dropdown-item">Dry Gin</a>
                 <a href="{% url 'products' %}?category=flavoured_gin" class="dropdown-item">Flavoured Gin</a>
               </div>
             </li>
@@ -120,8 +121,8 @@
               </a>
               <div class="dropdown-menu border-0" aria-labelledby="our-cocktails-link">
                 <a href="" class="dropdown-item">All Recipes</a>
-                <a href="" class="dropdown-item ">Summer Favourites</a>
-                <a href="" class="dropdown-item ">Winter Warmers</a>
+                <a href="" class="dropdown-item">Summer Favourites</a>
+                <a href="" class="dropdown-item">Winter Warmers</a>
                 <a href="" class="dropdown-item">Boozy Brunches</a>
               </div>
             </li>
@@ -137,6 +138,9 @@
         <div class="col">
           <h4 class="text-center">Free delivery on orders over £{{ free_delivery_threshold }}</h4>
         </div>
+      </div>
+      <div class="row">
+        <div class="col-12" id="heading"></div>
       </div>
     </div>
 
