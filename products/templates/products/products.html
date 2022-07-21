@@ -7,12 +7,26 @@
 {% block content %}
 <div class="overlay"></div>
 <div class="container-fluid">
-    <div>
-        <p>
-            {% for c in current_categories %}
-                {{ c.friendly_name }}
-            {% endfor %}
-        </p>
+    <div class="row">
+        <div class="col-12 text-center mt-4 pl-5 pr-5">
+            <h3>
+                <strong>
+                {% if current_categories %}
+                    {% for c in current_categories %}
+                        {{ c.friendly_name }}
+                    {% endfor %}
+                {% else %}
+                    Shop All
+                {% endif %}
+                </strong>
+            </h3>
+            <h4>Our gins are a labour of love that has taken us on a journey of
+                original botanicals, innovation and imaginative natural flavours. 
+                The result is a diverse range of exceptional gins that captivate 
+                the senses - designed to impress, explore, talk about and remember. 
+                We're sure you'll find something to your taste.
+            </h4>
+        </div>
     </div>
     <div class="row mt-2 mb-2 sort-btn mr-2">
         <div class="dropdown">
