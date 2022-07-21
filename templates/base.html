@@ -41,21 +41,21 @@
     <header class="container-fluid bg_nav_color">
       <div class="row">
         <div class="col-8">
-          <a href="{% url 'home' %}" class="nav-link text-dark">
+          <a href="{% url 'home' %}" class="nav-link text-light">
             <h1>GinAmore</h1>
           </a>
         </div>
         <div class="col-4" id="main-header-icons">
           <form method="GET" action="{% url 'products' %}" class="d-flex mt-3">
-            <input class="form-control me-2" type="text" placeholder="Search" name="q" aria-label="Search">
+            <input class="form-control me-2 text-dark" type="text" placeholder="Search" name="q" aria-label="Search">
             <button class="btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
           </form>
           <ul class="list-inline mb-0">
             <li class="list-inline-item dropdown">
               <a href="" class="d-inline p-2 text-dark nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                <div class="text-center">
+                <div class="text-center text-light">
                   <div><i class="fa-solid fa-user"></i></div>
-                  <p class="my-0">My Account</p>
+                  <p class="my-0 navbar-text">My Account</p>
                 </div>
               </a>
               <div class="dropdown-menu">
@@ -74,9 +74,9 @@
             </li>
             <li class="list-inline-item">
               <a href="{% url 'view_bag' %}" class="{% if grand_total %} text-info {% else %} text-dark {% endif %} nav-link text-dark d-inline">
-                <div class="text-center">
+                <div class="text-center text-light">
                   <div><i class="fa-solid fa-bag-shopping"></i></div>
-                  <p class="my-0">
+                  <p class="my-0 navbar-text">
                     {% if grand_total %}
                       £{{ grand_total|floatformat:2 }}
                     {% else %}
@@ -100,7 +100,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item dropdown">
-              <a class="nav-link text-dark mr-5" href="#" id="our-gins-link" data-toggle="dropdown"
+              <a class="nav-link text-dark mr-5 navbar-text" href="#" id="our-gins-link" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 Gins
               </a>
@@ -112,10 +112,10 @@
               </div>
             </li>
             <li class="nav-item ">
-              <a class="nav-link text-dark mr-5" href="#">Our Story</a>
+              <a class="nav-link text-dark mr-5 navbar-text" href="#">Our Story</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link text-dark mr-5" href="#" id="our-cocktails-link" data-toggle="dropdown"
+              <a class="nav-link text-dark mr-5 navbar-text" href="#" id="our-cocktails-link" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 Cocktails
               </a>
@@ -127,7 +127,7 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-dark mr-5" href="#">Contact Us</a>
+              <a class="nav-link text-dark mr-5 navbar-text" href="#">Contact Us</a>
             </li>
           </ul>
         </div>
@@ -136,7 +136,7 @@
     <div class="container-fluid bg_delivery_color">
       <div class="row">
         <div class="col">
-          <h4 class="text-center">Free delivery on orders over £{{ free_delivery_threshold }}</h4>
+          <h4 class="text-center text-light">Free delivery on orders over £{{ free_delivery_threshold }}</h4>
         </div>
       </div>
       <div class="row">

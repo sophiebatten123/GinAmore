@@ -7,10 +7,19 @@ html{
 
 body {
     font-family: 'Mali', cursive;
-    background: url('../images/main_background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+}
+
+.main-images img {
+    height: auto;
+    width: 100%;
+}
+
+#left_blueberry {
+    padding-left: 0;
+}
+
+#right_blueberry {
+    padding-right: 0;
 }
 
 .overlay {
@@ -48,6 +57,10 @@ body {
     justify-content: center;
 }
 
+.navbar-text {
+    font-size: 20px;
+}
+
 #main-header-icons {
     text-align: right;
 }
@@ -58,6 +71,10 @@ body {
 
 /*....................................................Homepage Content*/
 
+.circle_container {
+    position: relative;
+}
+
 #main_image_gin img{
     height: 180px;
     width: 100%;
@@ -65,29 +82,43 @@ body {
 }
 
 #bg_circle {
-    height: 300px;
+    height: 400px;
+    position: absolute;
+    top: -500px;
+    left: 630px;
 }
 
 #bg_circle img {
     height: 100%;
     width: auto;
+    border-radius: 50%;
 }
 
 /*........................................................Temporary Formatting*/
 
 .background_temp {
-    background-color: #866c89c2;
+    background-color: #1c3a42;
     height: 150px;
+    border: white 2px solid;
 }
 
 .bg_nav_color {
-    background-color: #866c89c2;
+    background-color: #1c3a42;
 }
 
 .bg_delivery_color {
-    background-color: #a38fa55c;
+    background-color: #1c3a42;
 }
 
+.bg-homepage-buttons {
+    background-color: #a2b779;
+    border: white solid 2px;
+}
+
+.bg-homepage-buttons a {
+    text-decoration: none;
+    font-size: 20px;
+}
 /*.....................................................Gin Shop Cards */
 
 .gin_image_container {
