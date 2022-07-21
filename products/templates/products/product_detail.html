@@ -93,6 +93,28 @@
         </div>
     </div>
 </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            {% if reviews %}
+                {% for review in reviews %}
+                    <p>{{ review.user_review }}</p>
+                {% endfor %}
+            {% else %}
+                <p> No Reviews. </p>
+            {% endif %}
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-12">
+            <form method="POST" action="{% url 'product_detail' product.id %}">
+                {% csrf_token %}
+                {{ review_form|crispy }}
+                <button class="w-100 btn btn-orange" type="submit">Post Review</button>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block postloadjs %}
