@@ -71,21 +71,22 @@ body {
 
 /*....................................................Homepage Content*/
 
-.circle_container {
-    position: relative;
-}
-
 #main_image_gin img{
     height: 180px;
     width: 100%;
     border-radius: 50%;
 }
 
+.circle_container {
+    background-color: red;
+    text-align: center;
+    position: relative;
+}
+
 #bg_circle {
-    height: 400px;
+    height: 300px;
     position: absolute;
-    top: -500px;
-    left: 630px;
+    top: -420px;
 }
 
 #bg_circle img {
@@ -98,7 +99,7 @@ body {
 
 .background_temp {
     background-color: #1c3a42;
-    height: 150px;
+    height: 300px;
     border: white 2px solid;
 }
 
@@ -112,13 +113,34 @@ body {
 
 .bg-homepage-buttons {
     background-color: #a2b779;
-    border: white solid 2px;
+    border: #1c3a42 solid 2px;
 }
 
 .bg-homepage-buttons a {
     text-decoration: none;
     font-size: 20px;
 }
+/*.....................................................Home page */
+
+.bartender {
+    height: 300px;
+    border: solid white 2px;
+    overflow: hidden;
+    opacity: 0.75;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../images/bartender2.jpg');
+}
+
+.gin {
+    overflow: hidden;
+    border: solid white 2px;
+    opacity: 0.75;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../images/ginpic.jpg');
+}
+
 /*.....................................................Gin Shop Cards */
 
 .gin_image_container {
@@ -178,4 +200,30 @@ body {
 .btn-like {
     border: none;
     background-color: white;
+}
+
+/*........................................................Footer*/
+
+.footer_background {
+    background-color: #1c3a42;
+    height: 200px;
+    border: white 2px solid;
+}
+
+.footer-text {
+    color: #b5b7bd;
+}
+
+.icons ul {
+    padding: 0;
+}
+
+.icons li {
+    display: inline;
+    padding: 10px;
+}
+
+.icons li i {
+    color: white;
+    font-size: 20px;
 }
