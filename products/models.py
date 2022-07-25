@@ -1,10 +1,18 @@
+'''
+Imports relevant django packages
+'''
 from django.db import models
 from django.contrib.auth.models import User
 
 
 class Category(models.Model):
-
+    '''
+    Category model information
+    '''
     class Meta:
+        '''
+        Specifies how the title will be displayed
+        '''
         verbose_name_plural = "Categories"
 
     name = models.CharField(max_length=300)
@@ -14,21 +22,44 @@ class Category(models.Model):
         return self.name
 
     def get_friendly_name(self):
+        '''
+        Returns the category name
+        '''
         return self.friendly_name
 
 
 class Product(models.Model):
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    '''
+    Category model information
+    '''
+    category = models.ForeignKey(
+        'Category',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL
+    )
     sku = models.CharField(max_length=300, null=True, blank=True)
     name = models.CharField(max_length=300)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    likes = models.ManyToManyField(User, related_name='product_likes', blank=True)
-    rating = models.DecimalField(max_digits=6, decimal_places=2, blank=True, null=True)
+    likes = models.ManyToManyField(
+        User,
+        related_name='product_likes',
+        blank=True
+    )
+    rating = models.DecimalField(
+        max_digits=6,
+        decimal_places=2,
+        blank=True,
+        null=True
+    )
     image_url = models.URLField(max_length=2000, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
+        '''
+        Returns the product name
+        '''
         return self.name
 
 

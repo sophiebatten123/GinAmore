@@ -1,13 +1,22 @@
+'''
+Imports relevant django packages
+'''
 from django.contrib import admin
 from .models import Order, OrderLineItem
 
 
 class OrderLineItemAdminInline(admin.TabularInline):
+    '''
+    Creates model fields for admin
+    '''
     model = OrderLineItem
     readonly_fields = ('lineitem_total',)
 
 
 class OrderAdmin(admin.ModelAdmin):
+    '''
+    Creates the admin fields within the database.
+    '''
     inlines = (OrderLineItemAdminInline,)
     readonly_fields = ('order_number',
                        'delivery_cost',

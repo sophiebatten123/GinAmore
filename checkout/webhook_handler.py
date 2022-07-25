@@ -1,5 +1,5 @@
 '''
-Imports the relevant packages
+Imports relevant django packages
 '''
 import json
 import time

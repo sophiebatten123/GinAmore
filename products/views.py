@@ -1,7 +1,11 @@
+'''
+Imports relevant django packages
+'''
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
+from django.db.models.functions import Lower
 from .models import Product, Category, Review
 from .forms import ProductForm, ReviewForm
 
@@ -10,7 +14,6 @@ def all_products(request):
     '''
     A view to display all products
     '''
-
     products = Product.objects.all()
     query = None
     categories = None
@@ -21,7 +24,7 @@ def all_products(request):
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
             sort = sortkey
-            
+
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 products = products.annotate(lower_name=Lower('name'))
@@ -36,14 +39,14 @@ def all_products(request):
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
-
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
                 messages.error(request, 'You didnt type anything.')
                 return redirect(reverse('products'))
-            
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+
+            queries = Q(
+                name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}_{categories}'
@@ -84,7 +87,7 @@ def product_detail(request, product_id):
             return redirect(reverse('product_detail', args=[product.id]))
     else:
         review_form = ReviewForm()
-    
+
     reviews = Review.objects.filter(product=product)
 
     context = {
@@ -113,7 +116,10 @@ def add_product(request):
             messages.success(request, 'Successfully added the product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add the product. Please check the form is valid.')
+            messages.error(
+                request,
+                'Failed to add the product. Please check the form is valid.'
+            )
     else:
         form = ProductForm()
 
@@ -142,7 +148,10 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update the product. Please check your form is valid!')
+            messages.error(
+                request,
+                'Failed to update the product. Please check your form is valid'
+            )
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
@@ -167,5 +176,5 @@ def delete_product(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.success(request, 'Product has been deleted!')
-    
+
     return redirect(reverse('products'))

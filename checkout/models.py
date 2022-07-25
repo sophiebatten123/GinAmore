@@ -1,5 +1,5 @@
 '''
-Imports relevant packages
+Imports relevant django packages
 '''
 import uuid
 
