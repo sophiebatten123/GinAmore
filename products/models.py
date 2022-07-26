@@ -42,11 +42,6 @@ class Product(models.Model):
     name = models.CharField(max_length=300)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    likes = models.ManyToManyField(
-        User,
-        related_name='product_likes',
-        blank=True
-    )
     rating = models.DecimalField(
         max_digits=6,
         decimal_places=2,
