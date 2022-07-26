@@ -15,7 +15,7 @@ class ProductForm(forms.ModelForm):
         Product fields generated within the form
         '''
         model = Product
-        fields = '__all__'
+        exclude = ('likes', 'image_url',)
 
     image = forms.ImageField(label='Image',
                              required=False,
