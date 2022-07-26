@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Mali:wght@300&display=swap');
 
 /*......................................................... Main site components */
-html{
+html {
     height: 100%;
 }
 
 body {
     font-family: 'Mali', cursive;
 }
+
+/*...........................................................Homepage */
 
 .main-images img {
     height: auto;
@@ -20,16 +22,6 @@ body {
 
 #right_blueberry {
     padding-right: 0;
-}
-
-.overlay {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background-color: white;
-    z-index: -1;
 }
 
 .message-container {
