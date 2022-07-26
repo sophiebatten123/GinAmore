@@ -1,5 +1,5 @@
 '''
-Imports relevant packages
+Imports relevant django packages
 '''
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
@@ -23,10 +23,11 @@ def profile(request):
             form.save()
             messages.success(request, 'Profile updated')
         else:
-            messages.error(request, 'Update failed, Please ensure the form is valid!')
+            messages.error(
+                request, 'Update failed, Please ensure the form is valid!')
     else:
         form = UserProfileForm(instance=profile)
-    
+
     orders = profile.orders.all()
 
     template = 'profiles/profile.html'

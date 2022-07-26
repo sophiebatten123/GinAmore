@@ -1,17 +1,26 @@
+'''
+Imports relevant django packages
+'''
 from django import forms
 from .models import UserProfile
 
 
 class UserProfileForm(forms.ModelForm):
+    '''
+    Generates the user profile form
+    '''
     class Meta:
+        '''
+        Specifies the models displayed within the form
+        '''
         model = UserProfile
         exclude = ('user',)
 
     def __init__(self, *args, **kwargs):
-        """
+        '''
         Add placeholders and classes, remove auto-generated
         labels and set autofocus on first field
-        """
+        '''
         super().__init__(*args, **kwargs)
         placeholders = {
             'default_phone_number': 'Phone Number',
