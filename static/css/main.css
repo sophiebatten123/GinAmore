@@ -227,4 +227,18 @@ body {
     clear: left;
     font: 14px Helvetica, Arial, sans-serif;
     width: 600px;
-  }
+}
+
+#mce-EMAIL {
+    width: 100%;
+}
+
+#sign_up_image {
+    height: 300px;
+    border: solid white 2px;
+    overflow: hidden;
+    opacity: 0.75;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../images/gin_signup.jpg');
+}
