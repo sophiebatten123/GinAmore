@@ -135,15 +135,10 @@ body {
 
 /*.....................................................Gin Shop Cards */
 
-.gin_image_container {
+.gin_image_cards_container {
     height: 200px;
     text-align: center;
     margin: 0;
-}
-
-.gin_image {
-    height: 100%;
-    width: auto;
 }
 
 .shop-btn {
@@ -241,4 +236,74 @@ body {
     background-size: cover;
     background-position: center;
     background-image: url('../images/gin_signup.jpg');
+}
+
+/*........................................................Product Details*/
+
+.gin_image_container {
+    height: 450px;
+    text-align: center;
+    margin: 0;
+}
+
+.gin_image {
+    height: 100%;
+    width: auto;
+}
+
+.add-button {
+    background-color: #1c3a42;
+    width: 100%;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.wishlist_left {
+    float: left;
+}
+
+.wishlist_right {
+    float: right;
+}
+
+.extra-product-info a {
+    text-decoration: none;
+    color: #1c3a42;
+}
+
+/*....................................................Review Background */
+
+.review-background {
+    height: auto;
+    background-color: #1c3a421c;
+    border-radius: 5px;
+}
+
+/*......................................................Delivery Information*/
+
+.delivery-information {
+    height: auto;
+    background-color: #1c3a42;
+}
+
+.white-line {
+    background-color: white;
+}
+
+.return-delivery-btn p {
+    background-color: white;
+    border: solid 2px #1c3a42;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #1c3a42;
+}
+
+.return-delivery-container a {
+    text-decoration: none;
+}
+
+.return-delivery-btn p:hover {
+    background-color: #1c3a421c;
 }
