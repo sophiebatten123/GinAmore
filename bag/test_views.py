@@ -1,29 +1,23 @@
 '''
 Imports relevant django packages
 '''
-from django.test import TestCase
-from django.contrib.auth.models import User
+from django.test import TestCase, Client
 
 
 class TestBagViews(TestCase):
     '''
     Bag views Testing
     '''
-    def test_bag(self):
+    def setUp(self):
         '''
-        Sets up the test bag views
+        Sets up the testing enviroment
         '''
-        test_user = User.objects.create_user(
-            username='test_user',
-            password='test_password',
-            email='test@test.com'
-        )
-        test_user.save()
+        self.client = Client()
 
-    def test_view_bag_url(self):
+    def test_bag_view(self):
         '''
-        Tests view bag URL
+        Tests bag view URL
         '''
-        response = self.client.get('/bag')
+        response = self.client.get('/bag/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'bag/bag.html')
