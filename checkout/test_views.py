@@ -21,34 +21,19 @@ class TestCheckoutViews(TestCase):
         )
         test_user.save()
 
-        Order.objects.create(
-            order_number='123456',
-            full_name='Test User',
-            phone_number='1234567890',
-            email='test@test.com',
-            country='Test Country',
-            town_or_city='Test City',
-            postcode='Test Postcode',
-            street_address1='Test Address',
-            county='Test County'
-        )
+    def test_checkout_url(self):
+        '''
+        Tests checkout URL
+        '''
+        response = self.client.get('/checkout')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'checkout/checkout.html')
 
-    def test_user_details(self):
-        '''
-        Tests the users details
-        '''
-
-    def test_checkout_success(self):
-        '''
-        Tests for a successful checkout
-        '''
-
-    def test_bag_empty(self):
-        '''
-        Tests if the bag is empty
-        '''
-
-    def test_profile(self):
-        '''
-        Tests if the user has a profile
-        '''
+    #def test_checkout_success_url(self):
+        #'''
+        #Tests for a successful checkout URL
+        #'''
+        #item = Order.objects.create(order_number='123456')
+        #response = self.client.get(f'/checkout_success/{item.order_number}')
+        #self.assertEqual(response.status_code, 200)
+        #self.assertTemplateUsed(response, 'checkout/checkout_success.html')

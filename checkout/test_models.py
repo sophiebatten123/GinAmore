@@ -21,7 +21,11 @@ class TestCheckoutModels(TestCase):
         )
         test_user.save()
 
-        Order.objects.create(
+    def test_order_number(self):
+        '''
+        Tests that the correct order number is produced
+        '''
+        order = Order.objects.create(
             order_number='123456',
             full_name='Test User',
             phone_number='1234567890',
@@ -31,11 +35,6 @@ class TestCheckoutModels(TestCase):
             postcode='Test Postcode',
             street_address1='Test Address',
             county='Test County'
-        )
-
-    def test_order_number(self):
-        '''
-        Tests that the correct order number is produced
-        '''
-        order = Order.objects.get(full_name='Test User')
-        self.assertEqual(str(order), order.order_number)
+            )
+        self.assertTrue(isinstance(order, Order))
+        self.assertEqual(str(order), '123456')
