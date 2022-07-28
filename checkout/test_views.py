@@ -4,6 +4,7 @@ Imports relevant django packages
 from django.test import TestCase
 from django.contrib.auth.models import User
 from .models import Order
+from .views import checkout
 
 
 class TestCheckoutViews(TestCase):
@@ -21,13 +22,13 @@ class TestCheckoutViews(TestCase):
         )
         test_user.save()
 
-    def test_checkout_url(self):
-        '''
-        Tests checkout URL
-        '''
-        response = self.client.get('/checkout')
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'checkout/checkout.html')
+    #def test_checkout_url(self):
+        #'''
+        #Tests checkout URL
+        #'''
+        #response = self.client.post('/checkout', )
+        #self.assertEqual(response.status_code, 200)
+        #self.assertTemplateUsed(response, 'checkout/checkout.html')
 
     #def test_checkout_success_url(self):
         #'''

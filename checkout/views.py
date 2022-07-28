@@ -6,6 +6,7 @@ import json
 from django.shortcuts import (
     render, redirect, reverse, get_object_or_404, HttpResponse
 )
+from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
@@ -40,6 +41,7 @@ def cache_checkout_data(request):
         return HttpResponse(content=e, status=400)
 
 
+@login_required
 def checkout(request):
     '''
     Handles the checkout request from user
