@@ -19,6 +19,8 @@ class TestBagViews(TestCase):
         self.product_url = reverse('products')
         self.product_detail_url = reverse('product_detail', args=[1])
         self.add_product = reverse('add_product')
+        self.edit_product = reverse('edit_product', args=[1])
+        self.delete_product = reverse('delete_product', args=[1])
 
         self.product_example = Product.objects.create(
             name='test',
@@ -27,6 +29,12 @@ class TestBagViews(TestCase):
             rating='9.9',
             image='test'
         )
+
+        self.client = Client()
+        self.user = User.objects.create_superuser(
+            'super',
+            'super@test.com',
+            'superpassword')
 
     def test_view_all_products(self):
         '''
@@ -48,12 +56,16 @@ class TestBagViews(TestCase):
         '''
         Tests that a superuser can access the add product URL
         '''
-        self.client = Client()
-        self.user = User.objects.create_superuser(
-            'super',
-            'super@test.com',
-            'superpassword')
         self.client.login(username='super', password='superpassword')
         response = self.client.get(self.add_product)
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/add_product.html')
+
+    def test_edit_product_url(self):
+        '''
+        Tests the edit product URL for superusers
+        '''
+        self.client.login(username='super', password='superpassword')
+        response = self.client.get(self.edit_product)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'products/edit_product.html')
