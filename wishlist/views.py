@@ -2,6 +2,7 @@
 Imports relevant django packages
 '''
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from products.models import Product
 
@@ -15,6 +16,7 @@ def view_wishlist(request):
     return render(request, 'wishlist/wishlist.html')
 
 
+@login_required
 def add_to_wishlist(request, item_id):
     '''
     Add an item to the wishlist
