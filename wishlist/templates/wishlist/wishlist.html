@@ -33,7 +33,7 @@
                             </div>
                             <div class="row">
                                 <div class="col gin_image_cards_container">
-                                    <a href="">
+                                    <a href="{% url 'product_detail' item.product.id %}">
                                         <img class="gin_image" src="{{item.product.image.url}}" alt="Image of Gin">
                                     </a>
                                 </div>
@@ -44,7 +44,7 @@
                             <p class="text-center">{{item.product.rating}}/5</p>
                             <div class="row">
                                 <div class="col-12 btns">
-                                    <a href="{% url 'products' %}">
+                                    <a href="{% url 'product_detail' item.product.id %}">
                                         <p class="text-light shop-btn text-center">Shop Now</p>
                                     </a>
                                 </div>

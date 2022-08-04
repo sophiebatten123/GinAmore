@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'profiles',
     'wishlist',
     'storages',
+    'ourstory',
 ]
 
 MIDDLEWARE = [
