@@ -28,6 +28,7 @@ def add_to_wishlist(request, item_id):
         if request.POST:
             if product.likes.filter(id=request.user.id).exists():
                 product.likes.remove(request.user)
+                wishlist.pop(item_id)
                 messages.success(
                     request,
                     f'{product.name} has been removed from your wishlist'
@@ -57,11 +58,10 @@ def remove_from_wishlist(request, item_id):
     redirect_url = request.POST.get('redirect_url')
     wishlist = request.session.get('wishlist', {})
 
-    for k in list(wishlist.keys()):
-        product = get_object_or_404(Product, pk=item_id)
-        if wishlist[k] == item_id:
-            del wishlist[k]
-            messages.success(request, f'{ product.name } has been deleted!')
+    product = get_object_or_404(Product, pk=item_id)
+    wishlist.pop(item_id)
+    product.likes.remove(request.user)
+    messages.success(request, f'{ product.name } has been deleted!')
 
     request.session['wishlist'] = wishlist
 
