@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'wishlist',
     'storages',
     'ourstory',
+    'cocktails',
 ]
 
 MIDDLEWARE = [
