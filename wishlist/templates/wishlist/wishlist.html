@@ -17,22 +17,34 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-12">
-                                    <i class="fas fa-heart heart"></i>
+                                    <form class="form" action="{% url 'remove_from_wishlist' item.product.id %}" method="POST">
+                                        {% csrf_token %}
+                                        <div class="wishlist_left">
+                                            <button type="submit" value="{{ item.product.id }}" class="btn-like p-0">
+                                                <i class="fas fa-heart heart"></i>
+                                                <div class="wishlist_right ml-2">
+                                                    <p>Remove from wishlist</p>
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                    </form>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col gin_image_container">
+                                <div class="col gin_image_cards_container">
                                     <a href="">
                                         <img class="gin_image" src="{{item.product.image.url}}" alt="Image of Gin">
                                     </a>
                                 </div>
                             </div>
+                            <p>{{ product.liked }}</p>
                             <p class="mt-3 text-center">{{ item.product.name}}</p>
                             <p class="text-center">£{{ item.product.price}}</p>
                             <p class="text-center">{{item.product.rating}}/5</p>
                             <div class="row">
                                 <div class="col-12 btns">
-                                    <a href="">
+                                    <a href="{% url 'products' %}">
                                         <p class="text-light shop-btn text-center">Shop Now</p>
                                     </a>
                                 </div>
@@ -43,9 +55,29 @@
                 {% endfor %}
             </div>
             {% else %}
-            <p>Add some items to your wishlist!</p>
+            <div class="container-fluid no-items">
+                <div class="row">
+                    <div class="col-12">
+                        <p>Add some items to your wishlist!</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 btns">
+                        <a href="{% url 'products' %}">
+                            <p class="text-light shop-btn text-center">Shop Now</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
             {% endif %}
             <hr>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 background_temp">
+            <h3 class="text-center text-light">Reccommended Items</h3>
         </div>
     </div>
 </div>

@@ -83,6 +83,11 @@ def product_detail(request, product_id):
             messages.success(request, ('Thank you for your review!'))
 
             return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(
+                request,
+                'Please login to create a review on one of our products!')
+            return redirect(reverse('product_detail', args={product.id}))
     else:
         review_form = ReviewForm()
 

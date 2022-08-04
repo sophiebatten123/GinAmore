@@ -48,3 +48,21 @@ def add_to_wishlist(request, item_id):
             'You must be logged in to add an item to your wishlist'
         )
         return redirect(redirect_url)
+
+
+def remove_from_wishlist(request, item_id):
+    '''
+    Removes the item from the users wishlist
+    '''
+    product = get_object_or_404(Product, pk=item_id)
+    redirect_url = request.POST.get('redirect_url')
+    wishlist = request.session.get('wishlist', {})
+
+    product.likes.remove(request.user)
+    messages.success(request, f'{ product.name } has been deleted!')
+    wishlist.remove({
+            'item_id': item_id,
+            'product': product,
+        })
+
+    return redirect(redirect_url)

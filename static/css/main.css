@@ -95,6 +95,12 @@ body {
     border: white 2px solid;
 }
 
+.background_temp_strip {
+    background-color: #1c3a42;
+    height: 30px;
+    border: white 2px solid;
+}
+
 .bg_nav_color {
     background-color: #1c3a42;
 }
@@ -142,7 +148,8 @@ body {
 }
 
 .shop-btn {
-    background-color: #866c89c2;
+    background-color: #1c3a42;
+    width: 100%;
     border-radius: 5px;
     text-decoration: none;
 }
@@ -193,7 +200,7 @@ body {
 
 .footer_background {
     background-color: #1c3a42;
-    height: 200px;
+    height: 230px;
     border: white 2px solid;
 }
 
@@ -213,6 +220,24 @@ body {
 .icons li i {
     color: white;
     font-size: 20px;
+}
+
+.footer-list a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.footer-list a:hover {
+    font-size: 18px;
+    color: white;
+}
+
+.footer-list li {
+    list-style: none;
+}
+
+.footer-list {
+    padding-left: 0;
 }
 
 /*................................................Mailchimp */
@@ -306,4 +331,10 @@ body {
 
 .return-delivery-btn p:hover {
     background-color: #1c3a421c;
+}
+
+/*...............................................................wishlist*/
+
+.no-items {
+    height: 250px;
 }
