@@ -341,8 +341,16 @@ body {
 
 /*..............................................................cocktails*/
 
-.white-banner {
-    background-color: white;
+.hide {
+    display: none;
+}
+
+.text-decoration-none a{
+    text-decoration: none;
+}
+
+.cocktail-headings a{
+    text-decoration: none;
 }
 
 .cocktail-image {
@@ -363,28 +371,40 @@ body {
     height: 300px;
     border: solid white 2px;
     overflow: hidden;
-    opacity: 0.75;
+    opacity: 0.85;
     background-size: cover;
     background-position: center;
     background-image: url('../images/summergin.jpg');
+}
+
+.summer:hover > .hide {
+    display: block;
 }
 
 .winter {
     height: 300px;
     border: solid white 2px;
     overflow: hidden;
-    opacity: 0.75;
+    opacity: 0.85;
     background-size: cover;
     background-position: center;
     background-image: url('../images/wintergin.jpg');
+}
+
+.winter:hover > .hide {
+    display: block;
 }
 
 .brunch {
     height: 300px;
     border: solid white 2px;
     overflow: hidden;
-    opacity: 0.75;
+    opacity: 0.85;
     background-size: cover;
     background-position: center;
     background-image: url('../images/brunchgin.jpg');
+}
+
+.brunch:hover > .hide {
+    display: block;
 }

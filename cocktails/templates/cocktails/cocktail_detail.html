@@ -8,7 +8,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-4">
-            <img class="mt-4" src="{{ cocktail.image.url }}" alt="{{cocktail.name}}">
+            <img class="mt-4 mb-4" src="{{ cocktail.image.url }}" alt="{{cocktail.name}}">
         </div>
         <div class="col-8">
             <h5 class="mt-4">{{ cocktail.name }}</h5>
@@ -17,7 +17,7 @@
                 <div class="col-6">
                     <p>
                         <a href="#">
-                            {{ cocktail.category }}
+                            {{ cocktail.category.friendly_name }}
                         </a>
                     </p>
                 </div>
@@ -33,6 +33,11 @@
                     <p>{{ cocktail.ingredients | safe }}</p>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 background_temp">
+            <h3 class="text-center text-light">Reccomended Gins</h3>
         </div>
     </div>
 </div>

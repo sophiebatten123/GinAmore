@@ -7,19 +7,7 @@
 {% block content %}
 <div class="container-fluid">
     <div class="row">
-        <div class="col-4 summer">
-            <h3 class="white-banner mt-2">Summer Favourites</h3>
-        </div>
-        <div class="col-4 winter">
-            <h3 class="white-banner mt-2">Winter Warmers</h3>
-        </div>
-        <div class="col-4 brunch">
-            <h3 class="white-banner mt-2">Boozy Brunches</h3>
-        </div>
-    </div>
-    <div class="row">
         <div class="col-12">
-            <hr>
             <h3>Our Favourite Cocktails</h3>
         </div>
     </div>
@@ -28,22 +16,24 @@
         <div class="col-sm-12 col-md-12 col-lg-6 mt-2 cocktail-background">
             <div class="row">
                 <div class="col-4">
-                    <img class="cocktail-image mt-4" src="{{ cocktail.image.url }}" alt="{{cocktail.name}}">
+                    <a href="{% url 'cocktail_detail' cocktail.id %}">
+                        <img class="cocktail-image mt-4" src="{{ cocktail.image.url }}" alt="{{cocktail.name}}">
+                    </a>
                 </div>
                 <div class="col-8">
                     <div class="row">
-                        <div class="col-12">
-                            <h5 class="mt-4 ml-2">
-                                <a href="{% url 'cocktail_detail' cocktail.id %}">{{ cocktail.name }}</a>
-                            </h5>
+                        <div class="col-12 text-decoration-none">
+                            <a href="{% url 'cocktail_detail' cocktail.id %}">
+                                <h5 class="mt-4 ml-2 text-dark">
+                                    {{ cocktail.name }}
+                                </h5>
+                            </a>
                             <hr>
                         </div>
-                        <div class="col-6">
-                            <p class="ml-2">
-                                <a href="#">
-                                    {{ cocktail.category }}
-                                </a>
-                            </p>
+                        <div class="col-6 text-decoration-none">
+                            <a href="{% url 'cocktails' %}?category={{ cocktail.category }}">
+                                <p class="text-dark ml-2">{{ cocktail.category.friendly_name }}</p>
+                            </a>
                         </div>
                         <div class="col-6">
                             <p class="ml-2"><i class="fas fa-heart heart mr-2"></i>{{ cocktail.rating }}/5</p>
@@ -59,6 +49,38 @@
             </div>
         </div>
         {% endfor %}
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <hr>
+        </div>
+        <div class="col-4 cocktail-headings">
+            <a href="{% url 'cocktails' %}?category=summer_favourites">
+                <div class="summer">
+                    <h3 class="text-light ml-2 mt-2"><strong>Summer Favourites</strong></h3>
+                    <p class="mt-4 text-light ml-2 hide">Extra Information</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-4 cocktail-headings">
+            <a href="{% url 'cocktails' %}?category=winter_warmers">
+                <div class="winter">
+                    <h3 class="text-light ml-2 mt-2"><strong>Winter Warmers</strong></h3>
+                    <p class="mt-4 text-light ml-2 hide">Extra Information</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-4 cocktail-headings">
+            <a href="{% url 'cocktails' %}?category=boozy_brunches">
+                <div class="brunch">
+                    <h3 class="text-light mt-2 ml-2"><strong>Boozy Brunches</strong></h3>
+                    <p class="mt-4 text-light ml-2 hide">Extra Information</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-12">
+            <hr>
+        </div>
     </div>
 </div>
 {% endblock %}

@@ -122,9 +122,9 @@
               </a>
               <div class="dropdown-menu border-0" aria-labelledby="our-cocktails-link">
                 <a href="{% url 'cocktails' %}" class="dropdown-item">All Recipes</a>
-                <a href="" class="dropdown-item">Summer Favourites</a>
-                <a href="" class="dropdown-item">Winter Warmers</a>
-                <a href="" class="dropdown-item">Boozy Brunches</a>
+                <a href="{% url 'cocktails' %}?category=summer_favourites" class="dropdown-item">Summer Favourites</a>
+                <a href="{% url 'cocktails' %}?category=winter_warmers" class="dropdown-item">Winter Warmers</a>
+                <a href="{% url 'cocktails' %}?category=boozy_brunches" class="dropdown-item">Boozy Brunches</a>
               </div>
             </li>
             <li class="nav-item">
