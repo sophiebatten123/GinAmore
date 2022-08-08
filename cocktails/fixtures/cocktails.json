@@ -1,0 +1,35 @@
+[
+    {
+        "pk": 1,
+        "model": "cocktails.cocktail",
+        "fields": {
+            "name": "Lychee and Strawberry Gin Crush",
+            "description": "A really refreshing and tastey gin cocktail",
+            "category": 1,
+            "rating": 4.5,
+            "image": "cocktail1.jpg"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "cocktails.cocktail",
+        "fields": {
+            "name": "Spiced Apple and Cranberry Gin Fizz",
+            "description": "A really warming and tastey gin fizz",
+            "category": 2,
+            "rating": 4.7,
+            "image": "cocktail2.png"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "cocktails.cocktail",
+        "fields": {
+            "name": "Blueberry and Mint Gin Pitcher",
+            "description": "A showcase piece that will have your guests raving!",
+            "category": 3,
+            "rating": 4.8,
+            "image": "cocktail3.png"
+        }
+    }
+]

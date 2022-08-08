@@ -1,0 +1,26 @@
+[
+    {
+        "pk": 1,
+        "model": "cocktails.category",
+        "fields": {
+            "name": "summer_favourites",
+            "friendly_name": "Summer Favourites"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "cocktails.category",
+        "fields": {
+            "name": "winter_warmers",
+            "friendly_name": "Winter Warmers"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "cocktails.category",
+        "fields": {
+            "name": "boozy_brunches",
+            "friendly_name": "Boozy Brunches"
+        }
+    }
+]
