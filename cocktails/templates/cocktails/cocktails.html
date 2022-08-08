@@ -8,9 +8,44 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
-            <p>All Cocktails</p>
-            {{ cocktail }}
+            <h3>Cocktail Inspiration</h3>
         </div>
+    </div>
+    <div class="row">
+        <div class="col-4 summer">
+            <h3 class="white-banner mt-2">Summer Favourites</h3>
+        </div>
+        <div class="col-4 winter">
+            <h3 class="white-banner mt-2">Winter Warmers</h3>
+        </div>
+        <div class="col-4 brunch">
+            <h3 class="white-banner mt-2">Boozy Brunches</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h3>Our Favourite Cocktails</h3>
+        </div>
+    </div>
+    <div class="row">
+        {% for c in cocktail %}
+        <div class="col-sm-12 col-md-12 col-lg-6 mt-2 cocktail-background">
+            <div class="row">
+                <div class="col-4">
+                    <img class="cocktail-image mt-4" src="{{ c.image.url }}" alt="{{c.name}}">
+                </div>
+                <div class="col-8">
+                    <div class="row">
+                        <div class="col-12">{{ c.name }}</div>
+                        <div class="col-6">{{ c.rating }}</div>
+                        <div class="col-6">{{ c.category }}</div>
+                        <hr/>
+                        <div class="col-12">{{ c.description }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}

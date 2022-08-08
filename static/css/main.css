@@ -338,3 +338,52 @@ body {
 .no-items {
     height: 250px;
 }
+
+/*..............................................................cocktails*/
+
+.white-banner {
+    background-color: white;
+}
+
+.cocktail-image {
+    float: left;
+    width:  200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.cocktail-background {
+    height: 250px;
+    background-color: #fda4a55c;
+    border: solid 2px white;
+}
+
+.summer {
+    height: 300px;
+    border: solid white 2px;
+    overflow: hidden;
+    opacity: 0.75;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../images/summergin.jpg');
+}
+
+.winter {
+    height: 300px;
+    border: solid white 2px;
+    overflow: hidden;
+    opacity: 0.75;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../images/wintergin.jpg');
+}
+
+.brunch {
+    height: 300px;
+    border: solid white 2px;
+    overflow: hidden;
+    opacity: 0.75;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../images/brunchgin.jpg');
+}
