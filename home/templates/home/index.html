@@ -53,4 +53,35 @@
         </div>
     </div>
 </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4 cocktail-headings p-0">
+            <a href="{% url 'cocktails' %}?category=summer_favourites">
+                <div class="summer">
+                    <h3 class="text-light ml-2 mt-2"><strong>Summer Favourites</strong></h3>
+                    <p class="mt-4 text-light ml-2 hide">Extra Information</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-4 cocktail-headings p-0">
+            <a href="{% url 'cocktails' %}?category=winter_warmers">
+                <div class="winter">
+                    <h3 class="text-light ml-2 mt-2"><strong>Winter Warmers</strong></h3>
+                    <p class="mt-4 text-light ml-2 hide">Extra Information</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-4 cocktail-headings p-0">
+            <a href="{% url 'cocktails' %}?category=boozy_brunches">
+                <div class="brunch">
+                    <h3 class="text-light mt-2 ml-2"><strong>Boozy Brunches</strong></h3>
+                    <p class="mt-4 text-light ml-2 hide">Extra Information</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-12">
+            <hr>
+        </div>
+    </div>
+</div>
 {% endblock %}

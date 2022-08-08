@@ -8,18 +8,18 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-4">
-            <img class="mt-4 mb-4" src="{{ cocktail.image.url }}" alt="{{cocktail.name}}">
+            <a href="{{ cocktail.image.url }}" target="_blank">
+                <img class="mt-4 mb-4 cocktail-image-detail" src="{{ cocktail.image.url }}" alt="{{cocktail.name}}">
+            </a>
         </div>
         <div class="col-8">
             <h5 class="mt-4">{{ cocktail.name }}</h5>
             <hr>
             <div class="row">
-                <div class="col-6">
-                    <p>
-                        <a href="#">
-                            {{ cocktail.category.friendly_name }}
-                        </a>
-                    </p>
+                <div class="col-6 text-decoration-none">
+                    <a href="{% url 'cocktails' %}?category={{ cocktail.category }}">
+                        <p class="text-dark">{{ cocktail.category.friendly_name }}</p>
+                    </a>
                 </div>
                 <div class="col-6">
                     <p><i class="fas fa-heart heart mr-2"></i>{{ cocktail.rating }}/5</p>

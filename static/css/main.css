@@ -361,6 +361,14 @@ body {
     border: solid 2px white;
 }
 
+.cocktail-image-detail {
+    float: left;
+    width:  350px;
+    height: 350px;
+    object-fit: cover;
+    border: solid 2px white;
+}
+
 .cocktail-background {
     height: 250px;
     background-color: #fda4a55c;
