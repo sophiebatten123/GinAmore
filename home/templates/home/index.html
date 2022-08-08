@@ -6,22 +6,12 @@
 
 {% block content %}
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-6 main-images" id="left_blueberry">
-            <img src="{% static 'images/blueberry1.jpg' %}" alt="An Image of a Left Botanical Blueberry Gin Icon">
-        </div>
-        <div class="col-6 main-images" id="right_blueberry">
-            <img src="{% static 'images/blueberry2.jpg' %}" alt="An Image of a Right Botanical Blueberry Gin Icon">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <h3>--Botanical Freshness--</h3>
-        </div>
-    </div>
-    <div class="row circle_container">
-        <div class="col" id="bg_circle">
-            <img src="{% static 'images/gin.jpg' %}" alt="An Image of Our Famous Gin Fizz Cocktail">
+    <div class="row main-container">
+        <img class="full-width" src="{% static 'images/maingin.jpg' %}" alt="Main Gin Image">
+        <div class="col-6">
+            <h5 class="text-center text-light border shop-main-btn pink-background">
+                <strong>Explore Our Products <i class="fa-solid fa-arrow-right"></i></strong>
+            </h5>
         </div>
     </div>
     <div class="row">
@@ -44,38 +34,47 @@
 </div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-6 bartender"></div>
-        <div class="col-6 gin"></div>
+        <div class="col-12 text-center">
+            <hr>
+            <h3 class="text-dark">Experts in Distillery</h3>
+        </div>
     </div>
     <div class="row">
-        <div class="col-12 background_temp">
-            <h3 class="text-center text-light">Information/Quotes</h3>
-        </div>
+        <div class="col-12"><hr></div>
+        <div class="col-6 bartender"></div>
+        <div class="col-6 gin"></div>
     </div>
 </div>
 <div class="container-fluid">
     <div class="row">
+        <div class="col-12 text-center">
+            <hr>
+            <h3 class="text-dark">Cocktail Indulgence</h3>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-4 cocktail-headings p-0">
             <a href="{% url 'cocktails' %}?category=summer_favourites">
                 <div class="summer">
-                    <h3 class="text-light ml-2 mt-2"><strong>Summer Favourites</strong></h3>
-                    <p class="mt-4 text-light ml-2 hide">Extra Information</p>
+                    <p class="mt-4 text-light ml-2 hide">A blaze of big botanicals busting with character and spicy Szechuan pepper that packs a punch on the palate. Perfect with our fruity, peppery aperitif.</p>
+                    <h5 class="text-dark white-background ml-2 mt-2 arrow-fixed"><strong>Summer Favourite Cocktails <i class="fa-solid fa-arrow-right"></i></strong></h5>
                 </div>
             </a>
         </div>
         <div class="col-4 cocktail-headings p-0">
             <a href="{% url 'cocktails' %}?category=winter_warmers">
                 <div class="winter">
-                    <h3 class="text-light ml-2 mt-2"><strong>Winter Warmers</strong></h3>
-                    <p class="mt-4 text-light ml-2 hide">Extra Information</p>
+                    <p class="mt-4 text-light ml-2 hide">A blaze of big botanicals busting with character and spicy Szechuan pepper that packs a punch on the palate. Perfect with our fruity, peppery aperitif.</p>
+                    <h5 class="text-dark white-background ml-2 mt-2 arrow-fixed"><strong>Winter Warming Cocktails <i class="fa-solid fa-arrow-right"></i></strong></h5>
                 </div>
             </a>
         </div>
         <div class="col-4 cocktail-headings p-0">
             <a href="{% url 'cocktails' %}?category=boozy_brunches">
                 <div class="brunch">
-                    <h3 class="text-light mt-2 ml-2"><strong>Boozy Brunches</strong></h3>
-                    <p class="mt-4 text-light ml-2 hide">Extra Information</p>
+                    <p class="mt-4 text-light ml-2 hide">A blaze of big botanicals busting with character and spicy Szechuan pepper that packs a punch on the palate. Perfect with our fruity, peppery aperitif.</p>
+                    <h5 class="text-dark white-background ml-2 mt-2 arrow-fixed"><strong>Boozy Brunch Cocktails <i class="fa-solid fa-arrow-right"></i></strong></h5>
                 </div>
             </a>
         </div>

@@ -97,7 +97,7 @@ body {
 
 .background_temp_strip {
     background-color: #1c3a42;
-    height: 30px;
+    height: 40px;
     border: white 2px solid;
 }
 
@@ -106,12 +106,12 @@ body {
 }
 
 .bg_delivery_color {
-    background-color: #1c3a42;
+    background-color: #dd9186b5;
 }
 
 .bg-homepage-buttons {
-    background-color: #a2b779;
-    border: #1c3a42 solid 2px;
+    background-color: #dae5db;
+    border: #dd9186b5 solid 2px;
 }
 
 .bg-homepage-buttons a {
@@ -119,6 +119,28 @@ body {
     font-size: 20px;
 }
 /*.....................................................Home page */
+
+.pink-background {
+    background-color: #dd9186b5;
+    border: #dd9186b5 solid 2px;
+    padding: 50px;
+}
+
+.full-width {
+    height: auto;
+    width: 100%;
+}
+
+.main-container {
+    position: relative;
+    justify-content: center;
+}
+
+.shop-main-btn {
+    position: absolute;
+    bottom: 60px;
+    right: -50%;
+}
 
 .bartender {
     height: 300px;
@@ -188,7 +210,7 @@ body {
 }
 
 .heart {
-    color: #866c89c2;
+    color: #1c3a42;
 }
 
 .btn-like {
@@ -341,6 +363,18 @@ body {
 
 /*..............................................................cocktails*/
 
+.white-background {
+    background-color: white;
+    width: auto;
+    float: right;
+}
+
+.arrow-fixed {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+}
+
 .hide {
     display: none;
 }
@@ -371,7 +405,7 @@ body {
 
 .cocktail-background {
     height: 250px;
-    background-color: #fda4a55c;
+    background-color: #dae5db;
     border: solid 2px white;
 }
 
@@ -383,6 +417,11 @@ body {
     background-size: cover;
     background-position: center;
     background-image: url('../images/summergin.jpg');
+    position: relative;
+}
+
+.summer:hover {
+    opacity: 1;
 }
 
 .summer:hover > .hide {
@@ -397,6 +436,11 @@ body {
     background-size: cover;
     background-position: center;
     background-image: url('../images/wintergin.jpg');
+    position: relative;
+}
+
+.winter:hover {
+    opacity: 1;
 }
 
 .winter:hover > .hide {
@@ -411,6 +455,11 @@ body {
     background-size: cover;
     background-position: center;
     background-image: url('../images/brunchgin.jpg');
+    position: relative;
+}
+
+.brunch:hover {
+    opacity: 1;
 }
 
 .brunch:hover > .hide {
