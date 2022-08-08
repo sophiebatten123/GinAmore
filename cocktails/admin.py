@@ -3,6 +3,7 @@ Imports relevant django packages
 '''
 from django.contrib import admin
 from .models import Cocktail, Category
+from django_summernote.admin import SummernoteModelAdmin
 
 
 class CategoryAdmin(admin.ModelAdmin):
@@ -18,10 +19,12 @@ class CategoryAdmin(admin.ModelAdmin):
 admin.site.register(Category, CategoryAdmin)
 
 
-class CocktailAdmin(admin.ModelAdmin):
+class CocktailAdmin(SummernoteModelAdmin):
     '''
     Information to be displayed in the cocktail admin database
     '''
+    summernote_fields = ('recipe', 'ingredients')
+
     list_display = (
         'name',
         'category',

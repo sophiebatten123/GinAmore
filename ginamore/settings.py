@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'storages',
     'ourstory',
     'cocktails',
+    'django_summernote',
 ]
 
 MIDDLEWARE = [

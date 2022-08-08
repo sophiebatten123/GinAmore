@@ -36,7 +36,7 @@ class Cocktail(models.Model):
     name = models.CharField(max_length=254)
     description = models.TextField()
     recipe = models.TextField()
-    ingredients = models.CharField(max_length=254, null=True, blank=True)
+    ingredients = models.TextField()
     rating = models.DecimalField(
         max_digits=6,
         decimal_places=2,
