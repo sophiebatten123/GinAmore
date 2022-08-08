@@ -350,6 +350,7 @@ body {
     width:  200px;
     height: 200px;
     object-fit: cover;
+    border: solid 2px white;
 }
 
 .cocktail-background {

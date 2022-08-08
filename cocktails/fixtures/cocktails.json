@@ -5,6 +5,8 @@
         "fields": {
             "name": "Lychee and Strawberry Gin Crush",
             "description": "A really refreshing and tastey gin cocktail",
+            "recipe": "Stir quickly",
+            "ingredients": "100ml of lemonade, A handful of strawberries",
             "category": 1,
             "rating": 4.5,
             "image": "cocktail1.jpg",
@@ -17,6 +19,8 @@
         "fields": {
             "name": "Spiced Apple and Cranberry Gin Fizz",
             "description": "A really warming and tastey gin fizz",
+            "recipe": "Stir quickly",
+            "ingredients": "100ml of lemonade, A handful of strawberries",
             "category": 2,
             "rating": 4.7,
             "image": "cocktail2.png",
@@ -29,6 +33,8 @@
         "fields": {
             "name": "Blueberry and Mint Gin Pitcher",
             "description": "A showcase piece that will have your guests raving!",
+            "recipe": "Stir quickly",
+            "ingredients": "100ml of lemonade, A handful of strawberries",
             "category": 3,
             "rating": 4.8,
             "image": "cocktail3.png",

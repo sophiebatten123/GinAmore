@@ -7,11 +7,6 @@
 {% block content %}
 <div class="container-fluid">
     <div class="row">
-        <div class="col-12">
-            <h3>Cocktail Inspiration</h3>
-        </div>
-    </div>
-    <div class="row">
         <div class="col-4 summer">
             <h3 class="white-banner mt-2">Summer Favourites</h3>
         </div>
@@ -24,23 +19,41 @@
     </div>
     <div class="row">
         <div class="col-12">
+            <hr>
             <h3>Our Favourite Cocktails</h3>
         </div>
     </div>
     <div class="row">
-        {% for c in cocktail %}
+        {% for cocktail in cocktails %}
         <div class="col-sm-12 col-md-12 col-lg-6 mt-2 cocktail-background">
             <div class="row">
                 <div class="col-4">
-                    <img class="cocktail-image mt-4" src="{{ c.image.url }}" alt="{{c.name}}">
+                    <img class="cocktail-image mt-4" src="{{ cocktail.image.url }}" alt="{{cocktail.name}}">
                 </div>
                 <div class="col-8">
                     <div class="row">
-                        <div class="col-12">{{ c.name }}</div>
-                        <div class="col-6">{{ c.rating }}</div>
-                        <div class="col-6">{{ c.category }}</div>
+                        <div class="col-12">
+                            <h5 class="mt-4 ml-2">
+                                <a href="{% url 'cocktail_detail' cocktail.id %}">{{ cocktail.name }}</a>
+                            </h5>
+                            <hr>
+                        </div>
+                        <div class="col-6">
+                            <p class="ml-2">
+                                <a href="#">
+                                    {{ cocktail.category }}
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col-6">
+                            <p class="ml-2"><i class="fas fa-heart heart mr-2"></i>{{ cocktail.rating }}/5</p>
+                        </div>
                         <hr/>
-                        <div class="col-12">{{ c.description }}</div>
+                        <div class="col-12">
+                            <p class="ml-2">
+                                {{ cocktail.description }}
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

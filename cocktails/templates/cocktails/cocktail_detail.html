@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4">
+            <img class="cocktail-image mt-4" src="{{ cocktail.image.url }}" alt="{{cocktail.name}}">
+        </div>
+        <div class="col-8">
+            <p>{{ cocktail.name }}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
