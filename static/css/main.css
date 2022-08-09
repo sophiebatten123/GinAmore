@@ -97,7 +97,7 @@ body {
 
 .background_temp_strip {
     background-color: #1c3a42;
-    height: 40px;
+    height: 75px;
     border: white 2px solid;
 }
 
@@ -110,8 +110,8 @@ body {
 }
 
 .bg-homepage-buttons {
-    background-color: #dae5db;
-    border: #dd9186b5 solid 2px;
+    background-color: #e7b1a9;
+    border: white solid 2px;
 }
 
 .bg-homepage-buttons a {
@@ -124,6 +124,24 @@ body {
     background-color: #dd9186b5;
     border: #dd9186b5 solid 2px;
     padding: 50px;
+}
+
+.main-cocktail-pictures {
+    opacity: 0.75;
+    width:  200px;
+    height: 250px;
+    object-fit: cover;
+    border: solid 2px white;
+}
+
+.cocktails-main a {
+    text-decoration: none;
+}
+
+.main-cocktail-background {
+    height: 50px;
+    background-color: #dd9186b5;
+    border: white solid 2px;
 }
 
 .full-width {
@@ -150,15 +168,6 @@ body {
     background-size: cover;
     background-position: center;
     background-image: url('../images/bartender2.jpg');
-}
-
-.gin {
-    overflow: hidden;
-    border: solid white 2px;
-    opacity: 0.75;
-    background-size: cover;
-    background-position: center;
-    background-image: url('../images/ginpic.jpg');
 }
 
 /*.....................................................Gin Shop Cards */

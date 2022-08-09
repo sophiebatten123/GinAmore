@@ -17,40 +17,78 @@
     <div class="row">
         <div class="col-4 text-center bg-homepage-buttons">
             <a href="">
-                <p class="text-dark pt-2">Beautifully Crafted Gin</p>
+                <p class="text-light pt-2"><strong>Crafted Gin</strong></p>
             </a>
         </div>
         <div class="col-4 text-center bg-homepage-buttons">
             <a href="">
-                <p class="text-dark pt-2">History of GinAmore</p>
+                <p class="text-light pt-2"><strong>History of GinAmore</strong></p>
             </a>
         </div>
         <div class="col-4 text-center bg-homepage-buttons">
             <a href="{% url 'products' %}">
-                <p class="text-dark pt-2">Shop now</p>
+                <p class="text-light pt-2"><strong>Shop Now</strong></p>
             </a>
         </div>
     </div>
 </div>
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-12 text-center">
-            <hr>
-            <h3 class="text-dark">Experts in Distillery</h3>
+    <div class="row background_temp_strip">
+        <div class="col-12 text-center mt-3">
+            <h3 class="text-light">Experts in Distillery</h3>
         </div>
     </div>
     <div class="row">
-        <div class="col-12"><hr></div>
         <div class="col-6 bartender"></div>
-        <div class="col-6 gin"></div>
+        <div class="col-6">
+            <p class="mt-5">A blaze of big botanicals busting with character and spicy 
+                Szechuan pepper that packs a punch on the palate. Perfect with
+                our fruity, peppery aperitif.A blaze of big botanicals busting 
+                with character and spicy Szechuan pepper that packs a punch on 
+                the palate. Perfect with our fruity, peppery aperitif.</p>
+            <p>A blaze of big botanicals busting with character and spicy 
+                Szechuan pepper that packs a punch on the palate. Perfect with
+                our fruity, peppery aperitif.A blaze of big botanicals busting 
+                with character and spicy Szechuan pepper that packs a punch on 
+                the palate. Perfect with our fruity, peppery aperitif.</p>
+        </div>
     </div>
 </div>
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-12 text-center">
-            <hr>
-            <h3 class="text-dark">Cocktail Indulgence</h3>
-            <hr>
+    <div class="row background_temp_strip">
+        <div class="col-12 text-center mt-3">
+            <h3 class="text-light">Our Popular Gins</h3>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            {% for product in products %}
+            <div class="carousel-item {% if forloop.counter == 1 %}active{% endif %}" id="slide{{ forloop.counter }}">
+                <img src="{{ product.image.url }}" class="d-block w-100" alt="{{ product.name }}" class="main-cocktail-pictures">
+            </div>
+            {% endfor %}
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+</div>
+<div class="container-fluid">
+    <div class="row background_temp_strip">
+        <div class="col-12 text-center mt-3">
+            <h3 class="text-light">Cocktail Indulgence</h3>
         </div>
     </div>
     <div class="row">
@@ -58,7 +96,7 @@
             <a href="{% url 'cocktails' %}?category=summer_favourites">
                 <div class="summer">
                     <p class="mt-4 text-light ml-2 hide">A blaze of big botanicals busting with character and spicy Szechuan pepper that packs a punch on the palate. Perfect with our fruity, peppery aperitif.</p>
-                    <h5 class="text-dark white-background ml-2 mt-2 arrow-fixed"><strong>Summer Favourite Cocktails <i class="fa-solid fa-arrow-right"></i></strong></h5>
+                    <h5 class="text-dark white-background ml-2 mt-2 arrow-fixed p-2"><strong>Summer Favourite Cocktails <i class="fa-solid fa-arrow-right"></i></strong></h5>
                 </div>
             </a>
         </div>
@@ -66,7 +104,7 @@
             <a href="{% url 'cocktails' %}?category=winter_warmers">
                 <div class="winter">
                     <p class="mt-4 text-light ml-2 hide">A blaze of big botanicals busting with character and spicy Szechuan pepper that packs a punch on the palate. Perfect with our fruity, peppery aperitif.</p>
-                    <h5 class="text-dark white-background ml-2 mt-2 arrow-fixed"><strong>Winter Warming Cocktails <i class="fa-solid fa-arrow-right"></i></strong></h5>
+                    <h5 class="text-dark white-background ml-2 mt-2 arrow-fixed p-2"><strong>Winter Warming Cocktails <i class="fa-solid fa-arrow-right"></i></strong></h5>
                 </div>
             </a>
         </div>
@@ -74,7 +112,7 @@
             <a href="{% url 'cocktails' %}?category=boozy_brunches">
                 <div class="brunch">
                     <p class="mt-4 text-light ml-2 hide">A blaze of big botanicals busting with character and spicy Szechuan pepper that packs a punch on the palate. Perfect with our fruity, peppery aperitif.</p>
-                    <h5 class="text-dark white-background ml-2 mt-2 arrow-fixed"><strong>Boozy Brunch Cocktails <i class="fa-solid fa-arrow-right"></i></strong></h5>
+                    <h5 class="text-dark white-background ml-2 mt-2 arrow-fixed p-2"><strong>Boozy Brunch Cocktails <i class="fa-solid fa-arrow-right"></i></strong></h5>
                 </div>
             </a>
         </div>
@@ -83,4 +121,17 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript">
+    let liEls = document.querySelectorAll('ul li');
+    let index = 0;
+    window.show = function(increase) {
+        index = index + increase;
+        index = Math.min(Math.max(index,0), liEls.length-1);
+        liEls[index].scrollIntoView({behavior: 'smooth'});
+    }
+</script>
 {% endblock %}
