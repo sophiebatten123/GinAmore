@@ -16,14 +16,6 @@ body {
     width: 100%;
 }
 
-#left_blueberry {
-    padding-left: 0;
-}
-
-#right_blueberry {
-    padding-right: 0;
-}
-
 .message-container {
     position: fixed;
     top: 75px;
@@ -69,24 +61,6 @@ body {
     border-radius: 50%;
 }
 
-.circle_container {
-    background-color: red;
-    text-align: center;
-    position: relative;
-}
-
-#bg_circle {
-    height: 300px;
-    position: absolute;
-    top: -420px;
-}
-
-#bg_circle img {
-    height: 100%;
-    width: auto;
-    border-radius: 50%;
-}
-
 /*........................................................Temporary Formatting*/
 
 .background_temp {
@@ -126,22 +100,34 @@ body {
     padding: 50px;
 }
 
-.main-cocktail-pictures {
+.hide {
+    display: none;
+}
+
+.cocktail-main-images {
+    height: 400px;
+    position: relative;
+}
+
+.cocktail-name-main {
+    position: absolute;
+    bottom: 20px;
+}
+
+.cocktail-main-images img{
     opacity: 0.75;
     width:  200px;
-    height: 250px;
+    height: 400px;
     object-fit: cover;
     border: solid 2px white;
 }
 
-.cocktails-main a {
-    text-decoration: none;
+.cocktail-main-images img:hover {
+    opacity: 1;
 }
 
-.main-cocktail-background {
-    height: 50px;
-    background-color: #dd9186b5;
-    border: white solid 2px;
+.cocktails-main a {
+    text-decoration: none;
 }
 
 .full-width {

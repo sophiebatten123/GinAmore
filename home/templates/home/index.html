@@ -9,19 +9,21 @@
     <div class="row main-container">
         <img class="full-width" src="{% static 'images/maingin.jpg' %}" alt="Main Gin Image">
         <div class="col-6">
-            <h5 class="text-center text-light border shop-main-btn pink-background">
-                <strong>Explore Our Products <i class="fa-solid fa-arrow-right"></i></strong>
-            </h5>
+            <a href="{% url 'products' %}">
+                <h5 class="text-center text-light border shop-main-btn pink-background">
+                    <strong>Explore Our Products <i class="fa-solid fa-arrow-right"></i></strong>
+                </h5>
+            </a>
         </div>
     </div>
     <div class="row">
         <div class="col-4 text-center bg-homepage-buttons">
             <a href="">
-                <p class="text-light pt-2"><strong>Crafted Gin</strong></p>
+                <p class="text-light pt-2"><strong>Beautifully Crafted Gin</strong></p>
             </a>
         </div>
         <div class="col-4 text-center bg-homepage-buttons">
-            <a href="">
+            <a href="{% url 'ourstory' %}">
                 <p class="text-light pt-2"><strong>History of GinAmore</strong></p>
             </a>
         </div>
@@ -62,28 +64,16 @@
     </div>
 </div>
 <div class="container-fluid">
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            {% for product in products %}
-            <div class="carousel-item {% if forloop.counter == 1 %}active{% endif %}" id="slide{{ forloop.counter }}">
+    <div class="row">
+    {% for product in products %}
+        <div class="col-3 cocktail-main-images {% if forloop.counter >= 5 %}hide{% endif %}" id="slide{{ forloop.counter }}">
+            <a href="{% url 'product_detail' product.id %}">
                 <img src="{{ product.image.url }}" class="d-block w-100" alt="{{ product.name }}" class="main-cocktail-pictures">
-            </div>
-            {% endfor %}
+                <p class="text-dark white-background cocktail-name-main p-2"><strong>{{ product.name }} <i class="fa-solid fa-arrow-right"></i></strong></p>
+            </a>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
+    {% endfor %}
+    </div>
 </div>
 <div class="container-fluid">
     <div class="row background_temp_strip">
