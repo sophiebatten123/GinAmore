@@ -293,6 +293,11 @@ body {
     width: auto;
 }
 
+.gin-category {
+    color:#e7b1a9;
+    text-decoration: none;
+}
+
 .add-button {
     background-color: #1c3a42;
     width: 100%;

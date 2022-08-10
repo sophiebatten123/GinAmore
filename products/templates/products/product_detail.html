@@ -65,6 +65,11 @@
             <div class="row">
                 <div class="col-6 extra-product-info">
                     <a href="#"><p>Delivery Information</p></a>
+                    <a href="{% url 'products' %}?category={{ product.category }}">
+                        <p class="mt-2">
+                            Category: <span class="gin-category">{{ product.category.friendly_name }}</span>
+                        </p>
+                    </a>
                 </div>
                 <div class="col-6 extra-product-info">
                     <a href="#">

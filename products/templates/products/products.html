@@ -32,12 +32,19 @@
             <a class="btn btn-secondary dropdown-toggle shop-btn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
               Sort Products
             </a>
-          
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <li><a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">Price (Lowest - Highest)</a></li>
-              <li><a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=desc">Price (Highest - Lowest)</a></li>
-              <li><a class="dropdown-item" href="{% url 'products' %}?sort=rating&direction=desc">Highest Rating</a></li>
-            </ul>
+            {% if selected_categories %}   
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category={{ selected_categories }}&sort=price&direction=asc">Price (Lowest - Highest)</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category={{ selected_categories }}&sort=price&direction=desc">Price (Highest - Lowest)</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category={{ selected_categories }}&sort=rating&direction=desc">Highest Rating</a></li>
+                </ul>
+            {% else %}
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">Price (Lowest - Highest)</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=desc">Price (Highest - Lowest)</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?sort=rating&direction=desc">Highest Rating</a></li>
+                </ul>
+            {% endif %}
         </div>
     </div>
     <div class="row">
