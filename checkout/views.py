@@ -46,6 +46,8 @@ def checkout(request):
     '''
     Handles the checkout request from user
     '''
+    products = Product.objects.all()
+
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
@@ -132,6 +134,7 @@ def checkout(request):
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
+        'products': products,
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
     }

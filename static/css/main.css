@@ -326,6 +326,25 @@ body {
     border-radius: 5px;
 }
 
+/*......................................................Checkout*/
+
+.checkout-section {
+    background-color: #e4afa745;
+    border: white solid 2px;
+}
+
+.cocktail-checkout-images {
+    height: 200px;
+}
+
+.cocktail-checkout-images img{
+    opacity: 0.75;
+    width:  100px;
+    height: 200px;
+    object-fit: cover;
+    border: solid 2px white;
+}
+
 /*......................................................Delivery Information*/
 
 .delivery-information {

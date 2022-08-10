@@ -47,8 +47,25 @@
                     <p><strong>£{{ grand_total |floatformat:2 }}</strong></p>
                 </div>
             </div>
+            <div class="row mt-4">
+                <div class="col-12 checkout-section p-2">
+                    <h5 class>Your Wishlist</h5>
+                    {% if wishlist_products %}
+                        <div class="row">
+                            {% for item in wishlist_products %}
+                            <div class="col-4 cocktail-checkout-images {% if forloop.counter >= 4 %}hide{% endif %}" id="slide{{ forloop.counter }}">
+                                <a href="{% url 'product_detail' item.product.id %}">
+                                    <img src="{{item.product.image.url}}" class="gin_image d-block w-100" alt="{{ item.product.name }}" class="main-cocktail-pictures">
+                                    <p class="text-dark white-background cocktail-name-main p-2"><strong>{{ item.product.name }} <i class="fa-solid fa-arrow-right"></i></strong></p>
+                                </a>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
         </div>
-        <div class="col">
+        <div class="col checkout-section p-2">
             <p>Please fill out the form below:</p>
        <form action="{% url 'checkout' %}" method="POST" id="payment_form">
             {% csrf_token %}
@@ -57,6 +74,7 @@
                 {{order_form.full_name | as_crispy_field }}
                 {{order_form.email | as_crispy_field }}
             </fieldset>
+            <hr>
             <fieldset class="rounded">
                 <legend class="fieldset-label w-auto text-black">Delivery Information:</legend>
                 {{order_form.phone_number | as_crispy_field }}
@@ -68,7 +86,7 @@
                 {{order_form.country | as_crispy_field }}
                 <div class="form-check form-check-inline">
                     {% if user.is_authenticated %}
-                        <label class="form-check-label" for="id-save-info">Save my delivery information</label>
+                        <label class="form-check-label mb-2" for="id-save-info">Save my delivery information</label>
                         <input class="form-check-input" type="checkbox" id="id-save-info" name="save-info" checked>
                     {% else %}
                         <label class="form-check-label" for="id-save-info">
@@ -78,6 +96,7 @@
                     {% endif %}
                 </div>
             </fieldset>
+            <hr>
             <fieldset class="rounded">
                 <legend class="fieldset-label w-auto text-black">Payment Details:</legend>
                 <!--A stripe care element will go here-->

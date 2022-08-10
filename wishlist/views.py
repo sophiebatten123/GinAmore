@@ -65,5 +65,4 @@ def remove_from_wishlist(request, item_id):
 
     request.session['wishlist'] = wishlist
 
-    print(wishlist)
     return redirect(redirect_url)
