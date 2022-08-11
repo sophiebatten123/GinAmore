@@ -40,3 +40,14 @@ GinAmore aims to provide users with the ability to easily purchase premium flavo
 - [Future Features](#)
 - [Deployment](#)
 - [Credits](#)
+
+## User Stories
+
+|User Story ID|As A/An|I want to be able to...|So that I can...|Story Points|MoSCoW|
+|--------------------|--------------------|-----------------|--------------|-------------|
+|1| Shopper | View a list of all Gin products | Select which ones I want to purchase | -- | --|
+|2| Shopper | View individual Gin details | Identify the price, description and product rating of each product | -- | -- |
+|3| Shopper | Be able to quickly see the total cost of all my products | Avoid spending too much | -- | -- |
+|4| Shopper | Identify any deals and special offers quickly on the page | Take advantage of special offers | -- | -- |
+|-------------------|-------------------|---------------|---------------|--------------|
+|5| Site User | Easily register for an account | View my personal profile information | -- | -- |
