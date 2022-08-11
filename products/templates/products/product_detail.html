@@ -132,32 +132,12 @@
         </div>
     </div>
 </div>
-<div class="container-fluid">
-    <div class="row mt-4 mb-4">
-        <div class="col-12 background_temp_reccommended">
-            <h4 class="text-center text-light pt-2">Similar Products:</h4>
-            <div class="row">
-                {% for item in products %}
-                    {% if item.category == product.category and item != product %}
-                        <div class="col-2 product-reccommended-images">
-                            <a href="{% url 'product_detail' item.id %}">
-                                <img src="{{item.image.url}}" class="gin_image d-block w-100" alt="{{ item.name }}" class="main-cocktail-pictures">
-                                <p class="text-dark white-background cocktail-name-main p-2">{{ item.name }} <i class="fa-solid fa-arrow-right"></i></p>
-                            </a>
-                        </div>
-                    {% endif %}
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-</div>
 <div class="container-fluid" id="delivery">
     <div class="row mt-4 mb-4">
-        <div class="col-2"></div>
-        <div class="col-8">
-            <div class="row">
+        <div class="col-12">
+            <div class="row background_header_reccommended">
                 <div class="col-12">
-                    <h3>Delivery & Returns</h3>
+                    <h3 class="text-light">Delivery & Returns</h3>
                 </div>
             </div>
             <div class="row">
@@ -185,19 +165,46 @@
                         <br/>You can also return to your nearest Click & Collect Store.</p>
                     <div class="row">
                         <div class="col-6 return-delivery-container">
-                            <a href="#" class="return-delivery-btn text-center"><p class="pt-2">More Information on Our Returns Policy</p></a>
+                            <a href="#" class="return-delivery-btn text-center"><p class="pt-3 text-light">More Information on Our Returns Policy</p></a>
                         </div>
                         <div class="col-6 return-delivery-container">
-                            <a href="#" class="return-delivery-btn text-center"><p class="pt-2">More Delivery Information</p></a>
+                            <a href="#" class="return-delivery-btn text-center"><p class="pt-3 text-light">More Delivery Information</p></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-2"></div>
     </div>
 </div>
 <div class="container-fluid">
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-12 background_header_reccommended">
+                    <h4 class="text-light pt-2">Similar Products:</h4>
+                </div>
+            </div>
+            <div class="row background_temp_reccommended">
+                {% for item in products %}
+                    {% if item.category == product.category and item != product %}
+                        <div class="col-2 product-reccommended-images mt-2 p-0">
+                            <a href="{% url 'product_detail' item.id %}">
+                                <img src="{{item.image.url}}" class="gin_image d-block w-100" alt="{{ item.name }}" class="main-cocktail-pictures">
+                                <p class="text-light white-background cocktail-name-main p-2"><strong>{{ item.name }} <i class="fa-solid fa-arrow-right"></i></strong></p>
+                            </a>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row background_header_reccommended">
+        <div class="col-12">
+            <h3 class="text-light">Reviews</h3>
+        </div>
+    </div>
     <div class="row">
         <div class="col-6">
             {% if reviews %}
@@ -231,6 +238,7 @@
             </form>
         </div>
     </div>
+    <hr>
 </div>
 {% endblock %}
 

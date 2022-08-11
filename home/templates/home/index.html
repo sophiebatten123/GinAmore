@@ -66,10 +66,10 @@
 <div class="container-fluid">
     <div class="row">
     {% for product in products %}
-        <div class="col-3 cocktail-main-images {% if forloop.counter >= 5 %}hide{% endif %}" id="slide{{ forloop.counter }}">
+        <div class="col-3 p-0 cocktail-main-images {% if forloop.counter >= 5 %}hide{% endif %}" id="slide{{ forloop.counter }}">
             <a href="{% url 'product_detail' product.id %}">
                 <img src="{{ product.image.url }}" class="d-block w-100" alt="{{ product.name }}" class="main-cocktail-pictures">
-                <p class="text-dark white-background cocktail-name-main p-2"><strong>{{ product.name }} <i class="fa-solid fa-arrow-right"></i></strong></p>
+                <p class="text-light white-background cocktail-name-main p-2"><strong>{{ product.name }} <i class="fa-solid fa-arrow-right"></i></strong></p>
             </a>
         </div>
     {% endfor %}
@@ -86,7 +86,7 @@
             <a href="{% url 'cocktails' %}?category=summer_favourites">
                 <div class="summer">
                     <p class="mt-4 text-light ml-2 hide">A blaze of big botanicals busting with character and spicy Szechuan pepper that packs a punch on the palate. Perfect with our fruity, peppery aperitif.</p>
-                    <h5 class="text-dark white-background ml-2 mt-2 arrow-fixed p-2"><strong>Summer Favourite Cocktails <i class="fa-solid fa-arrow-right"></i></strong></h5>
+                    <h5 class="text-light white-background ml-2 mt-2 arrow-fixed p-2"><strong>Summer Favourite Cocktails <i class="fa-solid fa-arrow-right"></i></strong></h5>
                 </div>
             </a>
         </div>
@@ -94,7 +94,7 @@
             <a href="{% url 'cocktails' %}?category=winter_warmers">
                 <div class="winter">
                     <p class="mt-4 text-light ml-2 hide">A blaze of big botanicals busting with character and spicy Szechuan pepper that packs a punch on the palate. Perfect with our fruity, peppery aperitif.</p>
-                    <h5 class="text-dark white-background ml-2 mt-2 arrow-fixed p-2"><strong>Winter Warming Cocktails <i class="fa-solid fa-arrow-right"></i></strong></h5>
+                    <h5 class="text-light white-background ml-2 mt-2 arrow-fixed p-2"><strong>Winter Warming Cocktails <i class="fa-solid fa-arrow-right"></i></strong></h5>
                 </div>
             </a>
         </div>
@@ -102,7 +102,7 @@
             <a href="{% url 'cocktails' %}?category=boozy_brunches">
                 <div class="brunch">
                     <p class="mt-4 text-light ml-2 hide">A blaze of big botanicals busting with character and spicy Szechuan pepper that packs a punch on the palate. Perfect with our fruity, peppery aperitif.</p>
-                    <h5 class="text-dark white-background ml-2 mt-2 arrow-fixed p-2"><strong>Boozy Brunch Cocktails <i class="fa-solid fa-arrow-right"></i></strong></h5>
+                    <h5 class="text-light white-background ml-2 mt-2 arrow-fixed p-2"><strong>Boozy Brunch Cocktails <i class="fa-solid fa-arrow-right"></i></strong></h5>
                 </div>
             </a>
         </div>

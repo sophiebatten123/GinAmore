@@ -10,20 +10,65 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
-    <div class="row mt-4">
-        <div class="col-12">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6 pt-2">
             <h3>Checkout</h3>
             <hr>
+            <p>Please fill out the form below:</p>
+            <form action="{% url 'checkout' %}" method="POST" id="payment_form">
+                {% csrf_token %}
+                <fieldset class="rounded">
+                    <legend class="fieldset-label w-auto text-black">Your Details:</legend>
+                    {{order_form.full_name | as_crispy_field }}
+                    {{order_form.email | as_crispy_field }}
+                </fieldset>
+                <hr>
+                <fieldset class="rounded">
+                    <legend class="fieldset-label w-auto text-black">Delivery Information:</legend>
+                    {{order_form.phone_number | as_crispy_field }}
+                    {{order_form.postcode | as_crispy_field }}
+                    {{order_form.street_address1 | as_crispy_field }}
+                    {{order_form.street_address2 | as_crispy_field }}
+                    {{order_form.town_or_city | as_crispy_field }}
+                    {{order_form.county | as_crispy_field }}
+                    {{order_form.country | as_crispy_field }}
+                    <div class="form-check form-check-inline">
+                        {% if user.is_authenticated %}
+                            <label class="form-check-label mb-2" for="id-save-info">Save my delivery information</label>
+                            <input class="form-check-input" type="checkbox" id="id-save-info" name="save-info" checked>
+                        {% else %}
+                            <label class="form-check-label" for="id-save-info">
+                                <a class="text-info" href="{% url 'account_signup' %}">Register</a>
+                                <a class="text-info" href="{% url 'account_login' %}">Sign in</a> and save this information for next time!
+                            </label>
+                        {% endif %}
+                    </div>
+                </fieldset>
+                <hr>
+                <fieldset class="rounded">
+                    <legend class="fieldset-label w-auto text-black">Payment Details:</legend>
+                    <div id="card-element"></div>
+                    <div id="card-errors" role="alert"></div>
+                    <input type="hidden" value="{{ client_secret }}" name="client_secret">
+                </fieldset>
+                <div class="mt-4">
+                    <input class="checkbox" type="checkbox" value="1" id="checkboxOneInput"/>
+                    <label for="checkboxOneInput" id="checkbox-label">Confirm you are over 18 or over</label>
+                </div>
+                <div class="submit-button mt-2" id="checkout-button">
+                    <button id="submit-button" class="btn submit text-light add-button text-center" disabled="disabled">Checkout</button>
+                </div>
+            </form>
         </div>
-    </div>
-    <div class="row mt-4">
-        <div class="col">
+        <div class="col-6 pt-2">
+            <h3>Your Items</h3>
+            <hr>
             {% for item in bag_items %}
                 <div class="row">
                     <div class="col-2">
                         <a href="{% url 'product_detail' item.product.id %}">
-                            <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                            <img class="w-100 p-2" src="{{ item.product.image.url }}" alt="{{ product.name }}">
                         </a>
                     </div>
                     <div class="col-7">
@@ -48,15 +93,20 @@
                 </div>
             </div>
             <div class="row mt-4">
-                <div class="col-12 checkout-section p-2">
-                    <h5 class>Your Wishlist</h5>
+                <div class="col-12 p-2">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3>Room for more?</h3>
+                            <hr>
+                        </div>
+                    </div>
                     {% if wishlist_products %}
                         <div class="row">
                             {% for item in wishlist_products %}
-                            <div class="col-4 cocktail-checkout-images {% if forloop.counter >= 4 %}hide{% endif %}" id="slide{{ forloop.counter }}">
+                            <div class="col-4 p-0 cocktail-checkout-images {% if forloop.counter >= 4 %}hide{% endif %}" id="slide{{ forloop.counter }}">
                                 <a href="{% url 'product_detail' item.product.id %}">
                                     <img src="{{item.product.image.url}}" class="gin_image d-block w-100" alt="{{ item.product.name }}" class="main-cocktail-pictures">
-                                    <p class="text-dark white-background cocktail-name-main p-2"><strong>{{ item.product.name }} <i class="fa-solid fa-arrow-right"></i></strong></p>
+                                    <p class="text-light white-background cocktail-name-main p-2"><strong>{{ item.product.name }} <i class="fa-solid fa-arrow-right"></i></strong></p>
                                 </a>
                             </div>
                             {% endfor %}
@@ -64,55 +114,6 @@
                     {% endif %}
                 </div>
             </div>
-        </div>
-        <div class="col checkout-section p-2">
-            <p>Please fill out the form below:</p>
-       <form action="{% url 'checkout' %}" method="POST" id="payment_form">
-            {% csrf_token %}
-            <fieldset class="rounded">
-                <legend class="fieldset-label w-auto text-black">Your Details:</legend>
-                {{order_form.full_name | as_crispy_field }}
-                {{order_form.email | as_crispy_field }}
-            </fieldset>
-            <hr>
-            <fieldset class="rounded">
-                <legend class="fieldset-label w-auto text-black">Delivery Information:</legend>
-                {{order_form.phone_number | as_crispy_field }}
-                {{order_form.postcode | as_crispy_field }}
-                {{order_form.street_address1 | as_crispy_field }}
-                {{order_form.street_address2 | as_crispy_field }}
-                {{order_form.town_or_city | as_crispy_field }}
-                {{order_form.county | as_crispy_field }}
-                {{order_form.country | as_crispy_field }}
-                <div class="form-check form-check-inline">
-                    {% if user.is_authenticated %}
-                        <label class="form-check-label mb-2" for="id-save-info">Save my delivery information</label>
-                        <input class="form-check-input" type="checkbox" id="id-save-info" name="save-info" checked>
-                    {% else %}
-                        <label class="form-check-label" for="id-save-info">
-                            <a class="text-info" href="{% url 'account_signup' %}">Register</a>
-                            <a class="text-info" href="{% url 'account_login' %}">Sign in</a> and save this information for next time!
-                        </label>
-                    {% endif %}
-                </div>
-            </fieldset>
-            <hr>
-            <fieldset class="rounded">
-                <legend class="fieldset-label w-auto text-black">Payment Details:</legend>
-                <!--A stripe care element will go here-->
-                <div id="card-element"></div>
-                <!--Used to display error with forms-->
-                <div id="card-errors" role="alert"></div>
-                <input type="hidden" value="{{ client_secret }}" name="client_secret">
-            </fieldset>
-            <div class="mt-4">
-                <input class="checkbox" type="checkbox" value="1" id="checkboxOneInput"/>
-                <label for="checkboxOneInput" id="checkbox-label">Confirm you are over 18 or over</label>
-            </div>
-            <div class="submit-button mt-2" id="checkout-button">
-                <button id="submit-button" class="btn submit text-light add-button text-center" disabled="disabled">Checkout</button>
-            </div>
-       </form>
         </div>
     </div>
 </div>
