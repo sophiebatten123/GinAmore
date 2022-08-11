@@ -203,8 +203,8 @@
         <div class="col-6">
             {% if reviews %}
                 {% for review in reviews %}
-                    <div class="row">
-                        <div class="col-12 review-background mt-2 mb-2">
+                    <div class="row border">
+                        <div class="col-10 mt-2 mb-2">
                             <table>
                                 <tr>
                                     <th></th>
@@ -218,7 +218,14 @@
                                   </tr>
                             </table>
                         </div>
+                        {% if request.user.is_superuser %}
+                        <div class="col-2 btns pt-2">
+                            <div class="red-background">
+                                <a href="{% url 'delete_review' review.id %}"><p class="text-light text-center"><i class="fa-solid fa-xmark"></i></p></a>
+                            </div>
+                        </div>
                     </div>
+                    {% endif %}
                 {% endfor %}
             {% else %}
                 <p> No Reviews. </p>

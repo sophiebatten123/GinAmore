@@ -280,11 +280,14 @@ body {
 
 /*.....................................................Reviews*/
 
-.review-background {
-    height: auto;
-    background-color: #1c3a421c;
-    border-radius: 5px;
+.red-background {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: red;
+    float: right;
 }
+
 
 /*......................................................Delivery Information*/
 
