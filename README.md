@@ -19,9 +19,9 @@ GinAmore aims to provide users with the ability to easily purchase premium flavo
   - [Agile Planning Enviroment](#)
   - [Design](#)
     - [GinAmore Design Principles](#)
-    - [Colour Scheme](#)
-    - [Typography](#)
-    - [Imagery](#)
+    - [Colour Scheme](#colour-scheme)
+    - [Typography](#typography)
+    - [Imagery](#imagery)
   - [Wireframes](#)
     - [Desktop Wireframes](#)
     - [Mobile Wireframes](#)
@@ -111,3 +111,9 @@ GinAmore aims to provide users with the ability to easily purchase premium flavo
 |----|------|-----------------------|----------------|------------|------|
 |28| Site User | Leave comments on cocktail recipes  | Communicate with other site users and leave reviews and advice on recipes | -- | --|
 |29| Site Admin | Screen/delete comments  | Ensure that they are appropriate | -- | -- |
+
+# Colour Scheme
+
+The colours within the site were carefully selected to mirror the premium products sold at GinAmore. The dark regal blue contrasts against the light pink making elements of importance stand out on the page. These colours were initially selected from the sites main banner image using DEV tools, allowing for all colours within the page to compliment eachother nicely.
+
+![Colour-Scheme](static/images/color-scheme.PNG)
