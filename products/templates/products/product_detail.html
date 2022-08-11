@@ -33,18 +33,14 @@
                         <div class="wishlist_left">
                             <button type="submit" value="{{ product.id }}" class="btn-like p-0">
                                 <i class="fas fa-heart heart"></i>
-                                <div class="wishlist_right ml-2">
-                                    <p>Remove from wishlist</p>
-                                </div>
+                                <p class="wishlist_right">Remove from wishlist</p>
                             </button>
                         </div>
                         {% else %}
                         <div class="wishlist_left">
                             <button type="submit" value="{{ product.id }}" class="btn-like p-0">
                                 <i class="far fa-heart"></i>
-                                <div class="wishlist_right ml-2">
-                                    <p>Add to wishlist</p>
-                                </div>
+                                <p class="wishlist_right">Add to wishlist</p>
                             </button>
                         </div>
                         {% endif %}
@@ -122,13 +118,13 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-12">
-                            <input type="submit" class="text-light add-button text-center" value="Add to bag">
-                        </div>
-                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                    </div>
-            </form>
+                            <div class="col-12">
+                                <input type="submit" class="text-light add-button text-center" value="Add to bag">
+                            </div>
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -189,7 +185,7 @@
                     {% if item.category == product.category and item != product %}
                         <div class="col-2 product-reccommended-images mt-2 p-0">
                             <a href="{% url 'product_detail' item.id %}">
-                                <img src="{{item.image.url}}" class="gin_image d-block w-100" alt="{{ item.name }}" class="main-cocktail-pictures">
+                                <img src="{{item.image.url}}" class="gin_image d-block w-100 main-cocktail-pictures" alt="{{ item.name }}">
                                 <p class="text-light white-background cocktail-name-main p-2"><strong>{{ item.name }} <i class="fa-solid fa-arrow-right"></i></strong></p>
                             </a>
                         </div>
