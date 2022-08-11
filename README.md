@@ -91,21 +91,21 @@ GinAmore aims to provide users with the ability to easily purchase premium flavo
 |22| Store Owner | Edit/Update a Product | Change details of a product including description and price | -- | -- |
 |23| Store Owner | Delete a Product | Remove any discontinued products | -- | -- |
 
-### Review Products
+### Product Review and Screening
 
 | ID | As A |I want to be able to...|So that I can...|Story Points|MoSCoW|
 |----|------|-----------------------|----------------|------------|------|
 |24| Shopper | Leave a Product Review | Advise other shoppers on their purchases | -- | --|
 |25| Store Owner | Screen/delete reviewed comments | Allowing reviews to be monitored and deleted if needed | -- | -- |
 
-### Wishlist
+### Wishlist Functionality
 
 | ID | As A |I want to be able to...|So that I can...|Story Points|MoSCoW|
 |----|------|-----------------------|----------------|------------|------|
 |26| Shopper | Like products so they appear in my wish list | Easily find items later on to purchase them quickly | -- | --|
 |27| Shopper | Remove items from my wish list if I change my mind | Keep my wish list basket up to date with things I love | -- | -- |
 
-### Cocktails
+### Cocktails Review and Screening
 
 | ID | As A |I want to be able to...|So that I can...|Story Points|MoSCoW|
 |----|------|-----------------------|----------------|------------|------|
