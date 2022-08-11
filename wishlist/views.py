@@ -7,8 +7,6 @@ from django.contrib import messages
 from products.models import Product
 
 
-# Create your views here.
-
 def view_wishlist(request):
     '''
     A view to return the wishlist

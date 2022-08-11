@@ -1,3 +1,6 @@
+'''
+Imports relevant django packages
+'''
 from django.shortcuts import render
 
 
