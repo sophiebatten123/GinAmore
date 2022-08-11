@@ -87,5 +87,5 @@ form.addEventListener('submit', function(ev) {
     }).fail(function() {
         // Reloads the page in the case of an error to display the error message.
         location.reload();
-    })
+    });
 });

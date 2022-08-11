@@ -25,7 +25,6 @@
         {% for cocktail in cocktails %}
         <div class="col-sm-12 col-md-12 col-lg-6 mt-2 cocktail-background">
             <div class="row">
-                <hr>
                 <div class="col-4">
                     <a href="{% url 'cocktail_detail' cocktail.id %}">
                         <img class="cocktail-image mt-4" src="{{ cocktail.image.url }}" alt="{{cocktail.name}}">

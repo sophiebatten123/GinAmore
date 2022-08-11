@@ -9,19 +9,34 @@ body {
     font-family: 'Mali', cursive;
 }
 
-/*...........................................................Homepage */
+/*.........................................................General Styling*/
 
-.main-images img {
+.btns a {
+    text-decoration: none;
+}
+
+.background_temp {
+    background-color: #1c3a42;
+    height: 300px;
+    border: white 2px solid;
+}
+
+.background_temp_strip {
+    background-color: #1c3a42;
+    height: 75px;
+    border: white 2px solid;
+}
+
+.hide {
+    display: none;
+}
+
+.full-width {
     height: auto;
     width: 100%;
 }
 
-.message-container {
-    position: fixed;
-    top: 75px;
-    right: 10px;
-    z-index: 99999999999999;
-}
+/*..........................................................Toasts*/
 
 .custom-toast {
     overflow: visible;
@@ -29,10 +44,6 @@ body {
 
 .toast-capper {
     height: 2px;
-}
-
-.btns a {
-    text-decoration: none;
 }
 
 /*.......................................................Navigation Bar and Header*/
@@ -53,7 +64,20 @@ body {
     float: right;
 }
 
-/*....................................................Homepage Content*/
+.bg_nav_color {
+    background-color: #1c3a42;
+}
+
+.bg_delivery_color {
+    background-color: #dd9186b5;
+}
+
+/*...........................................................Homepage */
+
+.main-images img {
+    height: auto;
+    width: 100%;
+}
 
 #main_image_gin img{
     height: 180px;
@@ -61,26 +85,11 @@ body {
     border-radius: 50%;
 }
 
-/*........................................................Temporary Formatting*/
-
-.background_temp {
-    background-color: #1c3a42;
-    height: 300px;
-    border: white 2px solid;
-}
-
-.background_temp_strip {
-    background-color: #1c3a42;
-    height: 75px;
-    border: white 2px solid;
-}
-
-.bg_nav_color {
-    background-color: #1c3a42;
-}
-
-.bg_delivery_color {
-    background-color: #dd9186b5;
+.message-container {
+    position: fixed;
+    top: 75px;
+    right: 10px;
+    z-index: 99999999999999;
 }
 
 .bg-homepage-buttons {
@@ -92,16 +101,11 @@ body {
     text-decoration: none;
     font-size: 20px;
 }
-/*.....................................................Home page */
 
 .pink-background {
     background-color: #dd9186b5;
     border: #dd9186b5 solid 2px;
     padding: 50px;
-}
-
-.hide {
-    display: none;
 }
 
 .cocktail-main-images {
@@ -131,11 +135,6 @@ body {
     text-decoration: none;
 }
 
-.full-width {
-    height: auto;
-    width: 100%;
-}
-
 .main-container {
     position: relative;
     justify-content: center;
@@ -157,7 +156,7 @@ body {
     background-image: url('../images/bartender2.jpg');
 }
 
-/*.....................................................Gin Shop Cards */
+/*.....................................................All Products Page */
 
 .gin_image_cards_container {
     height: 200px;
@@ -176,7 +175,7 @@ body {
     justify-content: right;
 }
 
-/*......................................................Product Form */
+/*......................................................Product Detail Page */
 
 .btn-file {
     position: relative;
@@ -205,84 +204,6 @@ body {
     text-decoration: none;
 }
 
-.heart {
-    color: #1c3a42;
-}
-
-.btn-like {
-    border: none;
-    background-color: white;
-}
-
-/*........................................................Footer*/
-
-.footer_background {
-    background-color: #1c3a42;
-    height: 230px;
-    border: white 2px solid;
-}
-
-.footer-text {
-    color: #b5b7bd;
-}
-
-.icons ul {
-    padding: 0;
-}
-
-.icons li {
-    display: inline;
-    padding: 10px;
-}
-
-.icons li i {
-    color: white;
-    font-size: 20px;
-}
-
-.footer-list a {
-    display: inline-block;
-    text-decoration: none;
-}
-
-.footer-list a:hover {
-    font-size: 18px;
-    color: white;
-}
-
-.footer-list li {
-    list-style: none;
-}
-
-.footer-list {
-    padding-left: 0;
-}
-
-/*................................................Mailchimp */
-
-#mc_embed_signup {
-    background: #fff;
-    clear: left;
-    font: 14px Helvetica, Arial, sans-serif;
-    width: 600px;
-}
-
-#mce-EMAIL {
-    width: 100%;
-}
-
-#sign_up_image {
-    height: 300px;
-    border: solid white 2px;
-    overflow: hidden;
-    opacity: 0.75;
-    background-size: cover;
-    background-position: center;
-    background-image: url('../images/gin_signup.jpg');
-}
-
-/*........................................................Product Details*/
-
 .gin_image_container {
     height: 450px;
     text-align: center;
@@ -307,6 +228,35 @@ body {
     text-decoration: none;
 }
 
+.extra-product-info a {
+    text-decoration: none;
+    color: #1c3a42;
+}
+
+.product-reccommended-images {
+    height: 250px;
+}
+
+.product-reccommended-images img{
+    opacity: 0.75;
+    width:  100px;
+    height: 250px;
+    object-fit: cover;
+    border: solid 2px white;
+}
+
+.background_temp_reccommended {
+    background-color: white;
+    height: 275px;
+}
+
+.background_header_reccommended {
+    background-color: #1c3a42;
+    border: white 2px solid;
+}
+
+/*.....................................................Wishlist*/
+
 .wishlist_left {
     float: left;
 }
@@ -315,36 +265,25 @@ body {
     float: right;
 }
 
-.extra-product-info a {
-    text-decoration: none;
+.heart {
     color: #1c3a42;
 }
 
-/*....................................................Review Background */
+.btn-like {
+    border: none;
+    background-color: white;
+}
+
+.no-items {
+    height: 250px;
+}
+
+/*.....................................................Reviews*/
 
 .review-background {
     height: auto;
     background-color: #1c3a421c;
     border-radius: 5px;
-}
-
-/*......................................................Checkout*/
-
-.checkout-section {
-    background-color: #e4afa745;
-    border: white solid 2px;
-}
-
-.cocktail-checkout-images {
-    height: 200px;
-}
-
-.cocktail-checkout-images img{
-    opacity: 0.75;
-    width:  100px;
-    height: 200px;
-    object-fit: cover;
-    border: solid 2px white;
 }
 
 /*......................................................Delivery Information*/
@@ -374,13 +313,7 @@ body {
     background-color: #1c3a421c;
 }
 
-/*...............................................................wishlist*/
-
-.no-items {
-    height: 250px;
-}
-
-/*..............................................................cocktails*/
+/*..............................................................Cocktails Page*/
 
 .white-background {
     background-color: #dd9186b5;
@@ -484,36 +417,7 @@ body {
     display: block;
 }
 
-/*................................................Product Detail*/
-
-.product-reccommended-images {
-    height: 250px;
-}
-
-.product-reccommended-images img{
-    opacity: 0.75;
-    width:  100px;
-    height: 250px;
-    object-fit: cover;
-    border: solid 2px white;
-}
-
-.background_temp_reccommended {
-    background-color: white;
-    height: 275px;
-}
-
-.background_strip_reccommended {
-    background-color: #e7b1a9;
-    height: 10px;
-}
-
-.background_header_reccommended {
-    background-color: #1c3a42;
-    border: white 2px solid;
-}
-
-/*.....................................................Our Story*/
+/*.....................................................Our Story Page*/
 
 .our-gin-image {
     height: 500px;
@@ -569,7 +473,7 @@ body {
     right: 220px;
 }
 
-/*......................................................Contact Us*/
+/*......................................................Contact Us Page*/
 
 .contact-image img{
     border-radius: 5px;
@@ -588,3 +492,91 @@ body {
     color: #1c3a42;
     font-size: 20px;
 }
+
+/*......................................................Checkout Page*/
+
+.checkout-section {
+    background-color: #e4afa745;
+    border: white solid 2px;
+}
+
+.cocktail-checkout-images {
+    height: 200px;
+}
+
+.cocktail-checkout-images img{
+    opacity: 0.75;
+    width:  100px;
+    height: 200px;
+    object-fit: cover;
+    border: solid 2px white;
+}
+
+/*................................................Mailchimp */
+
+#mc_embed_signup {
+    background: #fff;
+    clear: left;
+    font: 14px Helvetica, Arial, sans-serif;
+    width: 600px;
+}
+
+#mce-EMAIL {
+    width: 100%;
+}
+
+#sign_up_image {
+    height: 300px;
+    border: solid white 2px;
+    overflow: hidden;
+    opacity: 0.75;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../images/gin_signup.jpg');
+}
+
+/*........................................................Footer*/
+
+.footer_background {
+    background-color: #1c3a42;
+    height: 230px;
+    border: white 2px solid;
+}
+
+.footer-text {
+    color: #b5b7bd;
+}
+
+.icons ul {
+    padding: 0;
+}
+
+.icons li {
+    display: inline;
+    padding: 10px;
+}
+
+.icons li i {
+    color: white;
+    font-size: 20px;
+}
+
+.footer-list a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.footer-list a:hover {
+    font-size: 18px;
+    color: white;
+}
+
+.footer-list li {
+    list-style: none;
+}
+
+.footer-list {
+    padding-left: 0;
+}
+
+/*.................................................Media Queries */
