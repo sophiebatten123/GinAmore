@@ -512,3 +512,79 @@ body {
     background-color: #1c3a42;
     border: white 2px solid;
 }
+
+/*.....................................................Our Story*/
+
+.our-gin-image {
+    height: 500px;
+    border: solid white 2px;
+    overflow: hidden;
+    opacity: 0.75;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../images/our-gin-image.jpg');
+    position: relative;
+}
+
+.our-cocktail-image {
+    height: 500px;
+    border: solid white 2px;
+    overflow: hidden;
+    opacity: 0.75;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../images/our-cocktail-image.jpg');
+    position: relative;
+}
+
+.our-gin-btns {
+    text-decoration: none;
+    background-color: white;
+    border: solid #e7b1a9 2px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 100px;
+    right: 300px;
+}
+
+.our-gin-label {
+    position: absolute;
+    bottom: 200px;
+    right: 290px;
+}
+
+.our-cocktail-btns {
+    text-decoration: none;
+    background-color: white;
+    border: solid #e7b1a9 2px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 100px;
+    right: 250px;
+}
+
+.our-cocktail-label {
+    position: absolute;
+    bottom: 200px;
+    right: 220px;
+}
+
+/*......................................................Contact Us*/
+
+.contact-image img{
+    border-radius: 5px;
+}
+
+.contact-icons ul {
+    padding: 0;
+}
+
+.contact-icons li {
+    display: inline;
+    padding: 10px;
+}
+
+.contact-icons li i {
+    color: #1c3a42;
+    font-size: 20px;
+}
