@@ -43,10 +43,71 @@ GinAmore aims to provide users with the ability to easily purchase premium flavo
 
 ## User Stories
 
-| User Story ID |As A/An|I want to be able to...|So that I can...|Story Points|MoSCoW|
-|---------------|-------|-----------------------|----------------|------------|------|
+### Viewing and Navigation
+
+| ID | As A |I want to be able to...|So that I can...|Story Points|MoSCoW|
+|----|------|-----------------------|----------------|------------|------|
 |1| Shopper | View a list of all Gin products | Select which ones I want to purchase | -- | --|
 |2| Shopper | View individual Gin details | Identify the price, description and product rating of each product | -- | -- |
 |3| Shopper | Be able to quickly see the total cost of all my products | Avoid spending too much | -- | -- |
 |4| Shopper | Identify any deals and special offers quickly on the page | Take advantage of special offers | -- | -- |
-|5| Site User | Easily register for an account | View my personal profile information | -- | -- |
+
+### Registration and Verification
+
+| ID | As A |I want to be able to...|So that I can...|Story Points|MoSCoW|
+|----|------|-----------------------|----------------|------------|------|
+|5| Site User | Easily register for an account | View my personal profile information | -- | --|
+|6| Site User | Easily login/logout of my account | Access my personal account | -- | -- |
+|7| Site User | Easily recover my password if I forget it | Recover access to my account | -- | -- |
+|8| Site User | Be able to personalise my user profile | Verify my account is set up | -- | -- |
+|9| Site User | Identify any deals and special offers quickly on the page | View my basket, order information and payment information | -- | -- |
+
+### Sorting and Searching
+
+| ID | As A |I want to be able to...|So that I can...|Story Points|MoSCoW|
+|----|------|-----------------------|----------------|------------|------|
+|10| Shopper | Be able to sort through the Gin products | Easily see the best rated, best priced items | -- | --|
+|11| Shopper | Be able to sort based on the Gin category | Sort Gin items based on the type of Gin I prefer | -- | -- |
+|12| Shopper | Search a product by name and description | Find a specific Gin I would like to purchase | -- | -- |
+|13| Shopper | Easily see what I have searched for and the results | Quickly decide which product I would like to purchase | -- | -- |
+
+### Purchasing and Checkout
+
+| ID | As A |I want to be able to...|So that I can...|Story Points|MoSCoW|
+|----|------|-----------------------|----------------|------------|------|
+|14| Shopper | View items in my bag to be purchased | Check total cost and the items that I will be purchasing | -- | --|
+|15| Shopper | Receive an email to verify my order | Feel more secure that my payment has gone through | -- | -- |
+|16| Shopper | View an order confirmation when my order is complete | Check my order is correct without mistakes | -- | -- |
+|17| Shopper | Feel my personal payment information is protected | Confidently prodive payment details to purchase an item | -- | -- |
+|18| Shopper | Easily enter my payment information | Check out quickly without hassle | -- | -- |
+|19| Shopper | Adjust the quantity of items in my bag | Easily adjust the quantity for my own preference | -- | -- |
+|20| Shopper | Easily select the quantity of the product I want | I am able to get the amount of Gin I require | -- | -- |
+
+### Admin and Store Management
+
+| ID | As A |I want to be able to...|So that I can...|Story Points|MoSCoW|
+|----|------|-----------------------|----------------|------------|------|
+|21| Store Owner | Add a Product | Add new products to my store | -- | --|
+|22| Store Owner | Edit/Update a Product | Change details of a product including description and price | -- | -- |
+|23| Store Owner | Delete a Product | Remove any discontinued products | -- | -- |
+
+### Review Products
+
+| ID | As A |I want to be able to...|So that I can...|Story Points|MoSCoW|
+|----|------|-----------------------|----------------|------------|------|
+|24| Shopper | Leave a Product Review | Advise other shoppers on their purchases | -- | --|
+|25| Store Owner | Screen/delete reviewed comments | Allowing reviews to be monitored and deleted if needed | -- | -- |
+
+### Wishlist
+
+| ID | As A |I want to be able to...|So that I can...|Story Points|MoSCoW|
+|----|------|-----------------------|----------------|------------|------|
+|26| Shopper | Like products so they appear in my wish list | Easily find items later on to purchase them quickly | -- | --|
+|27| Shopper | Remove items from my wish list if I change my mind | Keep my wish list basket up to date with things I love | -- | -- |
+
+### Cocktails
+
+| ID | As A |I want to be able to...|So that I can...|Story Points|MoSCoW|
+|----|------|-----------------------|----------------|------------|------|
+|28| Site User | Leave comments on cocktail recipes  | Communicate with other site users and leave reviews and advice on recipes | -- | --|
+|29| Site Admin | Screen/delete comments  | Ensure that they are appropriate | -- | -- |
