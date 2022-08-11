@@ -484,3 +484,23 @@ body {
 .brunch:hover > .hide {
     display: block;
 }
+
+/*................................................Product Detail*/
+
+.product-reccommended-images {
+    height: 250px;
+}
+
+.product-reccommended-images img{
+    opacity: 0.75;
+    width:  100px;
+    height: 250px;
+    object-fit: cover;
+    border: solid 2px white;
+}
+
+.background_temp_reccommended {
+    background-color: #e7b1a9;
+    height: 350px;
+    border: white 2px solid;
+}

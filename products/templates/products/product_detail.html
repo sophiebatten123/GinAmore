@@ -9,10 +9,11 @@
     <div class="row mt-4">
         <div class="col-sm-12 col-md-6">
             {% if product.image %}
-            <div class="col gin_image_container">
+            <div class="col gin_image_container mb-4">
                 <a href="{{ product.image.url }}" target="_blank">
                     <img class="gin_image" src="{{product.image.url}}" alt="Image of Gin">
                 </a>
+                <p class="mt-2"><i class="fa-solid fa-magnifying-glass"></i> Click to enlarge</p>
             </div>
             {% else %}
             <div class="col">
@@ -64,7 +65,7 @@
             <hr/>
             <div class="row">
                 <div class="col-6 extra-product-info">
-                    <a href="#"><p>Delivery Information</p></a>
+                    <a href="#delivery"><p>Delivery Information</p></a>
                     <a href="{% url 'products' %}?category={{ product.category }}">
                         <p class="mt-2">
                             Category: <span class="gin-category">{{ product.category.friendly_name }}</span>
@@ -132,13 +133,25 @@
     </div>
 </div>
 <div class="container-fluid">
-    <div class="row mt-4">
-        <div class="col-12 background_temp">
-            <h4 class="text-center text-light pt-2">More from GinAmore:</h4>
+    <div class="row mt-4 mb-4">
+        <div class="col-12 background_temp_reccommended">
+            <h4 class="text-center text-light pt-2">Similar Products:</h4>
+            <div class="row">
+                {% for item in products %}
+                    {% if item.category == product.category and item != product %}
+                        <div class="col-2 product-reccommended-images">
+                            <a href="{% url 'product_detail' item.id %}">
+                                <img src="{{item.image.url}}" class="gin_image d-block w-100" alt="{{ item.name }}" class="main-cocktail-pictures">
+                                <p class="text-dark white-background cocktail-name-main p-2">{{ item.name }} <i class="fa-solid fa-arrow-right"></i></p>
+                            </a>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
         </div>
     </div>
 </div>
-<div class="container-fluid">
+<div class="container-fluid" id="delivery">
     <div class="row mt-4 mb-4">
         <div class="col-2"></div>
         <div class="col-8">
