@@ -138,6 +138,10 @@ Although the wireframes for site users and site admin are similar there are a fe
 
 [Cocktail Detail Page](static/images/cocktail_detail_desktop.PNG)
 
+[Wishlist](static/images/wishlist_desktop.PNG)
+
+[Shopping Bag](static/images/bag_desktop.PNG)
+
 ## Desktop Wire Frames (Site Admin)
 
 [Gin Page](static/images/gin_admin_desktop.PNG)
