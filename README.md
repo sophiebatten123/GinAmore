@@ -120,6 +120,26 @@ The colours within the site were carefully selected to mirror the premium produc
 
 # Wire Frames
 
-## Desktop Wire Frames
+Although the wireframes for site users and site admin are similar there are a few subtle differences between some pages to help admin modify, add and delete products and cocktails. Extra wireframes were created to account for these differences below:
+
+## Desktop Wire Frames (Site Users)
 
 [Homepage](static/images/homepage_desktop.PNG)
+
+[Our Story](static/images/aboutus_desktop.PNG)
+
+[Contact Us](static/images/contact_desktop.PNG)
+
+[Gin Page](static/images/gin_desktop.PNG)
+
+[Gin Detail Page](static/images/gin_detail_desktop.PNG)
+
+[Cocktail Page](static/images/cocktail_desktop.PNG)
+
+## Desktop Wire Frames (Site Admin)
+
+[Gin Page](static/images/gin_admin_desktop.PNG)
+
+[Gin Detail Page](static/images/gin_detail_admin_desktop.PNG)
+
+[Cocktail Page](static/images/cocktails_admin_desktop.PNG)
