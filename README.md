@@ -117,3 +117,12 @@ GinAmore aims to provide users with the ability to easily purchase premium flavo
 The colours within the site were carefully selected to mirror the premium products sold at GinAmore. The dark regal blue contrasts against the light pink making elements of importance stand out on the page. These colours were initially selected from the sites main banner image using DEV tools, allowing for all colours within the page to compliment eachother nicely.
 
 ![Colour-Scheme](static/images/color-scheme.PNG)
+
+# Wire Frames
+
+## Desktop Wire Frames
+
+<details>
+  <summary>Homepage</summary>
+  <img src="static/images/hompage_desktop.PNG" alt="Desktop Homepage Wireframe" width="500"> 
+</details>
