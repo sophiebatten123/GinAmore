@@ -122,7 +122,4 @@ The colours within the site were carefully selected to mirror the premium produc
 
 ## Desktop Wire Frames
 
-<details>
-  <summary>Homepage</summary>
-  <img src="static/images/hompage_desktop.PNG" alt="Desktop Homepage Wireframe" width="500"> 
-</details>
+[Homepage](static/images/homepage_desktop.PNG)
