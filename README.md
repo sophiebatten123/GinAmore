@@ -136,6 +136,8 @@ Although the wireframes for site users and site admin are similar there are a fe
 
 [Cocktail Page](static/images/cocktail_desktop.PNG)
 
+[Cocktail Detail Page](static/images/cocktail_detail_desktop.PNG)
+
 ## Desktop Wire Frames (Site Admin)
 
 [Gin Page](static/images/gin_admin_desktop.PNG)
@@ -143,3 +145,5 @@ Although the wireframes for site users and site admin are similar there are a fe
 [Gin Detail Page](static/images/gin_detail_admin_desktop.PNG)
 
 [Cocktail Page](static/images/cocktails_admin_desktop.PNG)
+
+[Cocktail Detail Page](static/images/cocktail_detail_admin_desktop.PNG)
