@@ -36,6 +36,10 @@ body {
     width: 100%;
 }
 
+.pink-text {
+    color: #e7b1a9;
+}
+
 /*..........................................................Toasts*/
 
 .custom-toast {
@@ -512,6 +516,14 @@ body {
     height: 200px;
     object-fit: cover;
     border: solid 2px white;
+}
+
+.checkout a{
+    text-decoration: none;
+}
+
+.our-gin-btns-checkout {
+    background-color: #e7b1a9;
 }
 
 /*................................................Mailchimp */
