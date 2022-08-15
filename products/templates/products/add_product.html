@@ -5,9 +5,9 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
+<div class="container bg-light">
     <div class="row mt-4">
-        <div class="col-12">
+        <div class="col-12 mt-2 mb-2">
             <h3>Product Management: Add a Product</h3>
             <hr>
             <form method="POST" action="{% url 'add_product' %}" class="form" enctype="multipart/form-data">
@@ -20,11 +20,13 @@
                     {% endif %}
                 {% endfor %}
                 <div class="row">
-                    <div class="col-6">
-                        <a href="{% url 'products' %}" class="btn shop-btn text-light">Cancel</a>
+                    <div class="col-6 checkout">
+                        <a href="{% url 'products' %}">
+                            <p class="our-gin-btns-checkout text-light text-center">Cancel</p>
+                        </a>
                     </div>
                     <div class="col-6">
-                        <button class="btn shop-btn text-light" type="submit">Add product</button>
+                        <button class="our-gin-btns-checkout text-light" type="submit">Add product</button>
                     </div>
                 </div>
             </form>
