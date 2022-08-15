@@ -9,38 +9,42 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
+<div class="container bg-light">
     <div class="row mt-4">
-        <div class="col-12">
-            <h3>My Profile</h3>
-            <hr>
+        <div class="col-12 mt-2 mb-2">
+            <h3>Your previous orders:</h3>
         </div>
     </div>
     <div class="row">
-        <div class="col-6">
-            <p>Delivery Details:</p>
-            <form action="{% url 'profile' %}" method="POST" id="profile-update-form">
-                {% csrf_token %}
-                {{ form|crispy }}
-                <button class="btn">Update Delivery Information</button>
-            </form>
-        </div>
-        <div class="col-6">
-            <p>Your previous orders:</p>
+        <div class="col-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Order Number</th>
+                        <th>Order Date</th>
+                        <th>Order Total</th>
+                        <th> </th>
+                    </tr>
+                </thead>
             {% for order in orders %}
-                <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}">
-                    {{ order.order_number|truncatechars:6 }}
-                </a>
-                <p>Order Date: {{ order.date }}</p>
-                <ul class="list-unstyled">
-                    {% for item in order.lineitems.all %}
-                        <li>
-                            {{ item.product.name }} x {{ item.quantity }}
-                        </li>
-                    {% endfor %}
-                </ul>
-                <p>Order Total: {{ order.grand_total }}</p>
+            <tr class="checkout">
+                <td>
+                    <p>{{ order.order_number|truncatechars:10 }}</p>
+                </td>
+                <td>
+                    <p>{{ order.date }}</p>
+                </td>
+                <td>
+                    <p>£{{ order.grand_total }}</p>
+                </td>
+                <td>
+                    <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}">
+                        <p class="pink-text">View Details <i class="fa-solid fa-arrow-right"></i></p>
+                    </a>
+                </td>
+            </tr>
             {% endfor %}
+            </table>
         </div>
     </div>
 </div>

@@ -54,6 +54,20 @@
         </div>
         <div class="col-xs-8 col-sm-8 col-md-3 text-center p-0 m-0">
           <ul class="list-inline mb-0">
+            {% if request.user.is_superuser %}
+              <li class="list-inline-item dropdown">
+                <a href="" class="d-inline p-2 text-dark nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  <div class="text-center text-light">
+                    <div><i class="fa-solid fa-gears"></i></div>
+                    <p class="my-0 navbar-text">Site Admin</p>
+                  </div>
+                </a>
+                <div class="dropdown-menu">
+                  <a href="{% url 'add_product' %}" class="dropdown-item">Add a Product</a>
+                  <a href="#" class="dropdown-item">Add a Cocktail</a>
+                </div>
+              </li>
+            {% endif %}
             <li class="list-inline-item dropdown">
               <a href="" class="d-inline p-2 text-dark nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 <div class="text-center text-light">
@@ -63,11 +77,8 @@
               </a>
               <div class="dropdown-menu">
                 {% if request.user.is_authenticated %}
-                  {% if request.user.is_superuser %}
-                    <a href="{% url 'add_product' %}" class="dropdown-item">Shop Management</a>
-                  {% endif %}
-                  <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                  <a href="{% url 'view_wishlist' %}" class="dropdown-item">Wishlist</a>
+                  <a href="{% url 'profile' %}" class="dropdown-item">Previous Orders</a>
+                  <a href="{% url 'view_wishlist' %}" class="dropdown-item">Your Wishlist</a>
                   <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                 {% else %}
                   <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>

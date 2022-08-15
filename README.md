@@ -142,6 +142,10 @@ Although the wireframes for site users and site admin are similar there are a fe
 
 [Shopping Bag](static/images/bag_desktop.PNG)
 
+[Checkout Page](static/images/checkout_desktop.PNG)
+
+[Checkout Success Page](static/images/checkout_success_desktop.PNG)
+
 ## Desktop Wire Frames (Site Admin)
 
 [Gin Page](static/images/gin_admin_desktop.PNG)

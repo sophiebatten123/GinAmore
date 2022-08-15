@@ -11,12 +11,15 @@
 {% block content %}
 <div class="container bg-light">
     <div class="row mt-4 pt-2">
-        <div class="col-8">
+        <div class="col-6">
             <h3>Order Confirmation</h3>
             <p>Checkout Number: <span class="pink-text">{{ order.order_number }}</span></p>
         </div>
-        <div class="col-4 mt-4">
+        <div class="col-3 mt-4">
             <p>Order Total: <strong>£{{ order.grand_total }}</strong></p>
+        </div>
+        <div class="col-3 mt-4">
+            <p>{{ order.date }}</p>
         </div>
         <div class="col-12">
             <hr>
