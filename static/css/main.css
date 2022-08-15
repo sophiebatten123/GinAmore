@@ -72,6 +72,10 @@ body {
     background-color: #dd9186b5;
 }
 
+.small-search-show {
+    display: none;
+}
+
 /*...........................................................Homepage */
 
 .main-images img {
@@ -537,7 +541,7 @@ body {
 
 .footer_background {
     background-color: #1c3a42;
-    height: 230px;
+    height: auto;
     border: white 2px solid;
 }
 
@@ -578,3 +582,16 @@ body {
 }
 
 /*.................................................Media Queries */
+
+@media(max-width:780px) {
+    .small-search-hide {
+        display: none;
+    }
+    .small-search-show {
+        display: block;
+        float: right;
+    }
+    .form-control {
+        width: auto;
+    }
+}

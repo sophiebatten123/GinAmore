@@ -48,11 +48,6 @@
                 our fruity, peppery aperitif.A blaze of big botanicals busting 
                 with character and spicy Szechuan pepper that packs a punch on 
                 the palate. Perfect with our fruity, peppery aperitif.</p>
-            <p>A blaze of big botanicals busting with character and spicy 
-                Szechuan pepper that packs a punch on the palate. Perfect with
-                our fruity, peppery aperitif.A blaze of big botanicals busting 
-                with character and spicy Szechuan pepper that packs a punch on 
-                the palate. Perfect with our fruity, peppery aperitif.</p>
         </div>
     </div>
 </div>
@@ -66,7 +61,7 @@
 <div class="container-fluid">
     <div class="row">
     {% for product in products %}
-        <div class="col-3 p-0 cocktail-main-images {% if forloop.counter >= 5 %}hide{% endif %}" id="slide{{ forloop.counter }}">
+        <div class="col-sm-6 col-md-3 p-0 cocktail-main-images {% if forloop.counter >= 5 %}hide{% endif %}" id="slide{{ forloop.counter }}">
             <a href="{% url 'product_detail' product.id %}">
                 <img src="{{ product.image.url }}" class="d-block w-100 main-cocktail-pictures" alt="{{ product.name }}">
                 <p class="text-light white-background cocktail-name-main p-2"><strong>{{ product.name }} <i class="fa-solid fa-arrow-right"></i></strong></p>
@@ -82,7 +77,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-4 cocktail-headings p-0">
+        <div class="col-sm-12 col-md-4 cocktail-headings p-0">
             <a href="{% url 'cocktails' %}?category=summer_favourites">
                 <div class="summer">
                     <p class="mt-4 text-light ml-2 hide">A blaze of big botanicals busting with character and spicy Szechuan pepper that packs a punch on the palate. Perfect with our fruity, peppery aperitif.</p>
@@ -90,7 +85,7 @@
                 </div>
             </a>
         </div>
-        <div class="col-4 cocktail-headings p-0">
+        <div class="col-sm-12 col-md-4 cocktail-headings p-0">
             <a href="{% url 'cocktails' %}?category=winter_warmers">
                 <div class="winter">
                     <p class="mt-4 text-light ml-2 hide">A blaze of big botanicals busting with character and spicy Szechuan pepper that packs a punch on the palate. Perfect with our fruity, peppery aperitif.</p>
@@ -98,7 +93,7 @@
                 </div>
             </a>
         </div>
-        <div class="col-4 cocktail-headings p-0">
+        <div class="col-sm-12 col-md-4 cocktail-headings p-0">
             <a href="{% url 'cocktails' %}?category=boozy_brunches">
                 <div class="brunch">
                     <p class="mt-4 text-light ml-2 hide">A blaze of big botanicals busting with character and spicy Szechuan pepper that packs a punch on the palate. Perfect with our fruity, peppery aperitif.</p>
@@ -115,13 +110,13 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-6 our-gin-image">
+        <div class="col-sm-12 col-md-6 our-gin-image">
             <h2 class="text-light our-gin-label">Our Gins</h2>
             <a href="{% url 'products' %}">
                 <p class="our-gin-btns text-dark pt-3 pb-3 pl-4 pr-4">Shop Now</p>
             </a>
         </div>
-        <div class="col-6 our-cocktail-image">
+        <div class="col-sm-12 col-md-6 our-cocktail-image">
             <h2 class="text-light our-cocktail-label">Our Cocktails</h2>
             <a href="{% url 'cocktails' %}">
                 <p class="our-cocktail-btns text-dark pt-3 pb-3 pl-4 pr-4">Explore Now</p>
