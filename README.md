@@ -67,7 +67,7 @@ GinAmore aims to provide users with the ability to easily purchase premium flavo
 
 | ID | As A |I want to be able to...|So that I can...|Story Points|MoSCoW|
 |----|------|-----------------------|----------------|------------|------|
-|10| Shopper | Sort through all Gin products | Easily see the best rated, best priced items | 5 | S |
+|10| Shopper | Sort through all Gin products | Easily see the best rated, best priced items | 3 | S |
 |11| Shopper | Sort based on the Gin category | Sort Gin items based on the type of Gin I prefer | 3 | S |
 |12| Shopper | Search a product by name and description | Find a specific Gin I would like to purchase | 3 | Mo |
 |13| Shopper |  See search results quickly and easily  | Quickly decide which product I would like to purchase | 2 | Mo |
@@ -77,8 +77,8 @@ GinAmore aims to provide users with the ability to easily purchase premium flavo
 | ID | As A |I want to be able to...|So that I can...|Story Points|MoSCoW|
 |----|------|-----------------------|----------------|------------|------|
 |14| Shopper | View items in my bag to be purchased | Check total cost and the items that I will be purchasing | 2 | Mo |
-|15| Shopper | Receive an email to verify my order | Feel more secure that my payment has gone through | 5 | Co |
-|16| Shopper | View an order confirmation when my order is complete | Check my order is correct without mistakes | 3 | Co |
+|15| Shopper | Receive an email to verify my order | Feel more secure that my payment has gone through | 3 | Co |
+|16| Shopper | View an order confirmation when my order is complete | Check my order is correct without mistakes | 2 | Co |
 |17| Shopper | Securely provide payment details | Confidently provide payment details to purchase an item | 5 | Mo |
 |18| Shopper | Enter payment information quickly  | Check out quickly without hassle | 3 | Mo |
 |19| Shopper | Adjust the quantity of items in my bag | Easily adjust the quantity for my own preference | 2 | S |
