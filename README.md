@@ -57,7 +57,7 @@ GinAmore aims to provide users with the ability to easily purchase premium flavo
 |----|------|-----------------------|----------------|------------|------|
 |4| Site User | Easily register for an account | View my personal profile information | 3 | Mo |
 |5| Site User | Easily login/logout of my account | Access my personal account | 3 | Mo |
-|6| Site User | Easily recover my password if I forget it | Recover access to my account | 2 | Mo |
+|6| Site User | Easily recover my password if I forget it | Recover access to my account | 2 | S |
 |7| Site User | Receive an email to verify I have created an account | Verify my account is set up. | 2 | S |
 |8| Site User | Register/login to an account via social media | Login to my account quicker | 3 | Co |
 |9| Site User | Confirm I am of legal age to drink | Use the site effectively and purchase items | 3 | Mo |
@@ -67,8 +67,8 @@ GinAmore aims to provide users with the ability to easily purchase premium flavo
 
 | ID | As A |I want to be able to...|So that I can...|Story Points|MoSCoW|
 |----|------|-----------------------|----------------|------------|------|
-|10| Shopper | Sort through all Gin products | Easily see the best rated, best priced items | 3 | Mo |
-|11| Shopper | Sort based on the Gin category | Sort Gin items based on the type of Gin I prefer | 3 | Mo |
+|10| Shopper | Sort through all Gin products | Easily see the best rated, best priced items | 5 | S |
+|11| Shopper | Sort based on the Gin category | Sort Gin items based on the type of Gin I prefer | 3 | S |
 |12| Shopper | Search a product by name and description | Find a specific Gin I would like to purchase | 3 | Mo |
 |13| Shopper |  See search results quickly and easily  | Quickly decide which product I would like to purchase | 2 | Mo |
 
@@ -79,17 +79,17 @@ GinAmore aims to provide users with the ability to easily purchase premium flavo
 |14| Shopper | View items in my bag to be purchased | Check total cost and the items that I will be purchasing | 2 | Mo |
 |15| Shopper | Receive an email to verify my order | Feel more secure that my payment has gone through | 5 | S |
 |16| Shopper | View an order confirmation when my order is complete | Check my order is correct without mistakes | 3 | S |
-|17| Shopper | Securely provide payment details | Confidently provide payment details to purchase an item | 3 | Mo |
-|18| Shopper | Enter payment information quickly  | Check out quickly without hassle | 3 | 5 |
+|17| Shopper | Securely provide payment details | Confidently provide payment details to purchase an item | 5 | Mo |
+|18| Shopper | Enter payment information quickly  | Check out quickly without hassle | 3 | Mo |
 |19| Shopper | Adjust the quantity of items in my bag | Easily adjust the quantity for my own preference | 2 | S |
 |20| Shopper | Select the quantity of product to add to shopping bag | I am able to get the amount of Gin I require | 3 | Mo |
-|21| Shopper | Quickly see the total cost of all my products | Avoid spending too much | 1 | Mo |
+|21| Shopper | Quickly see the total cost of all my products | Avoid spending too much | 2 | S |
 
 ### EPIC: Admin and Store Management
 
 | ID | As A |I want to be able to...|So that I can...|Story Points|MoSCoW|
 |----|------|-----------------------|----------------|------------|------|
-|22| Store Owner | Easily Add Cocktail Recipes | Keep recipes interesting and new to users | 3 | Mo |
+|22| Store Owner | Easily Add Cocktail Recipes | Keep recipes interesting and new to users | 3 | S |
 |23| Store Owner | Edit/Update Cocktail Recipes | Ensure the cocktail information is up to date | 3 | S |
 |24| Store Owner | Add a Product | Add new products to my store | 3 | Mo |
 |25| Store Owner | Edit/Update a Product | Change details of a product including description and price | 3 | Mo |
@@ -102,7 +102,7 @@ GinAmore aims to provide users with the ability to easily purchase premium flavo
 |27| Shopper | Rate and Review Cocktail Recipes | Communicate with others on the site | 3 | Co |
 |28| Store Owner | Delete a Review |  Filter the content shown to customer | 1 | Co |
 |29| Shopper | Leave a Product Review | Advise other shoppers on their purchases | 3 | S |
-|30| Shopper | Submit cocktail recipe ideas | Contribute to the site and feel in contact with other cocktail makers | 5 | Co |
+|30| Shopper | Submit cocktail recipe ideas | Contribute to the site and feel in contact with other cocktail makers | 5 | W |
 
 ### EPIC: Wishlist Functionality
 
@@ -115,8 +115,8 @@ GinAmore aims to provide users with the ability to easily purchase premium flavo
 
 | ID | As A |I want to be able to...|So that I can...|Story Points|MoSCoW|
 |----|------|-----------------------|----------------|------------|------|
-|33| Shopper | View individual cocktail recipes | Learn how to make individual cocktails | 5 | Mo |
-|34| Shopper | View cocktail recipes based on their category | Choose which recipe I would like to make | 3 | Mo |
+|33| Shopper | View individual cocktail recipes | Learn how to make individual cocktails | 5 | S |
+|34| Shopper | View cocktail recipes based on their category | Choose which recipe I would like to make | 3 | S |
 
 # Agile Planning Enviroment
 
