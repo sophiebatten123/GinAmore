@@ -120,9 +120,15 @@ GinAmore aims to provide users with the ability to easily purchase premium flavo
 
 # Agile Planning Enviroment
 
+The story point allocation above is based upon a 100 point iteration. Using the MoSCoW method each user story was then been labeled as being either 'Must Have', 'Should Have', 'Could Have' or 'Wont Have', this then guided the focus and planning of the project. Note that the 'Wont Have' User Story below was excluded from the 60:20:20 MoSCoW allocation.
+
 ## Acceptance Criteria
 
-## Epics
+Each of the user stories was given acceptance criteria, an example of this can be seen below:
+ 
+![Acceptance Criteria]()
+
+This helped to ensure all tasks were completed before the user story was marked as done and ensured the website was fully functional. I also used the acceptance criteria to guide the manual testing that was performed throughout the project.
 
 # Colour Scheme
 
