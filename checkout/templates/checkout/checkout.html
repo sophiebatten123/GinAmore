@@ -11,8 +11,54 @@
 
 {% block content %}
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-6 pt-2">
+    <div class="row bg-light">
+        <div class="col-md-6 pt-2 small-search-show">
+            <h3 class="mt-2 mb-2">Order Summary:</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Name</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+            {% for item in bag_items %}
+            <tr>
+                <td style="width:25%">
+                    <a href="{% url 'product_detail' item.product.id %}">
+                        <img class="w-100 p-2" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                    </a>
+                </td>
+                <td style="width:35%">
+                    <p>{{ item.product.name }}</p>
+                </td>
+                <td style="width:15%">
+                    <p>{{ item.quantity }}</p>
+                </td>
+                <td style="width:25%">
+                    <p class="text-muted">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                </td>
+            </tr>
+            {% endfor %}
+            </table>
+            <div class="row mt-4 text-dark">
+                <div class="col-12">
+                    <hr>
+                </div>
+                <div class="col-9 mt-2">
+                    <p>Order Total:</p>
+                    <p>Delivery:</p>
+                    <p>Grand Total:</p>
+                </div>
+                <div class="col-3 mt-2">
+                    <p>£{{ total |floatformat:2 }}</p>
+                    <p>£{{ delivery |floatformat:2 }}</p>
+                    <p><strong>£{{ grand_total |floatformat:2 }}</strong></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 pt-2">
             <h3>Checkout</h3>
             <hr>
             <p>Please fill out the form below:</p>
@@ -61,7 +107,7 @@
                 </div>
             </form>
         </div>
-        <div class="col-6 pt-2">
+        <div class="col-md-6 pt-2 small-search-hide">
             <h3>Your Items</h3>
             <hr>
             {% for item in bag_items %}
@@ -113,6 +159,28 @@
                         </div>
                     {% endif %}
                 </div>
+            </div>
+        </div>
+        <div class="row mt-4 small-search-show">
+            <div class="col-12 p-2">
+                <div class="row pl-2">
+                    <div class="col-12">
+                        <h3>Room for more?</h3>
+                        <hr>
+                    </div>
+                </div>
+                {% if wishlist_products %}
+                    <div class="row">
+                        {% for item in wishlist_products %}
+                        <div class="col-4 p-0 cocktail-checkout-images {% if forloop.counter >= 4 %}hide{% endif %}" id="slide{{ forloop.counter }}">
+                            <a href="{% url 'product_detail' item.product.id %}">
+                                <img src="{{item.product.image.url}}" class="gin_image d-block w-100" alt="{{ item.product.name }}" class="main-cocktail-pictures">
+                                <p class="text-light white-background cocktail-name-main p-2"><strong>{{ item.product.name }} <i class="fa-solid fa-arrow-right"></i></strong></p>
+                            </a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
             </div>
         </div>
     </div>

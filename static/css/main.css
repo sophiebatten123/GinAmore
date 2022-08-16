@@ -607,7 +607,4 @@ body {
         display: block;
         float: right;
     }
-    .form-control {
-        width: auto;
-    }
 }
