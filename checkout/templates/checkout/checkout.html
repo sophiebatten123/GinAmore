@@ -42,7 +42,7 @@
             </tr>
             {% endfor %}
             </table>
-            <div class="row mt-4 text-dark">
+            <div class="row text-dark">
                 <div class="col-12">
                     <hr>
                 </div>
@@ -55,6 +55,9 @@
                     <p>£{{ total |floatformat:2 }}</p>
                     <p>£{{ delivery |floatformat:2 }}</p>
                     <p><strong>£{{ grand_total |floatformat:2 }}</strong></p>
+                </div>
+                <div class="col-12">
+                    <hr>
                 </div>
             </div>
         </div>

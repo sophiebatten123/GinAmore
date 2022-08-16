@@ -162,17 +162,17 @@ Although the wireframes for site users and site admin are similar there are a fe
 
 ## Mobile Wire Frames (Site Users)
 
-[Homepage](static/images/homepage_mobile.PNG)
+[Homepage](static/images/home_mobile.PNG)
 
-[Our Story](static/images/aboutus_mobile.PNG)
+[Our Story](static/images/about_us_mobile.PNG)
 
-[Contact Us](static/images/contact_mobile.PNG)
+[Contact Us](static/images/contact_us_mobile.PNG)
 
 [Gin Page](static/images/gin_mobile.PNG)
 
 [Gin Detail Page](static/images/gin_detail_mobile.PNG)
 
-[Cocktail Page](static/images/cocktail_mobile.PNG)
+[Cocktail Page](static/images/cocktails_mobile.PNG)
 
 [Cocktail Detail Page](static/images/cocktail_detail_mobile.PNG)
 
