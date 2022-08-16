@@ -43,80 +43,80 @@ GinAmore aims to provide users with the ability to easily purchase premium flavo
 
 ## User Stories
 
-### Viewing and Navigation (Products)
+### EPIC: Viewing and Navigation (Products)
 
 | ID | As A |I want to be able to...|So that I can...|Story Points|MoSCoW|
 |----|------|-----------------------|----------------|------------|------|
-|1| Shopper | View a list of all Gin products | Select which ones I want to purchase | M | --|
-|2| Shopper | View individual Gin details | Identify the price, description and product rating of each product | M | -- |
-|3| Shopper | Identify any deals and special offers quickly on the page | Take advantage of special offers | S | -- |
+|1| Shopper | View a list of all Gin products | Select which ones I want to purchase | 8 | Mo |
+|2| Shopper | View individual Gin details | Identify the price, description and product rating of each product | 5 | Mo |
+|3| Shopper | Identify any deals and special offers quickly on the page | Take advantage of special offers | 1 | S |
 
-### Registration and Verification
-
-| ID | As A |I want to be able to...|So that I can...|Story Points|MoSCoW|
-|----|------|-----------------------|----------------|------------|------|
-|4| Site User | Easily register for an account | View my personal profile information | M | --|
-|5| Site User | Easily login/logout of my account | Access my personal account | M | -- |
-|6| Site User | Easily recover my password if I forget it | Recover access to my account | M | -- |
-|7| Site User | Receive an email to verify I have created an account | Verify my account is set up. | S | -- |
-|8| Site User | Register/login to an account via social media | Login to my account quicker | C | -- |
-|9| Site User | Confirm I am of legal age to drink | Use the site effectively and purchase items | M | -- |
-
-
-### Sorting and Searching
+### EPIC: Registration and Verification
 
 | ID | As A |I want to be able to...|So that I can...|Story Points|MoSCoW|
 |----|------|-----------------------|----------------|------------|------|
-|10| Shopper | Sort through all Gin products | Easily see the best rated, best priced items | M | --|
-|11| Shopper | Sort based on the Gin category | Sort Gin items based on the type of Gin I prefer | M | -- |
-|12| Shopper | Search a product by name and description | Find a specific Gin I would like to purchase | M | -- |
-|13| Shopper |  See search results quickly and easily  | Quickly decide which product I would like to purchase | M | -- |
+|4| Site User | Easily register for an account | View my personal profile information | 3 | Mo |
+|5| Site User | Easily login/logout of my account | Access my personal account | 3 | Mo |
+|6| Site User | Easily recover my password if I forget it | Recover access to my account | 2 | Mo |
+|7| Site User | Receive an email to verify I have created an account | Verify my account is set up. | 2 | S |
+|8| Site User | Register/login to an account via social media | Login to my account quicker | 5 | Co |
+|9| Site User | Confirm I am of legal age to drink | Use the site effectively and purchase items | 3 | Mo |
 
-### Purchasing and Checkout
 
-| ID | As A |I want to be able to...|So that I can...|Story Points|MoSCoW|
-|----|------|-----------------------|----------------|------------|------|
-|14| Shopper | View items in my bag to be purchased | Check total cost and the items that I will be purchasing | M | --|
-|15| Shopper | Receive an email to verify my order | Feel more secure that my payment has gone through | S | -- |
-|16| Shopper | View an order confirmation when my order is complete | Check my order is correct without mistakes | S | -- |
-|17| Shopper | Securely provide payment details| Confidently provide payment details to purchase an item | M | -- |
-|18| Shopper | Enter payment information quickly  | Check out quickly without hassle | M | -- |
-|19| Shopper | Adjust the quantity of items in my bag | Easily adjust the quantity for my own preference | S | -- |
-|20| Shopper | Select the quantity of product to add to shopping bag | I am able to get the amount of Gin I require | M | -- |
-|21| Shopper | Quickly see the total cost of all my products | Avoid spending too much | m | -- |
-
-### Admin and Store Management
+### EPIC: Sorting and Searching
 
 | ID | As A |I want to be able to...|So that I can...|Story Points|MoSCoW|
 |----|------|-----------------------|----------------|------------|------|
-|22| Store Owner | Easily Add Cocktail Recipes | Keep recipes interesting and new to users | M | --|
-|23| Store Owner | Edit/Update Cocktail Recipes | Ensure the cocktail information is up to date | S | -- |
-|24| Store Owner | Add a Product | Add new products to my store | M | --|
-|25| Store Owner | Edit/Update a Product | Change details of a product including description and price | M | -- |
-|26| Store Owner | Delete a Product | Remove any discontinued products | M | -- |
+|10| Shopper | Sort through all Gin products | Easily see the best rated, best priced items | 5 | Mo |
+|11| Shopper | Sort based on the Gin category | Sort Gin items based on the type of Gin I prefer | 3 | Mo |
+|12| Shopper | Search a product by name and description | Find a specific Gin I would like to purchase | 3 | Mo |
+|13| Shopper |  See search results quickly and easily  | Quickly decide which product I would like to purchase | 2 | Mo |
 
-### Product and Cocktail Reviews
-
-| ID | As A |I want to be able to...|So that I can...|Story Points|MoSCoW|
-|----|------|-----------------------|----------------|------------|------|
-|27| Shopper | Rate and Review Cocktail Recipes | Communicate with others on the site | C | --|
-|28| Store Owner | Delete a Review |  Filter the content shown to customer | S | --|
-|29| Shopper | Leave a Product Review | Advise other shoppers on their purchases | S | --|
-|30| Shopper | Submit cocktail recipe ideas | Contribute to the site and feel in contact with other cocktail makers | C | --|
-
-### Wishlist Functionality
+### EPIC: Purchasing and Checkout
 
 | ID | As A |I want to be able to...|So that I can...|Story Points|MoSCoW|
 |----|------|-----------------------|----------------|------------|------|
-|31| Shopper | Add items to my wish list | Easily find items later on to purchase them quickly | C | --|
-|32| Shopper | Remove items from my wish list | Keep my wish list basket up to date with things I love | C | -- |
+|14| Shopper | View items in my bag to be purchased | Check total cost and the items that I will be purchasing | 2 | Mo |
+|15| Shopper | Receive an email to verify my order | Feel more secure that my payment has gone through | 5 | S |
+|16| Shopper | View an order confirmation when my order is complete | Check my order is correct without mistakes | 3 | S |
+|17| Shopper | Securely provide payment details | Confidently provide payment details to purchase an item | 5 | Mo |
+|18| Shopper | Enter payment information quickly  | Check out quickly without hassle | 3 | 5 |
+|19| Shopper | Adjust the quantity of items in my bag | Easily adjust the quantity for my own preference | 2 | S |
+|20| Shopper | Select the quantity of product to add to shopping bag | I am able to get the amount of Gin I require | 3 | Mo |
+|21| Shopper | Quickly see the total cost of all my products | Avoid spending too much | 2 | Mo |
 
-### Viewing and Navigation (Cocktails)
+### EPIC: Admin and Store Management
 
 | ID | As A |I want to be able to...|So that I can...|Story Points|MoSCoW|
 |----|------|-----------------------|----------------|------------|------|
-|33| Shopper | View individual cocktail recipes | Learn how to make individual cocktails | M | --|
-|34| Shopper | View cocktail recipes based on their category | Choose which recipe I would like to make | M | -- |
+|22| Store Owner | Easily Add Cocktail Recipes | Keep recipes interesting and new to users | 3 | Mo |
+|23| Store Owner | Edit/Update Cocktail Recipes | Ensure the cocktail information is up to date | 3 | S |
+|24| Store Owner | Add a Product | Add new products to my store | 3 | Mo |
+|25| Store Owner | Edit/Update a Product | Change details of a product including description and price | 3 | Mo |
+|26| Store Owner | Delete a Product | Remove any discontinued products | 2 | Mo |
+
+### EPIC: Product and Cocktail Reviews
+
+| ID | As A |I want to be able to...|So that I can...|Story Points|MoSCoW|
+|----|------|-----------------------|----------------|------------|------|
+|27| Shopper | Rate and Review Cocktail Recipes | Communicate with others on the site | 3 | Co |
+|28| Store Owner | Delete a Review |  Filter the content shown to customer | 1 | Co |
+|29| Shopper | Leave a Product Review | Advise other shoppers on their purchases | 3 | S |
+|30| Shopper | Submit cocktail recipe ideas | Contribute to the site and feel in contact with other cocktail makers | 8 | Co |
+
+### EPIC: Wishlist Functionality
+
+| ID | As A |I want to be able to...|So that I can...|Story Points|MoSCoW|
+|----|------|-----------------------|----------------|------------|------|
+|31| Shopper | Add items to my wish list | Easily find items later on to purchase them quickly | 5 | Co |
+|32| Shopper | Remove items from my wish list | Keep my wish list basket up to date with things I love | 2 | Co |
+
+### EPIC: Viewing and Navigation (Cocktails)
+
+| ID | As A |I want to be able to...|So that I can...|Story Points|MoSCoW|
+|----|------|-----------------------|----------------|------------|------|
+|33| Shopper | View individual cocktail recipes | Learn how to make individual cocktails | 5 | Mo |
+|34| Shopper | View cocktail recipes based on their category | Choose which recipe I would like to make | 3 | Mo |
 
 # Agile Planning Enviroment
 
