@@ -120,7 +120,7 @@ GinAmore aims to provide users with the ability to easily purchase premium flavo
 
 # Agile Planning Enviroment
 
-The story point allocation above is based upon a 100 point iteration. Using the MoSCoW method each user story was then been labeled as being either 'Must Have', 'Should Have', 'Could Have' or 'Wont Have', this then guided the focus and planning of the project. Note that the 'Wont Have' User Story below was excluded from the 60:20:20 MoSCoW allocation.
+The story point allocation above is based upon a 100 point iteration and uses the Fibonacci Sequence. Using the MoSCoW method each user story was then been labeled as being either 'Must Have', 'Should Have', 'Could Have' or 'Wont Have', based upon its importance to the project whilst following the 60:20:20 MoSCoW format. Note that the 'Wont Have' User Story below was excluded from the 60:20:20 MoSCoW allocation.
 
 ![Acceptance Criteria](static/images/agile-screenshot.PNG)
 
@@ -229,3 +229,61 @@ Although the wireframes for site users and site admin are similar there are a fe
 [Add Product Page](static/images/add_product_mobile.PNG)
 
 [Edit Product Page](static/images/edit_product_mobile.PNG)
+
+# Technologies Used
+
+***
+## Coding Languages
+***
+
+* [HTML]()
+  * HTML is the main language used accross the site and completes the structure of the webpages.
+
+* [CSS]()
+  * CSS is used throughout to create custom styling to elements accross the site.
+
+* [Javascript]()
+  * Javascript is used within the checkout template to help with form submission and to verify the users age.
+  * [JQuery]() is used within the following webpages:
+    * To update item quantity within the bag template and to update the form.
+    * To display success and fail messages within form submission.
+
+* [Python]()
+  * Python was used extensively on the site to handle back-end functionality.
+
+***
+## Frameworks and Platforms
+***
+
+* [Django]()
+  * The project was created using Django as a framework to help handle back-end functionality. 
+
+* [Github]()
+  * Github was the hosting site for the project code.
+
+* [Gitpod]()
+  * Gitpod has been used to commit and push code within the GitHub repository.
+
+* [Bootstrap]()
+  * Bootstrap was used within the site to help format the layout of elements and improve the responsiveness of the site.
+
+* [Google Fonts]()
+  * Google Fonts was used to select the typography type for the website and imported within CSS.
+
+* [AWS S3 Buckets]()
+  * AWS S3 Buckets provide storage for static and media files within the deployed Heroku site.
+
+* [Heroku]()
+  * Heroku was used as a platform to deploy the site.
+
+* [Google Chrome Developer Tools]()
+  * Google Chrome's Developer Tools were used to help debug errors within the code and to help style the site through the colour selector.
+
+* [Uizard Wireframe Generator]()
+  * Wireframes were created and generated through Uizard.
+
+* [Font Awesome]()
+  * Icons used accross the site were imported from Font Awesome.
+
+* [Am I Responsive]()
+  * The site Mock Up image was generated using Am I Responsive.
