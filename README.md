@@ -132,6 +132,8 @@ Each of the user stories was given acceptance criteria, an example of this can b
 
 This helped to ensure all tasks were completed before the user story was marked as done and ensured the website was fully functional. I also used the acceptance criteria to guide the manual testing that was performed throughout the project.
 
+# Site Map
+
 # Database Schema
 
 Entity Relationship Databases (ERD) were created to help develop this project. These were seperated into seperate database schemas: 'Gin Products' and 'Cocktail Products' due to them not being related to each other directly.
@@ -147,6 +149,10 @@ Entity Relationship Databases (ERD) were created to help develop this project. T
 # Marketing
 
 # Search Engine Optimization
+
+# Business Model
+
+The business model used for the GinAmore store would be a B2C (Business to Customer), this is due to the business selling products directly to the customer through the platform.
 
 # Colour Scheme
 
