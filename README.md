@@ -288,6 +288,8 @@ Although the wireframes for site users and site admin are similar there are a fe
 * [Am I Responsive]()
   * The site Mock Up image was generated using Am I Responsive.
 
+[Back to top ⇧](#ginamore)
+
 # Deployment
 
 ## Github
@@ -330,6 +332,14 @@ Deployment of my project was scaffolded using the Code Institute's [Django Blog 
     - Login to Heroku within the terminal window using **heroku login -i**
     - Run the following command in the terminal window: **heroku git:remote -a your_app_name_here**. By doing this you will link the app to your GidPod terminal.
     - After linking the app you can deploy new versions to Heroku by running the command **git push heroku main**.
+  
+[Back to top ⇧](#ginamore)
+
+***
+### Allauth
+
+Within the Django Framework, Allauth a package that handles registration and login details was installed. More information on how this was installed can be found here: [Django Allauth Installation](https://django-allauth.readthedocs.io/en/latest/installation.html).
+****
 
 # Forking the Repository
 
@@ -345,5 +355,56 @@ Deployment of my project was scaffolded using the Code Institute's [Django Blog 
   * Copy the URL for the required repository.
   * Open Git Bash on your device.
   * Change the current working directory to the location where you want the cloned directory.
-  * Type git clone in the CLI and then paste the URL you copied earlier. This is what it should look like: **$ git clone https://github.com/sophiebatten123/ginamore**
+  * Type git clone in the CLI and then paste the URL you copied earlier. This is what it should look like: $ git clone https://github.com/sophiebatten123/ginamore
   * Press Enter to create your local clone.
+
+  For more information on how to clone a repository read GitHubs [Cloning a Repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) document.
+
+[Back to top ⇧](#ginamore)
+
+# AWS S3 Bucket Set Up
+
+The deployed site uses AWS S3 Buckets to store the webpages static and media files. More information on how you can set up an AWS S3 Bucket can be found below:
+
+  1. Create an AWS account [here](https://portal.aws.amazon.com/billing/signup#/start/email).
+  2. Login to your account and within the search bar type in **S3**.
+  3. Within the S3 page click on the button that says **Create Bucket**.
+  4. Name the bucket and select the region which is closest to you.
+  5. Underneath **Object Ownership** select **ACLs enabled**.
+  6. Uncheck **Block Public Access** and acknowledge that the bucket will be made public, then click **Create Bucket**.
+  7. Inside the created bucket click on the **Properties** tab. Below **Static Website Hosting** click **Edit** and change the Static website hosting option to **Enabled**. Copy the default values for the index and error documents and click **Save Changes**.
+  8. Click on the **Permissions** tab, below **Cross-origin Resource Sharing (CORS)**, click **Edit** and then paste in the following code:
+
+  ```
+    [
+        {
+            "AllowedHeaders": [
+            "Authorization"
+            ],
+            "AllowedMethods": [
+            "GET"
+            ],
+            "AllowedOrigins": [
+            "*"
+            ],
+            "ExposeHeaders": []
+        }
+    ]
+  ```
+
+  9. Within the **Bucket Policy** section. Click **Edit** and then **Policy Generator**. Click the **Select Type of Policy** dropdown and select **S3 Bucket Policy** and within **Principle** allow all principals by typing *.
+  10. Within the **Actions** dropdown menu select **Get Object** and in the previous tab copy the **Bucket ARN number**. Paste this within the policy generator within the field labeled **Amazon Resource Name (ARN)**.
+  11. Click **Add statement > Generate Policy** and copy the policy that's been generated and paste this into the **Bucket Policy Editor**.
+  12. Before saving, add /* at the end of your **Resource Key**, this will allow access to all resources within the bucket.
+  13. Once saved, scroll down to the **Access Control List (ACL)** and click **Edit**.
+  14. Next to **Everyone (public access)**, check the **list** checkbox and save your changes.
+
+[Back to top ⇧](#ginamore)
+
+# IAM
+
+# Connecting AWS to Django
+
+# Stripe
+
+# Credits
