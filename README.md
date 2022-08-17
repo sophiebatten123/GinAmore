@@ -132,6 +132,12 @@ Each of the user stories was given acceptance criteria, an example of this can b
 
 This helped to ensure all tasks were completed before the user story was marked as done and ensured the website was fully functional. I also used the acceptance criteria to guide the manual testing that was performed throughout the project.
 
+# Database Schema
+
+# Marketing
+
+# Search Engine Optimization
+
 # Colour Scheme
 
 The colours within the site were carefully selected to mirror the premium products sold at GinAmore. The dark regal blue contrasts against the light pink making elements of importance stand out on the page. These colours were initially selected from the sites main banner image using DEV tools, allowing for all colours within the page to compliment eachother nicely.
@@ -290,6 +296,8 @@ Although the wireframes for site users and site admin are similar there are a fe
 
 [Back to top ⇧](#ginamore)
 
+# Testing
+
 # Deployment
 
 ## Github
@@ -408,3 +416,11 @@ The deployed site uses AWS S3 Buckets to store the webpages static and media fil
 # Stripe
 
 # Credits
+
+- The images used on my site were taken from [Shutterstock](https://www.shutterstock.com/).
+- Images and video clips were also used from [Pexels](https://www.pexels.com/).
+- The icons included throughout the website were taken from [Font-Awesome](https://fontawesome.com/).
+- The colour theme was chosen using [coolors](https://coolors.co/).
+- Help and support was given by the Code Institute Tutors.
+
+Thank you to the tutors of code institute for the help given throughout this project.
