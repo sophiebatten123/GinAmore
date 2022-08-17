@@ -150,6 +150,30 @@ Entity Relationship Databases (ERD) were created to help develop this project. T
 
 # Search Engine Optimization
 
+The site was optimized by careful selection of keywords. The following steps were taken to do this:
+
+1. WORDS SELECTED IN THE TABLE
+2. Words crossed out in red were removed due to too having too much competition using (SITE HERE).
+3. Words crossed out in blue were removed due to the lack of relevance and not being specific to the site.
+
+**Words in Yellow denote the sites "Short Tail Keywords"**
+**Words in Green denote the sites "Long Tailed Keywords"**
+
+![Site Optimization Keyword Selection](static/images/site_optimization.PNG)
+
+INFO HERE ON HOW THEY ARE USED IN THE SITE.
+  - ALT Image descriptions with keywords
+  - Image names with keywords
+  - Within the META data (screenshot)
+
+## Improving Google Metrics
+
+- Click Through Rate (CTR)
+- Bounce Rate
+- Dwell Time
+- Session Time
+- Pages Per Session
+
 # Business Model
 
 The business model used for the GinAmore store would be a B2C (Business to Customer), this is due to the business selling products directly to the customer through the platform.
