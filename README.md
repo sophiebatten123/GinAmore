@@ -136,7 +136,13 @@ This helped to ensure all tasks were completed before the user story was marked 
 
 Entity Relationship Databases (ERD) were created to help develop this project. These were seperated into seperate database schemas: 'Gin Products' and 'Cocktail Products' due to them not being related to each other directly.
 
+***
+
 ![Entity Relationship Database: Products](static/images/erd_products.PNG)
+
+***
+
+![Entity Relationship Database: Cocktails](static/images/erd_cocktails.PNG)
 
 # Marketing
 
