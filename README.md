@@ -374,14 +374,14 @@ Within the Django Framework, Allauth a package that handles registration and log
 
 The deployed site uses AWS S3 Buckets to store the webpages static and media files. More information on how you can set up an AWS S3 Bucket can be found below:
 
-  1. Create an AWS account [here](https://portal.aws.amazon.com/billing/signup#/start/email).
-  2. Login to your account and within the search bar type in **S3**.
-  3. Within the S3 page click on the button that says **Create Bucket**.
-  4. Name the bucket and select the region which is closest to you.
-  5. Underneath **Object Ownership** select **ACLs enabled**.
-  6. Uncheck **Block Public Access** and acknowledge that the bucket will be made public, then click **Create Bucket**.
-  7. Inside the created bucket click on the **Properties** tab. Below **Static Website Hosting** click **Edit** and change the Static website hosting option to **Enabled**. Copy the default values for the index and error documents and click **Save Changes**.
-  8. Click on the **Permissions** tab, below **Cross-origin Resource Sharing (CORS)**, click **Edit** and then paste in the following code:
+1. Create an AWS account [here](https://portal.aws.amazon.com/billing/signup#/start/email).
+2. Login to your account and within the search bar type in **S3**.
+3. Within the S3 page click on the button that says **Create Bucket**.
+4. Name the bucket and select the region which is closest to you.
+5. Underneath **Object Ownership** select **ACLs enabled**.
+6. Uncheck **Block Public Access** and acknowledge that the bucket will be made public, then click **Create Bucket**.
+7. Inside the created bucket click on the **Properties** tab. Below **Static Website Hosting** click **Edit** and change the Static website hosting option to **Enabled**. Copy the default values for the index and error documents and click **Save Changes**.
+8. Click on the **Permissions** tab, below **Cross-origin Resource Sharing (CORS)**, click **Edit** and then paste in the following code:
 
   ```
     [
@@ -400,16 +400,49 @@ The deployed site uses AWS S3 Buckets to store the webpages static and media fil
     ]
   ```
 
-  9. Within the **Bucket Policy** section. Click **Edit** and then **Policy Generator**. Click the **Select Type of Policy** dropdown and select **S3 Bucket Policy** and within **Principle** allow all principals by typing *.
-  10. Within the **Actions** dropdown menu select **Get Object** and in the previous tab copy the **Bucket ARN number**. Paste this within the policy generator within the field labeled **Amazon Resource Name (ARN)**.
-  11. Click **Add statement > Generate Policy** and copy the policy that's been generated and paste this into the **Bucket Policy Editor**.
-  12. Before saving, add /* at the end of your **Resource Key**, this will allow access to all resources within the bucket.
-  13. Once saved, scroll down to the **Access Control List (ACL)** and click **Edit**.
-  14. Next to **Everyone (public access)**, check the **list** checkbox and save your changes.
+9. Within the **Bucket Policy** section. Click **Edit** and then **Policy Generator**. Click the **Select Type of Policy** dropdown and select **S3 Bucket Policy** and within **Principle** allow all principals by typing *.
+10. Within the **Actions** dropdown menu select **Get Object** and in the previous tab copy the **Bucket ARN number**. Paste this within the policy generator within the field labeled **Amazon Resource Name (ARN)**.
+11. Click **Add statement > Generate Policy** and copy the policy that's been generated and paste this into the **Bucket Policy Editor**.
+12. Before saving, add /* at the end of your **Resource Key**, this will allow access to all resources within the bucket.
+13. Once saved, scroll down to the **Access Control List (ACL)** and click **Edit**.
+14. Next to **Everyone (public access)**, check the **list** checkbox and save your changes.
 
 [Back to top ⇧](#ginamore)
 
 # IAM
+
+1. Search for IAM within the AWS navigation bar and select it.
+2. Click **User Groups** that can be seen in the side bar and then click **Create group** and name the group 'manage-your-project-name'.
+3. Click **Policies** and then **Create policy**.
+4. Navigate to the JSON tab and click **Import Managed Policy**, within here search **S3** and select **AmazonS3FullAccess** followed by **Import**.
+5. Navigate back to the recently created S3 bucket and copy your **ARN Number**. Go back to **This Policy** and update the **Resource Key** to include your ARN Number, and another line with your ARN followed by a /*. Below is an example of what this should look like:
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:*",
+                "s3-object-lambda:*"
+            ],
+            "Resource": [
+                "YOUR-ARN-NO-HERE",
+                "YOUR-ARN-NO-HERE/*"
+            ]
+        }
+    ]
+}
+
+```
+
+6. Ensure the policy has been given a name and a short description, then click **Create Policy**.
+7. Click **User groups**, and then the group you created earlier. Under permissions click **Add Permission** and from the dropdown click **Attach Policies**.
+8. Select **Users** from the sidebar and click **Add User**.
+9. Provide a username and check **Programmatic Access**, then click 'Next: Permissions'.
+10. Ensure your policy is selected and navigate through until you click **Add User**.
+11. Download the **CSV file**, which contains the user's access key and secret access key.
 
 # Connecting AWS to Django
 
