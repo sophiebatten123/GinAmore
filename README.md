@@ -120,7 +120,7 @@ GinAmore aims to provide users with the ability to easily purchase premium flavo
 
 # Agile Planning Enviroment
 
-The story point allocation above is based upon a 100 point iteration. Using the MoSCoW method each user story was then been labeled as being either 'Must Have', 'Should Have', 'Could Have' or 'Wont Have', this then guided the focus and planning of the project. Note that the 'Wont Have' User Story below was excluded from the 60:20:20 MoSCoW allocation.
+The story point allocation above is based upon a 100 point iteration and uses the Fibonacci Sequence. Using the MoSCoW method each user story was then been labeled as being either 'Must Have', 'Should Have', 'Could Have' or 'Wont Have', based upon its importance to the project whilst following the 60:20:20 MoSCoW format. Note that the 'Wont Have' User Story below was excluded from the 60:20:20 MoSCoW allocation.
 
 ![Acceptance Criteria](static/images/agile-screenshot.PNG)
 
@@ -131,6 +131,12 @@ Each of the user stories was given acceptance criteria, an example of this can b
 ![Acceptance Criteria](static/images/acceptance-criteria.PNG)
 
 This helped to ensure all tasks were completed before the user story was marked as done and ensured the website was fully functional. I also used the acceptance criteria to guide the manual testing that was performed throughout the project.
+
+# Database Schema
+
+# Marketing
+
+# Search Engine Optimization
 
 # Colour Scheme
 
@@ -229,3 +235,192 @@ Although the wireframes for site users and site admin are similar there are a fe
 [Add Product Page](static/images/add_product_mobile.PNG)
 
 [Edit Product Page](static/images/edit_product_mobile.PNG)
+
+# Technologies Used
+
+***
+### Coding Languages
+***
+
+* [HTML]()
+  * HTML is the main language used accross the site and completes the structure of the webpages.
+
+* [CSS]()
+  * CSS is used throughout to create custom styling to elements accross the site.
+
+* [Javascript]()
+  * Javascript is used within the checkout template to help with form submission and to verify the users age.
+  * [JQuery]() is used within the following webpages:
+    * To update item quantity within the bag template and to update the form.
+    * To display success and fail messages within form submission.
+
+* [Python]()
+  * Python was used extensively on the site to handle back-end functionality.
+
+***
+### Frameworks and Platforms
+***
+
+* [Django]()
+  * The project was created using Django as a framework to help handle back-end functionality. 
+
+* [Github]()
+  * Github was the hosting site for the project code.
+
+* [Gitpod]()
+  * Gitpod has been used to commit and push code within the GitHub repository.
+
+* [Bootstrap]()
+  * Bootstrap was used within the site to help format the layout of elements and improve the responsiveness of the site.
+
+* [Google Fonts]()
+  * Google Fonts was used to select the typography type for the website and imported within CSS.
+
+* [AWS S3 Buckets]()
+  * AWS S3 Buckets provide storage for static and media files within the deployed Heroku site.
+
+* [Heroku]()
+  * Heroku was used as a platform to deploy the site.
+
+* [Google Chrome Developer Tools]()
+  * Google Chrome's Developer Tools were used to help debug errors within the code and to help style the site through the colour selector.
+
+* [Uizard Wireframe Generator]()
+  * Wireframes were created and generated through Uizard.
+
+* [Font Awesome]()
+  * Icons used accross the site were imported from Font Awesome.
+
+* [Am I Responsive]()
+  * The site Mock Up image was generated using Am I Responsive.
+
+[Back to top ⇧](#ginamore)
+
+# Testing
+
+# Deployment
+
+## Github
+  * Created a new GitHub repository page using the 'Code Institute Template'.
+  * Opened the new repository by clicking on the 'Gitpod' button.
+  * Installed the relevant apps and packages needed to deploy to HEROKU.
+
+## Django and Heroku
+
+Deployment of my project was scaffolded using the Code Institute's [Django Blog Cheatsheet](https://codeinstitute.s3.amazonaws.com/fst/Django%20Blog%20Cheat%20Sheet%20v1.pdf). Furthermore, the following steps were taken to deploy the project to Heroku from the GitHub repository:
+
+1. Create the Heroku App:
+    - Before creating the Heroku app make sure your project has the following files:
+        - requirements.txt to create this type the following within the terminal: **pip3 freeze --local > requirements.txt**.
+        - Procfile to create this type the following within the terminal: **python run.py > Procfile**.
+    - Select "Create new app" within Heroku.
+2. Attach the Postgres database:
+    - Search "Postgres" within the Resources tab and select the Heroku Postgres option.
+3. Create the settings.py file:
+    - In Heroku navigate to the Settings tab, click on Reveal Config Vars and copy the DATABASE_URL.
+    - Within the GitPod workspace, create an env.py file within the main directory.
+    - Import the env.py file within the settings.py file.
+    - Create a SECRET_KEY value within the Reveal Config Vars in Heroku.
+    - Add the DATABASE_URL value and your chosen SECRET_KEY value to the env.py file.
+    - Run the following command in your terminal **python3 manage.py migrate**.
+    - Add the CLOUDINARY_URL to the Reveal Config Vars in Heroku and add this to your settings.py file.
+    - Add the following sections to your settings.py file:
+        - Cloudinary to the INSTALLED_APPS list
+        - STATICFILES_STORAGE
+        - STATICFILES_DIRS
+        - STATIC_ROOT
+        - MEDIA_URL
+        - DEFAULT_FILE_STORAGE
+        - TEMPLATES_DIR
+        - Update DIRS in TEMPLATES with TEMPLATES_DIR
+        - Update ALLOWED_HOSTS with ['app_name.heroku.com','localhost']
+4. Store Static and Media files in Cloudinary and Deploy to Heroku:
+    - Create three directories in the top level directory: media, storage and templates.
+    - Create a file named "Procfile" in the main directory and ass the following: [web: gunicorn project-name.wsgi].
+    - Login to Heroku within the terminal window using **heroku login -i**
+    - Run the following command in the terminal window: **heroku git:remote -a your_app_name_here**. By doing this you will link the app to your GidPod terminal.
+    - After linking the app you can deploy new versions to Heroku by running the command **git push heroku main**.
+  
+[Back to top ⇧](#ginamore)
+
+***
+### Allauth
+
+Within the Django Framework, Allauth a package that handles registration and login details was installed. More information on how this was installed can be found here: [Django Allauth Installation](https://django-allauth.readthedocs.io/en/latest/installation.html).
+****
+
+# Forking the Repository
+
+  * Log in to GitHub and locate the required GitHub repository.
+  * At the top of the Repository, above the **"Settings"** button, locate the button labeled **"Fork"**.
+  * You should now have a copy of the original repository within your GitHub account.
+  * You can make changes to this new version whilst keeping the original version safe.
+
+# Cloning the Repository
+
+  * Ensure that you are logged into GitHub and locate the required GitHub repository.
+  * Click the dropdown button labelled **'Code'** above the file list.
+  * Copy the URL for the required repository.
+  * Open Git Bash on your device.
+  * Change the current working directory to the location where you want the cloned directory.
+  * Type git clone in the CLI and then paste the URL you copied earlier. This is what it should look like: $ git clone https://github.com/sophiebatten123/ginamore
+  * Press Enter to create your local clone.
+
+  For more information on how to clone a repository read GitHubs [Cloning a Repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) document.
+
+[Back to top ⇧](#ginamore)
+
+# AWS S3 Bucket Set Up
+
+The deployed site uses AWS S3 Buckets to store the webpages static and media files. More information on how you can set up an AWS S3 Bucket can be found below:
+
+  1. Create an AWS account [here](https://portal.aws.amazon.com/billing/signup#/start/email).
+  2. Login to your account and within the search bar type in **S3**.
+  3. Within the S3 page click on the button that says **Create Bucket**.
+  4. Name the bucket and select the region which is closest to you.
+  5. Underneath **Object Ownership** select **ACLs enabled**.
+  6. Uncheck **Block Public Access** and acknowledge that the bucket will be made public, then click **Create Bucket**.
+  7. Inside the created bucket click on the **Properties** tab. Below **Static Website Hosting** click **Edit** and change the Static website hosting option to **Enabled**. Copy the default values for the index and error documents and click **Save Changes**.
+  8. Click on the **Permissions** tab, below **Cross-origin Resource Sharing (CORS)**, click **Edit** and then paste in the following code:
+
+  ```
+    [
+        {
+            "AllowedHeaders": [
+            "Authorization"
+            ],
+            "AllowedMethods": [
+            "GET"
+            ],
+            "AllowedOrigins": [
+            "*"
+            ],
+            "ExposeHeaders": []
+        }
+    ]
+  ```
+
+  9. Within the **Bucket Policy** section. Click **Edit** and then **Policy Generator**. Click the **Select Type of Policy** dropdown and select **S3 Bucket Policy** and within **Principle** allow all principals by typing *.
+  10. Within the **Actions** dropdown menu select **Get Object** and in the previous tab copy the **Bucket ARN number**. Paste this within the policy generator within the field labeled **Amazon Resource Name (ARN)**.
+  11. Click **Add statement > Generate Policy** and copy the policy that's been generated and paste this into the **Bucket Policy Editor**.
+  12. Before saving, add /* at the end of your **Resource Key**, this will allow access to all resources within the bucket.
+  13. Once saved, scroll down to the **Access Control List (ACL)** and click **Edit**.
+  14. Next to **Everyone (public access)**, check the **list** checkbox and save your changes.
+
+[Back to top ⇧](#ginamore)
+
+# IAM
+
+# Connecting AWS to Django
+
+# Stripe
+
+# Credits
+
+- The images used on my site were taken from [Shutterstock](https://www.shutterstock.com/).
+- Images and video clips were also used from [Pexels](https://www.pexels.com/).
+- The icons included throughout the website were taken from [Font-Awesome](https://fontawesome.com/).
+- The colour theme was chosen using [coolors](https://coolors.co/).
+- Help and support was given by the Code Institute Tutors.
+
+Thank you to the tutors of code institute for the help given throughout this project.
