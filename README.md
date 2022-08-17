@@ -349,14 +349,14 @@ Deployment of my project was scaffolded using the Code Institute's [Django Blog 
 Within the Django Framework, Allauth a package that handles registration and login details was installed. More information on how this was installed can be found here: [Django Allauth Installation](https://django-allauth.readthedocs.io/en/latest/installation.html).
 ****
 
-# Forking the Repository
+## Forking the Repository
 
   * Log in to GitHub and locate the required GitHub repository.
   * At the top of the Repository, above the **"Settings"** button, locate the button labeled **"Fork"**.
   * You should now have a copy of the original repository within your GitHub account.
   * You can make changes to this new version whilst keeping the original version safe.
 
-# Cloning the Repository
+## Cloning the Repository
 
   * Ensure that you are logged into GitHub and locate the required GitHub repository.
   * Click the dropdown button labelled **'Code'** above the file list.
@@ -444,9 +444,81 @@ The deployed site uses AWS S3 Buckets to store the webpages static and media fil
 10. Ensure your policy is selected and navigate through until you click **Add User**.
 11. Download the **CSV file**, which contains the user's access key and secret access key.
 
+[Back to top ⇧](#ginamore)
+
 # Connecting AWS to Django
 
-# Stripe
+1. Within your terminal install the following packages by typing 
+
+```
+  pip3 install boto3
+  pip3 install django-storages 
+```  
+
+2. Freeze the requirements by typing 
+
+```
+pip3 freeze > requirements.txt
+```
+
+3. Add **storages** to your installed apps within your settings.py file.
+4. At the bottom of the settings.py file add the following code:
+
+```
+if 'USE_AWS' in os.environ:
+    AWS_STORAGE_BUCKET_NAME = 'insert-your-bucket-name-here'
+    AWS_S3_REGION_NAME = 'insert-your-region-here'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+```
+5. Add the following keys within Heroku: **AWS_ACCESS_KEY_ID** and **AWS_SECRET_ACCESS_KEY**. These can be found in your CSV file.
+6. Add the key **USE_AWS**, and set the value to True within Heroku.
+6. Remove the **DISABLE_COLLECTSTAIC** variable from Heroku.
+7. Within your settings.py file inside the code just written add: 
+
+```
+  AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+```
+8. Inside the settings.py file inside the bucket config if statement add the following lines of code:
+
+```
+STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+STATICFILES_LOCATION = 'static'
+DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+MEDIAFILES_LOCATION = 'media'
+
+STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+
+AWS_S3_OBJECT_PARAMETERS = {
+    'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+    'CacheControl': 'max-age=94608000',
+}
+```
+
+9. In the root directory of your project create a file called **custom_storages.py**. Import the following at the top of this file and add the classes below:
+
+```
+  from django.conf import settings
+  from storages.backends.s3boto3 import S3Boto3Storage
+
+  class StaticStorage(S3Boto3Storage):
+    location = settings.STATICFILES_LOCATION
+
+  class MediaStorage(S3Boto3Storage):
+    location = settings.MEDIAFILES_LOCATION
+```
+
+10. Navigate back to you AWS S3 Bucket and click on **Create Folder** name this folder **media**, within the media file click **Upload > Add Files** and select the images for your site.
+11. Under **Permissions** select the option **Grant public-read access** and click **Upload**.
+
+[Back to top ⇧](#ginamore)
+
+# Stripe Payments
+
+To handle payments within the website ensure that you have set this up a guide on how this can be done can be found [here](https://stripe.com/docs/payments/accept-a-payment#web-collect-card-details).
+
+
 
 # Credits
 
