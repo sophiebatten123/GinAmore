@@ -233,7 +233,7 @@ Although the wireframes for site users and site admin are similar there are a fe
 # Technologies Used
 
 ***
-## Coding Languages
+### Coding Languages
 ***
 
 * [HTML]()
@@ -252,7 +252,7 @@ Although the wireframes for site users and site admin are similar there are a fe
   * Python was used extensively on the site to handle back-end functionality.
 
 ***
-## Frameworks and Platforms
+### Frameworks and Platforms
 ***
 
 * [Django]()
@@ -287,3 +287,63 @@ Although the wireframes for site users and site admin are similar there are a fe
 
 * [Am I Responsive]()
   * The site Mock Up image was generated using Am I Responsive.
+
+# Deployment
+
+## Github
+  * Created a new GitHub repository page using the 'Code Institute Template'.
+  * Opened the new repository by clicking on the 'Gitpod' button.
+  * Installed the relevant apps and packages needed to deploy to HEROKU.
+
+## Django and Heroku
+
+Deployment of my project was scaffolded using the Code Institute's [Django Blog Cheatsheet](https://codeinstitute.s3.amazonaws.com/fst/Django%20Blog%20Cheat%20Sheet%20v1.pdf). Furthermore, the following steps were taken to deploy the project to Heroku from the GitHub repository:
+
+1. Create the Heroku App:
+    - Before creating the Heroku app make sure your project has the following files:
+        - requirements.txt to create this type the following within the terminal: **pip3 freeze --local > requirements.txt**.
+        - Procfile to create this type the following within the terminal: **python run.py > Procfile**.
+    - Select "Create new app" within Heroku.
+2. Attach the Postgres database:
+    - Search "Postgres" within the Resources tab and select the Heroku Postgres option.
+3. Create the settings.py file:
+    - In Heroku navigate to the Settings tab, click on Reveal Config Vars and copy the DATABASE_URL.
+    - Within the GitPod workspace, create an env.py file within the main directory.
+    - Import the env.py file within the settings.py file.
+    - Create a SECRET_KEY value within the Reveal Config Vars in Heroku.
+    - Add the DATABASE_URL value and your chosen SECRET_KEY value to the env.py file.
+    - Run the following command in your terminal **python3 manage.py migrate**.
+    - Add the CLOUDINARY_URL to the Reveal Config Vars in Heroku and add this to your settings.py file.
+    - Add the following sections to your settings.py file:
+        - Cloudinary to the INSTALLED_APPS list
+        - STATICFILES_STORAGE
+        - STATICFILES_DIRS
+        - STATIC_ROOT
+        - MEDIA_URL
+        - DEFAULT_FILE_STORAGE
+        - TEMPLATES_DIR
+        - Update DIRS in TEMPLATES with TEMPLATES_DIR
+        - Update ALLOWED_HOSTS with ['app_name.heroku.com','localhost']
+4. Store Static and Media files in Cloudinary and Deploy to Heroku:
+    - Create three directories in the top level directory: media, storage and templates.
+    - Create a file named "Procfile" in the main directory and ass the following: [web: gunicorn project-name.wsgi].
+    - Login to Heroku within the terminal window using **heroku login -i**
+    - Run the following command in the terminal window: **heroku git:remote -a your_app_name_here**. By doing this you will link the app to your GidPod terminal.
+    - After linking the app you can deploy new versions to Heroku by running the command **git push heroku main**.
+
+# Forking the Repository
+
+  * Log in to GitHub and locate the required GitHub repository.
+  * At the top of the Repository, above the **"Settings"** button, locate the button labeled **"Fork"**.
+  * You should now have a copy of the original repository within your GitHub account.
+  * You can make changes to this new version whilst keeping the original version safe.
+
+# Cloning the Repository
+
+  * Ensure that you are logged into GitHub and locate the required GitHub repository.
+  * Click the dropdown button labelled **'Code'** above the file list.
+  * Copy the URL for the required repository.
+  * Open Git Bash on your device.
+  * Change the current working directory to the location where you want the cloned directory.
+  * Type git clone in the CLI and then paste the URL you copied earlier. This is what it should look like: **$ git clone https://github.com/sophiebatten123/ginamore**
+  * Press Enter to create your local clone.
