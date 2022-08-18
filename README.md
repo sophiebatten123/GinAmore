@@ -205,25 +205,12 @@ The final steps for working with these two files requires a DNS certificate for 
 
 ***
 ## Improving Google Metrics
-***
 
 | Expertise | Authoritiveness | Trustworthiness |
 |-----------|-----------------|-----------------|
 | Creating engaging content to meet the users needs. | Including clear steps and examples within the recipe section of the site. | Content is proffesional and avoids typos and spelling mistakes. |
 | Included an FAQS page for users. |  | Links to privacy statements and terms and conditions is provided at the bottom. |
 | High quality images were included within the site. |  | Reviews are included on all products and cocktails. |
-
-GinAmore aims to provide:
-1. Expertise
-  - Creating engaging content to meet the users needs.
-  - Included an FAQS page for users.
-  - High quality images were included within the site.
-2. Authoriviness
-  - Including clear steps and examples within the recipe section of the site.
-3. Trustworthiness
-  - Content is proffesional and avoids typos and spelling mistakes.
-  - Links to privacy statements and terms and conditions is provided at the bottom.
-  - Reviews are included on all products and cocktails.
 
 ***
 
