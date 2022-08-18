@@ -152,27 +152,85 @@ Entity Relationship Databases (ERD) were created to help develop this project. T
 
 The site was optimized by careful selection of keywords. The following steps were taken to do this:
 
-1. WORDS SELECTED IN THE TABLE
-2. Words crossed out in red were removed due to too having too much competition using (SITE HERE).
+1. The entire table consists of important relevant topics based upon my initial understanding of the buissness.
+2. Using these topics a 'brain dump' of keywords was made orientated around common topics and themes within the buissness.
+3. Topics and keywords were then tried out on Google and the relevant suggestions it gave were added to the keyword list.
+2. Words crossed out in red were removed due to too having too much competition using [Wordtracker](https://www.wordtracker.com/?fpr=refer&fp_sid=bingof).
 3. Words crossed out in blue were removed due to the lack of relevance and not being specific to the site.
 
-**Words in Yellow denote the sites "Short Tail Keywords"**
-**Words in Green denote the sites "Long Tailed Keywords"**
+Words in Yellow denote the sites **"Short Tail Keywords"**
+
+Words in Green denote the sites **Long Tailed Keywords"**
 
 ![Site Optimization Keyword Selection](static/images/site_optimization.PNG)
 
-INFO HERE ON HOW THEY ARE USED IN THE SITE.
-  - ALT Image descriptions with keywords
-  - Image names with keywords
+## SEO Implementations in HTML
+  - Words/phrases included within semantic HTML elements were optimized using the keywords above.
+  - Careful consideration was given to the words chosen to avoid 'keyword stuffing'.
+  - Keywords were used within links, urls and aria labels.
+  - Social network links include **rel="noopener"** to not affect the assessment of the webpage.
+  - Image description alt tags contain the keywords chosen above.
+  - External reliable links were included within the site to improve SEO, these include:
+    - Charities that the company supports.
+    - Reccomended mixer brands.
+    - Useful tips/advice on drinking sensibly.
   - Within the META data (screenshot)
 
+***
+## sitemap.xml
+***
+
+A sitemap was made to list the websites important URL's to ensure that search engines are able to easily navigate through the site and understand its structure. This was made using [XML-sitemaps.com](https://www.xml-sitemaps.com/) using the following steps:
+
+1. Paste the URL of the deployed site into XML-sitemaps.
+2. Download the XML sitemap file.
+3. Drag and drop this files into the projects root folder, and ensure it is labeled **sitemap.xml**
+
+***
+## robots.txt
+***
+
+A robots.txt file was created to tell search engines where not to allowed go on the site and increase the quality of the site, ultimetly improving the SEO rating. The following steps were taken to creat this:
+
+1. A file was added named **robots.txt**.
+2. The following code was written into this file, adding in your personalised sitemap url:
+
+```
+  User-agent: *
+  Disallow:
+  Sitemap: YOUR_SITEMAP_URL
+```
+
+The final steps for working with these two files requires a DNS certificate for a deployed custom domain. This project did not require a custom domain and so has been temporarily left out.
+
+***
 ## Improving Google Metrics
+***
+
+GinAmore aims to provide:
+1. Expertise
+  - Creating engaging content to meet the users needs.
+  - Included an FAQS page for users.
+  - High quality images were included within the site.
+2. Authoriviness
+  - Including clear steps and examples within the recipe section of the site.
+3. Trustworthiness
+  - Content is proffesional and avoids typos and spelling mistakes.
+  - Links to privacy statements and terms and conditions is provided at the bottom.
+  - Reviews are included on all products and cocktails.
+
+Google metrics were considered when developing the site, including: 
 
 - Click Through Rate (CTR)
+  - The title and Meta data of the website were optimized with both short and long tailed keywords.
 - Bounce Rate
+  - The homepage of the site has been made engaging for the user.
 - Dwell Time
+  - Content on the homepage is interesting and engaging to users.
 - Session Time
+  - It is made easy for users to discover more content through 'reccomneded items" sections on the page.
 - Pages Per Session
+  - Links were regularly included throughout the webiste to encourage users to navigate through the website more and engage with more of the content.
 
 # Business Model
 
