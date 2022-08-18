@@ -87,3 +87,21 @@ def edit_cocktail(request, product_id):
     }
 
     return render(request, template, context)
+
+
+def delete_cocktail(request, product_id):
+    '''
+    Deletes the product from the shop
+    '''
+    if not request.user.is_superuser:
+        messages.error(
+            request,
+            'Sorry, only store owners can delete cocktails'
+            )
+        return redirect(reverse('home'))
+
+    cocktail = get_object_or_404(Cocktail, pk=product_id)
+    cocktail.delete()
+    messages.success(request, 'Cocktail has been deleted!')
+
+    return redirect(reverse('cocktails'))
