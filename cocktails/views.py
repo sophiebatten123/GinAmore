@@ -69,6 +69,10 @@ def add_cocktail(request):
     '''
     Add a cocktail to the site
     '''
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can add cocktails')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = CocktailForm(request.POST, request.FILES)
         if form.is_valid():
@@ -76,7 +80,10 @@ def add_cocktail(request):
             messages.success(request, 'Successfully added a cocktail!')
             return redirect(reverse('add_cocktail'))
         else:
-            messages.error(request, 'Failed to add the cocktail. Ensure the form is valid')
+            messages.error(
+                request,
+                'Failed to add the cocktail. Ensure the form is valid'
+                )
     else:
         form = CocktailForm()
 
@@ -92,6 +99,10 @@ def edit_cocktail(request, product_id):
     '''
     Edit a cocktail from the store
     '''
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can edit cocktails')
+        return redirect(reverse('home'))
+
     cocktail = get_object_or_404(Cocktail, pk=product_id)
     if request.method == 'POST':
         form = CocktailForm(request.POST, request.FILES, instance=cocktail)
@@ -100,7 +111,10 @@ def edit_cocktail(request, product_id):
             messages.success(request, 'Successfully updated the cocktail!')
             return redirect(reverse('cocktail_detail', args=[cocktail.id]))
         else:
-            messages.error(request, 'Failed to edit the cocktail. Ensure the form is valid')
+            messages.error(
+                request,
+                'Failed to edit the cocktail. Ensure the form is valid'
+                )
     else:
         form = CocktailForm(instance=cocktail)
         messages.info(request, f'You are editing {cocktail.name}')
