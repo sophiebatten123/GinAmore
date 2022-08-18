@@ -15,6 +15,7 @@ class CocktailForm(forms.ModelForm):
         '''
         model = Cocktail
         fields = '__all__'
+        exclude = ('image_url',)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

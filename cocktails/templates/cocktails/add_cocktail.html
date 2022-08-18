@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row mt-4">
+        <div class="col-12 mt-2 mb-2">
+            <h3>Product Management: Add a Cocktail</h3>
+            <hr>
+            <form method="POST" action="{% url 'add_cocktail' %}" class="form" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% for field in form %}
+                    {% if field.name != 'image' %}
+                        {{ field | as_crispy_field }}
+                    {% else %}
+                        {{ field }}
+                    {% endif %}
+                {% endfor %}
+                <div class="row">
+                    <div class="col-6 checkout">
+                        <a href="{% url 'products' %}">
+                            <p class="our-gin-btns-checkout text-light text-center">Cancel</p>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <button class="our-gin-btns-checkout text-light" type="submit">Add cocktail</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <hr>
+        </div>
+    </div>
+</div>
+{% endblock %}

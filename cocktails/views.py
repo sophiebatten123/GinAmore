@@ -3,6 +3,7 @@ Imports relevant django packages
 '''
 from django.shortcuts import render, get_object_or_404
 from .models import Cocktail
+from .forms import CocktailForm
 
 
 def cocktails(request):
@@ -36,3 +37,16 @@ def cocktail_detail(request, product_id):
     }
 
     return render(request, 'cocktails/cocktail_detail.html', context)
+
+
+def add_cocktail(request):
+    '''
+    Add a cocktail to the site
+    '''
+    form = CocktailForm()
+    template = 'cocktails/add_cocktail.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
