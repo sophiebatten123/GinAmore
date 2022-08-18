@@ -132,7 +132,11 @@ Each of the user stories was given acceptance criteria, an example of this can b
 
 This helped to ensure all tasks were completed before the user story was marked as done and ensured the website was fully functional. I also used the acceptance criteria to guide the manual testing that was performed throughout the project.
 
-# Site Map
+# Site Map Wireframe
+
+The following site map was created to help understand the flow of the website prior to development. This helped in understanding the links between pages and ensured pages were easily accessed by users.
+
+![Site Map Wireframe](static/images/site_map.PNG)
 
 # Database Schema
 
@@ -211,8 +215,6 @@ The final steps for working with these two files requires a DNS certificate for 
 | Creating engaging content to meet the users needs. | Including clear steps and examples within the recipe section of the site. | Content is proffesional and avoids typos and spelling mistakes. |
 | Included an FAQS page for users. |  | Links to privacy statements and terms and conditions is provided at the bottom. |
 | High quality images were included within the site. |  | Reviews are included on all products and cocktails. |
-
-***
 
 Google metrics were considered when developing the site, including: 
 
