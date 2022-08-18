@@ -2,6 +2,7 @@
 Imports relevant django packages
 '''
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Category(models.Model):
@@ -47,3 +48,20 @@ class Cocktail(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class CocktailReview(models.Model):
+    '''
+    User review model for cocktail recipes
+    '''
+    user = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
+    cocktail = models.ForeignKey(Cocktail, on_delete=models.CASCADE)
+    title = models.CharField(max_length=25, null=False, blank=False)
+    user_review = models.TextField(max_length=250, null=False, blank=False)
+    date_created = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        '''
+        Returns the review as a string
+        '''
+        return f'{self.title}'

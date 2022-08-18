@@ -2,8 +2,8 @@
 Imports relevant django packages
 '''
 from django.shortcuts import render, reverse, redirect, get_object_or_404
-from .models import Cocktail
-from .forms import CocktailForm
+from .models import Cocktail, CocktailReview
+from .forms import CocktailForm, CocktailReviewForm
 from django.contrib import messages
 
 
@@ -33,8 +33,33 @@ def cocktail_detail(request, product_id):
     '''
     cocktail = get_object_or_404(Cocktail, pk=product_id)
 
+    if request.method == 'POST':
+
+        review_form = CocktailReviewForm(data=request.POST or None)
+
+        if request.user.is_authenticated and review_form.is_valid():
+
+            review_form.instance.user = request.user
+            review = review_form.save(commit=False)
+            review.cocktail = cocktail
+            review.save()
+            messages.success(request, ('Thank you for your review!'))
+
+            return redirect(reverse('cocktail_detail', args=[cocktail.id]))
+        else:
+            messages.error(
+                request,
+                'Please login to create a review on one of our cocktails!')
+            return redirect(reverse('cocktail_detail', args={cocktail.id}))
+    else:
+        review_form = CocktailReviewForm()
+
+    reviews = CocktailReview.objects.filter(cocktail=cocktail)
+
     context = {
         'cocktail': cocktail,
+        'reviews': reviews,
+        'review_form': review_form,
     }
 
     return render(request, 'cocktails/cocktail_detail.html', context)
@@ -103,5 +128,20 @@ def delete_cocktail(request, product_id):
     cocktail = get_object_or_404(Cocktail, pk=product_id)
     cocktail.delete()
     messages.success(request, 'Cocktail has been deleted!')
+
+    return redirect(reverse('cocktails'))
+
+
+def delete_review(request, review_id):
+    '''
+    Deletes the review from the product
+    '''
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can delete reviews!')
+        return redirect(reverse('home'))
+
+    review = get_object_or_404(CocktailReview, pk=review_id)
+    review.delete()
+    messages.success(request, 'Review has been deleted!')
 
     return redirect(reverse('cocktails'))

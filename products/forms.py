@@ -33,7 +33,7 @@ class ProductForm(forms.ModelForm):
 
 class ReviewForm(forms.ModelForm):
     '''
-    Creates the review for the procudt.
+    Creates the review for the product.
     '''
     class Meta:
         '''
