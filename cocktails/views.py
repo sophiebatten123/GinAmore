@@ -1,9 +1,10 @@
 '''
 Imports relevant django packages
 '''
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, reverse, redirect, get_object_or_404
 from .models import Cocktail
 from .forms import CocktailForm
+from django.contrib import messages
 
 
 def cocktails(request):
@@ -43,7 +44,17 @@ def add_cocktail(request):
     '''
     Add a cocktail to the site
     '''
-    form = CocktailForm()
+    if request.method == 'POST':
+        form = CocktailForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added a cocktail!')
+            return redirect(reverse('add_cocktail'))
+        else:
+            messages.error(request, 'Failed to add the cocktail. Ensure the form is valid')
+    else:
+        form = CocktailForm()
+
     template = 'cocktails/add_cocktail.html'
     context = {
         'form': form,
