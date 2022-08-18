@@ -132,6 +132,12 @@ Each of the user stories was given acceptance criteria, an example of this can b
 
 This helped to ensure all tasks were completed before the user story was marked as done and ensured the website was fully functional. I also used the acceptance criteria to guide the manual testing that was performed throughout the project.
 
+# Features
+
+## Existing Features
+
+## Future Features
+
 # Site Map Wireframe
 
 The following site map was created to help understand the flow of the website prior to development. This helped in understanding the links between pages and ensured pages were easily accessed by users.
@@ -392,6 +398,16 @@ Although the wireframes for site users and site admin are similar there are a fe
 [Back to top ⇧](#ginamore)
 
 # Testing
+
+## Manual Testing
+
+## Automated Testing
+
+# Fixed Bugs and Errors
+
+| Bug/Error Identified | Reason for the Error | Fix for the Error |
+|-----------|-----------------|-----------------|
+|  |  |  |
 
 # Deployment
 
