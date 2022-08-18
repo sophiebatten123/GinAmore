@@ -8,9 +8,9 @@
 <div class="container-fluid">
     <div class="row mt-4">
         <div class="col-12 mt-2 mb-2">
-            <h3>Product Management: Add a Cocktail</h3>
+            <h3>Product Management: Edit Cocktail</h3>
             <hr>
-            <form method="POST" action="{% url 'add_cocktail' %}" class="form" enctype="multipart/form-data">
+            <form method="POST" action="{% url 'edit_cocktail' cocktail.id %}" class="form" enctype="multipart/form-data">
                 {% csrf_token %}
                 {% for field in form %}
                     {% if field.name != 'image' %}
@@ -26,7 +26,7 @@
                         </a>
                     </div>
                     <div class="col-6">
-                        <button class="our-gin-btns-checkout text-light" type="submit">Add cocktail</button>
+                        <button class="our-gin-btns-checkout text-light" type="submit">Update cocktail</button>
                     </div>
                 </div>
             </form>
