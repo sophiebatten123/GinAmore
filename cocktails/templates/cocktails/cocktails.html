@@ -57,6 +57,16 @@
                     </div>
                 </div>
             </div>
+            {% if request.user.is_superuser %}
+                            <div class="row">
+                                <div class="col-6 btns">
+                                    <a href="{% url 'edit_cocktail' cocktail.id %}"><p class="text-light edit-button text-center">Edit</p></a>
+                                </div>
+                                <div class="col-6 btns">
+                                    <a href="#"><p class="text-light delete-button text-center">Delete</p></a>
+                                </div>
+                            </div>
+                        {% endif %}
         </div>
         {% endfor %}
     </div>
