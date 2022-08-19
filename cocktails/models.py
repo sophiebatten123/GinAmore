@@ -5,7 +5,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
-class Category(models.Model):
+class CocktailCategory(models.Model):
     '''
     Cockatil category model
     '''
@@ -30,7 +30,7 @@ class Cocktail(models.Model):
     Cocktail information model
     '''
     category = models.ForeignKey(
-        'Category',
+        'CocktailCategory',
         null=True,
         blank=True,
         on_delete=models.SET_NULL)

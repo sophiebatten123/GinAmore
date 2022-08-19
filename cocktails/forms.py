@@ -2,7 +2,7 @@
 Imports relevant django packages
 '''
 from django import forms
-from .models import Cocktail, Category, CocktailReview
+from .models import Cocktail, CocktailCategory, CocktailReview
 
 
 class CocktailForm(forms.ModelForm):
@@ -19,7 +19,7 @@ class CocktailForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        categories = Category.objects.all()
+        categories = CocktailCategory.objects.all()
         friendly_names = [(c.id, c.get_friendly_name()) for c in categories]
 
         self.fields['category'].choices = friendly_names

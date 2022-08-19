@@ -2,7 +2,7 @@
 Imports relevant django packages
 '''
 from django.contrib import admin
-from .models import Cocktail, Category
+from .models import Cocktail, CocktailCategory
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -16,7 +16,7 @@ class CategoryAdmin(admin.ModelAdmin):
     )
 
 
-admin.site.register(Category, CategoryAdmin)
+admin.site.register(CocktailCategory, CategoryAdmin)
 
 
 class CocktailAdmin(SummernoteModelAdmin):

@@ -22,7 +22,7 @@
         </div>
     </div>
     <div class="row">
-        {% for cocktail in cocktails %}
+        {% for cocktail in cocktail_items %}
         <div class="col-sm-12 col-md-12 col-lg-6 mt-2 cocktail-background">
             <div class="row">
                 <div class="col-4">
@@ -55,18 +55,23 @@
                             </p>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-12 btns">
+                            <a href="{% url 'cocktail_detail' cocktail.id %}"><p class="text-light shop-btn text-center">View Recipe</p></a>
+                        </div>
+                    </div>
+                    {% if request.user.is_superuser %}
+                        <div class="row">
+                            <div class="col-6 btns">
+                                <a href="{% url 'edit_cocktail' cocktail.id %}"><p class="text-light edit-button text-center">Edit</p></a>
+                            </div>
+                            <div class="col-6 btns">
+                                <a href="{% url 'delete_cocktail' cocktail.id %}"><p class="text-light delete-button text-center">Delete</p></a>
+                            </div>
+                        </div>
+                    {% endif %}
                 </div>
             </div>
-            {% if request.user.is_superuser %}
-                            <div class="row">
-                                <div class="col-6 btns">
-                                    <a href="{% url 'edit_cocktail' cocktail.id %}"><p class="text-light edit-button text-center">Edit</p></a>
-                                </div>
-                                <div class="col-6 btns">
-                                    <a href="{% url 'delete_cocktail' cocktail.id %}"><p class="text-light delete-button text-center">Delete</p></a>
-                                </div>
-                            </div>
-                        {% endif %}
         </div>
         {% endfor %}
     </div>

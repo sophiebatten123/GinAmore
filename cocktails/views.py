@@ -2,7 +2,7 @@
 Imports relevant django packages
 '''
 from django.shortcuts import render, reverse, redirect, get_object_or_404
-from .models import Cocktail, CocktailReview
+from .models import Cocktail, CocktailReview, CocktailCategory
 from .forms import CocktailForm, CocktailReviewForm
 from django.contrib import messages
 
@@ -11,16 +11,16 @@ def cocktails(request):
     '''
     A view to return the render all cocktail recipes
     '''
-    cocktails = Cocktail.objects.all()
+    cocktail_items = Cocktail.objects.all()
     categories = None
 
     if 'category' in request.GET:
         categories = request.GET['category'].split(',')
-        cocktails = cocktails.filter(category__name__in=categories)
-        categories = Category.objects.filter(name__in=categories)
+        cocktail_items = cocktail_items.filter(category__name__in=categories)
+        categories = CocktailCategory.objects.filter(name__in=categories)
 
     context = {
-        'cocktails': cocktails,
+        'cocktail_items': cocktail_items,
         'current_categories': categories,
     }
 

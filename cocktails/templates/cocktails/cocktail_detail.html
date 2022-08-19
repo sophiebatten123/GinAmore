@@ -13,7 +13,19 @@
             </a>
         </div>
         <div class="col-8">
-            <h5 class="mt-4">{{ cocktail.name }}</h5>
+            <div class="row">
+                <div class="col-6">
+                    <h5 class="mt-4">{{ cocktail.name }}</h5>
+                </div>
+                {% if request.user.is_superuser %}
+                    <div class="col-3 btns mt-4">
+                        <a href="{% url 'edit_cocktail' cocktail.id %}"><p class="text-light edit-button text-center">Edit</p></a>
+                    </div>
+                    <div class="col-3 btns mt-4">
+                        <a href="{% url 'delete_cocktail' cocktail.id %}"><p class="text-light delete-button text-center">Delete</p></a>
+                    </div>
+                {% endif %}
+            </div>
             <hr>
             <div class="row">
                 <div class="col-6 text-decoration-none">
