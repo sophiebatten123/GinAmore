@@ -56,6 +56,10 @@ body {
     justify-content: center;
 }
 
+.navbar-icon-text {
+    font-size: 12px;
+}
+
 .navbar-text {
     font-size: 20px;
 }
@@ -113,11 +117,11 @@ body {
 .pink-background {
     background-color: #dd9186b5;
     border: #dd9186b5 solid 2px;
-    padding: 50px;
+    padding: 30px;
 }
 
 .cocktail-main-images {
-    height: 400px;
+    height: 300px;
     position: relative;
 }
 
@@ -129,8 +133,7 @@ body {
 
 .cocktail-main-images img{
     opacity: 0.75;
-    width:  200px;
-    height: 400px;
+    height: 300px;
     object-fit: cover;
     border: solid 2px white;
 }
@@ -441,6 +444,18 @@ body {
     position: relative;
 }
 
+.gin-lower-container {
+    width: auto;
+    height: 100px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+}
+
 .our-cocktail-image {
     height: 500px;
     border: solid white 2px;
@@ -457,31 +472,7 @@ body {
     background-color: white;
     border: solid #e7b1a9 2px;
     border-radius: 5px;
-    position: absolute;
-    bottom: 100px;
-    right: 300px;
-}
-
-.our-gin-label {
-    position: absolute;
-    bottom: 200px;
-    right: 290px;
-}
-
-.our-cocktail-btns {
-    text-decoration: none;
-    background-color: white;
-    border: solid #e7b1a9 2px;
-    border-radius: 5px;
-    position: absolute;
-    bottom: 100px;
-    right: 250px;
-}
-
-.our-cocktail-label {
-    position: absolute;
-    bottom: 200px;
-    right: 220px;
+    margin: auto;
 }
 
 /*......................................................Contact Us Page*/
@@ -599,12 +590,46 @@ body {
 
 /*.................................................Media Queries */
 
-@media(max-width:780px) {
-    .small-search-hide {
-        display: none;
-    }
+@media(max-width:770px) {
     .small-search-show {
         display: block;
         float: right;
+    }
+    .navbar-icon-text {
+        font-size: 15px;
+    }
+    .small-search-hide {
+        display: none;
+    }
+    .nav-icons {
+        text-align: right;
+    }
+    .nav-icons ul {
+        float: right;
+        padding-right: 3px;
+    }
+    .pink-background {
+        padding: 20px;
+        bottom: 40px;
+    }
+    .bg-homepage-buttons {
+        padding: 0px;
+    }
+    .bg-homepage-buttons p {
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 575px) {
+    .heading-small {
+        font-size: 40px;
+        margin-top: 10px;
+    }
+    .pink-background {
+        padding: 10px;
+        bottom: 30px;
+    }
+    .bg-homepage-buttons p {
+        font-size: 13px;
     }
 }

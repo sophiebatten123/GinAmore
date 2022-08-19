@@ -63,7 +63,7 @@
     {% for product in products %}
         <div class="col-sm-6 col-md-3 p-0 cocktail-main-images {% if forloop.counter >= 5 %}hide{% endif %}" id="slide{{ forloop.counter }}">
             <a href="{% url 'product_detail' product.id %}">
-                <img src="{{ product.image.url }}" class="d-block w-100 main-cocktail-pictures" alt="{{ product.name }}">
+                <img src="{{ product.image.url }}" class="d-block full-width main-cocktail-pictures" alt="{{ product.name }}">
                 <p class="text-light white-background cocktail-name-main p-2"><strong>{{ product.name }} <i class="fa-solid fa-arrow-right"></i></strong></p>
             </a>
         </div>
@@ -111,16 +111,20 @@
     </div>
     <div class="row">
         <div class="col-sm-12 col-md-6 our-gin-image">
-            <h2 class="text-light our-gin-label">Our Gins</h2>
-            <a href="{% url 'products' %}">
-                <p class="our-gin-btns text-dark pt-3 pb-3 pl-4 pr-4">Shop Now</p>
-            </a>
+            <div class="gin-lower-container">
+                <h2 class="text-light">Our Gins</h2>
+                <a href="{% url 'products' %}">
+                    <p class="our-gin-btns text-dark pt-3 pb-3 pl-4 pr-4 w-50">Shop Now</p>
+                </a>
+            </div>
         </div>
         <div class="col-sm-12 col-md-6 our-cocktail-image">
-            <h2 class="text-light our-cocktail-label">Our Cocktails</h2>
-            <a href="{% url 'cocktails' %}">
-                <p class="our-cocktail-btns text-dark pt-3 pb-3 pl-4 pr-4">Explore Now</p>
-            </a>
+            <div class="gin-lower-container">
+                <h2 class="text-light">Our Cocktails</h2>
+                <a href="{% url 'cocktails' %}">
+                    <p class="our-gin-btns text-dark pt-3 pb-3 pl-4 pr-4 w-50">Explore Now</p>
+                </a>
+            </div>
         </div>
         <div class="col-12">
             <hr>

@@ -41,9 +41,9 @@
   <body>
     <header class="container-fluid bg_nav_color">
       <div class="row">
-        <div class="col-xs-4 col-sm-4 col-md-6 p-0 m-0">
+        <div class="col-sm-4 col-md-6 p-0 m-0 w-50">
           <a href="{% url 'home' %}" class="nav-link text-light">
-            <h1>GinAmore</h1>
+            <h1 class="heading-small">GinAmore</h1>
           </a>
         </div>
         <div class="col-3 text-center mt-2 p-0 ml-0 mr-0 small-search-hide" id="main-header-icons">
@@ -52,14 +52,14 @@
             <button class="btn" type="submit"><i class="fa-solid fa-magnifying-glass text-light"></i></button>
           </form>
         </div>
-        <div class="col-xs-8 col-sm-8 col-md-3 text-center p-0 m-0">
+        <div class="col-sm-7 col-md-3 p-0 m-0 nav-icons w-50">
           <ul class="list-inline mb-0">
             {% if request.user.is_superuser %}
               <li class="list-inline-item dropdown">
                 <a href="" class="d-inline p-2 text-dark nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                   <div class="text-center text-light">
                     <div><i class="fa-solid fa-gears"></i></div>
-                    <p class="my-0 navbar-text">Site Admin</p>
+                    <p class="my-0 navbar-icon-text">Site Admin</p>
                   </div>
                 </a>
                 <div class="dropdown-menu">
@@ -72,7 +72,7 @@
               <a href="" class="d-inline p-2 text-dark nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 <div class="text-center text-light">
                   <div><i class="fa-solid fa-user"></i></div>
-                  <p class="my-0 navbar-text">My Account</p>
+                  <p class="my-0 navbar-icon-text">My Account</p>
                 </div>
               </a>
               <div class="dropdown-menu">
@@ -90,7 +90,7 @@
               <a href="{% url 'view_bag' %}" class="{% if grand_total %} text-info {% else %} text-dark {% endif %} nav-link text-dark d-inline">
                 <div class="text-center text-light">
                   <div><i class="fa-solid fa-bag-shopping"></i></div>
-                  <p class="my-0 navbar-text">
+                  <p class="my-0 navbar-icon-text">
                     {% if grand_total %}
                       £{{ grand_total|floatformat:2 }}
                     {% else %}
@@ -106,8 +106,8 @@
     </header>
     <div class="container-fluid">
       <div class="row bg-light">
-        <div class="col-sm-2 col-md-12 ml-0 mr-0">
-          <nav class="navbar navbar-expand-lg bg-light" id="main-nav">
+        <div class="col-sm-2 col-md-12 ml-0 mr-0 w-50">
+          <nav class="navbar navbar-expand-lg bg-light mt-2" id="main-nav">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
               aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
@@ -148,8 +148,8 @@
             </div>
           </nav>
         </div>
-        <div class="col-sm-10 ml-0 mr-0">
-          <div class="text-center mt-2 mb-2 small-search-show" id="main-header-icons">
+        <div class="col-sm-10 ml-0 mr-0 w-50">
+          <div class="text-center mb-2 small-search-show" id="main-header-icons">
             <form method="GET" action="{% url 'products' %}" class="d-flex mt-3">
               <input class="form-control me-2 text-dark" type="text" placeholder="Search" name="q" aria-label="Search">
               <button class="btn" type="submit"><i class="fa-solid fa-magnifying-glass text-dark"></i></button>
