@@ -39,13 +39,3 @@
     </div>
 </div>
 {% endblock %}
-
-{% block postloadjs %}
-{{ block.super }}
-
-<script>
-    $(document).ready(function() {
-        $('#summernote').summernote();
-    });
-</script>
-{% endblock %}

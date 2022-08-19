@@ -37,7 +37,6 @@ class Cocktail(models.Model):
     name = models.CharField(max_length=254)
     description = models.TextField()
     recipe = models.TextField()
-    ingredients = models.TextField()
     rating = models.DecimalField(
         max_digits=6,
         decimal_places=2,
@@ -45,6 +44,19 @@ class Cocktail(models.Model):
         blank=True)
     image_url = models.URLField(max_length=2000, null=True, blank=True)
     image = models.ImageField(null=True, blank=False)
+
+    def __str__(self):
+        return self.name
+
+
+class RecipeIngredient(models.Model):
+    '''
+    Model to create an ingredient for the recipe
+    '''
+    cocktail = models.ForeignKey(Cocktail, on_delete=models.CASCADE)
+    name = models.CharField(max_length=254)
+    quantity = models.CharField(max_length=54)
+    measurement = models.CharField(max_length=54)
 
     def __str__(self):
         return self.name
