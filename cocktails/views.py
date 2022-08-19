@@ -2,8 +2,8 @@
 Imports relevant django packages
 '''
 from django.shortcuts import render, reverse, redirect, get_object_or_404
-from .models import Cocktail, CocktailReview, CocktailCategory
-from .forms import CocktailForm, CocktailReviewForm
+from .models import Cocktail, CocktailReview, CocktailCategory, CocktailIngredient
+from .forms import CocktailForm, CocktailReviewForm, CocktailIngredientForm
 from django.contrib import messages
 
 
@@ -75,8 +75,13 @@ def add_cocktail(request):
 
     if request.method == 'POST':
         form = CocktailForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
+        form_2 = CocktailIngredientForm(request.POST)
+        if all([form.is_valid(), form_2.is_valid()]):
+            parent = form.save(commit=False)
+            parent.save()
+            child = form_2.save(commit=False)
+            child.cocktail = parent
+            child.save()
             messages.success(request, 'Successfully added a cocktail!')
             return redirect(reverse('add_cocktail'))
         else:
@@ -86,10 +91,12 @@ def add_cocktail(request):
                 )
     else:
         form = CocktailForm()
+        form_2 = CocktailIngredientForm()
 
     template = 'cocktails/add_cocktail.html'
     context = {
         'form': form,
+        'form_2': form_2,
     }
 
     return render(request, template, context)

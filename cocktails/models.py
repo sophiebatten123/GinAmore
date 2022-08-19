@@ -3,6 +3,7 @@ Imports relevant django packages
 '''
 from django.db import models
 from django.contrib.auth.models import User
+from .validators import validate_measurements
 
 
 class CocktailCategory(models.Model):
@@ -49,14 +50,17 @@ class Cocktail(models.Model):
         return self.name
 
 
-class RecipeIngredient(models.Model):
+class CocktailIngredient(models.Model):
     '''
     Model to create an ingredient for the recipe
     '''
     cocktail = models.ForeignKey(Cocktail, on_delete=models.CASCADE)
     name = models.CharField(max_length=254)
     quantity = models.CharField(max_length=54)
-    measurement = models.CharField(max_length=54)
+    measurement = models.CharField(
+        max_length=54,
+        validators=[validate_measurements]
+        )
 
     def __str__(self):
         return self.name

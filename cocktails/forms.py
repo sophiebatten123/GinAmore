@@ -2,7 +2,7 @@
 Imports relevant django packages
 '''
 from django import forms
-from .models import Cocktail, CocktailCategory, CocktailReview
+from .models import Cocktail, CocktailCategory, CocktailReview, CocktailIngredient
 
 
 class CocktailForm(forms.ModelForm):
@@ -11,7 +11,7 @@ class CocktailForm(forms.ModelForm):
     '''
     class Meta:
         '''
-        Category fields generated within the form
+        Cocktail fields generated within the form
         '''
         model = Cocktail
         fields = '__all__'
@@ -25,6 +25,18 @@ class CocktailForm(forms.ModelForm):
         self.fields['category'].choices = friendly_names
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black rounded-0'
+
+
+class CocktailIngredientForm(forms.ModelForm):
+    '''
+    Form to display the cocktail ingredients information
+    '''
+    class Meta:
+        '''
+        Coktail ingredient fields generated within the form
+        '''
+        model = CocktailIngredient
+        fields = ('name', 'quantity', 'measurement',)
 
 
 class CocktailReviewForm(forms.ModelForm):
