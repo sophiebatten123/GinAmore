@@ -4,6 +4,7 @@ Imports relevant django packages
 from django.shortcuts import render, reverse, redirect, get_object_or_404
 from .models import Cocktail, CocktailReview, CocktailCategory, CocktailIngredient
 from .forms import CocktailForm, CocktailReviewForm, CocktailIngredientForm
+from django.forms.models import modelformset_factory
 from django.contrib import messages
 
 
@@ -73,15 +74,27 @@ def add_cocktail(request):
         messages.error(request, 'Sorry, only store owners can add cocktails')
         return redirect(reverse('home'))
 
+    CocktailIngredientFormSet = modelformset_factory(
+            CocktailIngredient,
+            form=CocktailIngredientForm,
+            extra=0
+            )
+
     if request.method == 'POST':
+        cocktailingredientformset = modelformset_factory(
+            CocktailIngredient,
+            form=CocktailIngredientForm,
+            extra=0
+            )
+        formset = cocktailingredientformset(request.POST)
         form = CocktailForm(request.POST, request.FILES)
-        form_2 = CocktailIngredientForm(request.POST)
-        if all([form.is_valid(), form_2.is_valid()]):
+        if all([form.is_valid(), formset.is_valid()]):
             parent = form.save(commit=False)
             parent.save()
-            child = form_2.save(commit=False)
-            child.cocktail = parent
-            child.save()
+            for form in formset:
+                child = form.save(commit=False)
+                child.cocktail = parent
+                child.save()
             messages.success(request, 'Successfully added a cocktail!')
             return redirect(reverse('add_cocktail'))
         else:
@@ -91,12 +104,12 @@ def add_cocktail(request):
                 )
     else:
         form = CocktailForm()
-        form_2 = CocktailIngredientForm()
+        formset = CocktailIngredientFormSet()
 
     template = 'cocktails/add_cocktail.html'
     context = {
         'form': form,
-        'form_2': form_2,
+        'formset': formset,
     }
 
     return render(request, template, context)
