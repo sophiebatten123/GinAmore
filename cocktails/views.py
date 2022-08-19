@@ -3,7 +3,7 @@ Imports relevant django packages
 '''
 from django.shortcuts import render, reverse, redirect, get_object_or_404
 from .models import Cocktail, CocktailReview, CocktailCategory, CocktailIngredient
-from .forms import CocktailForm, CocktailReviewForm, CocktailIngredientForm
+from .forms import CocktailForm, CocktailReviewForm, CocktailIngredientForm, CocktailIngredientFormSet
 from django.forms.models import modelformset_factory
 from django.contrib import messages
 
@@ -74,19 +74,13 @@ def add_cocktail(request):
         messages.error(request, 'Sorry, only store owners can add cocktails')
         return redirect(reverse('home'))
 
-    CocktailIngredientFormSet = modelformset_factory(
-            CocktailIngredient,
-            form=CocktailIngredientForm,
-            extra=0
-            )
-
     if request.method == 'POST':
         cocktailingredientformset = modelformset_factory(
             CocktailIngredient,
             form=CocktailIngredientForm,
             extra=0
             )
-        formset = cocktailingredientformset(request.POST)
+        formset = cocktailingredientformset(request.POST, queryset=[])
         form = CocktailForm(request.POST, request.FILES)
         if all([form.is_valid(), formset.is_valid()]):
             parent = form.save(commit=False)
@@ -124,10 +118,22 @@ def edit_cocktail(request, product_id):
         return redirect(reverse('home'))
 
     cocktail = get_object_or_404(Cocktail, pk=product_id)
+    
     if request.method == 'POST':
+        cocktailingredientformset = modelformset_factory(
+            CocktailIngredient,
+            form=CocktailIngredientForm,
+            extra=0
+            )
+        formset = cocktailingredientformset(request.POST)
         form = CocktailForm(request.POST, request.FILES, instance=cocktail)
-        if form.is_valid():
-            form.save()
+        if all([form.is_valid(), formset.is_valid()]):
+            parent = form.save(commit=False)
+            parent.save()
+            for form in formset:
+                child = form.save(commit=False)
+                child.cocktail = parent
+                child.save()
             messages.success(request, 'Successfully updated the cocktail!')
             return redirect(reverse('cocktail_detail', args=[cocktail.id]))
         else:
@@ -137,11 +143,13 @@ def edit_cocktail(request, product_id):
                 )
     else:
         form = CocktailForm(instance=cocktail)
+        formset = CocktailIngredientFormSet()
         messages.info(request, f'You are editing {cocktail.name}')
 
     template = 'cocktails/edit_cocktail.html'
     context = {
         'form': form,
+        'formset': formset,
         'cocktail': cocktail,
     }
 

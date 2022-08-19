@@ -19,6 +19,20 @@
                         {{ field }}
                     {% endif %}
                 {% endfor %}
+                <div class="col-12"><hr></div>
+                {% if formset %}
+                <p class="mt-2">Ingredients:</p>
+                {{ formset.management_form }}
+                <div id="ingredient-form-list">
+                    {% for form in formset %}
+                    <div class="ingredient-form">
+                        {{ form | crispy }}
+                    </div>
+                    {% endfor %}
+                </div>
+                <div id="empty-form" class="hide">{{ formset.empty_form | crispy }}</div>
+                <button id="add-more" type="button">Add Ingredient</button>
+                {% endif %}
                 <div class="row">
                     <div class="col-6 checkout">
                         <a href="{% url 'cocktails' %}">
@@ -38,4 +52,28 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script>
+    const addIngredient = document.getElementById('add-more');
+    const totalNewForm = document.getElementById("id_form-TOTAL_FORMS");
+    addIngredient.addEventListener('click', function(event) {
+        if (event) {
+            event.preventDefault();
+        }
+        const currentIngredientForm = document.getElementsByClassName("ingredient-form")
+        let ingredientLength = currentIngredientForm.length;
+        const ingredientList = document.getElementById('ingredient-form-list');
+        const emptyForm = document.getElementById('empty-form').cloneNode(true);
+        emptyForm.setAttribute('class', 'ingredient-form');
+        emptyForm.setAttribute('id', `form-${ingredientLength}`);
+        const regex = new RegExp('__prefix__', 'g');
+        emptyForm.innerHTML = emptyForm.innerHTML.replace(regex, ingredientLength);
+        totalNewForm.setAttribute('value', ingredientLength + 1)
+        ingredientList.append(emptyForm);
+    })
+
+</script>
 {% endblock %}

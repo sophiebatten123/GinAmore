@@ -3,6 +3,7 @@ Imports relevant django packages
 '''
 from django import forms
 from .models import Cocktail, CocktailCategory, CocktailReview, CocktailIngredient
+from django.forms import formset_factory
 
 
 class CocktailForm(forms.ModelForm):
@@ -31,12 +32,34 @@ class CocktailIngredientForm(forms.ModelForm):
     '''
     Form to display the cocktail ingredients information
     '''
+    name = forms.CharField(
+        widget=forms.TextInput(attrs={
+            'class': 'form-control',
+            'placeholder': 'Enter ingredient here'
+        })
+    )
+    quantity = forms.CharField(
+        widget=forms.TextInput(attrs={
+            'class': 'form-control',
+            'placeholder': 'Enter the quantity here'
+        })
+    )
+    measurement = forms.CharField(
+        widget=forms.TextInput(attrs={
+            'class': 'form-control',
+            'placeholder': 'Enter the units of measurement here'
+        })
+    )
+
     class Meta:
         '''
         Coktail ingredient fields generated within the form
         '''
         model = CocktailIngredient
         fields = ('name', 'quantity', 'measurement',)
+
+
+CocktailIngredientFormSet = formset_factory(CocktailIngredientForm, extra=1)
 
 
 class CocktailReviewForm(forms.ModelForm):
