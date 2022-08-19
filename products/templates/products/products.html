@@ -6,45 +6,91 @@
 
 {% block content %}
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-12 text-center mt-4 pl-5 pr-5">
-            <h3>
-                <strong>
-                {% if current_categories %}
-                    {% for c in current_categories %}
-                        {{ c.friendly_name }}
-                    {% endfor %}
-                {% else %}
-                    Shop All
+    <div class="row gin-container">
+        {% if current_categories %}
+            {% for c in current_categories %}
+                {% if c.name == "sloe_gin" %}
+                    <img class="gin-width" src="{% static 'images/ourmaingin3.jpg' %}" alt="{{ c.name }} Image">
+                {% elif c.name == "flavoured_gin" %}
+                    <img class="gin-width" src="{% static 'images/ourmaingin2.jpg' %}" alt="{{ c.name }} Image">
+                {% elif c.name == "dry_gin" %}
+                    <img class="gin-width" src="{% static 'images/ourmaingin.jpg' %}" alt="{{ c.name }} Image">
                 {% endif %}
+            {% endfor %}
+        {% else %}
+        <img class="gin-width" src="{% static 'images/ourmaingin4.jpg' %}" alt="{{ c.name }} Image">
+        {% endif %}
+        <div class="our-gin-heading mt-4 ml-4">
+            <h3 class="text-dark p-4">
+                <strong>
+                    {% if current_categories %}
+                        {% for c in current_categories %}
+                            {{ c.friendly_name }}
+                        {% endfor %}
+                    {% else %}
+                        Shop All
+                    {% endif %}
                 </strong>
             </h3>
-            <h4>Our gins are a labour of love that has taken us on a journey of
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center mt-4 pl-5 pr-5">
+            <p>Our gins are a labour of love that has taken us on a journey of
                 original botanicals, innovation and imaginative natural flavours. 
                 The result is a diverse range of exceptional gins that captivate 
                 the senses - designed to impress, explore, talk about and remember. 
                 We're sure you'll find something to your taste.
-            </h4>
+            </p>
+        </div>
+        <div class="col-12">
+            <hr>
         </div>
     </div>
-    <div class="row mt-2 mb-2 sort-btn mr-2">
-        <div class="dropdown">
-            <a class="btn btn-secondary dropdown-toggle shop-btn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
-              Sort Products
-            </a>
-            {% if selected_categories %}   
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <li><a class="dropdown-item" href="{% url 'products' %}?category={{ selected_categories }}&sort=price&direction=asc">Price (Lowest - Highest)</a></li>
-                    <li><a class="dropdown-item" href="{% url 'products' %}?category={{ selected_categories }}&sort=price&direction=desc">Price (Highest - Lowest)</a></li>
-                    <li><a class="dropdown-item" href="{% url 'products' %}?category={{ selected_categories }}&sort=rating&direction=desc">Highest Rating</a></li>
+    <div class="row">
+        <div class="col mt-2 mb-2">
+            <div class="dropdown w-50">
+                <a class="btn btn-secondary dropdown-toggle shop-btn" href="#" role="button"
+                    id="dropdownMenuLinkCategories" data-toggle="dropdown" aria-expanded="false">
+                    Gin Category
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLinkCategories">
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category=sloe_gin">Sloe Gin</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category=dry_gin">Dry Gin</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category=flavoured_gin">Flavoured Gin</a>
+                    </li>
                 </ul>
-            {% else %}
+            </div>
+        </div>
+        <div class="col mt-2 mb-2">
+            <div class="dropdown w-50 mr-0 right-sort">
+                <a class="btn btn-secondary dropdown-toggle shop-btn" href="#" role="button" id="dropdownMenuLink"
+                    data-toggle="dropdown" aria-expanded="false">
+                    Sort Products
+                </a>
+                {% if selected_categories %}
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <li><a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">Price (Lowest - Highest)</a></li>
-                    <li><a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=desc">Price (Highest - Lowest)</a></li>
-                    <li><a class="dropdown-item" href="{% url 'products' %}?sort=rating&direction=desc">Highest Rating</a></li>
+                    <li><a class="dropdown-item"
+                            href="{% url 'products' %}?category={{ selected_categories }}&sort=price&direction=asc">Price
+                            (Lowest - Highest)</a></li>
+                    <li><a class="dropdown-item"
+                            href="{% url 'products' %}?category={{ selected_categories }}&sort=price&direction=desc">Price
+                            (Highest - Lowest)</a></li>
+                    <li><a class="dropdown-item"
+                            href="{% url 'products' %}?category={{ selected_categories }}&sort=rating&direction=desc">Highest
+                            Rating</a></li>
                 </ul>
-            {% endif %}
+                {% else %}
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">Price (Lowest -
+                            Highest)</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=desc">Price (Highest -
+                            Lowest)</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?sort=rating&direction=desc">Highest
+                            Rating</a></li>
+                </ul>
+                {% endif %}
+            </div>
         </div>
     </div>
     <div class="row">

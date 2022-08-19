@@ -57,7 +57,11 @@ body {
 }
 
 .navbar-icon-text {
-    font-size: 12px;
+    font-size: 15px;
+}
+
+.nav-icons {
+    text-align: right;
 }
 
 .navbar-text {
@@ -169,6 +173,30 @@ body {
 
 /*.....................................................All Products Page */
 
+.gin-container {
+    height: 350px;
+    position: relative;
+}
+
+.our-gin-heading {
+    width: 250px;
+    height: 80px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.gin-width {
+    opacity: 0.6;
+    width:  100%;
+    height: 350px;
+    object-fit: cover;
+    border: solid 2px white;
+}
+
 .gin_image_cards_container {
     height: 200px;
     text-align: center;
@@ -182,8 +210,8 @@ body {
     text-decoration: none;
 }
 
-.sort-btn {
-    justify-content: right;
+.right-sort {
+    float: right;
 }
 
 /*......................................................Product Detail Page */
@@ -590,19 +618,19 @@ body {
 
 /*.................................................Media Queries */
 
+@media(max-width:988px) {
+    .navbar-icon-text {
+        font-size: 12px;
+    }
+}
+
 @media(max-width:770px) {
     .small-search-show {
         display: block;
         float: right;
     }
-    .navbar-icon-text {
-        font-size: 15px;
-    }
     .small-search-hide {
         display: none;
-    }
-    .nav-icons {
-        text-align: right;
     }
     .nav-icons ul {
         float: right;
