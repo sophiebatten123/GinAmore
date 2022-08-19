@@ -118,14 +118,16 @@ def edit_cocktail(request, product_id):
         return redirect(reverse('home'))
 
     cocktail = get_object_or_404(Cocktail, pk=product_id)
-    
+    ingredients = cocktail.cocktail_ingredients_list.all()
+
     if request.method == 'POST':
         cocktailingredientformset = modelformset_factory(
             CocktailIngredient,
             form=CocktailIngredientForm,
             extra=0
             )
-        formset = cocktailingredientformset(request.POST)
+        ingredients = cocktail.cocktail_ingredients_list.all()
+        formset = cocktailingredientformset(request.POST, ingredients)
         form = CocktailForm(request.POST, request.FILES, instance=cocktail)
         if all([form.is_valid(), formset.is_valid()]):
             parent = form.save(commit=False)
@@ -143,8 +145,9 @@ def edit_cocktail(request, product_id):
                 )
     else:
         form = CocktailForm(instance=cocktail)
-        formset = CocktailIngredientFormSet()
+        formset = CocktailIngredientFormSet(request.POST or None, ingredients)
         messages.info(request, f'You are editing {cocktail.name}')
+        print(ingredients)
 
     template = 'cocktails/edit_cocktail.html'
     context = {

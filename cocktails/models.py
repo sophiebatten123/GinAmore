@@ -54,7 +54,11 @@ class CocktailIngredient(models.Model):
     '''
     Model to create an ingredient for the recipe
     '''
-    cocktail = models.ForeignKey(Cocktail, on_delete=models.CASCADE)
+    cocktail = models.ForeignKey(
+        Cocktail,
+        on_delete=models.CASCADE,
+        related_name='cocktail_ingredients_list'
+        )
     name = models.CharField(max_length=254)
     quantity = models.CharField(max_length=54)
     measurement = models.CharField(
