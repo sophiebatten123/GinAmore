@@ -11,42 +11,73 @@
             <h3>Product Management: Add a Cocktail</h3>
             <hr>
             <form method="POST" action="{% url 'add_cocktail' %}" class="form" enctype="multipart/form-data">
-                {% csrf_token %}
-                {% for field in form %}
-                    {% if field.name != 'image' %}
-                        {{ field | as_crispy_field }}
-                    {% else %}
-                        {{ field }}
-                    {% endif %}
-                {% endfor %}
-                <div class="col-12"><hr></div>
-                {% if formset %}
-                <p class="mt-2">Ingredients:</p>
-                {{ formset.management_form }}
-                <div id="ingredient-form-list">
-                    {% for form in formset %}
-                    <div class="ingredient-form">
-                        {{ form | crispy }}
+                <div class="row background_temp_strip-pink">
+                    <div class="col-12">
+                        <h3 class="mt-2 text-light">Cocktail Information:</h3>
                     </div>
-                    {% endfor %}
                 </div>
-                <div id="empty-form" class="hide">{{ formset.empty_form | crispy }}</div>
-                <button id="add-more" type="button">Add Ingredient</button>
-                {% endif %}
-                {% if formset_2 %}
-                <p class="mt-2">Recipe:</p>
-                {{ formset_2.management_form }}
-                <div id="steps-form-list">
-                    {% for form in formset_2 %}
-                    <div class="steps-form">
-                        {{ form | crispy }}
-                    </div>
-                    {% endfor %}
-                </div>
-                <div id="empty-steps-form" class="hide">{{ formset_2.empty_form | crispy }}</div>
-                <button id="add-more-steps" type="button">Add Recipe Step</button>
-                {% endif %}
                 <div class="row">
+                    <div class="col-8 mt-2">
+                        {% csrf_token %}
+                        {% for field in form %}
+                            {% if field.name != 'image' %}
+                                {{ field | as_crispy_field }}
+                            {% else %}
+                                {{ field }}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <div class="col-4 mt-4 center-image">
+                        <img class="mt-4 mb-4 cocktail-edit-image" src="" alt="">
+                        <p class="text-center"><i class="fa-solid fa-magnifying-glass"></i> Click to enlarge</p>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <hr>
+                </div>
+                <div class="row background_temp_strip-pink">
+                    <div class="col-12">
+                        <h3 class="mt-2 text-light">Recipe Information:</h3>
+                    </div>
+                </div>
+                <div class="row">
+                {% if formset_2 %}
+                    <div class="col-8">
+                        <h3 class="mt-2">Steps:</h3>
+                        <hr>
+                        {{ formset_2.management_form }}
+                        <div id="steps-form-list">
+                            {% for form in formset_2 %}
+                                <div class="steps-form">
+                                    {{ form | crispy }}
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div id="empty-steps-form" class="hide">{{ formset_2.empty_form | crispy }}</div>
+                        <button id="add-more-steps" type="button" class="text-success"><i class="fa-solid fa-plus mr-2"></i>Add Additional Step</button>
+                    </div>
+                {% endif %}
+                {% if formset %}
+                    <div class="col-4">
+                        <h3 class="mt-2">Ingredients:</h3>
+                        <hr>
+                        {{ formset.management_form }}
+                        <div id="ingredient-form-list">
+                            {% for form in formset %}
+                                <div class="ingredient-form">
+                                    {{ form | crispy }}
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div id="empty-form" class="hide">{{ formset.empty_form | crispy }}</div>
+                        <button id="add-more" type="button" class="text-success"><i class="fa-solid fa-plus mr-2"></i>Add Additional Ingerdient</button>
+                    </div>
+                {% endif %}
+                </div>
+                <div class="row mt-2">
+                    <div class="col-12">
+                        <hr>
+                    </div>
                     <div class="col-6 checkout">
                         <a href="{% url 'cocktails' %}">
                             <p class="our-gin-btns-checkout text-light text-center">Cancel</p>

@@ -48,7 +48,6 @@
                         {{ formset_2.management_form }}
                         <div id="steps-form-list-edit">
                             {% for form in formset_2 %}
-                                <p>Step {{ forloop.counter }}</p>
                                 <div class="steps-form">
                                     {{ form | crispy }}
                                 </div>
@@ -65,7 +64,6 @@
                         {{ formset.management_form }}
                         <div id="ingredient-form-list-edit">
                             {% for form in formset %}
-                                <p>Ingredient {{ forloop.counter }}</p>
                                 <div class="ingredient-form p-2">
                                     {{ form | crispy }}
                                 </div>

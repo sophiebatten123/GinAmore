@@ -477,6 +477,16 @@ body {
     border: none;
 }
 
+#add-more {
+    background-color: white;
+    border: none;
+}
+
+#add-more-steps {
+    background-color: white;
+    border: none;
+}
+
 .cocktail-edit-image {
     width:  auto;
     height: 400px;
