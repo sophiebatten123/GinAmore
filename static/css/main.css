@@ -27,6 +27,12 @@ body {
     border: white 2px solid;
 }
 
+.background_temp_strip-pink {
+    background-color: #e7b1a9;
+    height: 50px;
+    border: white 2px solid;
+}
+
 .hide {
     display: none;
 }
@@ -459,6 +465,29 @@ body {
     display: block;
 }
 
+/*.....................................................Cocktail Forms*/
+
+#add-more-steps-edit {
+    background-color: white;
+    border: none;
+}
+
+#add-more-ingredients-edit {
+    background-color: white;
+    border: none;
+}
+
+.cocktail-edit-image {
+    width:  auto;
+    height: 400px;
+    object-fit: cover;
+    border: solid 2px white;
+}
+
+.center-image {
+    text-align: center;
+}
+
 /*.....................................................Our Story Page*/
 
 .our-gin-image {
@@ -542,7 +571,7 @@ body {
 }
 
 .our-gin-btns-checkout {
-    background-color: #e7b1a9;
+    background-color: #1c3a42;
     border: white 2px solid;
     border-radius: 5px;
     padding: 10px;
