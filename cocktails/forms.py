@@ -59,9 +59,6 @@ class CocktailIngredientForm(forms.ModelForm):
         fields = ('name', 'quantity', 'measurement',)
 
 
-CocktailIngredientFormSet = formset_factory(CocktailIngredientForm, extra=1)
-
-
 class CocktailReviewForm(forms.ModelForm):
     '''
     Creates the review for the cocktail recipe.

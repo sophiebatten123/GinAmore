@@ -67,7 +67,7 @@ class CocktailIngredient(models.Model):
         )
 
     def __str__(self):
-        return self.name
+        return f'{self.name} {self.quantity}{self.measurement}'
 
 
 class CocktailReview(models.Model):

@@ -3,7 +3,7 @@ Imports relevant django packages
 '''
 from django.shortcuts import render, reverse, redirect, get_object_or_404
 from .models import Cocktail, CocktailReview, CocktailCategory, CocktailIngredient
-from .forms import CocktailForm, CocktailReviewForm, CocktailIngredientForm, CocktailIngredientFormSet
+from .forms import CocktailForm, CocktailReviewForm, CocktailIngredientForm
 from django.forms.models import modelformset_factory
 from django.contrib import messages
 
@@ -33,6 +33,7 @@ def cocktail_detail(request, product_id):
     A view to return the cocktails recipe information
     '''
     cocktail = get_object_or_404(Cocktail, pk=product_id)
+    ingredients = cocktail.cocktail_ingredients_list.all()
 
     if request.method == 'POST':
 
@@ -61,6 +62,7 @@ def cocktail_detail(request, product_id):
         'cocktail': cocktail,
         'reviews': reviews,
         'review_form': review_form,
+        'ingredients': ingredients,
     }
 
     return render(request, 'cocktails/cocktail_detail.html', context)
@@ -97,6 +99,10 @@ def add_cocktail(request):
                 'Failed to add the cocktail. Ensure the form is valid'
                 )
     else:
+        CocktailIngredientFormSet = modelformset_factory(
+            CocktailIngredient,
+            CocktailIngredientForm,
+            extra=0)
         form = CocktailForm()
         formset = CocktailIngredientFormSet()
 
@@ -145,9 +151,12 @@ def edit_cocktail(request, product_id):
                 )
     else:
         form = CocktailForm(instance=cocktail)
-        formset = CocktailIngredientFormSet(request.POST or None, ingredients)
+        cocktailingredientformset = modelformset_factory(
+            CocktailIngredient,
+            CocktailIngredientForm,
+            extra=0)
+        formset = cocktailingredientformset(queryset=ingredients)
         messages.info(request, f'You are editing {cocktail.name}')
-        print(ingredients)
 
     template = 'cocktails/edit_cocktail.html'
     context = {
