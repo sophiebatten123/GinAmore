@@ -2,7 +2,7 @@
 Imports relevant django packages
 '''
 from django.contrib import admin
-from .models import Cocktail, CocktailCategory, CocktailIngredient
+from .models import Cocktail, CocktailCategory, CocktailIngredient, CocktailRecipeStep
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -27,11 +27,19 @@ class CocktailIngredientInline(admin.StackedInline):
     extra = 0
 
 
+class CocktailStepInline(admin.TabularInline):
+    '''
+    Information to be displayed in the steps admin database
+    '''
+    model = CocktailRecipeStep
+    extra = 0
+
+
 class CocktailAdmin(admin.ModelAdmin):
     '''
     Information to be displayed in the cocktail admin database
     '''
-    inlines = [CocktailIngredientInline]
+    inlines = [CocktailIngredientInline, CocktailStepInline]
     list_display = (
         'name',
         'category',

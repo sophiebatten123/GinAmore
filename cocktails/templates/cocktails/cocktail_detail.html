@@ -39,7 +39,11 @@
             </div>
             <div class="row">
                 <div class="col-8">
-                    {{ cocktail.recipe | safe }}
+                    <ul>
+                    {% for step in recipe %}
+                        <li>{{ step }}</li>
+                    {% endfor %}
+                    </ul>
                 </div>
                 <div class="col-4">
                     <ul>

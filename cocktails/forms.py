@@ -2,7 +2,13 @@
 Imports relevant django packages
 '''
 from django import forms
-from .models import Cocktail, CocktailCategory, CocktailReview, CocktailIngredient
+from .models import (
+    Cocktail,
+    CocktailCategory,
+    CocktailReview,
+    CocktailIngredient,
+    CocktailRecipeStep
+)
 from django.forms import formset_factory
 
 
@@ -57,6 +63,37 @@ class CocktailIngredientForm(forms.ModelForm):
         '''
         model = CocktailIngredient
         fields = ('name', 'quantity', 'measurement',)
+
+
+CocktailIngredientFormSet = formset_factory(
+    CocktailIngredientForm,
+    extra=0
+)
+
+
+class CocktailStepForm(forms.ModelForm):
+    '''
+    Form to display the cocktail steps information
+    '''
+    step = forms.CharField(
+        widget=forms.TextInput(attrs={
+            'class': 'form-control',
+            'placeholder': 'Enter recipe step here'
+        })
+    )
+
+    class Meta:
+        '''
+        Coktail steps fields generated within the form
+        '''
+        model = CocktailIngredient
+        fields = ('step',)
+
+
+StepsIngredientFormSet = formset_factory(
+    CocktailStepForm,
+    extra=0
+)
 
 
 class CocktailReviewForm(forms.ModelForm):

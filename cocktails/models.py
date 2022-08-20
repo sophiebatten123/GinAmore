@@ -37,7 +37,6 @@ class Cocktail(models.Model):
         on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
     description = models.TextField()
-    recipe = models.TextField()
     rating = models.DecimalField(
         max_digits=6,
         decimal_places=2,
@@ -68,6 +67,21 @@ class CocktailIngredient(models.Model):
 
     def __str__(self):
         return f'{self.name} {self.quantity}{self.measurement}'
+
+
+class CocktailRecipeStep(models.Model):
+    '''
+    Model to create the steps for the cocktail recipes
+    '''
+    cocktail = models.ForeignKey(
+        Cocktail,
+        on_delete=models.CASCADE,
+        related_name='cocktail_steps_list'
+        )
+    step = models.CharField(max_length=254)
+
+    def __str__(self):
+        return self.step
 
 
 class CocktailReview(models.Model):
