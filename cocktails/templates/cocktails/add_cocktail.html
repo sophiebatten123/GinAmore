@@ -73,7 +73,7 @@
 <script>
     // Javascript to handle adding a new ingredient
     const addIngredient = document.getElementById('add-more');
-    const totalNewForm = document.getElementById("id_form-TOTAL_FORMS");
+    const totalNewForm = document.getElementById("id_form1-TOTAL_FORMS");
     addIngredient.addEventListener('click', function(event) {
         if (event) {
             event.preventDefault();
@@ -91,12 +91,12 @@
     })
     // Javascript to handle adding a new step
     const addStep = document.getElementById('add-more-steps');
-    const totalNewStepsForm = document.getElementById("id_form-TOTAL_FORMS");
+    const totalNewStepsForm = document.getElementById("id_form2-TOTAL_FORMS");
     addStep.addEventListener('click', function(event) {
         if (event) {
             event.preventDefault();
         }
-        const currentStepsForm = document.getElementsByClassName("steps-form")
+        const currentStepsForm = document.getElementsByClassName("steps-form");
         let stepsLength = currentStepsForm.length;
         const stepsList = document.getElementById('steps-form-list');
         const emptyForm = document.getElementById('empty-steps-form').cloneNode(true);
@@ -104,7 +104,7 @@
         emptyForm.setAttribute('id', `form-${stepsLength}`);
         const regex = new RegExp('__prefix__', 'g');
         emptyForm.innerHTML = emptyForm.innerHTML.replace(regex, stepsLength);
-        totalNewStepsForm.setAttribute('value', stepsLength + 1)
+        totalNewStepsForm.setAttribute('value', stepsLength + 1);
         stepsList.append(emptyForm);
     })
 </script>

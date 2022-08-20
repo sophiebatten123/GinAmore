@@ -102,20 +102,28 @@ def add_cocktail(request):
             form=CocktailStepForm,
             extra=0
             )
-        formset = cocktailingredientformset(request.POST, queryset=[])
-        formset_2 = stepsingredientformset(request.POST, queryset=[])
+        formset = cocktailingredientformset(
+            request.POST,
+            queryset=[],
+            prefix="form1"
+            )
+        formset_2 = stepsingredientformset(
+            request.POST,
+            queryset=[],
+            prefix="form2"
+            )
         form = CocktailForm(request.POST, request.FILES)
         if all([form.is_valid(), formset.is_valid(), formset_2.is_valid()]):
             parent = form.save(commit=False)
             parent.save()
             for form in formset:
-                child = form.save(commit=False)
-                child.cocktail = parent
-                child.save()
-            for form in formset_2:
-                child = form.save(commit=False)
-                child.cocktail = parent
-                child.save()
+                for form_2 in formset_2:
+                    child = form.save(commit=False)
+                    child_2 = form_2.save(commit=False)
+                    child.cocktail = parent
+                    child_2.cocktail = parent
+                    child.save()
+                    child_2.save()
             messages.success(request, 'Successfully added a cocktail!')
             return redirect(reverse('add_cocktail'))
         else:
@@ -125,8 +133,8 @@ def add_cocktail(request):
                 )
     else:
         form = CocktailForm()
-        formset = CocktailIngredientFormSet()
-        formset_2 = StepsIngredientFormSet()
+        formset = CocktailIngredientFormSet(prefix="form1")
+        formset_2 = StepsIngredientFormSet(prefix="form2")
 
     template = 'cocktails/add_cocktail.html'
     context = {
@@ -156,16 +164,35 @@ def edit_cocktail(request, product_id):
             form=CocktailIngredientForm,
             extra=0
             )
+        stepsingredientformset = modelformset_factory(
+            CocktailRecipeStep,
+            form=CocktailStepForm,
+            extra=0
+            )
         ingredients = cocktail.cocktail_ingredients_list.all()
-        formset = cocktailingredientformset(request.POST, ingredients)
+        recipe = cocktail.cocktail_steps_list.all()
+        formset = cocktailingredientformset(
+            request.POST,
+            ingredients,
+            prefix="form1"
+            )
+        formset_2 = stepsingredientformset(
+            request.POST,
+            recipe,
+            prefix="form2"
+            )
         form = CocktailForm(request.POST, request.FILES, instance=cocktail)
-        if all([form.is_valid(), formset.is_valid()]):
+        if all([form.is_valid(), formset.is_valid(), formset_2.is_valid()]):
             parent = form.save(commit=False)
             parent.save()
             for form in formset:
-                child = form.save(commit=False)
-                child.cocktail = parent
-                child.save()
+                for form_2 in formset_2:
+                    child = form.save(commit=False)
+                    child_2 = form_2.save(commit=False)
+                    child.cocktail = parent
+                    child_2.cocktail = parent
+                    child.save()
+                    child_2.save()
             messages.success(request, 'Successfully updated the cocktail!')
             return redirect(reverse('cocktail_detail', args=[cocktail.id]))
         else:
@@ -179,13 +206,23 @@ def edit_cocktail(request, product_id):
             CocktailIngredient,
             CocktailIngredientForm,
             extra=0)
-        formset = cocktailingredientformset(queryset=ingredients)
+        stepsingredientformset = modelformset_factory(
+            CocktailRecipeStep,
+            form=CocktailStepForm,
+            extra=0
+            )
+        formset_2 = stepsingredientformset(queryset=recipe, prefix="form2")
+        formset = cocktailingredientformset(
+            queryset=ingredients,
+            prefix="form1"
+            )
         messages.info(request, f'You are editing {cocktail.name}')
 
     template = 'cocktails/edit_cocktail.html'
     context = {
         'form': form,
         'formset': formset,
+        'formset_2': formset_2,
         'cocktail': cocktail,
     }
 

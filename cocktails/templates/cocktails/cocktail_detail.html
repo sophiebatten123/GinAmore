@@ -39,11 +39,9 @@
             </div>
             <div class="row">
                 <div class="col-8">
-                    <ul>
                     {% for step in recipe %}
-                        <li>{{ step }}</li>
+                        <p><strong>Step {{ forloop.counter }}:</strong> {{ step }}</p>
                     {% endfor %}
-                    </ul>
                 </div>
                 <div class="col-4">
                     <ul>

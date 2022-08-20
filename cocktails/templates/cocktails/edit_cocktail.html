@@ -33,6 +33,19 @@
                 <div id="empty-form" class="hide">{{ formset.empty_form | crispy }}</div>
                 <button id="add-more" type="button">Add Ingredient</button>
                 {% endif %}
+                {% if formset_2 %}
+                <p class="mt-2">Recipe:</p>
+                {{ formset_2.management_form }}
+                <div id="steps-form-list">
+                    {% for form in formset_2 %}
+                    <div class="steps-form">
+                        {{ form | crispy }}
+                    </div>
+                    {% endfor %}
+                </div>
+                <div id="empty-steps-form" class="hide">{{ formset_2.empty_form | crispy }}</div>
+                <button id="add-more-steps" type="button">Add Recipe Step</button>
+                {% endif %}
                 <div class="row">
                     <div class="col-6 checkout">
                         <a href="{% url 'cocktails' %}">
@@ -58,7 +71,7 @@
 {{ block.super }}
 <script>
     const addIngredient = document.getElementById('add-more');
-    const totalNewForm = document.getElementById("id_form-TOTAL_FORMS");
+    const totalNewForm = document.getElementById("id_form1-TOTAL_FORMS");
     addIngredient.addEventListener('click', function(event) {
         if (event) {
             event.preventDefault();
@@ -74,6 +87,23 @@
         totalNewForm.setAttribute('value', ingredientLength + 1)
         ingredientList.append(emptyForm);
     })
-
+    // Javascript to handle adding a new step
+    const addStep = document.getElementById('add-more-steps');
+    const totalNewStepsForm = document.getElementById("id_form2-TOTAL_FORMS");
+    addStep.addEventListener('click', function(event) {
+        if (event) {
+            event.preventDefault();
+        }
+        const currentStepsForm = document.getElementsByClassName("steps-form");
+        let stepsLength = currentStepsForm.length;
+        const stepsList = document.getElementById('steps-form-list');
+        const emptyForm = document.getElementById('empty-steps-form').cloneNode(true);
+        emptyForm.setAttribute('class', 'steps-form');
+        emptyForm.setAttribute('id', `form-${stepsLength}`);
+        const regex = new RegExp('__prefix__', 'g');
+        emptyForm.innerHTML = emptyForm.innerHTML.replace(regex, stepsLength);
+        totalNewStepsForm.setAttribute('value', stepsLength + 1);
+        stepsList.append(emptyForm);
+    })
 </script>
 {% endblock %}
