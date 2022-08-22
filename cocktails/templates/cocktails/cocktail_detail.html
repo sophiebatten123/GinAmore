@@ -10,71 +10,87 @@
         <div class="col-sm-12 col-md-4 cocktails-main">
             <a href="{{ cocktail.image.url }}" target="_blank">
                 <img class="mt-4 mb-4 w-100 cocktail-image-main" src="{{ cocktail.image.url }}" alt="{{ cocktail.name }}">
-                <p class="mt-2 text-center text-dark"><i class="fa-solid fa-magnifying-glass"></i> Click to enlarge</p>
+                <p class="text-center text-dark"><i class="fa-solid fa-magnifying-glass"></i> Click to enlarge</p>
             </a>
         </div>
         <div class="col-sm-12 col-md-8">
-            <div class="row">
-                <div class="col-6">
-                    <h5 class="mt-4">{{ cocktail.name }}</h5>
+            <div class="row mt-4">
+                <div class="col-6 mb-2">
+                    <h4 class="small-product-name"><strong>{{ cocktail.name }}</strong></h4>
                 </div>
                 {% if request.user.is_superuser %}
-                    <div class="col-3 btns mt-4">
+                    <div class="col-3 btns">
                         <a href="{% url 'edit_cocktail' cocktail.id %}"><p class="text-light edit-button text-center">Edit</p></a>
                     </div>
-                    <div class="col-3 btns mt-4">
+                    <div class="col-3 btns">
                         <a href="{% url 'delete_cocktail' cocktail.id %}"><p class="text-light delete-button text-center">Delete</p></a>
                     </div>
                 {% endif %}
             </div>
             <hr>
             <div class="row">
-                <div class="col-6 text-decoration-none">
+                <div class="col-xs-12 col-sm-6 text-decoration-none">
                     <a href="{% url 'cocktails' %}?category={{ cocktail.category }}">
-                        <p class="text-dark">{{ cocktail.category.friendly_name }}</p>
+                        <p class="text-dark">Category:
+                            <span class="gin-category">{{ cocktail.category.friendly_name }}</span>
+                        </p>
                     </a>
                 </div>
-                <div class="col-6">
-                    <p><i class="fas fa-heart heart mr-2"></i>{{ cocktail.rating }}/5</p>
+                <div class="col-xs-12 col-sm-6 extra-product-info">
+                    <a href="#cocktail-review-section">
+                        <p>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+                        Reviews
+                        </p>
+                    </a>
                 </div>
             </div>
             <div class="row">
-                <div class="col-8">
-                    {% for step in recipe %}
-                        <p><strong>Step {{ forloop.counter }}:</strong> {{ step }}</p>
-                    {% endfor %}
-                </div>
-                <div class="col-4">
+                <div class="col-sm-12 col-md-4">
+                    <hr>
+                    <h5><strong>Ingredients:</strong></h5>
+                    <hr>
                     <ul>
                     {% for ingredient in ingredients %}
                         <li>{{ ingredient }}</li>
                     {% endfor %}
                     </ul>
                 </div>
+                <div class="col-sm-12 col-md-8">
+                    <hr>
+                    <h5><strong>Method:</strong></h5>
+                    <hr>
+                    {% for step in recipe %}
+                        <p><strong>Step {{ forloop.counter }}:</strong> {{ step }}</p>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>
-    <div class="row">
+</div>
+<div class="container-fluid" id="cocktail-review-section">
+    <div class="row background_header_reccommended">
         <div class="col-12">
-            <hr>
+            <h3 class="text-light">Reviews</h3>
         </div>
-        <div class="col-6">
+    </div>
+    <div class="row">
+        <div class="col-12 border">
             {% if cocktail_reviews %}
                 {% for review in cocktail_reviews %}
-                    <div class="row border">
-                        <div class="col-10 mt-2 mb-2">
-                            <table>
-                                <tr>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
-                                </tr>
-                                <tr>
-                                    <td class="pr-4 pl-4">{{ review.user }}</td>
-                                    <td class="pr-4 pl-4">{{ review.user_review }}</td>
-                                    <td class="pr-4 pl-4">{{ review.date_created }}</td>
-                                  </tr>
-                            </table>
+                    <div class="row border bg-light mt-2">
+                        <div class="col-2 mt-3 mb-2 text-center">
+                            <img class="user-width" src="{% static 'images/user.PNG' %}" alt="User icon image">
+                            <p>{{ review.user }}</p>
+                        </div>
+                        <div class="col-8 mt-2 mb-2 small-shift">
+                            <h5 class="small-title-review">{{ review.title }}</h5>
+                            <hr>
+                            <p class="small-review">{{ review.user_review }}</p>
                         </div>
                         {% if request.user.is_superuser %}
                         <div class="col-2 btns pt-2">
@@ -89,13 +105,41 @@
                 <p> No Reviews. </p>
             {% endif %}
         </div>
-        <div class="col-6">
-            <form method="POST" action="{% url 'cocktail_detail' cocktail.id %}">
+        <div class="col-2"></div>
+        <div class="col-8 text-center mt-4">
+            <p id="post-cocktail-review" class="text-dark">Write a Review</p>
+        </div>
+        <div class="col-2"></div>
+        <div class="col-12 bg-light border p-4" id="cocktail-review">
+            <div class="red-background text-center mb-2">
+                <p id="close-cocktail" class="text-light"><i class="fa-solid fa-xmark"></i></p>
+            </div>
+            <form method="POST" action="{% url 'cocktail_detail' cocktail.id %}" class="mt-2">
                 {% csrf_token %}
                 {{ review_form|crispy }}
-                <button class="text-light add-button text-center" type="submit">Post Review</button>
+                <button class="text-light add-button text-center w-50 text-center" type="submit">Post Review</button>
             </form>
         </div>
     </div>
+    <hr>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    {% include 'products/includes/quantity_input_script.html' %}
+    <script>
+       const cocktailReview = document.getElementById('post-cocktail-review');
+
+        cocktailReview.addEventListener("click", function() {
+            let cocktailForm = document.getElementById("cocktail-review");
+            let close = document.getElementById("close-cocktail");
+
+            cocktailForm.style.display = "block";
+
+            close.addEventListener("click", function(){
+            cocktailForm.style.display = "none";
+            });
+        });
+    </script>
 {% endblock %}

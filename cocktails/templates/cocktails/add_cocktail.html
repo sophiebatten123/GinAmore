@@ -17,7 +17,10 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-8 mt-2">
+                    <div class="col-md-12 col-lg-4 mt-4 center-image">
+                        <img class="mt-4 mb-4 cocktail-edit-image" src="{% static 'images/gin_placeholder.PNG' %}" alt="Placeholder cocktail image">
+                    </div>
+                    <div class="col-md-12 col-lg-8 mt-2">
                         {% csrf_token %}
                         {% for field in form %}
                             {% if field.name != 'image' %}
@@ -26,9 +29,6 @@
                                 {{ field }}
                             {% endif %}
                         {% endfor %}
-                    </div>
-                    <div class="col-4 mt-4 center-image">
-                        <img class="mt-4 mb-4 w-100" src="{% static 'images/gin_placeholder.PNG' %}" alt="Placeholder cocktail image">
                     </div>
                 </div>
                 <div class="col-12">
@@ -40,25 +40,9 @@
                     </div>
                 </div>
                 <div class="row">
-                {% if formset_2 %}
-                    <div class="col-8">
-                        <h3 class="mt-2">Steps:</h3>
-                        <hr>
-                        {{ formset_2.management_form }}
-                        <div id="steps-form-list">
-                            {% for form in formset_2 %}
-                                <div class="steps-form">
-                                    {{ form | crispy }}
-                                </div>
-                            {% endfor %}
-                        </div>
-                        <div id="empty-steps-form" class="hide">{{ formset_2.empty_form | crispy }}</div>
-                        <button id="add-more-steps" type="button" class="text-success"><i class="fa-solid fa-plus mr-2"></i>Add Additional Step</button>
-                    </div>
-                {% endif %}
-                {% if formset %}
-                    <div class="col-4">
-                        <h3 class="mt-2">Ingredients:</h3>
+                    {% if formset %}
+                    <div class="col-md-12 col-lg-4">
+                        <h3 class="mt-2"><strong>Ingredients:</strong></h3>
                         <hr>
                         {{ formset.management_form }}
                         <div id="ingredient-form-list">
@@ -70,6 +54,22 @@
                         </div>
                         <div id="empty-form" class="hide">{{ formset.empty_form | crispy }}</div>
                         <button id="add-more" type="button" class="text-success"><i class="fa-solid fa-plus mr-2"></i>Add Additional Ingerdient</button>
+                    </div>
+                {% endif %}
+                {% if formset_2 %}
+                    <div class="col-md-12 col-lg-8">
+                        <h3 class="mt-2"><strong>Steps:</strong></h3>
+                        <hr>
+                        {{ formset_2.management_form }}
+                        <div id="steps-form-list">
+                            {% for form in formset_2 %}
+                                <div class="steps-form">
+                                    {{ form | crispy }}
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div id="empty-steps-form" class="hide">{{ formset_2.empty_form | crispy }}</div>
+                        <button id="add-more-steps" type="button" class="text-success"><i class="fa-solid fa-plus mr-2"></i>Add Additional Step</button>
                     </div>
                 {% endif %}
                 </div>

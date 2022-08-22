@@ -50,6 +50,10 @@ body {
     display: none;
 }
 
+.medium-show {
+    display: none;
+}
+
 /*..........................................................Toasts*/
 
 .custom-toast {
@@ -397,6 +401,22 @@ body {
 
 #product-review {
     display: none;
+}
+
+#cocktail-review {
+    display: none;
+}
+
+#close-cocktail:hover {
+    cursor: pointer;
+}
+
+#post-cocktail-review {
+    text-decoration: underline;
+}
+
+#post-cocktail-review:hover {
+    cursor: pointer;
 }
 
 .red-background {
@@ -834,6 +854,12 @@ body {
     }
     .our-cocktail-image {
         height: 400px;
+    }
+    .cocktail-edit-image {
+        height: 300px;
+    }
+    .medium-show {
+        display: block;
     }
 }
 

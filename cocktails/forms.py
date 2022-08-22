@@ -110,4 +110,4 @@ class CocktailReviewForm(forms.ModelForm):
         Specifies the model and fields that are displayed on the form.
         '''
         model = CocktailReview
-        fields = ('user_review', )
+        fields = ('title', 'user_review', )

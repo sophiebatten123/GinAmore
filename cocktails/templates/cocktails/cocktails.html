@@ -42,7 +42,9 @@
                         </div>
                         <div class="col-6 text-decoration-none">
                             <a href="{% url 'cocktails' %}?category={{ cocktail.category }}">
-                                <p class="text-dark ml-2">{{ cocktail.category.friendly_name }}</p>
+                                <p class="text-dark ml-2">Category:
+                                    <span class="gin-category">{{ cocktail.category.friendly_name }}</span>
+                                </p>
                             </a>
                         </div>
                         <div class="col-6">
