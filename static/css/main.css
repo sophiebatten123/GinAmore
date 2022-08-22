@@ -46,6 +46,10 @@ body {
     color: #e7b1a9;
 }
 
+.small-show {
+    display: none;
+}
+
 /*..........................................................Toasts*/
 
 .custom-toast {
@@ -215,6 +219,7 @@ body {
     border: solid 2px white;
     width: 100%;
     border-radius: 5px;
+    font-size: 18px;
     text-decoration: none;
 }
 
@@ -255,6 +260,13 @@ body {
 .gin_image {
     width:  auto;
     height: 400px;
+    object-fit: cover;
+    border: solid 2px white;
+}
+
+.gin_image_cards {
+    width:  auto;
+    height: 100%;
     object-fit: cover;
     border: solid 2px white;
 }
@@ -843,6 +855,12 @@ body {
     .gin_image {
         height: 300px;
     }
+    .shop-btn-product {
+        font-size: 15px;
+    }
+    .small-product-name {
+        font-size: 18px;
+    }
 }
 
 @media(max-width: 575px) {
@@ -865,5 +883,20 @@ body {
     }
     .wishlist-area {
         margin-left: 20px;
+    }
+    .small-show {
+        display: block;
+    }
+    .user-width {
+        height: 50px;
+    }
+    .small-title-review {
+        font-size: 18px;
+    }
+    .small-review {
+        font-size: 15px;
+    }
+    .small-shift {
+        padding-left: 20px;
     }
 }

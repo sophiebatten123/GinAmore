@@ -24,7 +24,7 @@
         <div class="col-sm-12 col-md-6">
             <div class="row mt-4">
                 <div class="col-xs-12 col-sm-8 mb-2">
-                    <h4>{{ product.name }}</h4>
+                    <h4 class="small-product-name"><strong>{{ product.name }}</strong></h4>
                 </div>
                 <div class="col-xs-12 col-sm-4 p-0 mb-4 wishlist-area">
                     <form class="form" action="{% url 'add_to_wishlist' product.id %}" method="POST">
@@ -58,15 +58,16 @@
             {% endif %}
             <hr/>
             <div class="row">
-                <div class="col-6 extra-product-info">
+                <div class="col-xs-12 col-sm-6 extra-product-info">
                     <a href="#delivery"><p>Delivery Information</p></a>
                     <a href="{% url 'products' %}?category={{ product.category }}">
                         <p class="mt-2">
                             Category: <span class="gin-category">{{ product.category.friendly_name }}</span>
                         </p>
                     </a>
+                    <hr class="small-show">
                 </div>
-                <div class="col-6 extra-product-info">
+                <div class="col-xs-12 col-sm-6 extra-product-info">
                     <a href="#product-review-section">
                         <p>
                         <i class="fa-solid fa-star"></i>
@@ -82,15 +83,16 @@
             <p class="mt-4">{{ product.description }}</p>
             <hr/>
             <div class="row">
-                <div class="col-6">
-                    <p><strong>£{{ product.price }}</strong></p>
+                <div class="col-xs-12 col-sm-6">
+                    <p>Price: <strong>£{{ product.price }}</strong></p>
+                    <hr class="small-show">
                 </div>
-                <div class="col-6">
+                <div class="col-xs-12 col-sm-6">
                     <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                         {% csrf_token %}
                             <div class="form-row">
                                 <div class="col-12">
-                                    <div class="form-group w-50">
+                                    <div class="form-group w-100">
                                         <div class="input-group">
                                             <div class="input-group-prepend">
                                                 <button class="decrement-qty btn btn-black rounded-0" 
@@ -137,18 +139,7 @@
             <div class="row">
                 <div class="col-12">
                     <hr class="white-line"/>
-                    <table>
-                        <tr>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                        </tr>
-                        <tr>
-                            <td>Standard Delivery</td>
-                            <td>Orders within the UK will be delivered in 5 working days, 8am-8pm, Monday-Friday. Free on orders over £50.</td>
-                            <td>Cost dependent on product</td>
-                        </tr>
-                    </table>
+                    <p>Standard DeliveryOrders within the UK will be delivered in 5 working days, 8am-8pm, Monday-Friday. Free on orders over £50.</p>
                     <hr class="white-line"/>
                 </div>
             </div>
@@ -158,10 +149,10 @@
                     <p>Returns can be made by post using the return slip found within your order.
                         <br/>You can also return to your nearest Click & Collect Store.</p>
                     <div class="row">
-                        <div class="col-6 return-delivery-container">
-                            <a href="#" class="return-delivery-btn text-center"><p class="pt-3 text-light" id="return-product">More Information on Our Returns Policy</p></a>
+                        <div class="col-sm-12 col-md-6 return-delivery-container">
+                            <a href="#" class="return-delivery-btn text-center"><p class="pt-3 text-light" id="return-product">Information on Our Returns Policy</p></a>
                         </div>
-                        <div class="col-6 return-delivery-container">
+                        <div class="col-sm-12 col-md-6 return-delivery-container">
                             <a href="#" class="return-delivery-btn text-center"><p class="pt-3 text-light" id="shipping-product">More Delivery and Shipping Information</p></a>
                         </div>
                     </div>
@@ -208,10 +199,10 @@
                             <img class="user-width" src="{% static 'images/user.PNG' %}" alt="User icon image">
                             <p>{{ review.user }}</p>
                         </div>
-                        <div class="col-8 mt-2 mb-2">
-                            <h5>{{ review.title }}</h5>
+                        <div class="col-8 mt-2 mb-2 small-shift">
+                            <h5 class="small-title-review">{{ review.title }}</h5>
                             <hr>
-                            <p>{{ review.user_review }}</p>
+                            <p class="small-review">{{ review.user_review }}</p>
                         </div>
                         {% if request.user.is_superuser %}
                         <div class="col-2 btns pt-2">
@@ -238,7 +229,7 @@
             <form method="POST" action="{% url 'product_detail' product.id %}" class="mt-2">
                 {% csrf_token %}
                 {{ review_form|crispy }}
-                <button class="text-light add-button text-center w-25 text-center" type="submit">Post Review</button>
+                <button class="text-light add-button text-center w-50 text-center" type="submit">Post Review</button>
             </form>
         </div>
     </div>
