@@ -498,6 +498,10 @@ body {
     text-align: center;
 }
 
+.enlarge a{
+    text-decoration: none;
+}
+
 /*.....................................................Our Story Page*/
 
 .our-gin-image {

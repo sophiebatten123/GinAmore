@@ -27,11 +27,11 @@
                             {% endif %}
                         {% endfor %}
                     </div>
-                    <div class="col-4 mt-4 center-image">
+                    <div class="col-4 mt-4 center-image enlarge">
                         <a href="{{ cocktail.image.url }}" target="_blank">
                             <img class="mt-4 mb-4 cocktail-edit-image" src="{{ cocktail.image.url }}" alt="{{cocktail.name}}">
+                            <p class="text-center text-dark"><i class="fa-solid fa-magnifying-glass"></i> Click to enlarge</p>
                         </a>
-                        <p class="text-center"><i class="fa-solid fa-magnifying-glass"></i> Click to enlarge</p>
                     </div>
                 </div>
                 <div class="col-12"><hr></div>
@@ -136,5 +136,10 @@
         totalNewStepsForm.setAttribute('value', stepsLength + 1);
         stepsList.append(emptyForm);
     })
+    // Handles the addition of an image.
+    $('#new-image').change(function() {
+        var file = $("#new-image")[0].files[0];
+        $("#filename").text(`Image Selected: ${file.name}`);
+    });
 </script>
 {% endblock %}
