@@ -182,7 +182,7 @@ body {
 .gin-width {
     opacity: 0.6;
     width:  100%;
-    height: auto;
+    height: 300px;
     object-fit: cover;
 }
 
