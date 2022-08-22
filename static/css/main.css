@@ -179,28 +179,11 @@ body {
 
 /*.....................................................All Products Page */
 
-.gin-container {
-    height: 350px;
-    position: relative;
-}
-
-.our-gin-heading {
-    width: 250px;
-    height: 80px;
-    background-color: white;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
 .gin-width {
     opacity: 0.6;
     width:  100%;
-    height: 350px;
+    height: auto;
     object-fit: cover;
-    border: solid 2px white;
 }
 
 .gin_image_cards_container {
@@ -218,6 +201,14 @@ body {
 
 .right-sort {
     float: right;
+}
+
+.shop-btn-product {
+    background-color: #e7b1a9;
+    border: solid 2px white;
+    width: 100%;
+    border-radius: 5px;
+    text-decoration: none;
 }
 
 /*......................................................Product Detail Page */
@@ -297,6 +288,12 @@ body {
 
 .background_header_reccommended {
     background-color: #1c3a42;
+    border: white 2px solid;
+}
+
+.background_temp_strip-pink-product {
+    background-color: #1c3a42;
+    height: auto;
     border: white 2px solid;
 }
 

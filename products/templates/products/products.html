@@ -6,7 +6,8 @@
 
 {% block content %}
 <div class="container-fluid">
-    <div class="row gin-container">
+    <div class="row">
+        <div class="col-12 p-0">
         {% if current_categories %}
             {% for c in current_categories %}
                 {% if c.name == "sloe_gin" %}
@@ -20,9 +21,12 @@
         {% else %}
         <img class="gin-width" src="{% static 'images/ourmaingin4.jpg' %}" alt="{{ c.name }} Image">
         {% endif %}
-        <div class="our-gin-heading mt-4 ml-4">
-            <h3 class="text-dark p-4">
-                <strong>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center mt-2 p-0">
+            <div class="col-12">
+                <h3 class="text-dark p-2">
                     {% if current_categories %}
                         {% for c in current_categories %}
                             {{ c.friendly_name }}
@@ -30,27 +34,23 @@
                     {% else %}
                         Shop All
                     {% endif %}
-                </strong>
-            </h3>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12 text-center mt-4 pl-5 pr-5">
-            <p>Our gins are a labour of love that has taken us on a journey of
-                original botanicals, innovation and imaginative natural flavours. 
-                The result is a diverse range of exceptional gins that captivate 
-                the senses - designed to impress, explore, talk about and remember. 
-                We're sure you'll find something to your taste.
-            </p>
-        </div>
-        <div class="col-12">
+                </h3>
+            </div>
+            <div class="col-12 background_temp_strip-pink-product pt-2 text-light pl-0 pr-0">
+                <p>Our gins are a labour of love that has taken us on a journey of
+                    original botanicals, innovation and imaginative natural flavours. 
+                    <br> The result is a diverse range of exceptional gins that captivate 
+                    the senses - designed to impress, explore, talk about and remember. 
+                    We're sure you'll find something to your taste.
+                </p>
+            </div>
             <hr>
         </div>
     </div>
     <div class="row">
         <div class="col mt-2 mb-2">
             <div class="dropdown w-50">
-                <a class="btn btn-secondary dropdown-toggle shop-btn" href="#" role="button"
+                <a class="btn btn-secondary dropdown-toggle shop-btn-product" href="#" role="button"
                     id="dropdownMenuLinkCategories" data-toggle="dropdown" aria-expanded="false">
                     Gin Category
                 </a>
@@ -64,7 +64,7 @@
         </div>
         <div class="col mt-2 mb-2">
             <div class="dropdown w-50 mr-0 right-sort">
-                <a class="btn btn-secondary dropdown-toggle shop-btn" href="#" role="button" id="dropdownMenuLink"
+                <a class="btn btn-secondary dropdown-toggle shop-btn-product" href="#" role="button" id="dropdownMenuLink"
                     data-toggle="dropdown" aria-expanded="false">
                     Sort Products
                 </a>
@@ -128,11 +128,8 @@
             </div>
         {% endfor %}
     </div>
-</div>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-12 background_temp_strip">
-        </div>
+    <div class="col-12 p-0">
+        <hr>
     </div>
 </div>
 {% endblock %}
