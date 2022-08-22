@@ -244,8 +244,8 @@
               <li><a class="footer-text" href="{% url 'ourstory' %}">Our Story</a></li>
               <li><a href="#" class="footer-text"><p class="mb-0" id="returns">Returns & Refunds</p></a></li>
               <li><a class="footer-text" href="#"><p id="shipping" class="mb-0">Shipping</p></a></li>
-              <li><a class="footer-text" href="#">FAQ's</a></li>
-              <li><a href="#" class="footer-text"><p id="terms" class="footer-text mb-0">Terms and Conditions</p></a></li>
+              <li><a class="footer-text" href="#"><p id="faqs" class="mb-0">FAQ's</p></a></li>
+              <li><a href="#" class="footer-text"><p id="terms" class="mb-0">Terms and Conditions</p></a></li>
               <li><a class="footer-text" href="https://www.privacypolicygenerator.info/live.php?token=8DUyVJrwAYgkHKHutGJ0Z2lt9IK8zssS" target="_blank">Privacy Policy</a></li>
             </ul>
           </div>
@@ -253,7 +253,7 @@
             <h4 class="mt-3 text-light">Quick Links</h4>
             <ul class="mt-3 footer-list">
               <li><a class="footer-text" href="{% url 'products' %}">Shop</a></li>
-              <li><a class="footer-text" href="{% url 'cocktails' %}">Cocktail Classes</a></li>
+              <li><a class="footer-text" href="{% url 'cocktails' %}">Cocktails</a></li>
             </ul>
           </div>
           <div class="col-xs-4=12 col-sm-12 col-md-3 icons text-center">
@@ -309,6 +309,19 @@
   <p>After the 14-day period you will no longer be eligible and won't be able to receive a refund.<br></p>
   <p>If you have any additional questions or would like to request a refund, feel free to contact us.<br></p>
 </div>
+
+<div class="popup-box" id="faqs-popup">
+  <i class="fas fa-times close" id="close-faqs"></i>
+  <h1>FAQ's</h1>
+  <hr>
+  <p> Thanks for purchasing our products at GinAmore!<br></p>
+  <p>We offer a <strong>full money-back guarantee</strong> for all purchases made on our website within the first 14 days.
+    If you are not satisfied with the product that you have purchased from us, 
+    you can get your money back no questions asked within 14 days from purchase.<br></p> 
+  <p>After the 14-day period you will no longer be eligible and won't be able to receive a refund.<br></p>
+  <p>If you have any additional questions or would like to request a refund, feel free to contact us.<br></p>
+</div>
+
   {% block postloadjs %}
   <script>
     $('.toast').toast('show');
@@ -373,6 +386,20 @@
           shippingPopUp.style.zIndex = -1;
         });
     });
+    const faqsConditions = document.getElementById('faqs');
+
+    faqsConditions.addEventListener("click", function() {
+        let faqsPopUp = document.getElementById("faqs-popup");
+        let close = document.getElementById("close-faqs");
+
+        faqsPopUp.style.zIndex = 1;
+        faqsPopUp.style.pointerEvents = "auto";
+
+        close.addEventListener("click", function(){
+          faqsPopUp.style.zIndex = -1;
+        });
+    });
+
   </script>
   {% endblock %}
 

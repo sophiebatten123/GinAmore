@@ -312,7 +312,7 @@ body {
 
 .btn-like {
     border: none;
-    background-color: white;
+    background: none;
 }
 
 .no-items {
@@ -320,6 +320,10 @@ body {
 }
 
 /*.....................................................Reviews*/
+
+.user-width {
+    height: 75px;
+}
 
 .red-background {
     height: 25px;
@@ -655,6 +659,20 @@ body {
 }
 
 #shipping-popup p {
+    text-align: left;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+#faqs-popup {
+    z-index: -1;
+    pointer-events: none;
+    text-align: left;
+    top: 40%;
+    left: 50%;
+}
+
+#faqs-popup p {
     text-align: left;
     font-size: 18px;
     line-height: 20px;
