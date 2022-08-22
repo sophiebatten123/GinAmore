@@ -94,6 +94,14 @@ body {
     display: none;
 }
 
+/*...........................................................Auth*/
+
+.center-auth {
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+}
+
 /*...........................................................Homepage */
 
 .main-images img {

@@ -5,9 +5,9 @@
 {% endblock %}
 
 {% block content %}
-<div class="container bg-light">
-    <div class="row mt-4">
-        <div class="col-12">
+<div class="container-fluid bg-white">
+    <div class="row">
+        <div class="col-12 mt-4">
             <h3>Product Management: Edit a Product</h3>
             <hr>
             <form method="POST" action="{% url 'edit_product' product.id %}" class="form" enctype="multipart/form-data">
