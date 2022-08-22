@@ -240,14 +240,15 @@ body {
 }
 
 .gin_image_container {
-    height: 450px;
     text-align: center;
     margin: 0;
 }
 
 .gin_image {
-    height: 100%;
-    width: auto;
+    width:  auto;
+    height: 400px;
+    object-fit: cover;
+    border: solid 2px white;
 }
 
 .gin-category {
@@ -307,7 +308,7 @@ body {
 }
 
 .heart {
-    color: #1c3a42;
+    color: #e7b1a9;
 }
 
 .btn-like {
@@ -323,6 +324,22 @@ body {
 
 .user-width {
     height: 75px;
+}
+
+#post-product-review {
+    text-decoration: underline;
+}
+
+#post-product-review:hover {
+    cursor: pointer;
+}
+
+#close-review:hover {
+    cursor: pointer;
+}
+
+#product-review {
+    display: none;
 }
 
 .red-background {
@@ -787,6 +804,9 @@ body {
     .our-cocktail-image {
         height: 300px;
     }
+    .gin_image {
+        height: 300px;
+    }
 }
 
 @media(max-width: 575px) {
@@ -806,5 +826,8 @@ body {
     }
     .our-cocktail-image {
         height: 250px;
+    }
+    .wishlist-area {
+        margin-left: 20px;
     }
 }

@@ -40,4 +40,4 @@ class ReviewForm(forms.ModelForm):
         Specifies the model and fields that are displayed on the form.
         '''
         model = Review
-        fields = ('user_review', )
+        fields = ('title', 'user_review', )
