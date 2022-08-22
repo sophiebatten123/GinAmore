@@ -297,6 +297,34 @@ body {
     border: white 2px solid;
 }
 
+#return-product-popup {
+    z-index: -1;
+    pointer-events: none;
+    text-align: left;
+    top: 40%;
+    left: 50%;
+}
+
+#return-product-popup p {
+    text-align: left;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+#shipping-product-popup {
+    z-index: -1;
+    pointer-events: none;
+    text-align: left;
+    top: 40%;
+    left: 50%;
+}
+
+#shipping-product-popup p {
+    text-align: left;
+    font-size: 18px;
+    line-height: 20px;
+}
+
 /*.....................................................Wishlist*/
 
 .wishlist_left {

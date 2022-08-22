@@ -159,10 +159,10 @@
                         <br/>You can also return to your nearest Click & Collect Store.</p>
                     <div class="row">
                         <div class="col-6 return-delivery-container">
-                            <a href="#" class="return-delivery-btn text-center"><p class="pt-3 text-light">More Information on Our Returns Policy</p></a>
+                            <a href="#" class="return-delivery-btn text-center"><p class="pt-3 text-light" id="return-product">More Information on Our Returns Policy</p></a>
                         </div>
                         <div class="col-6 return-delivery-container">
-                            <a href="#" class="return-delivery-btn text-center"><p class="pt-3 text-light">More Delivery and Shipping Information</p></a>
+                            <a href="#" class="return-delivery-btn text-center"><p class="pt-3 text-light" id="shipping-product">More Delivery and Shipping Information</p></a>
                         </div>
                     </div>
                 </div>
@@ -244,6 +244,31 @@
     </div>
     <hr>
 </div>
+
+<!---Javascript Popup Boxes-->
+<div class="popup-box" id="return-product-popup">
+    <i class="fas fa-times close" id="close-product-returns"></i>
+    <h1>Returns Policy</h1>
+    <hr>
+    <p> Thanks for purchasing our products at GinAmore!<br></p>
+    <p>We offer a <strong>full money-back guarantee</strong> for all purchases made on our website within the first 14 days.
+      If you are not satisfied with the product that you have purchased from us, 
+      you can get your money back no questions asked within 14 days from purchase.<br></p> 
+    <p>After the 14-day period you will no longer be eligible and won't be able to receive a refund.<br></p>
+    <p>If you have any additional questions or would like to request a refund, feel free to contact us.<br></p>
+</div>
+
+<div class="popup-box" id="shipping-product-popup">
+    <i class="fas fa-times close" id="close-product-shipping"></i>
+    <h1>Shipping</h1>
+    <hr>
+    <p> Thanks for purchasing our products at GinAmore!<br></p>
+    <p>We offer a <strong>full money-back guarantee</strong> for all purchases made on our website within the first 14 days.
+      If you are not satisfied with the product that you have purchased from us, 
+      you can get your money back no questions asked within 14 days from purchase.<br></p> 
+    <p>After the 14-day period you will no longer be eligible and won't be able to receive a refund.<br></p>
+    <p>If you have any additional questions or would like to request a refund, feel free to contact us.<br></p>
+</div>
 {% endblock %}
 
 {% block postloadjs %}
@@ -260,6 +285,33 @@
 
             close.addEventListener("click", function(){
             reviewForm.style.display = "none";
+            });
+        });
+        // Javascript to handle pop ups
+        const returnProducts = document.getElementById('return-product');
+
+        returnProducts.addEventListener("click", function() {
+            let returnProductPopUp = document.getElementById("return-product-popup");
+            let close = document.getElementById("close-product-returns");
+
+            returnProductPopUp.style.zIndex = 1;
+            returnProductPopUp.style.pointerEvents = "auto";
+
+            close.addEventListener("click", function(){
+                returnProductPopUp.style.zIndex = -1;
+            });
+        });
+        const shippingProduct = document.getElementById('shipping-product');
+
+        shippingProduct.addEventListener("click", function() {
+            let shippingProductPopUp = document.getElementById("shipping-product-popup");
+            let close = document.getElementById("close-product-shipping");
+
+            shippingProductPopUp.style.zIndex = 1;
+            shippingProductPopUp.style.pointerEvents = "auto";
+
+            close.addEventListener("click", function(){
+                shippingProductPopUp.style.zIndex = -1;
             });
         });
     </script>
