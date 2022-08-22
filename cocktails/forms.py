@@ -9,6 +9,7 @@ from .models import (
     CocktailIngredient,
     CocktailRecipeStep
 )
+from .widgets import CustomClearableCocktailFileInput
 from django.forms import formset_factory
 
 
@@ -23,6 +24,10 @@ class CocktailForm(forms.ModelForm):
         model = Cocktail
         fields = '__all__'
         exclude = ('image_url',)
+
+    image = forms.ImageField(label='Image',
+                             required=False,
+                             widget=CustomClearableCocktailFileInput)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
