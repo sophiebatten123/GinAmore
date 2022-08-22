@@ -549,6 +549,11 @@ body {
     border-radius: 5px;
 }
 
+.content-center table{
+    margin: auto;
+    justify-content: center;
+}
+
 .contact-icons ul {
     padding: 0;
 }
@@ -662,6 +667,12 @@ body {
     .navbar-icon-text {
         font-size: 12px;
     }
+    .our-gin-image {
+        height: 400px;
+    }
+    .our-cocktail-image {
+        height: 400px;
+    }
 }
 
 @media(max-width:770px) {
@@ -686,6 +697,15 @@ body {
     .bg-homepage-buttons p {
         font-size: 16px;
     }
+    .our-story-image {
+        display: none;
+    }
+    .our-gin-image {
+        height: 300px;
+    }
+    .our-cocktail-image {
+        height: 300px;
+    }
 }
 
 @media(max-width: 575px) {
@@ -699,5 +719,11 @@ body {
     }
     .bg-homepage-buttons p {
         font-size: 13px;
+    }
+    .our-gin-image {
+        height: 250px;
+    }
+    .our-cocktail-image {
+        height: 250px;
     }
 }

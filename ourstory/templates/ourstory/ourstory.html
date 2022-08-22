@@ -10,14 +10,14 @@
         <div class="col-12">
             <hr>
         </div>
-        <div class="col-6 mt-2">
+        <div class="col-sm-12 col-md-6 mt-2">
             <h3>Our Story</h3>
             <hr>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in quam non lorem vulputate efficitur ut a tortor. Praesent ante ligula, semper quis elementum sit amet, viverra ultrices sapien. Cras quis ligula ac mauris pellentesque scelerisque. Ut vel cursus lacus. In laoreet metus quis magna ultrices fermentum. </p>
             <p>Vivamus in quam non lorem vulputate efficitur ut a tortor. Praesent ante ligula, semper quis elementum sit amet, viverra ultrices sapien. Cras quis ligula ac mauris pellentesque scelerisque. Ut vel cursus lacus. In laoreet metus quis magna ultrices fermentum. </p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
-        <div class="col-6 p-0 mt-2">
+        <div class="col-6 p-0 mt-2 our-story-image">
             <img src="{% static 'images/about_us.jpg' %}" class="w-100" alt="Our Story Bar Image">
         </div>
         <div class="col-12">
@@ -27,17 +27,21 @@
 </div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-12 col-md-6 our-gin-image">
-            <h2 class="text-light our-gin-label">Our Gins</h2>
-            <a href="{% url 'products' %}">
-                <p class="our-gin-btns text-dark pt-3 pb-3 pl-4 pr-4">Shop Now</p>
-            </a>
+        <div class="col-6 our-gin-image">
+            <div class="gin-lower-container">
+                <h2 class="text-light">Our Gins</h2>
+                <a href="{% url 'products' %}">
+                    <p class="our-gin-btns text-dark pt-3 pb-3 pl-4 pr-4 w-50">Shop Now</p>
+                </a>
+            </div>
         </div>
-        <div class="col-sm-12 col-md-6 our-cocktail-image">
-            <h2 class="text-light our-cocktail-label">Our Cocktails</h2>
-            <a href="{% url 'cocktails' %}">
-                <p class="our-cocktail-btns text-dark pt-3 pb-3 pl-4 pr-4">Explore Now</p>
-            </a>
+        <div class="col-6 our-cocktail-image">
+            <div class="gin-lower-container">
+                <h2 class="text-light">Our Cocktails</h2>
+                <a href="{% url 'cocktails' %}">
+                    <p class="our-gin-btns text-dark pt-3 pb-3 pl-4 pr-4 w-50">Explore Now</p>
+                </a>
+            </div>
         </div>
         <div class="col-12">
             <hr>

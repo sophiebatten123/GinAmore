@@ -7,26 +7,26 @@
 {% block content %}
 <div class="container-fluid">
     <div class="row">
-        <div class="col-8 mt-2">
-            <h3>Contact Us</h3>
+        <div class="col-12 mt-2 content-center">
+            <h3 class="text-center">Contact Us</h3>
             <hr>
-            <table>
+            <table class="bg-light">
                 <tr>
-                    <td><p><strong>Contact Number:</strong></p></td>
-                    <td><p class="pl-4"><strong>07862 673827</strong></p></td>
+                    <td class="p-2 pr-4m-2"><p><strong>Contact Number:</strong></p></td>
+                    <td class="p-2 pr-4m-2"><p class="pl-4"><strong>07862 673827</strong></p></td>
                 </tr>
                 <tr>
-                    <td><p><strong>Email Address:</strong></p></td>
-                    <td><p class="pl-4"><strong>ginamoree01@gmail.com</strong></p></td>
+                    <td class="p-2 pr-4 m-2"><p><strong>Email Address:</strong></p></td>
+                    <td class="p-2 pr-4 m-2"><p class="pl-4"><strong>ginamoree01@gmail.com</strong></p></td>
                 </tr>
                 <tr>
-                    <td><p><strong>Postal Address</strong></p></td>
-                    <td><p class="pl-4"><strong>Banbury Distillery <br> 2A Finsbury Road <br>
+                    <td class="p-2 pr-4 m-2"><p><strong>Postal Address</strong></p></td>
+                    <td class="p-2 pr-4 m-2"><p class="pl-4"><strong>Banbury Distillery <br> 2A Finsbury Road <br>
                         Banbury <br> BH23 6AH</strong></p></td>
                 </tr>
             </table>
             <div class="row">
-                <div class="col-12 contact-icons">
+                <div class="col-12 text-center contact-icons">
                     <ul class="mt-3">
                         <li><a href="https://www.facebook.com/IGinAmore" target="_blank" rel="noopener"
                                 aria-label="Click here to go to our facebook page"><i class="fab fa-facebook"></i></a></li>
@@ -40,9 +40,6 @@
                 </div>
             </div>
         </div>
-        <div class="col-4 contact-image mt-2">
-            <img src="{% static 'images/contact.jpg' %}" class="w-100" alt="Contact Us Logo Image">
-        </div>
         <div class="col-12">
             <hr>
         </div>
@@ -51,16 +48,20 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-6 our-gin-image">
-            <h2 class="text-light our-gin-label">Our Gins</h2>
-            <a href="{% url 'products' %}">
-                <p class="our-gin-btns text-dark pt-3 pb-3 pl-4 pr-4">Shop Now</p>
-            </a>
+            <div class="gin-lower-container">
+                <h2 class="text-light">Our Gins</h2>
+                <a href="{% url 'products' %}">
+                    <p class="our-gin-btns text-dark pt-3 pb-3 pl-4 pr-4 w-50">Shop Now</p>
+                </a>
+            </div>
         </div>
         <div class="col-6 our-cocktail-image">
-            <h2 class="text-light our-cocktail-label">Our Cocktails</h2>
-            <a href="{% url 'cocktails' %}">
-                <p class="our-cocktail-btns text-dark pt-3 pb-3 pl-4 pr-4">Explore Now</p>
-            </a>
+            <div class="gin-lower-container">
+                <h2 class="text-light">Our Cocktails</h2>
+                <a href="{% url 'cocktails' %}">
+                    <p class="our-gin-btns text-dark pt-3 pb-3 pl-4 pr-4 w-50">Explore Now</p>
+                </a>
+            </div>
         </div>
         <div class="col-12">
             <hr>
