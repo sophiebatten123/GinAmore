@@ -56,9 +56,9 @@ def cocktail_detail(request, product_id):
         if request.user.is_authenticated and review_form.is_valid():
 
             review_form.instance.user = request.user
-            review = review_form.save(commit=False)
-            review.cocktail = cocktail
-            review.save()
+            cocktail_review = review_form.save(commit=False)
+            cocktail_review.cocktail = cocktail
+            cocktail_review.save()
             messages.success(request, ('Thank you for your review!'))
 
             return redirect(reverse('cocktail_detail', args=[cocktail.id]))
@@ -70,11 +70,11 @@ def cocktail_detail(request, product_id):
     else:
         review_form = CocktailReviewForm()
 
-    reviews = CocktailReview.objects.filter(cocktail=cocktail)
+    cocktail_reviews = CocktailReview.objects.filter(cocktail=cocktail)
 
     context = {
         'cocktail': cocktail,
-        'reviews': reviews,
+        'cocktail_reviews': cocktail_reviews,
         'review_form': review_form,
         'ingredients': ingredients,
         'recipe': recipe,
@@ -247,7 +247,7 @@ def delete_cocktail(request, product_id):
     return redirect(reverse('cocktails'))
 
 
-def delete_review(request, review_id):
+def delete_cocktail_review(request, review_id):
     '''
     Deletes the review from the product
     '''

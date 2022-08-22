@@ -15,7 +15,7 @@ urlpatterns = [
         name='delete_cocktail'
         ),
     path(
-        'delete_review/<int:review_id>/',
-        views.delete_review,
-        name='delete_review'),
+        'delete_cocktail_review/<int:review_id>/',
+        views.delete_cocktail_review,
+        name='delete_cocktail_review'),
 ]

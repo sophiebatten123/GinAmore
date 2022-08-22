@@ -60,8 +60,8 @@
     </div>
     <div class="row">
         <div class="col-6">
-            {% if reviews %}
-                {% for review in reviews %}
+            {% if cocktail_reviews %}
+                {% for review in cocktail_reviews %}
                     <div class="row border">
                         <div class="col-10 mt-2 mb-2">
                             <table>
@@ -80,7 +80,7 @@
                         {% if request.user.is_superuser %}
                         <div class="col-2 btns pt-2">
                             <div class="red-background">
-                                <a href="{% url 'delete_review' review.id %}"><p class="text-light text-center"><i class="fa-solid fa-xmark"></i></p></a>
+                                <a href="{% url 'delete_cocktail_review' review.id %}"><p class="text-light text-center"><i class="fa-solid fa-xmark"></i></p></a>
                             </div>
                         </div>
                     </div>

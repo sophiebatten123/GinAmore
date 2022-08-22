@@ -186,7 +186,7 @@ def delete_product(request, product_id):
     return redirect(reverse('products'))
 
 
-def delete_review(request, review_id):
+def delete_product_review(request, review_id):
     '''
     Deletes the review from the product
     '''
