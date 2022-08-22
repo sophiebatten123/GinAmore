@@ -632,6 +632,34 @@ body {
     line-height: 20px;
 }
 
+#terms-popup {
+    z-index: -1;
+    pointer-events: none;
+    text-align: left;
+    top: 40%;
+    left: 50%;
+}
+
+#terms-popup p {
+    text-align: left;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+#shipping-popup {
+    z-index: -1;
+    pointer-events: none;
+    text-align: left;
+    top: 40%;
+    left: 50%;
+}
+
+#shipping-popup p {
+    text-align: left;
+    font-size: 18px;
+    line-height: 20px;
+}
+
 .footer_background {
     background-color: #1c3a42;
     height: auto;
