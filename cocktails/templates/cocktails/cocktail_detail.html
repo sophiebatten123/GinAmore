@@ -5,14 +5,15 @@
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid bg-light">
+<div class="container-fluid bg-white">
     <div class="row">
-        <div class="col-4">
+        <div class="col-sm-12 col-md-4 cocktails-main">
             <a href="{{ cocktail.image.url }}" target="_blank">
-                <img class="mt-4 mb-4 cocktail-image-detail" src="{{ cocktail.image.url }}" alt="{{cocktail.name}}">
+                <img class="mt-4 mb-4 w-100 cocktail-image-main" src="{{ cocktail.image.url }}" alt="{{ cocktail.name }}">
+                <p class="mt-2 text-center text-dark"><i class="fa-solid fa-magnifying-glass"></i> Click to enlarge</p>
             </a>
         </div>
-        <div class="col-8">
+        <div class="col-sm-12 col-md-8">
             <div class="row">
                 <div class="col-6">
                     <h5 class="mt-4">{{ cocktail.name }}</h5>
@@ -54,11 +55,9 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-12 background_temp">
-            <h3 class="text-center text-light">Reccomended Gins</h3>
+        <div class="col-12">
+            <hr>
         </div>
-    </div>
-    <div class="row">
         <div class="col-6">
             {% if cocktail_reviews %}
                 {% for review in cocktail_reviews %}

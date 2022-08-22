@@ -125,7 +125,7 @@ def add_cocktail(request):
                     child.save()
                     child_2.save()
             messages.success(request, 'Successfully added a cocktail!')
-            return redirect(reverse('add_cocktail'))
+            return redirect(reverse('cocktail_detail', args=[parent.id]))
         else:
             messages.error(
                 request,

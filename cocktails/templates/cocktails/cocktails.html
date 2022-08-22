@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid bg-light">
+<div class="container-fluid bg-white">
     <div class="row">
         <div class="col-12">
             <hr>
@@ -23,19 +23,19 @@
     </div>
     <div class="row">
         {% for cocktail in cocktail_items %}
-        <div class="col-sm-12 col-md-12 col-lg-6 mt-2 cocktail-background">
+        <div class="col-12">
             <div class="row">
-                <div class="col-4">
+                <div class="col-xs-12 col-sm-3 gin_image_cards_container">
                     <a href="{% url 'cocktail_detail' cocktail.id %}">
-                        <img class="cocktail-image mt-4" src="{{ cocktail.image.url }}" alt="{{cocktail.name}}">
+                        <img class="cocktail_image_cards mt-4" src="{{ cocktail.image.url }}" alt="{{cocktail.name}}">
                     </a>
                 </div>
-                <div class="col-8">
+                <div class="col-xs-12 col-sm-9">
                     <div class="row">
-                        <div class="col-12 text-decoration-none">
+                        <div class="col-12 text-decoration-none mt-2">
                             <a href="{% url 'cocktail_detail' cocktail.id %}">
                                 <h5 class="mt-4 ml-2 text-dark">
-                                    {{ cocktail.name }}
+                                    <strong>{{ cocktail.name }}</strong>
                                 </h5>
                             </a>
                             <hr>
@@ -48,27 +48,30 @@
                         <div class="col-6">
                             <p class="ml-2"><i class="fas fa-heart heart mr-2"></i>{{ cocktail.rating }}/5</p>
                         </div>
-                        <hr/>
                         <div class="col-12">
                             <p class="ml-2">
                                 {{ cocktail.description }}
                             </p>
                         </div>
-                    </div>
-                    <div class="row">
                         <div class="col-12 btns">
-                            <a href="{% url 'cocktail_detail' cocktail.id %}"><p class="text-light shop-btn text-center">View Recipe</p></a>
+                            <a href="{% url 'cocktail_detail' cocktail.id %}">
+                                <p class="text-light shop-btn text-center">View Recipe</p>
+                            </a>
                         </div>
                     </div>
                     {% if request.user.is_superuser %}
-                        <div class="row">
-                            <div class="col-6 btns">
-                                <a href="{% url 'edit_cocktail' cocktail.id %}"><p class="text-light edit-button text-center">Edit</p></a>
-                            </div>
-                            <div class="col-6 btns">
-                                <a href="{% url 'delete_cocktail' cocktail.id %}"><p class="text-light delete-button text-center">Delete</p></a>
-                            </div>
+                    <div class="row">
+                        <div class="col-6 btns">
+                            <a href="{% url 'edit_cocktail' cocktail.id %}">
+                                <p class="text-light edit-button text-center">Edit</p>
+                            </a>
                         </div>
+                        <div class="col-6 btns">
+                            <a href="{% url 'delete_cocktail' cocktail.id %}">
+                                <p class="text-light delete-button text-center">Delete</p>
+                            </a>
+                        </div>
+                    </div>
                     {% endif %}
                 </div>
             </div>
