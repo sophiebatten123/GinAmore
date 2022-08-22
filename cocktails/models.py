@@ -45,6 +45,13 @@ class Cocktail(models.Model):
     image_url = models.URLField(max_length=2000, null=True, blank=True)
     image = models.ImageField(null=True, blank=False)
 
+    @property
+    def get_image_url(self):
+        if self.image and hasattr(self.image, 'url'):
+            return self.image.url
+        else:
+            return "{% static images/user.PNG %}"
+
     def __str__(self):
         return self.name
 

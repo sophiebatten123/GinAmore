@@ -100,7 +100,7 @@
                         <div class="row">
                             <div class="col gin_image_cards_container">
                                 <a href="{% url 'product_detail' product.id %}">
-                                    <img class="gin_image_cards" src="{{product.image.url}}" alt="Image of Gin">
+                                    <img class="gin_image_cards" src="{{ product.image.url }}" alt="{{ product.name }}">
                                 </a>
                             </div>
                         </div>
