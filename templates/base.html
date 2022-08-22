@@ -55,7 +55,7 @@
         <div class="col-sm-7 col-md-3 p-0 m-0 nav-icons w-50">
           <ul class="list-inline mb-0">
             {% if request.user.is_superuser %}
-              <li class="list-inline-item dropdown">
+              <li class="list-inline-item">
                 <a href="" class="d-inline p-2 text-dark nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                   <div class="text-center text-light">
                     <div><i class="fa-solid fa-gears"></i></div>
@@ -68,7 +68,7 @@
                 </div>
               </li>
             {% endif %}
-            <li class="list-inline-item dropdown">
+            <li class="list-inline-item">
               <a href="" class="d-inline p-2 text-dark nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 <div class="text-center text-light">
                   <div><i class="fa-solid fa-user"></i></div>
@@ -158,8 +158,8 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid bg_delivery_color">
-      <div class="row">
+    <div class="container-fluid bg-light">
+      <div class="row bg_delivery_color">
         <div class="col">
           <h4 class="text-center text-light">Free delivery on orders over £{{ free_delivery_threshold }}</h4>
         </div>
@@ -191,7 +191,7 @@
     {% block content %}
     {% endblock %}
     
-    <div class="container-fluid">
+    <div class="container-fluid bg-white">
       <div class="row">
         <div class="col-5" id="sign_up_image"></div>
         <div class="col-7">
@@ -242,10 +242,10 @@
             <h4 class="mt-3 text-light">Information</h4>
             <ul class="mt-3 footer-list">
               <li><a class="footer-text" href="{% url 'ourstory' %}">Our Story</a></li>
-              <li><a class="footer-text" href="#">Returns & Refunds</a></li>
+              <li><a href="#"><p class="footer-text mb-0" id="returns">Returns & Refunds</p></a></li>
               <li><a class="footer-text" href="#">Shipping</a></li>
               <li><a class="footer-text" href="#">FAQ's</a></li>
-              <li><a class="footer-text" href="#" target="_blank">Terms and Conditions</a></li>
+              <li><p id="terms-and-conditions" class="footer-text mb-0">Terms and Conditions</p></li>
               <li><a class="footer-text" href="https://www.privacypolicygenerator.info/live.php?token=8DUyVJrwAYgkHKHutGJ0Z2lt9IK8zssS" target="_blank">Privacy Policy</a></li>
             </ul>
           </div>
@@ -272,12 +272,27 @@
       </div>
   </div>
 
+  <!---Javascript Popup Boxes-->
+
+  <div class="popup-box iconpopup" id="returns-popup">
+    <i class="fas fa-times close" id="close-terms"></i>
+    <h1>Returns Policy</h1>
+    <hr>
+    <p> Thanks for purchasing our products at GinAmore!<br></p>
+    <p>We offer a <strong>full money-back guarantee</strong> for all purchases made on our website within the first 14 days.
+      If you are not satisfied with the product that you have purchased from us, 
+      you can get your money back no questions asked within 14 days from purchase.<br></p> 
+    <p>After the 14-day period you will no longer be eligible and won't be able to receive a refund.<br></p>
+    <p>If you have any additional questions or would like to request a refund, feel free to contact us.<br></p>
+</div>
+
   {% block postloadjs %}
   <script>
     $('.toast').toast('show');
   </script>
   <script src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
   <script>
+    // Javascript to handle the email sign up page
     (function ($) {
       window.fnames = new Array();
       window.ftypes = new Array();
@@ -295,6 +310,20 @@
       ftypes[5] = 'birthday';
     }(jQuery));
     var $mcj = jQuery.noConflict(true);
+    // Javascript to handle pop ups
+    const returnsConditions = document.getElementById('returns');
+
+    returnsConditions.addEventListener("click", function() {
+        let returnsPopUp = document.getElementById("returns-popup");
+        let close = document.getElementById("close-terms");
+
+        returnsPopUp.style.zIndex = 1;
+        returnsPopUp.style.pointerEvents = "auto";
+
+        close.addEventListener("click", function(){
+          returnsPopUp.style.zIndex = -1;
+        });
+    });
   </script>
   {% endblock %}
 
