@@ -1,9 +1,13 @@
 {% load account %}{% user_display user as user_display %}{% load i18n %}{% autoescape off %}{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}Hello from {{ site_name }}!
 
-You're receiving this e-mail because user {{ user_display }} has given yours as an e-mail address to connect their account.
+Thank you for creating an account with us! 
 
-To confirm this is correct, go to {{ activate_url }}
+Please confirm your email address is correct by clicking the link below:
+
+{{ activate_url }}
 {% endblocktrans %}
-{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}Thank you from {{ site_name }}!
+{% blocktrans with site_name=current_site.name site_domain=current_site.domain %} We hope you enjoy shopping at our store!
+
+Lots of Love, 
 {{ site_domain }}{% endblocktrans %}
 {% endautoescape %}
