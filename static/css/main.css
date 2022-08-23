@@ -56,6 +56,16 @@ body {
 
 /*..........................................................Toasts*/
 
+.toast-btn {
+    background-color: #1c3a42;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.toast-btn a {
+    text-decoration: none;
+}
+
 .custom-toast {
     overflow: visible;
 }

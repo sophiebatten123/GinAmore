@@ -1,2 +1,3 @@
 {% load i18n %}
-{% blocktrans %}Just one more step! A confirmation e-mail has been sent to {{email}}.{% endblocktrans %}
+{% blocktrans %}Just one more step! 
+A confirmation e-mail has been sent to {{email}}.{% endblocktrans %}

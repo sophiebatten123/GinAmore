@@ -1,13 +1,45 @@
-<div class="toast custom-toast" data-autohide="false">
-    <div class="arrow-up arrow-success"></div>
-    <div class="w-100 toast-capper bg-success"></div>
+<div class="toast mt-2 p-2" aria-live="assertive" aria-atomic="true" data-delay="10000">
     <div class="toast-header">
         <strong class="mr-auto">Success!</strong>
         <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+            <i class="fas fa-window-close"></i>
         </button>
     </div>
     <div class="toast-body bg-white">
-        {{ message }}
+        <p>{{ message }}</p>
+    </div>
+    {% if bag_items %}
+    <div class="container-fluid bg-white">
+        {% for item in bag_items %}
+        <div class="row pr-0">
+            <div class="col-12">
+                <hr>
+            </div>
+            <div class="col-4">
+                <img class="img-thumbnail float-end" style="height: 50px; width: 50px"
+                src="{{ item.product.image.url }}" alt="{{ item.product.name }} thumbnail image">
+            </div>
+            <div class="col-8 pl-0">
+                <p>{{ item.product.name }}</p>
+                <p>Quantity: {{ item.quantity }}</p>
+                <p>£{{ item.product.price }}</p>
+            </div>
+        </div>
+        {% endfor %}
+        <div class="row">
+            <div class="col">
+                <hr>
+                <p><strong>Total Cost: £{{ grand_total|floatformat:2 }}</strong></p>
+            </div>
+          </div>
+        <div class="row">
+            <div class="col-12 mt-2 toast-btn text-center pt-2 pb-2">
+                <a href="{% url 'checkout' %}" class="text-light w-100 mb-2 pl-0 pr-0">Checkout</a>
+            </div>
+            <div class="col-12 mt-2 toast-btn text-center pt-2 pb-2">
+                <a href="{% url 'products' %}" class="text-light w-100 mb-2 pl-0 pr-0">Keep Shopping</a>
+            </div>
+        </div>
+    {% endif %}
     </div>
 </div>
