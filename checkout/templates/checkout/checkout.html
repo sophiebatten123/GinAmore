@@ -117,7 +117,7 @@
                 <div class="row">
                     <div class="col-2">
                         <a href="{% url 'product_detail' item.product.id %}">
-                            <img class="w-100 p-2" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                            <img class="w-100 p-2" src="{{ item.product.image.url }}" alt="{{ product.name }} Image">
                         </a>
                     </div>
                     <div class="col-7">
@@ -154,7 +154,7 @@
                             {% for item in wishlist_products %}
                             <div class="col-4 p-0 cocktail-checkout-images {% if forloop.counter >= 4 %}hide{% endif %}" id="slide{{ forloop.counter }}">
                                 <a href="{% url 'product_detail' item.product.id %}">
-                                    <img src="{{item.product.image.url}}" class="gin_image d-block w-100" alt="{{ item.product.name }}" class="main-cocktail-pictures">
+                                    <img src="{{item.product.image.url}}" class="gin_image d-block w-100" alt="{{ item.product.name }} Image" class="main-cocktail-pictures">
                                     <p class="text-light white-background cocktail-name-main p-2"><strong>{{ item.product.name }} <i class="fa-solid fa-arrow-right"></i></strong></p>
                                 </a>
                             </div>
@@ -177,7 +177,7 @@
                         {% for item in wishlist_products %}
                         <div class="col-4 p-0 cocktail-checkout-images {% if forloop.counter >= 4 %}hide{% endif %}" id="slide{{ forloop.counter }}">
                             <a href="{% url 'product_detail' item.product.id %}">
-                                <img src="{{item.product.image.url}}" class="gin_image d-block w-100" alt="{{ item.product.name }}" class="main-cocktail-pictures">
+                                <img src="{{item.product.image.url}}" class="gin_image d-block w-100" alt="{{ item.product.name }} Image" class="main-cocktail-pictures">
                                 <p class="text-light white-background cocktail-name-main p-2"><strong>{{ item.product.name }} <i class="fa-solid fa-arrow-right"></i></strong></p>
                             </a>
                         </div>

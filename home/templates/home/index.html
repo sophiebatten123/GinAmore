@@ -58,7 +58,7 @@
     {% for product in products %}
         <div class="col-sm-6 col-md-3 p-0 cocktail-main-images {% if forloop.counter >= 5 %}hide{% endif %}" id="slide{{ forloop.counter }}">
             <a href="{% url 'product_detail' product.id %}">
-                <img src="{{ product.image.url }}" class="d-block full-width main-cocktail-pictures" alt="{{ product.name }}">
+                <img src="{{ product.image.url }}" class="d-block full-width main-cocktail-pictures" alt="{{ product.name }} Image">
                 <p class="text-light white-background cocktail-name-main p-2"><strong>{{ product.name }} <i class="fa-solid fa-arrow-right"></i></strong></p>
             </a>
         </div>

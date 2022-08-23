@@ -11,7 +11,7 @@
             {% if product.image %}
             <div class="col gin_image_container mb-4 cocktails-main">
                 <a href="{{ product.image.url }}" target="_blank">
-                    <img class="gin_image" src="{{ product.image.url }}" alt="{{ product.name }}">
+                    <img class="gin_image" src="{{ product.image.url }}" alt="{{ product.name }} Image">
                 </a>
                 <p class="mt-2"><i class="fa-solid fa-magnifying-glass"></i> Click to enlarge</p>
             </div>
@@ -139,7 +139,7 @@
             <div class="row">
                 <div class="col-12">
                     <hr class="white-line"/>
-                    <p>Standard DeliveryOrders within the UK will be delivered in 5 working days, 8am-8pm, Monday-Friday. Free on orders over £50.</p>
+                    <p>Standard Delivery Orders within the UK will be delivered in 5 working days, 8am-8pm, Monday-Friday. Free on orders over £50.</p>
                     <hr class="white-line"/>
                 </div>
             </div>
@@ -196,7 +196,7 @@
                 {% for review in reviews %}
                     <div class="row border bg-light mt-2">
                         <div class="col-2 mt-3 mb-2 text-center">
-                            <img class="user-width" src="{% static 'images/user.PNG' %}" alt="User icon image">
+                            <img class="user-width" src="{% static 'images/user.PNG' %}" alt="User Review Icon Image">
                             <p>{{ review.user }}</p>
                         </div>
                         <div class="col-8 mt-2 mb-2 small-shift">
