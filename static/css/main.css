@@ -248,9 +248,9 @@ body {
 .shop-btn-product {
     background-color: #e7b1a9;
     border: solid 2px white;
-    width: 100%;
     border-radius: 5px;
     font-size: 18px;
+    width: 400px;
     text-decoration: none;
 }
 
@@ -885,6 +885,9 @@ body {
     .welcome-margin {
         margin-top: 30px;
     }
+    .shop-btn-product {
+        width: 200px;
+    }
 }
 
 @media(max-width:770px) {
@@ -988,5 +991,8 @@ body {
     }
     .small-show-heart i {
         display: inline;
+    }
+    .shop-btn-product {
+        width: 150px;
     }
 }

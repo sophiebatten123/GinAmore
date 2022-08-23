@@ -51,32 +51,33 @@
 </div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-6 mt-2 mb-2 dropdown">
+        <div class="col-6 mt-2 mb-2 dropdown sort-product">
             <a class="btn btn-secondary dropdown-toggle shop-btn-product" href="#" role="button"
                 id="dropdownMenuLinkCategories" data-toggle="dropdown" aria-expanded="false">
                 Gin Category
             </a>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLinkCategories">
+                <li><a class="dropdown-item" href="{% url 'products' %}">All Gins</a></li>
                 <li><a class="dropdown-item" href="{% url 'products' %}?category=sloe_gin">Sloe Gin</a></li>
                 <li><a class="dropdown-item" href="{% url 'products' %}?category=dry_gin">Dry Gin</a></li>
                 <li><a class="dropdown-item" href="{% url 'products' %}?category=flavoured_gin">Flavoured Gin</a>
                 </li>
             </ul>
         </div>
-        <div class="col-6 mt-2 mb-2 dropdown mr-0 right-sort">
-            <a class="btn btn-secondary dropdown-toggle shop-btn-product" href="#" role="button" id="dropdownMenuLink"
+        <div class="col-6 mt-2 mb-2 dropdown mr-0" sort-product>
+            <a class="btn btn-secondary dropdown-toggle shop-btn-product right-sort" href="#" role="button" id="dropdownMenuLink"
                 data-toggle="dropdown" aria-expanded="false">
                 Sort Products
             </a>
             {% if selected_categories %}
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <li><a class="dropdown-item"
+            <ul class="dropdown-menu right-sort" aria-labelledby="dropdownMenuLink">
+                <li class="product-sort-item"><a class="dropdown-item"
                         href="{% url 'products' %}?category={{ selected_categories }}&sort=price&direction=asc">Price
                         (Lowest - Highest)</a></li>
-                <li><a class="dropdown-item"
+                <li class="product-sort-item"><a class="dropdown-item"
                         href="{% url 'products' %}?category={{ selected_categories }}&sort=price&direction=desc">Price
                         (Highest - Lowest)</a></li>
-                <li><a class="dropdown-item"
+                <li class="product-sort-item"><a class="dropdown-item"
                         href="{% url 'products' %}?category={{ selected_categories }}&sort=rating&direction=desc">Highest
                         Rating</a></li>
             </ul>
