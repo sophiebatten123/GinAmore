@@ -127,10 +127,18 @@ body {
     width: 100%;
 }
 
+.small-show-heart i {
+    display: none;
+}
+
 #main_image_gin img{
     height: 180px;
     width: 100%;
     border-radius: 50%;
+}
+
+.welcome-margin {
+    margin-top: 40px;
 }
 
 .message-container {
@@ -873,6 +881,12 @@ body {
     }
 }
 
+@media(max-width:860px) {
+    .welcome-margin {
+        margin-top: 30px;
+    }
+}
+
 @media(max-width:770px) {
     .small-search-show {
         display: block;
@@ -915,6 +929,21 @@ body {
     }
 }
 
+@media(max-width: 744px) {
+    .welcome-margin {
+        margin-top: 20px;
+    }
+}
+
+@media(max-width: 684px) {
+    .welcome-margin {
+        margin-top: 10px;
+    }
+    .welcome p {
+        font-size: 15px;
+    }
+}
+
 @media(max-width: 575px) {
     .heading-small {
         font-size: 40px;
@@ -950,5 +979,14 @@ body {
     }
     .small-shift {
         padding-left: 20px;
+    }
+    .small-hidden {
+        display: none;
+    }
+    .welcome-margin {
+        text-align: center;
+    }
+    .small-show-heart i {
+        display: inline;
     }
 }
