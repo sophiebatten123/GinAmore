@@ -18,7 +18,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-lg-4 mt-4 center-image">
-                        <img class="mt-4 mb-4 cocktail-edit-image" src="{% static 'images/gin_placeholder.PNG' %}" alt="Placeholder Cocktail Image">
+                        <img class="mt-4 mb-4 cocktail-edit-image" src="{% static 'images/gin_placeholder.PNG' %}" alt="Placeholder Cocktail Image" height="200px" width="auto">
                     </div>
                     <div class="col-md-12 col-lg-8 mt-2">
                         {% csrf_token %}
@@ -144,9 +144,9 @@
         stepsList.append(emptyForm);
     })
     // Handles the addition of an image.
-    $('#new-image').change(function() {
-        var file = $("#new-image")[0].files[0];
-        $("#filename").text(`Image Selected: ${file.name}`);
+    $('#new-image-cocktail').change(function() {
+        var file = $("#new-image-cocktail")[0].files[0];
+        $("#filename-new-image-cocktail").text(`Image Selected: ${file.name}`);
     });
 </script>
 {% endblock %}

@@ -144,9 +144,9 @@
         stepsList.append(emptyForm);
     })
     // Handles the addition of an image.
-    $('#new-image').change(function() {
-        var file = $("#new-image")[0].files[0];
-        $("#filename").text(`Image Selected: ${file.name}`);
+    $('#update-image-cocktail').change(function() {
+        var file = $("#update-image-cocktail")[0].files[0];
+        $("#filename-update-cocktail").text(`Image Selected: ${file.name}`);
     });
 </script>
 {% endblock %}

@@ -1,18 +1,22 @@
 {% if widget.is_initial %}
     <p class="mb-2">{{ widget.initial_text }}:</p>
     <a href="{{ widget.value.url }}">
-        <img width="96" height="96" class="rounded shadow-sm" src="{{ widget.value.url }}">
+        <img width="96" height="96" class="rounded shadow-sm" src="{{ widget.value.url }}" alt="Current Cocktail Image">
     </a>
     <br>
     {{ widget.input_text }}
     <span class="btn btn-black rounded-0 btn-file mt-2 text-success">
-        <i class="fa-solid fa-arrows-rotate"></i> Change Image <input id="new-image" type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
+        <i class="fa-solid fa-arrows-rotate"></i> 
+        <label for="update-image-cocktail">Change Image</label>
+        <input id="update-image-cocktail" type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
     </span>
-    <strong><p class="text-danger mt-4" id="filename"></p></strong>
+    <strong><p class="text-danger mt-4" id="filename-update-cocktail"></p></strong>
 {% else %}
 {{ widget.input_text }}
 <span class="btn btn-black rounded-0 btn-file mt-2 text-success">
-    <i class="fa-solid fa-plus"></i> Select Image <input id="new-image" type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
+    <i class="fa-solid fa-plus"></i>
+    <label for="new-image-cocktail">Select Image</label>
+    <input id="new-image-cocktail" type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
 </span>
-<strong><p class="text-danger mt-4" id="filename"></p></strong>
+<strong><p class="text-danger mt-4" id="filename-new-image-cocktail"></p></strong>
 {% endif %}

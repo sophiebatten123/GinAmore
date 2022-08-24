@@ -10,7 +10,7 @@
         <label for="update-image">Change Image</label>
         <input id="update-image" type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
     </span>
-    <strong><p class="text-danger mt-4" id="filename"></p></strong>
+    <strong><p class="text-danger mt-4" id="filename-update-product"></p></strong>
 {% else %}
 {{ widget.input_text }}
 <span class="btn btn-black rounded-0 btn-file mt-2 text-success">
@@ -18,5 +18,5 @@
     <label for="new-image">Add Image</label>
     <input id="new-image" type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
 </span>
-<strong><p class="text-danger mt-4" id="filename"></p></strong>
+<strong><p class="text-danger mt-4" id="filename-add-product"></p></strong>
 {% endif %}
