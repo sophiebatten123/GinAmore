@@ -27,7 +27,7 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-3 gin_image_cards_container">
                     <a href="{% url 'cocktail_detail' cocktail.id %}">
-                        <img class="cocktail_image_cards mt-4" src="{{ cocktail.get_image_url }}" alt="{{ cocktail.name }} Image">
+                        <img class="cocktail_image_cards mt-4" src="{{ cocktail.get_image_url }}" alt="{{ cocktail.name }} Image" height="100" width="100">
                     </a>
                 </div>
                 <div class="col-xs-12 col-sm-9">
