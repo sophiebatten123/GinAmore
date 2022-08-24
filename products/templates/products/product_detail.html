@@ -9,11 +9,11 @@
     <div class="row">
         <div class="col-sm-12 col-md-6 mt-4">
             {% if product.image %}
-            <div class="col gin_image_container mb-4 cocktails-main">
+            <div class="col gin_image_container mb-4 cocktails-main btns">
                 <a href="{{ product.image.url }}" target="_blank">
                     <img class="gin_image" src="{{ product.image.url }}" alt="{{ product.name }} Image">
+                    <p class="mt-2 text-center text-dark"><i class="fa-solid fa-magnifying-glass"></i> Click to enlarge</p>
                 </a>
-                <p class="mt-2"><i class="fa-solid fa-magnifying-glass"></i> Click to enlarge</p>
             </div>
             {% else %}
             <div class="col">

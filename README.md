@@ -399,7 +399,7 @@ Although the wireframes for site users and site admin are similar there are a fe
 
 # Testing
 
-## Automated Testing
+## Manual and Automated Testing
 
 ### HTML & CSS: W3C Validation
 
@@ -408,6 +408,14 @@ When the site was ran through the validators there were no errors at the point o
 
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
 - [WSC HTML Validator](https://validator.w3.org/)
+
+### Javascript: JShint
+
+JavaScript code was tested regularly both manually and automatically through [JShint](https://jshint.com/) and the [DevTools](https://developer.chrome.com/docs/devtools/). DevTools allowed me to test responses using the console log function and jShint enabled me to ensure that my code was hitting the style guidelines. Upon the launch of my project jShint showed no errors or warnings with my code.
+
+### Wave Testing: Accessibility
+
+
 
 ### Lighthouse Reports
 
@@ -534,7 +542,15 @@ Attached below is a screenshot of the HTML & CSS Validator and Lighthouse Report
     <img src="static/images/lighthouse_checkout.PNG" width="500">
 </details>
 
-## Automated Testing
+## Python Testing
+
+### Manual Python Testing
+
+Python code was tested to ensure that it met [PEP8](https://pep8.org/) style guidelines. This was done within the terminal console, which displayed errors and warnings throughout the project which were in parallel to the project being produced. Upon deployment of my project I had no errors displaying within the terminal meaning that my code passed through PEP8 guidelines.
+
+Furthermore, using the MVC framework I was able to keep track of the changes made and ensure that they had the desired output. After each change made to the Postgres Database I referred directly to it to track the changes, ensuring that upon ‘trial runs’ information was being successfully displayed and filters were displaying alongside.
+
+### Automated Python Testing
 
 # Fixed Bugs and Errors
 
