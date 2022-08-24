@@ -40,4 +40,47 @@
        var itemId = $(this).data('item_id');
        handleEnableDisable(itemId);
     });
+
+    // Product Review
+    const productReview = document.getElementById('post-product-review');
+
+    productReview.addEventListener("click", function() {
+        let reviewForm = document.getElementById("product-review");
+        let close = document.getElementById("close-review");
+
+        reviewForm.style.display = "block";
+
+        close.addEventListener("click", function(){
+        reviewForm.style.display = "none";
+        });
+    });
+
+    // Javascript to handle pop ups
+    const returnProducts = document.getElementById('return-product');
+
+    returnProducts.addEventListener("click", function() {
+        let returnProductPopUp = document.getElementById("return-product-popup");
+        let close = document.getElementById("close-product-returns");
+
+        returnProductPopUp.style.zIndex = 1;
+        returnProductPopUp.style.pointerEvents = "auto";
+
+        close.addEventListener("click", function(){
+            returnProductPopUp.style.zIndex = -1;
+        });
+    });
+    
+    const shippingProduct = document.getElementById('shipping-product');
+
+    shippingProduct.addEventListener("click", function() {
+        let shippingProductPopUp = document.getElementById("shipping-product-popup");
+        let close = document.getElementById("close-product-shipping");
+
+        shippingProductPopUp.style.zIndex = 1;
+        shippingProductPopUp.style.pointerEvents = "auto";
+
+        close.addEventListener("click", function(){
+            shippingProductPopUp.style.zIndex = -1;
+        });
+    });
 </script>

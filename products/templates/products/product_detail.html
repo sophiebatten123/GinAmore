@@ -49,17 +49,29 @@
             {% if request.user.is_superuser %}
             <div class="row">
                 <div class="col-6 btns">
-                    <a href="{% url 'edit_product' product.id %}"><p class="text-blue edit-button text-center">Edit</p></a>
+                    <a href="{% url 'edit_product' product.id %}">
+                        <p class="text-blue edit-button text-center">
+                            Edit
+                        </p>
+                    </a>
                 </div>
                 <div class="col-6 btns">
-                    <a href="{% url 'delete_product' product.id %}"><p class="text-blue delete-button text-center">Delete</p></a>
+                    <a href="{% url 'delete_product' product.id %}">
+                        <p class="text-blue delete-button text-center">
+                            Delete
+                        </p>
+                    </a>
                 </div>
             </div>
             {% endif %}
             <hr/>
             <div class="row">
                 <div class="col-xs-12 col-sm-6 extra-product-info">
-                    <a href="#delivery"><p>Delivery Information</p></a>
+                    <a href="#delivery">
+                        <p>
+                            Delivery Information
+                        </p>
+                    </a>
                     <a href="{% url 'products' %}?category={{ product.category }}">
                         <p class="mt-2">
                             Category: <span class="gin-category">{{ product.category.friendly_name }}</span>
@@ -80,7 +92,9 @@
                     </a>
                 </div>
             </div>
-            <p class="mt-4">{{ product.description }}</p>
+            <p class="mt-4">
+                {{ product.description }}
+            </p>
             <hr/>
             <div class="row">
                 <div class="col-xs-12 col-sm-6">
@@ -140,7 +154,10 @@
             <div class="row">
                 <div class="col-12">
                     <hr class="white-line"/>
-                    <p>Standard Delivery Orders within the UK will be delivered in 5 working days, 8am-8pm, Monday-Friday. Free on orders over £50.</p>
+                    <p>
+                        Standard Delivery Orders within the UK will be delivered in
+                        5 working days, 8am-8pm, Monday-Friday. Free on orders over £50.
+                    </p>
                     <hr class="white-line"/>
                 </div>
             </div>
@@ -151,10 +168,18 @@
                         <br/>You can also return to your nearest Click & Collect Store.</p>
                     <div class="row">
                         <div class="col-sm-12 col-md-6 btns">
-                            <a href="#" class="return-delivery-btn text-center"><p class="pt-3 text-blue" id="return-product">Information on Our Returns Policy</p></a>
+                            <a href="#" class="return-delivery-btn text-center">
+                                <p class="pt-3 text-blue" id="return-product">
+                                    Information on Our Returns Policy
+                                </p>
+                            </a>
                         </div>
                         <div class="col-sm-12 col-md-6 btns">
-                            <a href="#" class="return-delivery-btn text-center"><p class="pt-3 text-blue" id="shipping-product">More Delivery and Shipping Information</p></a>
+                            <a href="#" class="return-delivery-btn text-center">
+                                <p class="pt-3 text-blue" id="shipping-product">
+                                    More Delivery and Shipping Information#
+                                </p>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -167,7 +192,9 @@
         <div class="col-12">
             <div class="row">
                 <div class="col-12 background_header_reccommended">
-                    <h4 class="text-light pt-2">Similar Products:</h4>
+                    <h4 class="text-light pt-2">
+                        Similar Products:
+                    </h4>
                 </div>
             </div>
             <div class="row background_temp_reccommended">
@@ -176,7 +203,9 @@
                         <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 product-reccommended-images mt-2 p-0">
                             <a href="{% url 'product_detail' item.id %}">
                                 <img src="{{item.image.url}}" class="gin_image d-block w-100 main-cocktail-pictures" alt="{{ item.name }}">
-                                <p class="text-blue white-background cocktail-name-main p-2">{{ item.name }} <i class="fa-solid fa-arrow-right"></i></p>
+                                <p class="text-blue white-background cocktail-name-main p-2">
+                                    {{ item.name }} <i class="fa-solid fa-arrow-right"></i>
+                                </p>
                             </a>
                         </div>
                     {% endif %}
@@ -188,7 +217,9 @@
 <div class="container-fluid" id="product-review-section">
     <div class="row background_header_reccommended">
         <div class="col-12">
-            <h3 class="text-light">Reviews</h3>
+            <h3 class="text-light">
+                Reviews
+            </h3>
         </div>
     </div>
     <div class="row">
@@ -198,39 +229,57 @@
                     <div class="row border bg-light mt-2">
                         <div class="col-2 mt-3 mb-2 text-center">
                             <img class="user-width" src="{% static 'images/user.PNG' %}" alt="User Review Icon Image">
-                            <p>{{ review.user }}</p>
+                            <p>
+                                {{ review.user }}
+                            </p>
                         </div>
                         <div class="col-8 mt-2 mb-2 small-shift">
-                            <h5 class="small-title-review">{{ review.title }}</h5>
+                            <h5 class="small-title-review">
+                                {{ review.title }}
+                            </h5>
                             <hr>
-                            <p class="small-review">{{ review.user_review }}</p>
+                            <p class="small-review">
+                                {{ review.user_review }}
+                            </p>
                         </div>
                         {% if request.user.is_superuser %}
                         <div class="col-2 btns pt-2">
                             <div class="red-background">
-                                <a href="{% url 'delete_product_review' review.id %}"><p class="text-blue text-center"><i class="fa-solid fa-xmark"></i></p></a>
+                                <a href="{% url 'delete_product_review' review.id %}">
+                                    <p class="text-blue text-center">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </p>
+                                </a>
                             </div>
                         </div>
                     </div>
                     {% endif %}
                 {% endfor %}
             {% else %}
-                <p> No Reviews. </p>
+                <p>
+                    No Reviews.
+                </p>
             {% endif %}
         </div>
         <div class="col-2"></div>
         <div class="col-8 text-center mt-4">
-            <p id="post-product-review" class="text-dark">Write a Review</p>
+            <p id="post-product-review" class="text-dark">
+                Write a Review
+            </p>
         </div>
         <div class="col-2"></div>
         <div class="col-12 bg-light border p-4" id="product-review">
             <div class="red-background text-center mb-2">
-                <p id="close-review" class="text-light"><i class="fa-solid fa-xmark"></i></p>
+                <p id="close-review" class="text-blue">
+                    <i class="fa-solid fa-xmark"></i>
+                </p>
             </div>
             <form method="POST" action="{% url 'product_detail' product.id %}" class="mt-2">
                 {% csrf_token %}
                 {{ review_form|crispy }}
-                <button class="text-light add-button text-center w-50 text-center" type="submit">Post Review</button>
+                <button class="text-light add-button text-center w-50 text-center" type="submit">
+                    Post Review
+                </button>
             </form>
         </div>
     </div>
@@ -242,7 +291,7 @@
     <i class="fas fa-times close" id="close-product-returns"></i>
     <h1>Returns Policy</h1>
     <hr>
-    <p> Thanks for purchasing our products at GinAmore!<br></p>
+    <p>Thanks for purchasing our products at GinAmore!<br></p>
     <p>We offer a <strong>full money-back guarantee</strong> for all purchases made on our website within the first 14 days.
       If you are not satisfied with the product that you have purchased from us, 
       you can get your money back no questions asked within 14 days from purchase.<br></p> 
@@ -254,7 +303,7 @@
     <i class="fas fa-times close" id="close-product-shipping"></i>
     <h1>Shipping</h1>
     <hr>
-    <p> Thanks for purchasing our products at GinAmore!<br></p>
+    <p>Thanks for purchasing our products at GinAmore!<br></p>
     <p>We offer a <strong>full money-back guarantee</strong> for all purchases made on our website within the first 14 days.
       If you are not satisfied with the product that you have purchased from us, 
       you can get your money back no questions asked within 14 days from purchase.<br></p> 
@@ -266,45 +315,4 @@
 {% block postloadjs %}
     {{ block.super }}
     {% include 'products/includes/quantity_input_script.html' %}
-    <script>
-       const productReview = document.getElementById('post-product-review');
-
-        productReview.addEventListener("click", function() {
-            let reviewForm = document.getElementById("product-review");
-            let close = document.getElementById("close-review");
-
-            reviewForm.style.display = "block";
-
-            close.addEventListener("click", function(){
-            reviewForm.style.display = "none";
-            });
-        });
-        // Javascript to handle pop ups
-        const returnProducts = document.getElementById('return-product');
-
-        returnProducts.addEventListener("click", function() {
-            let returnProductPopUp = document.getElementById("return-product-popup");
-            let close = document.getElementById("close-product-returns");
-
-            returnProductPopUp.style.zIndex = 1;
-            returnProductPopUp.style.pointerEvents = "auto";
-
-            close.addEventListener("click", function(){
-                returnProductPopUp.style.zIndex = -1;
-            });
-        });
-        const shippingProduct = document.getElementById('shipping-product');
-
-        shippingProduct.addEventListener("click", function() {
-            let shippingProductPopUp = document.getElementById("shipping-product-popup");
-            let close = document.getElementById("close-product-shipping");
-
-            shippingProductPopUp.style.zIndex = 1;
-            shippingProductPopUp.style.pointerEvents = "auto";
-
-            close.addEventListener("click", function(){
-                shippingProductPopUp.style.zIndex = -1;
-            });
-        });
-    </script>
 {% endblock %}
