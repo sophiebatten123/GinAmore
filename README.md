@@ -454,12 +454,14 @@ Attached below is a screenshot of the HTML & CSS Validator and Lighthouse Report
     <summary>Add Product: Automated Testing Report</summary>
     <img src="static/images/add_product_html.PNG" width="500">
     <img src="static/images/css_add_product.PNG" width="500">
+    <img src="static/images/lighthouse_add_product.PNG" width="500">
 </details>
 
 <details>
     <summary>Edit Product: Automated Testing Report</summary>
     <img src="static/images/edit_product_html.PNG" width="500">
     <img src="static/images/css_edit_product.PNG" width="500">
+    <img src="static/images/lighthouse_edit_product.PNG" width="500">
 </details>
 
 <details>
@@ -480,12 +482,14 @@ Attached below is a screenshot of the HTML & CSS Validator and Lighthouse Report
     <summary>Add Cocktail: Automated Testing Report</summary>
     <img src="static/images/add_cocktail_html.PNG" width="500">
     <img src="static/images/css_add_cocktail.PNG" width="500">
+    <img src="static/images/lighthouse_add_cocktail.PNG" width="500">
 </details>
 
 <details>
     <summary>Edit Cocktail: Automated Testing Report</summary>
     <img src="static/images/edit_cocktail_html.PNG" width="500">
     <img src="static/images/css_edit_cocktail.PNG" width="500">
+    <img src="static/images/lighthouse_edit_cocktail.PNG" width="500">
 </details>
 
 <details>
@@ -513,18 +517,21 @@ Attached below is a screenshot of the HTML & CSS Validator and Lighthouse Report
     <summary>Profile: Automated Testing Report</summary>
     <img src="static/images/profile_html.PNG" width="500">
     <img src="static/images/css_profile.PNG" width="500">
+    <img src="static/images/lighthouse_profile.PNG" width="500">
 </details>
 
 <details>
     <summary>Bag: Automated Testing Report</summary>
     <img src="static/images/bag_html.PNG" width="500">
     <img src="static/images/css_bag.PNG" width="500">
+    <img src="static/images/lighthouse_bag.PNG" width="500">
 </details>
 
 <details>
     <summary>Checkout: Automated Testing Report</summary>
     <img src="static/images/checkout_html.PNG" width="500">
     <img src="static/images/css_checkout.PNG" width="500">
+    <img src="static/images/lighthouse_checkout.PNG" width="500">
 </details>
 
 ## Automated Testing
