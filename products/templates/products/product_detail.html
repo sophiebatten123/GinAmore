@@ -31,13 +31,13 @@
                         {% csrf_token %}
                         {% if liked %}
                         <div class="wishlist_left">
-                            <button type="submit" value="{{ product.id }}" class="btn-like p-0 wishlist_right">
+                            <button type="submit" aria-label="Remove from Wishlist" value="{{ product.id }}" class="btn-like p-0 wishlist_right">
                                 <i class="fas fa-heart heart"></i> Remove from wishlist
                             </button>
                         </div>
                         {% else %}
                         <div class="wishlist_left">
-                            <button type="submit" value="{{ product.id }}" class="btn-like p-0 wishlist_right">
+                            <button type="submit" value="{{ product.id }}" class="btn-like p-0 wishlist_right" aria-label="Add to Wishlist">
                                 <i class="far fa-heart"></i> Add to wishlist
                             </button>
                         </div>
@@ -95,7 +95,7 @@
                                     <div class="form-group w-100">
                                         <div class="input-group">
                                             <div class="input-group-prepend">
-                                                <button class="decrement-qty btn btn-black rounded-0" 
+                                                <button class="decrement-qty btn btn-black rounded-0" aria-label="Decrement Quantity" 
                                                     data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
                                                     <span class="icon">
                                                         <i class="fas fa-minus"></i>
@@ -107,7 +107,7 @@
                                                 data-item_id="{{ product.id }}"
                                                 id="id_qty_{{ product.id }}">
                                             <div class="input-group-append">
-                                                <button class="increment-qty btn btn-black rounded-0"
+                                                <button class="increment-qty btn btn-black rounded-0" aria-label="Increment Quantity"
                                                     data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
                                                     <span class="icon">
                                                         <i class="fas fa-plus"></i>

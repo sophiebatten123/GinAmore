@@ -53,7 +53,9 @@
                             {% endfor %}
                         </div>
                         <div id="empty-form" class="hide">{{ formset.empty_form | crispy }}</div>
-                        <button id="add-more" type="button" class="text-success"><i class="fa-solid fa-plus mr-2"></i>Add Additional Ingredient</button>
+                        <button id="add-more" type="button" class="text-success" aria-label="Add Additional Ingredient">
+                            <i class="fa-solid fa-plus mr-2"></i>Add Additional Ingredient
+                        </button>
                     </div>
                 {% endif %}
                 {% if formset_2 %}
@@ -69,7 +71,9 @@
                             {% endfor %}
                         </div>
                         <div id="empty-steps-form" class="hide">{{ formset_2.empty_form | crispy }}</div>
-                        <button id="add-more-steps" type="button" class="text-success"><i class="fa-solid fa-plus mr-2"></i>Add Additional Step</button>
+                        <button id="add-more-steps" type="button" class="text-success" aria-label="Add Additional Step">
+                            <i class="fa-solid fa-plus mr-2"></i>Add Additional Step
+                        </button>
                     </div>
                 {% endif %}
                 </div>
@@ -83,7 +87,9 @@
                         </a>
                     </div>
                     <div class="col-6">
-                        <button class="our-gin-btns-checkout text-light" type="submit">Add cocktail</button>
+                        <button class="our-gin-btns-checkout text-light" type="submit" aria-label="Add Cocktail">
+                            Add cocktail
+                        </button>
                     </div>
                 </div>
             </form>

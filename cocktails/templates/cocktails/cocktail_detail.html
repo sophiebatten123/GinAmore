@@ -117,7 +117,9 @@
             <form method="POST" action="{% url 'cocktail_detail' cocktail.id %}" class="mt-2">
                 {% csrf_token %}
                 {{ review_form|crispy }}
-                <button class="text-light add-button text-center w-50 text-center" type="submit">Post Review</button>
+                <button class="text-light add-button text-center w-50 text-center" type="submit" aria-label="Post Review">
+                    Post Review
+                </button>
             </form>
         </div>
     </div>

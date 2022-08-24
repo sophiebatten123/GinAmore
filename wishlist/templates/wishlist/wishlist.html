@@ -20,7 +20,7 @@
                                     <form class="form" action="{% url 'remove_from_wishlist' item.product.id %}" method="POST">
                                         {% csrf_token %}
                                         <div class="wishlist_left">
-                                            <button type="submit" value="{{ item.product.id }}" class="btn-like p-0">
+                                            <button type="submit" value="{{ item.product.id }}" class="btn-like p-0" aria-label="Remove from wishlist">
                                                 <i class="fas fa-heart heart"></i>
                                                 <div class="wishlist_right ml-2">
                                                     <p>Remove from wishlist</p>
