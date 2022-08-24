@@ -401,6 +401,15 @@ Although the wireframes for site users and site admin are similar there are a fe
 
 ## Manual Testing
 
+### HTML & CSS: W3C Validation
+
+<details>
+    <summary>Home Page - Click Here:</summary>
+    <img src="static/images/home_html.PNG" width="300">
+    <img src="static/images/css_home.PNG" width="300">
+</details>
+
+
 ## Automated Testing
 
 # Fixed Bugs and Errors
