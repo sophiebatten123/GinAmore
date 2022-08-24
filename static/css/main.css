@@ -515,7 +515,7 @@ body {
     opacity: 0.85;
     background-size: cover;
     background-position: center;
-    background-image: url('../images/summergin.jpg');
+    background-image: url('../images/summergin.webp');
     position: relative;
 }
 
@@ -534,7 +534,7 @@ body {
     opacity: 0.85;
     background-size: cover;
     background-position: center;
-    background-image: url('../images/wintergin.jpg');
+    background-image: url('../images/wintergin.webp');
     position: relative;
 }
 
@@ -553,7 +553,7 @@ body {
     opacity: 0.85;
     background-size: cover;
     background-position: center;
-    background-image: url('../images/brunchgin.jpg');
+    background-image: url('../images/brunchgin.webp');
     position: relative;
 }
 
