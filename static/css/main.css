@@ -91,6 +91,10 @@ body {
     text-align: right;
 }
 
+.delivery-text {
+    font-size: 20px;
+}
+
 .navbar-text {
     font-size: 20px;
 }

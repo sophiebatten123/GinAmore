@@ -8,8 +8,8 @@
 {% block content %}
 <div class="container-fluid bg-white">
     <div class="row">
-        <div class="col-12 mt-4">
-            <h3>Shopping Bag</h3>
+        <div class="col-12 mt-4 pl-0">
+            <h2 class="pl-4">Shopping Bag</h2>
         </div>
     </div>
     <div class="row p-4">
@@ -77,7 +77,7 @@
             <hr>
         </div>
         <div class="col-md-12 p-2 h-100 text-dark">
-            <h4>Summary</h4>
+            <h3>Summary</h3>
             <hr>
             <p>Total Cost: <strong>£{{ total|floatformat:2 }}</strong></p>
             {% if free_delivery_delta > 0 %}
