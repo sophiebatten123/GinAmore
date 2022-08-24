@@ -759,6 +759,36 @@ body {
     width: 100%;
 }
 
+.pink-background-email {
+    background-color: #e7b1a9;
+    padding: 30px;
+}
+
+.text-center {
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+}
+
+.subscribe-icon {
+    font-size: 50px;
+}
+
+.input-email {
+    border: solid 2px white;
+    border-radius: 5px;
+    float: right;
+    height: 50px;
+}
+
+.subscribe-button {
+    background-color: #e7b1a9;
+    border: solid 2px #e7b1a9;
+    border-radius: 5px;
+    color: white;
+    height: 50px;
+}
+
 #sign_up_image {
     height: 300px;
     border: solid white 2px;
