@@ -48,5 +48,9 @@
                 var file = $("#new-image")[0].files[0];
                 $("#filename").text(`Your new product image will be set to: ${file.name}`);
             });
+            $('#update-image').change(function() {
+                var file = $("#update-image")[0].files[0];
+                $("#filename").text(`Your new product image will be set to: ${file.name}`);
+            });
         </script>
 {% endblock %}
