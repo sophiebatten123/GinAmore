@@ -490,9 +490,7 @@ Attached below is a screenshot of the HTML & CSS Validator and Lighthouse Report
 
 <details>
     <summary>Our Story: Automated Testing Report</summary>
-    HTML Report:
     <img src="static/images/ourstory_html.PNG" width="500">
-    CSS Report:
     <img src="static/images/css_our_story.PNG" width="500">
     <img src="static/images/lighthouse_ourstory.PNG" width="500">
 </details>
@@ -501,12 +499,14 @@ Attached below is a screenshot of the HTML & CSS Validator and Lighthouse Report
     <summary>Contact Us: Automated Testing Report</summary>
     <img src="static/images/contact_html.PNG" width="500">
     <img src="static/images/css_contact.PNG" width="500">
+    <img src="static/images/lighthouse_contact.PNG" width="500">
 </details>
 
 <details>
     <summary>Wishlist: Automated Testing Report</summary>
     <img src="static/images/wishlist_html.PNG" width="500">
     <img src="static/images/css_wishlist.PNG" width="500">
+    <img src="static/images/lighthouse_wishlist.PNG" width="500">
 </details>
 
 <details>

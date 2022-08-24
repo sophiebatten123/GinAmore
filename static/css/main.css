@@ -15,6 +15,10 @@ body {
     text-decoration: none;
 }
 
+.text-green {
+    color: green;
+}
+
 .background_temp {
     background-color: #1c3a42;
     height: 300px;
