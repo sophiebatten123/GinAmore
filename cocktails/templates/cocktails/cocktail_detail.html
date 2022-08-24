@@ -20,10 +20,18 @@
                 </div>
                 {% if request.user.is_superuser %}
                     <div class="col-3 btns">
-                        <a href="{% url 'edit_cocktail' cocktail.id %}"><p class="text-light edit-button text-center">Edit</p></a>
+                        <a href="{% url 'edit_cocktail' cocktail.id %}">
+                            <p class="text-blue edit-button text-center">
+                                Edit
+                            </p>
+                        </a>
                     </div>
                     <div class="col-3 btns">
-                        <a href="{% url 'delete_cocktail' cocktail.id %}"><p class="text-light delete-button text-center">Delete</p></a>
+                        <a href="{% url 'delete_cocktail' cocktail.id %}">
+                            <p class="text-blue delete-button text-center">
+                                Delete
+                            </p>
+                        </a>
                     </div>
                 {% endif %}
             </div>
@@ -95,7 +103,7 @@
                         {% if request.user.is_superuser %}
                         <div class="col-2 btns pt-2">
                             <div class="red-background">
-                                <a href="{% url 'delete_cocktail_review' review.id %}"><p class="text-light text-center"><i class="fa-solid fa-xmark"></i></p></a>
+                                <a href="{% url 'delete_cocktail_review' review.id %}"><p class="text-blue text-center"><i class="fa-solid fa-xmark"></i></p></a>
                             </div>
                         </div>
                     </div>

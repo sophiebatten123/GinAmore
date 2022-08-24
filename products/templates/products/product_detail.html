@@ -24,7 +24,7 @@
         <div class="col-sm-12 col-md-6">
             <div class="row mt-4">
                 <div class="col-xs-12 col-sm-8 mb-2">
-                    <h4 class="small-product-name"><strong>{{ product.name }}</strong></h4>
+                    <h2 class="small-product-name"><strong>{{ product.name }}</strong></h2>
                 </div>
                 <div class="col-xs-12 col-sm-4 p-0 mb-4 wishlist-area">
                     <form class="form" action="{% url 'add_to_wishlist' product.id %}" method="POST">
@@ -49,10 +49,10 @@
             {% if request.user.is_superuser %}
             <div class="row">
                 <div class="col-6 btns">
-                    <a href="{% url 'edit_product' product.id %}"><p class="text-light edit-button text-center">Edit</p></a>
+                    <a href="{% url 'edit_product' product.id %}"><p class="text-blue edit-button text-center">Edit</p></a>
                 </div>
                 <div class="col-6 btns">
-                    <a href="{% url 'delete_product' product.id %}"><p class="text-light delete-button text-center">Delete</p></a>
+                    <a href="{% url 'delete_product' product.id %}"><p class="text-blue delete-button text-center">Delete</p></a>
                 </div>
             </div>
             {% endif %}
@@ -92,8 +92,9 @@
                         {% csrf_token %}
                             <div class="form-row">
                                 <div class="col-12">
-                                    <div class="form-group w-100">
-                                        <div class="input-group">
+                                    <div class="form-group w-100 text-center">
+                                        <label for="id_qty_{{ product.id }}">Quantity</label>
+                                        <div class="input-group mb-4">
                                             <div class="input-group-prepend">
                                                 <button class="decrement-qty btn btn-black rounded-0" aria-label="Decrement Quantity" 
                                                     data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
@@ -150,10 +151,10 @@
                         <br/>You can also return to your nearest Click & Collect Store.</p>
                     <div class="row">
                         <div class="col-sm-12 col-md-6 btns">
-                            <a href="#" class="return-delivery-btn text-center"><p class="pt-3 text-light" id="return-product">Information on Our Returns Policy</p></a>
+                            <a href="#" class="return-delivery-btn text-center"><p class="pt-3 text-blue" id="return-product">Information on Our Returns Policy</p></a>
                         </div>
                         <div class="col-sm-12 col-md-6 btns">
-                            <a href="#" class="return-delivery-btn text-center"><p class="pt-3 text-light" id="shipping-product">More Delivery and Shipping Information</p></a>
+                            <a href="#" class="return-delivery-btn text-center"><p class="pt-3 text-blue" id="shipping-product">More Delivery and Shipping Information</p></a>
                         </div>
                     </div>
                 </div>
@@ -175,7 +176,7 @@
                         <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 product-reccommended-images mt-2 p-0">
                             <a href="{% url 'product_detail' item.id %}">
                                 <img src="{{item.image.url}}" class="gin_image d-block w-100 main-cocktail-pictures" alt="{{ item.name }}">
-                                <p class="text-light white-background cocktail-name-main p-2"><strong>{{ item.name }} <i class="fa-solid fa-arrow-right"></i></strong></p>
+                                <p class="text-blue white-background cocktail-name-main p-2">{{ item.name }} <i class="fa-solid fa-arrow-right"></i></p>
                             </a>
                         </div>
                     {% endif %}
@@ -207,7 +208,7 @@
                         {% if request.user.is_superuser %}
                         <div class="col-2 btns pt-2">
                             <div class="red-background">
-                                <a href="{% url 'delete_product_review' review.id %}"><p class="text-light text-center"><i class="fa-solid fa-xmark"></i></p></a>
+                                <a href="{% url 'delete_product_review' review.id %}"><p class="text-blue text-center"><i class="fa-solid fa-xmark"></i></p></a>
                             </div>
                         </div>
                     </div>

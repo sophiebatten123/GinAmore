@@ -28,9 +28,13 @@ body {
 }
 
 .background_temp_strip-pink {
-    background-color: #dd9186;
+    background-color: #e8a79d9c;
     height: 50px;
     border: white 2px solid;
+}
+
+.text-blue {
+    color: #1c3a42;
 }
 
 .hide {
@@ -43,7 +47,7 @@ body {
 }
 
 .pink-text {
-    color: #dd9186;
+    color: #e8a79d9c;
 }
 
 .small-show {
@@ -112,7 +116,7 @@ body {
 }
 
 .bg_delivery_color {
-    background-color: #dd9186;
+    background-color: #e8a79d9c;
 }
 
 .small-search-show {
@@ -148,7 +152,7 @@ body {
 }
 
 .bg-homepage-buttons {
-    background-color: #dd9186;
+    background-color: #e8a79d9c;
     border: white solid 2px;
 }
 
@@ -158,8 +162,8 @@ body {
 }
 
 .pink-background {
-    background-color: #dd9186;
-    border: #dd9186 solid 2px;
+    background-color: #e8a79d9c;
+    border: #e8a79d9c solid 2px;
     padding: 30px;
 }
 
@@ -227,7 +231,7 @@ body {
 }
 
 .shop-btn-product {
-    background-color: #dd9186;
+    background-color: #1c3a42;
     border: solid 2px white;
     border-radius: 5px;
     font-size: 18px;
@@ -284,7 +288,7 @@ body {
 }
 
 .gin-category {
-    color:#dd9186;
+    color:#df3419;
     text-decoration: none;
 }
 
@@ -363,7 +367,7 @@ body {
 }
 
 .heart {
-    color: #dd9186;
+    color: #e8a79d9c;
 }
 
 .btn-like {
@@ -417,7 +421,7 @@ body {
     height: 25px;
     width: 25px;
     border-radius: 50%;
-    background-color: #dd9186;
+    background-color: #e8a79d9c;
     float: right;
 }
 
@@ -434,7 +438,7 @@ body {
 }
 
 .return-delivery-btn p {
-    background-color: #dd9186;
+    background-color: #e8a79d9c;
     width: 100%;
     height: 60px;
     border-radius: 5px;
@@ -453,7 +457,7 @@ body {
 }
 
 .white-background {
-    background-color: #dd9186;
+    background-color: #e8a79d9c;
     width: auto;
     float: right;
     border: white solid 2px;
@@ -618,7 +622,7 @@ body {
 .our-gin-btns {
     text-decoration: none;
     background-color: white;
-    border: solid #dd9186 2px;
+    border: solid #e8a79d9c 2px;
     border-radius: 5px;
     margin: auto;
 }
@@ -655,12 +659,12 @@ body {
 }
 
 .pink-btn {
-    background-color: #dd9186;
+    background-color: #e8a79d9c;
     border: solid 2px white;
 }
 
 .text-pink {
-    color: #dd9186;
+    color: #e8a79d9c;
 }
 
 .center-quantity {
@@ -713,8 +717,12 @@ body {
     width: 100%;
 }
 
+.email-text {
+    font-size: 30px;
+}
+
 .pink-background-email {
-    background-color: #dd9186;
+    background-color: #e8a79d9c;
     padding: 30px;
 }
 
@@ -736,10 +744,10 @@ body {
 }
 
 .subscribe-button {
-    background-color: #dd9186;
-    border: solid 2px #dd9186;
+    background-color: #e8a79d9c;
+    border: solid 2px #1c3a42;
     border-radius: 5px;
-    color: white;
+    color: #1c3a42;
     height: 50px;
 }
 

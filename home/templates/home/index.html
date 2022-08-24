@@ -10,7 +10,7 @@
         <img class="full-width" src="{% static 'images/gin_banner.webp' %}" alt="Main Gin Image" height="350px" max-width="100%">
         <div class="col-6">
             <a href="{% url 'products' %}">
-                <h5 class="text-center text-light border shop-main-btn pink-background">
+                <h5 class="text-center text-blue border shop-main-btn pink-background">
                     <strong>Explore Our Products <i class="fa-solid fa-arrow-right"></i></strong>
                 </h5>
             </a>
@@ -19,12 +19,12 @@
     <div class="row">
         <div class="col-6 text-center bg-homepage-buttons">
             <a href="{% url 'ourstory' %}">
-                <p class="text-light pt-2">History of GinAmore</p>
+                <p class="text-blue pt-2">History of GinAmore</p>
             </a>
         </div>
         <div class="col-6 text-center bg-homepage-buttons">
             <a href="{% url 'products' %}">
-                <p class="text-light pt-2">Shop Now</p>
+                <p class="text-blue pt-2">Shop Now</p>
             </a>
         </div>
     </div>
@@ -59,7 +59,7 @@
         <div class="col-sm-6 col-md-3 p-0 cocktail-main-images {% if forloop.counter >= 5 %}hide{% endif %}" id="slide{{ forloop.counter }}">
             <a href="{% url 'product_detail' product.id %}">
                 <img src="{{ product.image.url }}" class="d-block full-width main-cocktail-pictures" alt="{{ product.name }} Image">
-                <p class="text-light white-background cocktail-name-main p-2"><strong>{{ product.name }} <i class="fa-solid fa-arrow-right"></i></strong></p>
+                <p class="text-blue white-background cocktail-name-main p-2"><strong>{{ product.name }} <i class="fa-solid fa-arrow-right"></i></strong></p>
             </a>
         </div>
     {% endfor %}
@@ -75,24 +75,21 @@
         <div class="col-sm-12 col-md-4 cocktail-headings p-0">
             <a href="{% url 'cocktails' %}?category=summer_favourites">
                 <div class="summer">
-                    <p class="mt-4 text-light ml-2 hide">A blaze of big botanicals busting with character and spicy Szechuan pepper that packs a punch on the palate. Perfect with our fruity, peppery aperitif.</p>
-                    <h5 class="text-light white-background ml-2 mt-2 arrow-fixed p-2"><strong>Summer Favourite Cocktails <i class="fa-solid fa-arrow-right"></i></strong></h5>
+                    <h5 class="text-blue white-background ml-2 mt-2 arrow-fixed p-2"><strong>Summer Favourite Cocktails <i class="fa-solid fa-arrow-right"></i></strong></h5>
                 </div>
             </a>
         </div>
         <div class="col-sm-12 col-md-4 cocktail-headings p-0">
             <a href="{% url 'cocktails' %}?category=winter_warmers">
                 <div class="winter">
-                    <p class="mt-4 text-light ml-2 hide">A blaze of big botanicals busting with character and spicy Szechuan pepper that packs a punch on the palate. Perfect with our fruity, peppery aperitif.</p>
-                    <h5 class="text-light white-background ml-2 mt-2 arrow-fixed p-2"><strong>Winter Warming Cocktails <i class="fa-solid fa-arrow-right"></i></strong></h5>
+                    <h5 class="text-blue white-background ml-2 mt-2 arrow-fixed p-2"><strong>Winter Warming Cocktails <i class="fa-solid fa-arrow-right"></i></strong></h5>
                 </div>
             </a>
         </div>
         <div class="col-sm-12 col-md-4 cocktail-headings p-0">
             <a href="{% url 'cocktails' %}?category=boozy_brunches">
                 <div class="brunch">
-                    <p class="mt-4 text-light ml-2 hide">A blaze of big botanicals busting with character and spicy Szechuan pepper that packs a punch on the palate. Perfect with our fruity, peppery aperitif.</p>
-                    <h5 class="text-light white-background ml-2 mt-2 arrow-fixed p-2"><strong>Boozy Brunch Cocktails <i class="fa-solid fa-arrow-right"></i></strong></h5>
+                    <h5 class="text-blue white-background ml-2 mt-2 arrow-fixed p-2"><strong>Boozy Brunch Cocktails <i class="fa-solid fa-arrow-right"></i></strong></h5>
                 </div>
             </a>
         </div>
