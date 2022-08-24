@@ -433,18 +433,21 @@ Attached below is a screenshot of the HTML & CSS Validator and Lighthouse Report
     <summary>Home Page: Automated Testing Report</summary>
     <img src="static/images/home_html.PNG" width="500">
     <img src="static/images/css_home.PNG" width="500">
+    <img src="static/images/lighthouse_home.PNG" width="500">
 </details>
 
 <details>
     <summary>Products: Automated Testing Report</summary>
     <img src="static/images/products_html.PNG" width="500">
     <img src="static/images/css_products.PNG" width="500">
+    <img src="static/images/lighthouse_products.PNG" width="500">
 </details>
 
 <details>
     <summary>Product Detail: Automated Testing Report</summary>
     <img src="static/images/product_detail_html.PNG" width="500">
     <img src="static/images/css_product_detail.PNG" width="500">
+    <img src="static/images/lighthouse_product_detail.PNG" width="500">
 </details>
 
 <details>
@@ -463,12 +466,14 @@ Attached below is a screenshot of the HTML & CSS Validator and Lighthouse Report
     <summary>Cocktails: Automated Testing Report</summary>
     <img src="static/images/cocktails_html.PNG" width="500">
     <img src="static/images/css_cocktails.PNG" width="500">
+    <img src="static/images/lighthouse_cocktails.PNG" width="500">
 </details>
 
 <details>
     <summary>Cocktail Details: Automated Testing Report</summary>
     <img src="static/images/cocktail_detail_html.PNG" width="500">
     <img src="static/images/css_cocktail_detail.PNG" width="500">
+    <img src="static/images/lighthouse_cocktail_detail.PNG" width="500">
 </details>
 
 <details>
@@ -485,8 +490,11 @@ Attached below is a screenshot of the HTML & CSS Validator and Lighthouse Report
 
 <details>
     <summary>Our Story: Automated Testing Report</summary>
+    HTML Report:
     <img src="static/images/ourstory_html.PNG" width="500">
+    CSS Report:
     <img src="static/images/css_our_story.PNG" width="500">
+    <img src="static/images/lighthouse_ourstory.PNG" width="500">
 </details>
 
 <details>
