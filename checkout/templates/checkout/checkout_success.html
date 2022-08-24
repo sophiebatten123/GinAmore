@@ -38,20 +38,20 @@
                     </tr>
                 </thead>
             {% for item in order.lineitems.all %}
-            <tr>
-                <td class="w-25">
-                    <img class="img-fluid" src="{{ item.product.image.url }}" alt="{{ item.product.name }} Image">
-                </td>
-                <td>
-                    <p>{{ item.product.name }}</p>
-                </td>
-                <td>
-                    <p>{{ item.quantity }}</p>
-                </td>
-                <td>
-                    <p>£{{ item.product.price }}</p>
-                </td>
-            </tr>
+                <tr>
+                    <td class="w-25">
+                        <img class="img-fluid" src="{{ item.product.image.url }}" alt="{{ item.product.name }} Image">
+                    </td>
+                    <td>
+                        <p>{{ item.product.name }}</p>
+                    </td>
+                    <td>
+                        <p>{{ item.quantity }}</p>
+                    </td>
+                    <td>
+                        <p>£{{ item.product.price }}</p>
+                    </td>
+                </tr>
             {% endfor %}
             </table>
             <hr>
