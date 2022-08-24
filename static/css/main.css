@@ -690,6 +690,36 @@ body {
     font-size: 20px;
 }
 
+/*......................................................Bag*/
+
+.table-image-width {
+    width: 10%;
+}
+
+.pink-btn {
+    background-color: #e7b1a9;
+    border: solid 2px white;
+}
+
+.text-pink {
+    color: #e7b1a9;
+}
+
+.center-quantity {
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.quantity-width {
+    width: 200px;
+}
+
+.qty_input {
+    width: 50px;
+    text-align: center;
+}
+
 /*......................................................Checkout Page*/
 
 .cocktail-checkout-images {
@@ -994,5 +1024,14 @@ body {
     }
     .shop-btn-product {
         width: 150px;
+    }
+}
+
+@media(max-width: 500px) {
+    .table-image-width {
+        width: 8%;
+    }
+    .table-text {
+        font-size: 14px;
     }
 }
