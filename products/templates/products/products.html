@@ -11,11 +11,11 @@
             {% if current_categories %}
                 {% for c in current_categories %}
                     {% if c.name == "sloe_gin" %}
-                        <img class="gin-width" src="{% static 'images/ourmaingin3.jpg' %}" alt="{{ c.name }} Image">
+                        <img class="gin-width" src="{% static 'images/sloe_gin.webp' %}" alt="{{ c.name }} Image">
                     {% elif c.name == "flavoured_gin" %}
-                        <img class="gin-width" src="{% static 'images/ourmaingin2.jpg' %}" alt="{{ c.name }} Image">
+                        <img class="gin-width" src="{% static 'images/flavored_gin.webp' %}" alt="{{ c.name }} Image">
                     {% elif c.name == "dry_gin" %}
-                        <img class="gin-width" src="{% static 'images/ourmaingin.jpg' %}" alt="{{ c.name }} Image">
+                        <img class="gin-width" src="{% static 'images/dry_gin.webp' %}" alt="{{ c.name }} Image">
                     {% endif %}
                 {% endfor %}
             {% else %}
