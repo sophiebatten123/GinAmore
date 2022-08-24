@@ -399,96 +399,120 @@ Although the wireframes for site users and site admin are similar there are a fe
 
 # Testing
 
-## Manual Testing
+## Automated Testing
 
 ### HTML & CSS: W3C Validation
 
+HTML and CSS was checked using an online W3C Validator to ensure there were no errors within the code. 
+When the site was ran through the validators there were no errors at the point of deployment.
+
+[W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+[WSC HTML Validator](https://validator.w3.org/)
+
+### Lighthouse Reports
+
+A lighthouse report was generated on each page of the site and the following steps were taken to improve sections based on the feedback it provided:
+- Performance 
+  - Images were convered from jpg files into webp files using:
+  - Images were reduced in size using:
+  - Unnecessary script tags were removed from the sites base.html file.
+- Accessibility
+  - White font colour within the pink banners were changed to blue.
+  - Missing labels were added to input form elements.
+  - Missing alt tags were added to images.
+  - Headers within the site were ordered based upon hierachy.
+- SEO
+  - Buttons were increased in size.
+- Best Practices
+
+Attached below is a screenshot of the HTML & CSS Validator and Lighthouse Reports for each page of the site:
+
 <details>
-    <summary>Home Page</summary>
+    <summary>Home Page: Reports</summary>
     <img src="static/images/home_html.PNG" width="300">
     <img src="static/images/css_home.PNG" width="300">
 </details>
 
 <details>
-    <summary>Products</summary>
+    <summary>Products: Reports</summary>
     <img src="static/images/products_html.PNG" width="300">
     <img src="static/images/css_products.PNG" width="300">
 </details>
 
 <details>
-    <summary>Product Detail</summary>
+    <summary>Product Detail: Reports</summary>
     <img src="static/images/product_detail_html.PNG" width="300">
     <img src="static/images/css_product_detail.PNG" width="300">
 </details>
 
 <details>
-    <summary>Add Product</summary>
+    <summary>Add Product: Automated Testing Reports</summary>
     <img src="static/images/add_product_html.PNG" width="300">
     <img src="static/images/css_add_product.PNG" width="300">
 </details>
 
 <details>
-    <summary>Edit Product</summary>
+    <summary>Edit Product: Automated Testing Reports</summary>
     <img src="static/images/edit_product_html.PNG" width="300">
     <img src="static/images/css_edit_product.PNG" width="300">
 </details>
 
 <details>
-    <summary>Cocktails</summary>
+    <summary>Cocktails: Automated Testing Reports</summary>
     <img src="static/images/cocktails_html.PNG" width="300">
     <img src="static/images/css_cocktails.PNG" width="300">
 </details>
 
 <details>
-    <summary>Cocktail Details</summary>
+    <summary>Cocktail Details: Automated Testing Reports</summary>
     <img src="static/images/cocktail_detail_html.PNG" width="300">
     <img src="static/images/css_cocktail_detail.PNG" width="300">
 </details>
 
 <details>
-    <summary>Add Cocktail</summary>
+    <summary>Add Cocktail: Automated Testing Reports</summary>
     <img src="static/images/add_cocktail_html.PNG" width="300">
     <img src="static/images/css_add_cocktail.PNG" width="300">
 </details>
 
 <details>
-    <summary>Edit Cocktail</summary>
+    <summary>Edit Cocktail: Automated Testing Reports</summary>
     <img src="static/images/edit_cocktail_html.PNG" width="300">
     <img src="static/images/css_edit_cocktail.PNG" width="300">
 </details>
 
 <details>
-    <summary>Our Story</summary>
+    <summary>Our Story: Automated Testing Reports</summary>
     <img src="static/images/ourstory_html.PNG" width="300">
     <img src="static/images/css_our_story.PNG" width="300">
 </details>
 
 <details>
-    <summary>Contact Us</summary>
+    <summary>Contact Us: Automated Testing Reports</summary>
     <img src="static/images/contact_html.PNG" width="300">
     <img src="static/images/css_contact.PNG" width="300">
 </details>
 
 <details>
-    <summary>Wishlist</summary>
+    <summary>Wishlist: Automated Testing Reports</summary>
     <img src="static/images/wishlist_html.PNG" width="300">
     <img src="static/images/css_wishlist.PNG" width="300">
 </details>
 
 <details>
-    <summary>Profile: Previous Orders</summary>
+    <summary>Profile: Automated Testing Reports</summary>
     <img src="static/images/profile_html.PNG" width="300">
     <img src="static/images/css_profile.PNG" width="300">
 </details>
 
 <details>
-    <summary>Bag</summary>
+    <summary>Bag: Automated Testing Reports</summary>
     <img src="static/images/bag_html.PNG" width="300">
     <img src="static/images/css_bag.PNG" width="300">
 </details>
 
 <details>
-    <summary>Checkout</summary>
+    <summary>Checkout: Automated Testing Reports</summary>
     <img src="static/images/checkout_html.PNG" width="300">
     <img src="static/images/css_checkout.PNG" width="300">
 </details>
