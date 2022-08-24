@@ -425,96 +425,98 @@ A lighthouse report was generated on each page of the site and the following ste
   - Buttons were increased in size.
 - Best Practices
 
+### Automated Testing Reports
+
 Attached below is a screenshot of the HTML & CSS Validator and Lighthouse Reports for each page of the site:
 
 <details>
-    <summary>Home Page: Reports</summary>
-    <img src="static/images/home_html.PNG" width="300">
-    <img src="static/images/css_home.PNG" width="300">
+    <summary>Home Page: Automated Testing Report</summary>
+    <img src="static/images/home_html.PNG" width="500">
+    <img src="static/images/css_home.PNG" width="500">
 </details>
 
 <details>
-    <summary>Products: Reports</summary>
-    <img src="static/images/products_html.PNG" width="300">
-    <img src="static/images/css_products.PNG" width="300">
+    <summary>Products: Automated Testing Report</summary>
+    <img src="static/images/products_html.PNG" width="500">
+    <img src="static/images/css_products.PNG" width="500">
 </details>
 
 <details>
-    <summary>Product Detail: Reports</summary>
-    <img src="static/images/product_detail_html.PNG" width="300">
-    <img src="static/images/css_product_detail.PNG" width="300">
+    <summary>Product Detail: Automated Testing Report</summary>
+    <img src="static/images/product_detail_html.PNG" width="500">
+    <img src="static/images/css_product_detail.PNG" width="500">
 </details>
 
 <details>
-    <summary>Add Product: Automated Testing Reports</summary>
-    <img src="static/images/add_product_html.PNG" width="300">
-    <img src="static/images/css_add_product.PNG" width="300">
+    <summary>Add Product: Automated Testing Report</summary>
+    <img src="static/images/add_product_html.PNG" width="500">
+    <img src="static/images/css_add_product.PNG" width="500">
 </details>
 
 <details>
-    <summary>Edit Product: Automated Testing Reports</summary>
-    <img src="static/images/edit_product_html.PNG" width="300">
-    <img src="static/images/css_edit_product.PNG" width="300">
+    <summary>Edit Product: Automated Testing Report</summary>
+    <img src="static/images/edit_product_html.PNG" width="500">
+    <img src="static/images/css_edit_product.PNG" width="500">
 </details>
 
 <details>
-    <summary>Cocktails: Automated Testing Reports</summary>
-    <img src="static/images/cocktails_html.PNG" width="300">
-    <img src="static/images/css_cocktails.PNG" width="300">
+    <summary>Cocktails: Automated Testing Report</summary>
+    <img src="static/images/cocktails_html.PNG" width="500">
+    <img src="static/images/css_cocktails.PNG" width="500">
 </details>
 
 <details>
-    <summary>Cocktail Details: Automated Testing Reports</summary>
-    <img src="static/images/cocktail_detail_html.PNG" width="300">
-    <img src="static/images/css_cocktail_detail.PNG" width="300">
+    <summary>Cocktail Details: Automated Testing Report</summary>
+    <img src="static/images/cocktail_detail_html.PNG" width="500">
+    <img src="static/images/css_cocktail_detail.PNG" width="500">
 </details>
 
 <details>
-    <summary>Add Cocktail: Automated Testing Reports</summary>
-    <img src="static/images/add_cocktail_html.PNG" width="300">
-    <img src="static/images/css_add_cocktail.PNG" width="300">
+    <summary>Add Cocktail: Automated Testing Report</summary>
+    <img src="static/images/add_cocktail_html.PNG" width="500">
+    <img src="static/images/css_add_cocktail.PNG" width="500">
 </details>
 
 <details>
-    <summary>Edit Cocktail: Automated Testing Reports</summary>
-    <img src="static/images/edit_cocktail_html.PNG" width="300">
-    <img src="static/images/css_edit_cocktail.PNG" width="300">
+    <summary>Edit Cocktail: Automated Testing Report</summary>
+    <img src="static/images/edit_cocktail_html.PNG" width="500">
+    <img src="static/images/css_edit_cocktail.PNG" width="500">
 </details>
 
 <details>
-    <summary>Our Story: Automated Testing Reports</summary>
-    <img src="static/images/ourstory_html.PNG" width="300">
-    <img src="static/images/css_our_story.PNG" width="300">
+    <summary>Our Story: Automated Testing Report</summary>
+    <img src="static/images/ourstory_html.PNG" width="500">
+    <img src="static/images/css_our_story.PNG" width="500">
 </details>
 
 <details>
-    <summary>Contact Us: Automated Testing Reports</summary>
-    <img src="static/images/contact_html.PNG" width="300">
-    <img src="static/images/css_contact.PNG" width="300">
+    <summary>Contact Us: Automated Testing Report</summary>
+    <img src="static/images/contact_html.PNG" width="500">
+    <img src="static/images/css_contact.PNG" width="500">
 </details>
 
 <details>
-    <summary>Wishlist: Automated Testing Reports</summary>
-    <img src="static/images/wishlist_html.PNG" width="300">
-    <img src="static/images/css_wishlist.PNG" width="300">
+    <summary>Wishlist: Automated Testing Report</summary>
+    <img src="static/images/wishlist_html.PNG" width="500">
+    <img src="static/images/css_wishlist.PNG" width="500">
 </details>
 
 <details>
-    <summary>Profile: Automated Testing Reports</summary>
-    <img src="static/images/profile_html.PNG" width="300">
-    <img src="static/images/css_profile.PNG" width="300">
+    <summary>Profile: Automated Testing Report</summary>
+    <img src="static/images/profile_html.PNG" width="500">
+    <img src="static/images/css_profile.PNG" width="500">
 </details>
 
 <details>
-    <summary>Bag: Automated Testing Reports</summary>
-    <img src="static/images/bag_html.PNG" width="300">
-    <img src="static/images/css_bag.PNG" width="300">
+    <summary>Bag: Automated Testing Report</summary>
+    <img src="static/images/bag_html.PNG" width="500">
+    <img src="static/images/css_bag.PNG" width="500">
 </details>
 
 <details>
-    <summary>Checkout: Automated Testing Reports</summary>
-    <img src="static/images/checkout_html.PNG" width="300">
-    <img src="static/images/css_checkout.PNG" width="300">
+    <summary>Checkout: Automated Testing Report</summary>
+    <img src="static/images/checkout_html.PNG" width="500">
+    <img src="static/images/css_checkout.PNG" width="500">
 </details>
 
 ## Automated Testing
