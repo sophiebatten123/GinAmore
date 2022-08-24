@@ -62,10 +62,6 @@ body {
     border-radius: 5px;
 }
 
-.toast-btn a {
-    text-decoration: none;
-}
-
 .custom-toast {
     overflow: visible;
 }
@@ -443,13 +439,7 @@ body {
     width: 100%;
     height: 60px;
     border-radius: 5px;
-    text-decoration: none;
 }
-
-.return-delivery-container a {
-    text-decoration: none;
-}
-
 .return-delivery-btn p:hover {
     background-color: #1c3a421c;
 }
@@ -478,14 +468,6 @@ body {
 
 .hide {
     display: none;
-}
-
-.text-decoration-none a{
-    text-decoration: none;
-}
-
-.cocktail-headings a{
-    text-decoration: none;
 }
 
 .cocktail-image {
@@ -596,10 +578,6 @@ body {
 
 .center-image {
     text-align: center;
-}
-
-.enlarge a{
-    text-decoration: none;
 }
 
 /*.....................................................Our Story Page*/
@@ -713,10 +691,6 @@ body {
     height: 200px;
     object-fit: cover;
     border: solid 2px white;
-}
-
-.checkout a{
-    text-decoration: none;
 }
 
 .our-gin-btns-checkout {
