@@ -404,11 +404,94 @@ Although the wireframes for site users and site admin are similar there are a fe
 ### HTML & CSS: W3C Validation
 
 <details>
-    <summary>Home Page - Click Here:</summary>
+    <summary>Home Page</summary>
     <img src="static/images/home_html.PNG" width="300">
     <img src="static/images/css_home.PNG" width="300">
 </details>
 
+<details>
+    <summary>Products</summary>
+    <img src="static/images/products_html.PNG" width="300">
+    <img src="static/images/css_products.PNG" width="300">
+</details>
+
+<details>
+    <summary>Product Detail</summary>
+    <img src="static/images/product_detail_html.PNG" width="300">
+    <img src="static/images/css_product_detail.PNG" width="300">
+</details>
+
+<details>
+    <summary>Add Product</summary>
+    <img src="static/images/add_product_html.PNG" width="300">
+    <img src="static/images/css_add_product.PNG" width="300">
+</details>
+
+<details>
+    <summary>Edit Product</summary>
+    <img src="static/images/edit_product_html.PNG" width="300">
+    <img src="static/images/css_edit_product.PNG" width="300">
+</details>
+
+<details>
+    <summary>Cocktails</summary>
+    <img src="static/images/cocktails_html.PNG" width="300">
+    <img src="static/images/css_cocktails.PNG" width="300">
+</details>
+
+<details>
+    <summary>Cocktail Details</summary>
+    <img src="static/images/cocktail_detail_html.PNG" width="300">
+    <img src="static/images/css_cocktail_detail.PNG" width="300">
+</details>
+
+<details>
+    <summary>Add Cocktail</summary>
+    <img src="static/images/add_cocktail_html.PNG" width="300">
+    <img src="static/images/css_add_cocktail.PNG" width="300">
+</details>
+
+<details>
+    <summary>Edit Cocktail</summary>
+    <img src="static/images/edit_cocktail_html.PNG" width="300">
+    <img src="static/images/css_edit_cocktail.PNG" width="300">
+</details>
+
+<details>
+    <summary>Our Story</summary>
+    <img src="static/images/ourstory_html.PNG" width="300">
+    <img src="static/images/css_our_story.PNG" width="300">
+</details>
+
+<details>
+    <summary>Contact Us</summary>
+    <img src="static/images/contact_html.PNG" width="300">
+    <img src="static/images/css_contact.PNG" width="300">
+</details>
+
+<details>
+    <summary>Wishlist</summary>
+    <img src="static/images/wishlist_html.PNG" width="300">
+    <img src="static/images/css_wishlist.PNG" width="300">
+</details>
+
+<details>
+    <summary>Profile: Previous Orders</summary>
+    <img src="static/images/profile_html.PNG" width="300">
+    <img src="static/images/css_profile.PNG" width="300">
+</details>
+
+<details>
+    <summary>Bag</summary>
+    <img src="static/images/bag_html.PNG" width="300">
+    <img src="static/images/css_bag.PNG" width="300">
+</details>
+
+<details>
+    <summary>Checkout</summary>
+    <img src="static/images/checkout_html.PNG" width="300">
+    <img src="static/images/css_checkout.PNG" width="300">
+</details>
 
 ## Automated Testing
 
