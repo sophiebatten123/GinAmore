@@ -76,6 +76,13 @@ body {
 
 /*.......................................................Navigation Bar and Header*/
 
+.message-container {
+    position: fixed;
+    top: 75px;
+    right: 10px;
+    z-index: 99999999999999;
+}
+
 #navbarSupportedContent {
     justify-content: center;
 }
@@ -122,6 +129,11 @@ body {
 
 /*...........................................................Homepage */
 
+.main-container {
+    position: relative;
+    justify-content: center;
+}
+
 .main-images img {
     height: auto;
     width: 100%;
@@ -131,21 +143,8 @@ body {
     display: none;
 }
 
-#main_image_gin img{
-    height: 180px;
-    width: 100%;
-    border-radius: 50%;
-}
-
 .welcome-margin {
     margin-top: 40px;
-}
-
-.message-container {
-    position: fixed;
-    top: 75px;
-    right: 10px;
-    z-index: 99999999999999;
 }
 
 .bg-homepage-buttons {
@@ -169,17 +168,6 @@ body {
     position: relative;
 }
 
-.cocktail-image-main {
-    height: 300px;
-    object-fit: cover;
-}
-
-.cocktail-name-main {
-    position: absolute;
-    bottom: 20px;
-    right: 0px;
-}
-
 .cocktail-main-images img{
     opacity: 0.75;
     height: 300px;
@@ -191,17 +179,10 @@ body {
     opacity: 1;
 }
 
-.cocktails-main a {
-    text-decoration: none;
-}
-
-.cocktails-main p {
-    text-decoration: none;
-}
-
-.main-container {
-    position: relative;
-    justify-content: center;
+.cocktail-name-main {
+    position: absolute;
+    bottom: 20px;
+    right: 0px;
 }
 
 .shop-main-btn {
@@ -630,7 +611,7 @@ body {
     opacity: 0.75;
     background-size: cover;
     background-position: center;
-    background-image: url('../images/our-gin-image.jpg');
+    background-image: url('../images/our-gin-image.webp');
     position: relative;
 }
 
@@ -653,7 +634,7 @@ body {
     opacity: 0.75;
     background-size: cover;
     background-position: center;
-    background-image: url('../images/our-cocktail-image.jpg');
+    background-image: url('../images/our-cocktail-image.webp');
     position: relative;
 }
 
