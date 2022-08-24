@@ -406,8 +406,8 @@ Although the wireframes for site users and site admin are similar there are a fe
 HTML and CSS was checked using an online W3C Validator to ensure there were no errors within the code. 
 When the site was ran through the validators there were no errors at the point of deployment.
 
-[W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
-[WSC HTML Validator](https://validator.w3.org/)
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+- [WSC HTML Validator](https://validator.w3.org/)
 
 ### Lighthouse Reports
 
