@@ -114,7 +114,7 @@
         if (event) {
             event.preventDefault();
         }
-        const currentIngredientForm = document.getElementsByClassName("ingredient-form")
+        const currentIngredientForm = document.getElementsByClassName("ingredient-form");
         let ingredientLength = currentIngredientForm.length;
         const ingredientList = document.getElementById('ingredient-form-list');
         const emptyForm = document.getElementById('empty-form').cloneNode(true);
@@ -122,9 +122,9 @@
         emptyForm.setAttribute('id', `form-${ingredientLength}`);
         const regex = new RegExp('__prefix__', 'g');
         emptyForm.innerHTML = emptyForm.innerHTML.replace(regex, ingredientLength);
-        totalNewForm.setAttribute('value', ingredientLength + 1)
+        totalNewForm.setAttribute('value', ingredientLength + 1);
         ingredientList.append(emptyForm);
-    })
+    });
     // Javascript to handle adding a new step
     const addStep = document.getElementById('add-more-steps');
     const totalNewStepsForm = document.getElementById("id_form2-TOTAL_FORMS");
@@ -142,7 +142,7 @@
         emptyForm.innerHTML = emptyForm.innerHTML.replace(regex, stepsLength);
         totalNewStepsForm.setAttribute('value', stepsLength + 1);
         stepsList.append(emptyForm);
-    })
+    });
     // Handles the addition of an image.
     $('#new-image-cocktail').change(function() {
         var file = $("#new-image-cocktail")[0].files[0];

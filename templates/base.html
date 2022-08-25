@@ -354,9 +354,8 @@
       ftypes[5] = 'birthday';
     }(jQuery));
     var $mcj = jQuery.noConflict(true);
-    // Javascript to handle pop ups
+    // Javascript to handle the returns pop ups
     const returnsConditions = document.getElementById('returns');
-
     returnsConditions.addEventListener("click", function() {
         let returnsPopUp = document.getElementById("returns-popup");
         let close = document.getElementById("close-returns");
@@ -368,6 +367,7 @@
           returnsPopUp.style.zIndex = -1;
         });
     });
+    // Javascript to handle the terms and conditions pop up
     const termsConditions = document.getElementById('terms');
 
     termsConditions.addEventListener("click", function() {
@@ -381,6 +381,7 @@
           termsPopUp.style.zIndex = -1;
         });
     });
+    // Javascript to handle the shipping pop up
     const shippingConditions = document.getElementById('shipping');
 
     shippingConditions.addEventListener("click", function() {
@@ -394,6 +395,7 @@
           shippingPopUp.style.zIndex = -1;
         });
     });
+    // Javascript to handle the FAQs pop up
     const faqsConditions = document.getElementById('faqs');
 
     faqsConditions.addEventListener("click", function() {
@@ -407,7 +409,6 @@
           faqsPopUp.style.zIndex = -1;
         });
     });
-
   </script>
 {% endblock %}
 

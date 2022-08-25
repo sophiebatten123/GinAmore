@@ -415,9 +415,12 @@ JavaScript code was tested regularly both manually and automatically through [JS
 
 ### Wave Testing: Accessibility
 
-- Improved alt labels on images
-- Added labels to input buttons
-- Headers run in order
+It was important during development that features on the site were made accessible to all users. [WAVE](https://wave.webaim.org/), an accessibility evaluation tool was used to improve this within the site. The tool is specifically aimed at catering for people with disabilities and visual impairments and highlights any problems they could have when using the site. The following actions were taken as a result:
+
+- Alt labels on images were made more descriptive
+- Missing labels were added to buttons within the site
+- Header elements were ordered within the page
+- Links were made darker to improve the contrast ratio
 
 ### Lighthouse Reports
 
