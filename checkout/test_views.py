@@ -30,12 +30,3 @@ class TestCheckoutViews(TestCase):
         response = self.client.get(reverse('products'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/products.html')
-
-    #def test_checkout_success_url(self):
-        #'''
-        #Tests for a successful checkout URL
-        #'''
-        #item = Order.objects.create(order_number='123456')
-        #response = self.client.get(f'/checkout_success/{item.order_number}')
-        #self.assertEqual(response.status_code, 200)
-        #self.assertTemplateUsed(response, 'checkout/checkout_success.html')

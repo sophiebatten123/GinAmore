@@ -2,7 +2,12 @@
 Imports relevant django packages
 '''
 from django.contrib import admin
-from .models import Cocktail, CocktailCategory, CocktailIngredient, CocktailRecipeStep
+from .models import (
+    Cocktail,
+    CocktailCategory,
+    CocktailIngredient,
+    CocktailRecipeStep
+)
 from django_summernote.admin import SummernoteModelAdmin
 
 
