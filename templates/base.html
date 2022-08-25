@@ -47,7 +47,7 @@
           </form>
         </div>
         <div class="col-sm-9 col-md-3 p-0 m-0 nav-icons w-50">
-          <ul class="list-inline mb-0">
+          <ul class="list-inline mb-0 main-margin">
             {% if request.user.is_superuser %}
               <li class="list-inline-item icon-nav">
                 <a href="" class="d-inline p-2 text-dark nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -154,7 +154,7 @@
     </div>
     <div class="container-fluid bg-light">
       <div class="row bg_delivery_color">
-        <div class="col">
+        <div class="col p-0">
           <p class="text-center text-blue delivery-text">Free delivery on orders over £{{ free_delivery_threshold }}</p>
         </div>
       </div>
