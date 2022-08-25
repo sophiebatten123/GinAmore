@@ -415,7 +415,9 @@ JavaScript code was tested regularly both manually and automatically through [JS
 
 ### Wave Testing: Accessibility
 
-
+- Improved alt labels on images
+- Added labels to input buttons
+- Headers run in order
 
 ### Lighthouse Reports
 

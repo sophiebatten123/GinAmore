@@ -11,15 +11,15 @@
             {% if current_categories %}
                 {% for c in current_categories %}
                     {% if c.name == "sloe_gin" %}
-                        <img class="gin-width" src="{% static 'images/sloe_gin.webp' %}" alt="{{ c.name }} Image">
+                        <img class="gin-width" src="{% static 'images/sloe_gin.webp' %}" alt="An image to display the {{ c.friendly_name }} category">
                     {% elif c.name == "flavoured_gin" %}
-                        <img class="gin-width" src="{% static 'images/flavored_gin.webp' %}" alt="{{ c.name }} Image">
+                        <img class="gin-width" src="{% static 'images/flavored_gin.webp' %}" alt="An image to display the {{ c.friendly_name }} category">
                     {% elif c.name == "dry_gin" %}
-                        <img class="gin-width" src="{% static 'images/dry_gin.webp' %}" alt="{{ c.name }} Image">
+                        <img class="gin-width" src="{% static 'images/dry_gin.webp' %}" alt="An image to display the {{ c.friendly_name }} category">
                     {% endif %}
                 {% endfor %}
             {% else %}
-                <img class="gin-width" src="{% static 'images/all_gin.webp' %}" alt="{{ c.name }} Image">
+                <img class="gin-width" src="{% static 'images/all_gin.webp' %}" alt="An image to display the all gin products">
             {% endif %}
         </div>
     </div>
@@ -101,7 +101,7 @@
                         <div class="row">
                             <div class="col gin_image_cards_container">
                                 <a href="{% url 'product_detail' product.id %}">
-                                    <img class="gin_image_cards" src="{{ product.image.url }}" alt="{{ product.name }} Image" height="100" width="100">
+                                    <img class="gin_image_cards" src="{{ product.image.url }}" alt="An image to show {{ product.name }}" height="100" width="100">
                                 </a>
                             </div>
                         </div>
