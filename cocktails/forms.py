@@ -26,7 +26,7 @@ class CocktailForm(forms.ModelForm):
         exclude = ('image_url',)
 
     image = forms.ImageField(label='Image',
-                             required=False,
+                             required=True,
                              widget=CustomClearableCocktailFileInput)
 
     def __init__(self, *args, **kwargs):

@@ -43,7 +43,7 @@ class Cocktail(models.Model):
         null=True,
         blank=True)
     image_url = models.URLField(max_length=2000, null=True, blank=True)
-    image = models.ImageField(null=True, blank=False)
+    image = models.ImageField(null=False, blank=False)
 
     @property
     def get_image_url(self):

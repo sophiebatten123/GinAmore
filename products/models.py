@@ -53,7 +53,7 @@ class Product(models.Model):
         null=True
     )
     image_url = models.URLField(max_length=2000, null=True, blank=True)
-    image = models.ImageField(null=True, blank=True)
+    image = models.ImageField(blank=False)
 
     def __str__(self):
         '''
