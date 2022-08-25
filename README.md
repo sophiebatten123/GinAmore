@@ -192,7 +192,7 @@ Users can clearly see all of the products sold at GinAmore. Customers are able t
 
 After selecting a product users are directed to the products information this includes name, rating, cost and description. From here they can add products to their shopping bag and alter its quantity.
 
-
+![Product Detail](static/images/product_detail.PNG)
 
 ### Delivery and Returns
 
