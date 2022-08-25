@@ -18,9 +18,16 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='CocktailRecipeStep',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(
+                    auto_created=True,
+                    primary_key=True,
+                    serialize=False,
+                    verbose_name='ID')),
                 ('step', models.CharField(max_length=254)),
-                ('cocktail', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='cocktail_steps_list', to='cocktails.cocktail')),
+                ('cocktail', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE,
+                    related_name='cocktail_steps_list',
+                    to='cocktails.cocktail')),
             ],
         ),
     ]

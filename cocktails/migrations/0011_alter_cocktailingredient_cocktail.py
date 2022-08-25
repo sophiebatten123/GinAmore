@@ -14,6 +14,9 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='cocktailingredient',
             name='cocktail',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='cocktail_ingredients_list', to='cocktails.cocktail'),
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name='cocktail_ingredients_list',
+                to='cocktails.cocktail'),
         ),
     ]
