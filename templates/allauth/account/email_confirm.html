@@ -7,7 +7,7 @@
 
 
 {% block inner_content %}
-<div class="container-fluid mt-4 mb-4 bg-light">
+<div class="container-fluid mt-4 mb-4">
     <h1>{% trans "Confirm E-mail Address" %}</h1>
     {% if confirmation %}
         {% user_display confirmation.email_address.user as user_display %}
