@@ -9,8 +9,6 @@ def validate_measurements(value):
     '''
     ureg = pint.UnitRegistry()
     try:
-        unit_instance = ureg[value]
+        ureg[value]
     except UndefinedUnitError as e:
-        raise ValidationError(f'{value} is not a valid unit of measure')
-    except:
         raise ValidationError(f'{value} is not a valid unit of measure')

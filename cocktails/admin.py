@@ -8,7 +8,6 @@ from .models import (
     CocktailIngredient,
     CocktailRecipeStep
 )
-from django_summernote.admin import SummernoteModelAdmin
 
 
 class CategoryAdmin(admin.ModelAdmin):

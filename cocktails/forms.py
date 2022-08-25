@@ -91,7 +91,7 @@ class CocktailStepForm(forms.ModelForm):
         '''
         Coktail steps fields generated within the form
         '''
-        model = CocktailIngredient
+        model = CocktailRecipeStep
         fields = ('step',)
 
 
