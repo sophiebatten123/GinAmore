@@ -1033,4 +1033,9 @@ body {
     .table-text {
         font-size: 14px;
     }
+    .dropdown-item {
+        padding-right: 4px;
+        padding-left: 4px;
+        font-size: 14px;
+    }
 }

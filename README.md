@@ -411,7 +411,7 @@ When the site was ran through the validators there were no errors at the point o
 
 ### Javascript: JShint
 
-JavaScript code was tested regularly both manually and automatically through [JShint](https://jshint.com/) and the [DevTools](https://developer.chrome.com/docs/devtools/). DevTools allowed me to test responses using the console log function and jShint enabled me to ensure that my code was hitting the style guidelines. Upon the launch of my project jShint showed no errors or warnings with my code.
+JavaScript code was tested regularly both manually and automatically through [JShint](https://jshint.com/) and the [DevTools](https://developer.chrome.com/docs/devtools/). DevTools allowed me to test responses using the console log function and jShint enabled me to ensure that my code was hitting the style guidelines. Upon the launch of my project JShint showed no errors or warnings with my code.
 
 ### Wave Testing: Accessibility
 
