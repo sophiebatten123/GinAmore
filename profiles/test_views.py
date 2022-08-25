@@ -4,7 +4,6 @@ Imports relevant django packages
 from django.test import TestCase, Client
 from django.contrib.auth.models import User
 from django.urls import reverse
-from .views import profile
 
 
 class TestProfileViews(TestCase):

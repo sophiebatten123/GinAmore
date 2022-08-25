@@ -4,8 +4,6 @@ Imports relevant django packages
 from django.test import TestCase, Client
 from django.contrib.auth.models import User
 from django.urls import reverse
-from .models import Order
-from .views import checkout, checkout_success
 
 
 class TestCheckoutViews(TestCase):
