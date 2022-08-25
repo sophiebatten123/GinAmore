@@ -132,11 +132,11 @@ Each of the user stories was given acceptance criteria, an example of this can b
 
 This helped to ensure all tasks were completed before the user story was marked as done and ensured the website was fully functional. I also used the acceptance criteria to guide the manual testing that was performed throughout the project.
 
-# Features
+# Existing Features
 
-## Existing Features
-
+***
 ## All Pages
+***
 
 ### Navigation
 
@@ -150,7 +150,9 @@ This helped to ensure all tasks were completed before the user story was marked 
 
 ![Footer](static/images/footer.PNG)
 
+***
 ## Home Page
+***
 
 ### Main Image
 
@@ -164,29 +166,102 @@ This helped to ensure all tasks were completed before the user story was marked 
 
 ![Our Cocktails](static/images/cocktails_home.PNG)
 
+***
 ## Products
+***
 
 ### All Products
 
 ![All Products](static/images/all_products.PNG)
 
-## Product Description
+### Product Description
 
 
 
-## Delivery and Returns
+### Delivery and Returns
 
 ![Delivery and Returns](static/images/delivery_returns.PNG)
 
-## Reccomended Products
+### Reccomended Products
 
 ![Reccomended Products](static/images/similar_products.PNG)
 
-## Reviews
+### Reviews
 
 ![Reviews](static/images/reviews.PNG)
 
-## Future Features
+***
+## Our Story 
+***
+
+![Our Story](static/images/our_story.PNG)
+
+***
+## Cocktails
+***
+
+### All Cocktails
+
+![Cocktails](static/images/cocktails.PNG)
+
+### Cocktail Detail
+
+![Cocktail Details](static/images/cocktail_details.PNG)
+
+***
+## Admin
+***
+
+### Add Product
+
+![Add Product](static/images/add_product.PNG)
+
+### Edit Product
+
+![Edit Product](static/images/edit_product.PNG)
+
+### Add Cocktail
+
+![Add Cocktail](static/images/add_cocktail.PNG)
+
+### Edit Cocktail
+
+![Edit Cocktail](static/images/edit_cocktail.PNG)
+
+***
+## Contact Us
+***
+
+![Contact Us](static/images/contact_us.PNG)
+
+***
+## Bag and Checkout
+***
+
+### Shopping Bag
+
+![Shopping Bag](static/images/bag.PNG)
+
+### Checkout
+
+![Checkout](static/images/checkout.PNG)
+
+### Checkout Success
+
+![Checkout Success](static/images/order_confirmed.PNG)
+
+### Previous Orders
+
+![Previous Orders](static/images/previous_orders.PNG)
+
+***
+## Wishlist
+***
+
+![Wishlist](static/images/wishlist.PNG)
+
+# Future Features
+
 
 # Site Map Wireframe
 
