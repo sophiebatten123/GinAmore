@@ -710,14 +710,17 @@ body {
 
 /*................................................Mailchimp */
 
-#mc_embed_signup {
+#mc_embed_signup_email {
     background: #fff;
     clear: left;
     font: 14px Helvetica, Arial, sans-serif;
+    border: solid 2px #1c3a42;
 }
 
 #mce-EMAIL {
     width: 100%;
+    background-color: #e8a79d9c;
+    border: solid 2px #1c3a42;
 }
 
 .email-text {
