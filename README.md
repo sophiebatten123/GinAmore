@@ -439,11 +439,27 @@ Market research was performed to decide on the marketing stratergy needed to pro
 
 ![GinAmore Twitter Page](static/images/twitter.PNG)
 
+# Mailchimp Email Subscription Service
+
+Users are encouraged to signup for newsletters, discounts and information about the products sold at GinAmore. This feature allows shop owners to send marketing emails through the platform, increasing enagement within the site. Below is a screenshot of one of the subscription emails that was sent by GinAmore's shop owner:
+
+![GinAmore Marketting Email](static/images/email_ginamore.PNG)
+
 # Colour Scheme
 
 The colours within the site were carefully selected to mirror the premium products sold at GinAmore. The dark regal blue contrasts against the light pink making elements of importance stand out on the page. These colours were initially selected from the sites main banner image using DEV tools, allowing for all colours within the page to compliment eachother nicely.
 
 ![Colour-Scheme](static/images/color-scheme.PNG)
+
+# Typography
+
+The aim of the font was to create a sophisticated feel within the site, complementing the imagery seen throughout. Moreover, text colours were either dark blue or white depending on the background contrast ratio, to ensure information was accessible to users who may be visually impaired. The main font used on the site was 'Mali' and this was selected using [Google Fonts](https://fonts.google.com/).
+
+# Favicon
+
+A simplistic favicon was created in the shape of a gin bottle, using simple lines
+
+![Favicon Icon](static/images/favicon.jpg)
 
 # Wireframes
 
@@ -762,6 +778,8 @@ Python code was tested to ensure that it met [PEP8](https://pep8.org/) style gui
 Furthermore, using the MVC framework I was able to keep track of the changes made and ensure that they had the desired output. After each change made to the Postgres Database I referred directly to it to track the changes, ensuring that upon ‘trial runs’ information was being successfully displayed and filters were displaying alongside.
 
 ### Automated Python Testing
+
+Some automated python tests were created to check that features of the site were working correctly, details of these tests can be seen below. The tests were ran using the command **ENTER COMMAND HERE**. Any testing that was not conducted using automated testing was done manually to ensure that site was fully functional upon deployment.
 
 # Fixed Bugs and Errors
 
