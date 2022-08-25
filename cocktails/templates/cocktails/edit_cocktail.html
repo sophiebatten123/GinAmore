@@ -8,7 +8,7 @@
 <div class="container-fluid bg-white">
     <div class="row">
         <div class="col-12 mt-4 mb-2">
-            <h3>Product Management: Edit Cocktail</h3>
+            <h2 class="delivery-text-header">Product Management: Edit Cocktail</h2>
             <hr>
             <form method="POST" action="{% url 'edit_cocktail' cocktail.id %}" class="form" enctype="multipart/form-data">
                 <div class="row background_temp_strip-pink">
@@ -55,7 +55,7 @@
                         </div>
                         <div id="empty-form-edit" class="hide">{{ formset.empty_form | crispy }}</div>
                         <button id="add-more-ingredients-edit" type="button" class="text-green" aria-label="Add Additional Ingredient">
-                            <i class="fa-solid fa-plus mr-2"></i>Add Additional Ingerdient
+                            <i class="fa-solid fa-plus mr-2"></i><strong>Add Additional Ingerdient</strong>
                         </button>
                     </div>
                 {% endif %}
@@ -74,7 +74,7 @@
                         </div>
                         <div id="empty-steps-form-edit" class="hide">{{ formset_2.empty_form | crispy }}</div>
                         <button id="add-more-steps-edit" type="button" class="text-green" aria-label="Add Additional Step">
-                            <i class="fa-solid fa-plus mr-2"></i>Add Additional Step
+                            <i class="fa-solid fa-plus mr-2"></i><strong>Add Additional Step</strong>
                         </button>
                     </div>
                 {% endif %}

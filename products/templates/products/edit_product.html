@@ -8,7 +8,7 @@
 <div class="container-fluid bg-white">
     <div class="row">
         <div class="col-12 mt-4">
-            <h3>Product Management: Edit a Product</h3>
+            <h2 class="delivery-text-header">Product Management: Edit a Product</h2>
             <hr>
             <form method="POST" action="{% url 'edit_product' product.id %}" class="form" enctype="multipart/form-data">
                 {% csrf_token %}

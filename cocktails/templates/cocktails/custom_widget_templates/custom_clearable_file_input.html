@@ -5,7 +5,7 @@
     </a>
     <br>
     {{ widget.input_text }}
-    <span class="btn btn-black rounded-0 btn-file mt-2 text-success">
+    <span class="btn btn-black rounded-0 btn-file mt-2 text-green">
         <i class="fa-solid fa-arrows-rotate"></i> 
         <label for="update-image-cocktail">Change Image</label>
         <input id="update-image-cocktail" type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
@@ -13,9 +13,9 @@
     <strong><p class="text-danger mt-4" id="filename-update-cocktail"></p></strong>
 {% else %}
 {{ widget.input_text }}
-<span class="btn btn-black rounded-0 btn-file mt-2 text-success">
+<span class="btn btn-black rounded-0 btn-file mt-2 text-green">
     <i class="fa-solid fa-plus"></i>
-    <label for="new-image-cocktail">Select Image</label>
+    <label for="new-image-cocktail"><strong>Select Image</strong></label>
     <input id="new-image-cocktail" type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
 </span>
 <strong><p class="text-danger mt-4" id="filename-new-image-cocktail"></p></strong>

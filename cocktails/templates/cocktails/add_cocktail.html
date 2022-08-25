@@ -8,7 +8,7 @@
 <div class="container-fluid bg-white">
     <div class="row">
         <div class="col-12 mt-4 mb-2">
-            <h3>Product Management: Add a Cocktail</h3>
+            <h2 class="delivery-text-header">Product Management: Add a Cocktail</h2>
             <hr>
             <form method="POST" action="{% url 'add_cocktail' %}" class="form" enctype="multipart/form-data">
                 <div class="row background_temp_strip-pink">
@@ -18,7 +18,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-lg-4 mt-4 center-image">
-                        <img class="mt-4 mb-4 cocktail-edit-image" src="{% static 'images/gin_placeholder.PNG' %}" alt="Placeholder Cocktail Image" height="200px" width="auto">
+                        <img class="mt-4 mb-4 cocktail-edit-image" src="{% static 'images/gin_placeholder.PNG' %}" alt="A image of a cartoon cocktail." height="200px" width="auto">
                     </div>
                     <div class="col-md-12 col-lg-8 mt-2">
                         {% csrf_token %}
@@ -54,7 +54,7 @@
                         </div>
                         <div id="empty-form" class="hide">{{ formset.empty_form | crispy }}</div>
                         <button id="add-more" type="button" class="text-green" aria-label="Add Additional Ingredient">
-                            <i class="fa-solid fa-plus mr-2"></i>Add Additional Ingredient
+                            <i class="fa-solid fa-plus mr-2"></i><strong>Add Additional Ingredient</strong>
                         </button>
                     </div>
                 {% endif %}
@@ -72,7 +72,7 @@
                         </div>
                         <div id="empty-steps-form" class="hide">{{ formset_2.empty_form | crispy }}</div>
                         <button id="add-more-steps" type="button" class="text-green" aria-label="Add Additional Step">
-                            <i class="fa-solid fa-plus mr-2"></i>Add Additional Step
+                            <i class="fa-solid fa-plus mr-2"></i><strong>Add Additional Step</strong>
                         </button>
                     </div>
                 {% endif %}
