@@ -93,48 +93,55 @@
             {% endif %}
         </div>
     </div>
-    <div class="row">
-        {% for product in products %}
-            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                <div class="card mt-2 mb-2">
-                    <div class="card-body cocktails-main">
-                        <div class="row">
-                            <div class="col gin_image_cards_container">
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="gin_image_cards" src="{{ product.image.url }}" alt="An image to show {{ product.name }}" height="100" width="100">
-                                </a>
-                            </div>
-                        </div>
-                        <p class="mt-3 text-center">{{product.name}}</p>
-                        <p class="text-center mt-2">£{{product.price}}</p>
-                        <a href="{% url 'products' %}?category={{ product.category }}">
-                            <p class="gin-category text-center mt-2">{{ product.category.friendly_name }}</p>
-                        </a>
-                        <p class="text-center"><i class="fas fa-heart heart mr-2 mt-2"></i>{{product.rating}}/5</p>
-                        <div class="row">
-                            <div class="col-12 btns">
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <p class="text-light shop-btn text-center mt-2">
-                                        Shop Now
-                                    </p>
-                                </a>
-                            </div>
-                        </div>
-                        {% if request.user.is_superuser %}
-                            <div class="row mt-2">
-                                <div class="col-6 btns">
-                                    <a href="{% url 'edit_product' product.id %}"><p class="text-blue edit-button text-center">Edit</p></a>
-                                </div>
-                                <div class="col-6 btns">
-                                    <a href="{% url 'delete_product' product.id %}"><p class="text-blue delete-button text-center">Delete</p></a>
+    {% if products %}
+        <div class="row">
+            {% for product in products %}
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                    <div class="card mt-2 mb-2">
+                        <div class="card-body cocktails-main">
+                            <div class="row">
+                                <div class="col gin_image_cards_container">
+                                    <a href="{% url 'product_detail' product.id %}">
+                                        <img class="gin_image_cards" src="{{ product.image.url }}" alt="An image to show {{ product.name }}" height="100" width="100">
+                                    </a>
                                 </div>
                             </div>
-                        {% endif %}
-                    </div>
-                  </div>                  
-            </div>
-        {% endfor %}
-    </div>
+                            <p class="mt-3 text-center">{{product.name}}</p>
+                            <p class="text-center mt-2">£{{product.price}}</p>
+                            <a href="{% url 'products' %}?category={{ product.category }}">
+                                <p class="gin-category text-center mt-2">{{ product.category.friendly_name }}</p>
+                            </a>
+                            <p class="text-center"><i class="fas fa-heart heart mr-2 mt-2"></i>{{product.rating}}/5</p>
+                            <div class="row">
+                                <div class="col-12 btns">
+                                    <a href="{% url 'product_detail' product.id %}">
+                                        <p class="text-light shop-btn text-center mt-2">
+                                            Shop Now
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                            {% if request.user.is_superuser %}
+                                <div class="row mt-2">
+                                    <div class="col-6 btns">
+                                        <a href="{% url 'edit_product' product.id %}"><p class="text-blue edit-button text-center">Edit</p></a>
+                                    </div>
+                                    <div class="col-6 btns">
+                                        <a href="{% url 'delete_product' product.id %}"><p class="text-blue delete-button text-center">Delete</p></a>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>                  
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="row delivery-text-header text-blue">
+            <i class="fa-solid fa-face-confused"></i>
+            <p>Looks like there are no products to see here. Try again later</p>
+        </div>
+    {% endif %}
     <div class="col-12 p-0">
         <hr>
     </div>

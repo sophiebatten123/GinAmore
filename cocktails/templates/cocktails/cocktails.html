@@ -21,65 +21,72 @@
             <hr>
         </div>
     </div>
-    <div class="row">
-        {% for cocktail in cocktail_items %}
-        <div class="col-md-12 col-lg-6">
-            <div class="row">
-                <div class="col-xs-12 col-sm-3 gin_image_cards_container">
-                    <a href="{% url 'cocktail_detail' cocktail.id %}">
-                        <img class="cocktail_image_cards mt-4" src="{{ cocktail.get_image_url }}" alt="An image to show {{ cocktail.name }}" height="100" width="100">
-                    </a>
-                </div>
-                <div class="col-xs-12 col-sm-9">
-                    <div class="row">
-                        <div class="col-12 btns mt-2">
-                            <a href="{% url 'cocktail_detail' cocktail.id %}">
-                                <h3 class="mt-4 ml-2 text-dark delivery-text">
-                                    <strong>{{ cocktail.name }}</strong>
-                                </h3>
-                            </a>
-                            <hr>
-                        </div>
-                        <div class="col-8 btns">
-                            <a href="{% url 'cocktails' %}?category={{ cocktail.category }}">
-                                <p class="text-dark ml-2">Category:
-                                    <span class="gin-category">{{ cocktail.category.friendly_name }}</span>
+    {% if cocktail_items %}
+        <div class="row">
+            {% for cocktail in cocktail_items %}
+            <div class="col-md-12 col-lg-6">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-3 gin_image_cards_container">
+                        <a href="{% url 'cocktail_detail' cocktail.id %}">
+                            <img class="cocktail_image_cards mt-4" src="{{ cocktail.get_image_url }}" alt="An image to show {{ cocktail.name }}" height="100" width="100">
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-9">
+                        <div class="row">
+                            <div class="col-12 btns mt-2">
+                                <a href="{% url 'cocktail_detail' cocktail.id %}">
+                                    <h3 class="mt-4 ml-2 text-dark delivery-text">
+                                        <strong>{{ cocktail.name }}</strong>
+                                    </h3>
+                                </a>
+                                <hr>
+                            </div>
+                            <div class="col-8 btns">
+                                <a href="{% url 'cocktails' %}?category={{ cocktail.category }}">
+                                    <p class="text-dark ml-2">Category:
+                                        <span class="gin-category">{{ cocktail.category.friendly_name }}</span>
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <p class="ml-2"><i class="fas fa-heart heart mr-2"></i>{{ cocktail.rating }}/5</p>
+                            </div>
+                            <div class="col-12">
+                                <p class="ml-2">
+                                    {{ cocktail.description }}
                                 </p>
-                            </a>
+                            </div>
+                            <div class="col-12 btns">
+                                <a href="{% url 'cocktail_detail' cocktail.id %}">
+                                    <p class="text-light shop-btn text-center">View Recipe</p>
+                                </a>
+                            </div>
                         </div>
-                        <div class="col-4">
-                            <p class="ml-2"><i class="fas fa-heart heart mr-2"></i>{{ cocktail.rating }}/5</p>
+                        {% if request.user.is_superuser %}
+                        <div class="row mt-2">
+                            <div class="col-6 btns">
+                                <a href="{% url 'edit_cocktail' cocktail.id %}">
+                                    <p class="text-blue edit-button text-center">Edit</p>
+                                </a>
+                            </div>
+                            <div class="col-6 btns">
+                                <a href="{% url 'delete_cocktail' cocktail.id %}">
+                                    <p class="text-blue delete-button text-center">Delete</p>
+                                </a>
+                            </div>
                         </div>
-                        <div class="col-12">
-                            <p class="ml-2">
-                                {{ cocktail.description }}
-                            </p>
-                        </div>
-                        <div class="col-12 btns">
-                            <a href="{% url 'cocktail_detail' cocktail.id %}">
-                                <p class="text-light shop-btn text-center">View Recipe</p>
-                            </a>
-                        </div>
+                        {% endif %}
                     </div>
-                    {% if request.user.is_superuser %}
-                    <div class="row mt-2">
-                        <div class="col-6 btns">
-                            <a href="{% url 'edit_cocktail' cocktail.id %}">
-                                <p class="text-blue edit-button text-center">Edit</p>
-                            </a>
-                        </div>
-                        <div class="col-6 btns">
-                            <a href="{% url 'delete_cocktail' cocktail.id %}">
-                                <p class="text-blue delete-button text-center">Delete</p>
-                            </a>
-                        </div>
-                    </div>
-                    {% endif %}
                 </div>
             </div>
+            {% endfor %}
         </div>
-        {% endfor %}
-    </div>
+    {% else %}
+        <div class="row delivery-text-header text-blue">
+            <i class="fa-solid fa-face-confused"></i>
+            <p>Looks like there are no cocktails to see here. Try again later</p>
+        </div>
+    {% endif %}
     <div class="row">
         <div class="col-12">
             <hr>
