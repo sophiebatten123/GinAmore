@@ -162,15 +162,19 @@ The footer of the page provides users with informational resources that help to 
 
 ### Main Image
 
-The main image on the site was carefully selected, with the aim to entice customers to explore the site further, thus improving the sites google metrics. The bold and contrasting colours within this image were then selected using Google Chromes DEV Tools and applied within the rest of the site.
+The main image on the site was carefully selected, with the aim to entice customers to explore the site further, thus improving the sites google metrics. The bold and contrasting colours within this image were then selected using [Chrome DevTools](https://developer.chrome.com/docs/devtools/) and applied within the rest of the site.
 
 ![Main Image](static/images/main_image.PNG)
 
 ### Popular Gins
 
+Gin products feature on the sites homepage to promote engagement on the site and improving the chances of customers exploring products further. The images where chosen to suit the sophisticated nature of the site and its key colours.
+
 ![Popular Gins](static/images/our_gins_home.PNG)
 
 ### Our Cocktails
+
+On the sites homepage customers are enticed to explore the sites cocktail recipes through artistic pictures and carefully selected category names. This was done to improve the CTR (Click Through Rate) and the time spent on the site.
 
 ![Our Cocktails](static/images/cocktails_home.PNG)
 
@@ -180,27 +184,39 @@ The main image on the site was carefully selected, with the aim to entice custom
 
 ### All Products
 
+Users can clearly see all of the products sold at GinAmore. Customers are able to filter products on this page based on cost, rating or category name. Admin users are also able to edit or delete products from the site using clear and distinguishable buttons on the page.
+
 ![All Products](static/images/all_products.PNG)
 
 ### Product Description
+
+After selecting a product users are directed to the products information this includes name, rating, cost and description. From here they can add products to their shopping bag and alter its quantity.
 
 
 
 ### Delivery and Returns
 
+Within the product detail pages customers are given information about delivery and returns. There is also the option to get more information using the buttons provided, improving the sites google metrics further.
+
 ![Delivery and Returns](static/images/delivery_returns.PNG)
 
 ### Reccomended Products
 
+Reccomended products shown on the product detail pages are based upon the category the user is currently exploring.
+
 ![Reccomended Products](static/images/similar_products.PNG)
 
 ### Reviews
+
+Users are able to review products and cocktail recipes. Admin are able to delete reviews using the cross button seen below.
 
 ![Reviews](static/images/reviews.PNG)
 
 ***
 ## Our Story 
 ***
+
+A simplistic overview of GinAmore's history is provided to users giving them a feeling of security on the site and making it seem more personal to users.
 
 ![Our Story](static/images/our_story.PNG)
 
@@ -210,9 +226,13 @@ The main image on the site was carefully selected, with the aim to entice custom
 
 ### All Cocktails
 
+All cocktail recipes can be seen by users, they are also given the ability to sort products based on their category. Admin are able to edit and delete recipes from this page directly.
+
 ![Cocktails](static/images/cocktails.PNG)
 
 ### Cocktail Detail
+
+The cocktail detail page provides users with information about the cocktail including its name, rating, recipe and the ingredients. The information on the page is easy to read and each section is seperated improving the readability of content.
 
 ![Cocktail Details](static/images/cocktail_details.PNG)
 
@@ -222,23 +242,33 @@ The main image on the site was carefully selected, with the aim to entice custom
 
 ### Add Product
 
+Admin are able to add products on the site using the site admin button at the top of the page. Upon clicking this admin users are given a form containing vital product information as seen below.
+
 ![Add Product](static/images/add_product.PNG)
 
 ### Edit Product
+
+Admin can edit products using the buttons on the product page and product detail pages. The form shown to admin already contains current information saving time when making alterations.
 
 ![Edit Product](static/images/edit_product.PNG)
 
 ### Add Cocktail
 
+Admin are able to add cocktails on the site using the site admin button at the top of the page. Upon clicking this admin users are given a form containing vital cocktail information as seen below.
+
 ![Add Cocktail](static/images/add_cocktail.PNG)
 
 ### Edit Cocktail
+
+Admin can edit cocktails using the buttons on the cocktail page and cocktail detail pages. The form shown to admin already contains current information saving time when making alterations.
 
 ![Edit Cocktail](static/images/edit_cocktail.PNG)
 
 ***
 ## Contact Us
 ***
+
+A simplistic contact us page is provided with all of the relevant company details
 
 ![Contact Us](static/images/contact_us.PNG)
 
@@ -248,23 +278,33 @@ The main image on the site was carefully selected, with the aim to entice custom
 
 ### Shopping Bag
 
+Once items have been added to a customers shopping bag they can be seen as shown below. It provides customers with a summary of their order information including the total price, delivery cost, name, quantity and price.
+
 ![Shopping Bag](static/images/bag.PNG)
 
 ### Checkout
+
+A simplistic checkout form is given for users to complete. If they have already checked out before their and checked that their details should be saved this will be automatically filled in next time. Before confirming and purchasing the items users must confirm they are over the age of 18 using an activate/deactivate button.
 
 ![Checkout](static/images/checkout.PNG)
 
 ### Checkout Success
 
+Upon successful checkout, customers are shown confirmation of their order on screen containing a breakdown of their information. This will also be sent via email, providing further confirmation and security to the customer.
+
 ![Checkout Success](static/images/order_confirmed.PNG)
 
 ### Previous Orders
+
+Logged in users can see their previous orders within their account section in the navigation bar. They are also able to expand and view each order using the link provided.
 
 ![Previous Orders](static/images/previous_orders.PNG)
 
 ***
 ## Wishlist
 ***
+
+Gin products can be added to a customers wishlist via the product detail pages. The wishlist page allows users to save their favourites for their next visit and purchase them at a later date. They are also given the option to remove the products if they change their mind.
 
 ![Wishlist](static/images/wishlist.PNG)
 
