@@ -136,6 +136,56 @@ This helped to ensure all tasks were completed before the user story was marked 
 
 ## Existing Features
 
+## All Pages
+
+### Navigation
+
+![Navigation Bar](static/images/navbar.PNG)
+
+### Newsletter Sign Up
+
+![Newsletter](static/images/email_signup.PNG)
+
+### Footer
+
+![Footer](static/images/footer.PNG)
+
+## Home Page
+
+### Main Image
+
+![Main Image](static/images/main_image.PNG)
+
+### Popular Gins
+
+![Popular Gins](static/images/our_gins_home.PNG)
+
+### Our Cocktails
+
+![Our Cocktails](static/images/cocktails_home.PNG)
+
+## Products
+
+### All Products
+
+![All Products](static/images/all_products.PNG)
+
+## Product Description
+
+
+
+## Delivery and Returns
+
+![Delivery and Returns](static/images/delivery_returns.PNG)
+
+## Reccomended Products
+
+![Reccomended Products](static/images/similar_products.PNG)
+
+## Reviews
+
+![Reviews](static/images/reviews.PNG)
+
 ## Future Features
 
 # Site Map Wireframe
