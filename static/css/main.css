@@ -87,6 +87,10 @@ body {
     z-index: 99999999999999;
 }
 
+.small-search-area {
+    display: none;
+}
+
 .icon-nav {
     margin-right: 10px;
 }
@@ -724,7 +728,6 @@ body {
 
 #mce-EMAIL {
     width: 100%;
-    background-color: #e8a79d9c;
     border: solid 2px #1c3a42;
 }
 
@@ -1003,6 +1006,9 @@ body {
         padding: 10px;
         bottom: 30px;
     }
+    .small-search-area {
+        display: block;
+    }
     .bg-homepage-buttons p {
         font-size: 13px;
     }
@@ -1041,6 +1047,9 @@ body {
     }
     .shop-btn-product {
         width: 150px;
+    }
+    .small-search-show {
+        display: none;
     }
 }
 

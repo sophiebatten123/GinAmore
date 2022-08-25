@@ -98,10 +98,20 @@
         </div>
       </div>
     </header>
-    <div class="container-fluid">
-      <div class="row bg-light">
-        <div class="col-sm-2 col-md-12 ml-0 mr-0 w-50">
-          <nav class="navbar navbar-expand-lg bg-light mt-2" id="main-nav">
+    <div class="container-fluid small-search-area bg-white">
+      <div class="row">
+        <div class="col-12 right-sort text-center mb-2 main-header-icons">
+            <form method="GET" action="{% url 'products' %}" class="d-flex mt-3">
+              <input class="form-control me-2 text-dark" type="text" placeholder="Search" name="q" aria-label="Search">
+              <button class="btn" type="submit"><i class="fa-solid fa-magnifying-glass text-dark"></i></button>
+            </form>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid bg-white">
+      <div class="row">
+        <div class="col-sm-1 col-md-12 ml-0 mr-0 w-50">
+          <nav class="navbar navbar-expand-lg bg-white mt-2" id="main-nav">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
               aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
@@ -142,7 +152,7 @@
             </div>
           </nav>
         </div>
-        <div class="col-sm-10 ml-0 mr-0 w-50">
+        <div class="col-sm-11 ml-0 mr-0 w-50">
           <div class="text-center mb-2 small-search-show main-header-icons">
             <form method="GET" action="{% url 'products' %}" class="d-flex mt-3">
               <input class="form-control me-2 text-dark" type="text" placeholder="Search" name="q" aria-label="Search">
@@ -152,7 +162,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid bg-light">
+    <div class="container-fluid bg-white">
       <div class="row bg_delivery_color">
         <div class="col p-0">
           <p class="text-center text-blue delivery-text">Free delivery on orders over £{{ free_delivery_threshold }}</p>
@@ -162,6 +172,7 @@
         <div class="col-12" id="heading"></div>
       </div>
     </div>
+
 <!--Messages-->
     {% if messages %}
       <div class="message-container">
