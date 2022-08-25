@@ -5,7 +5,7 @@
 
 (Developer: Sophie Batten)
 
-![Am I Responsive?]()
+![Am I Responsive?](static/images/am_i_responsive.PNG)
 
 GinAmore is an ecommerce website built using Django, Python, HTML, CSS and Javascript as part of the Code Institute Diploma in Full Stack Software Development.
 
