@@ -140,13 +140,19 @@ This helped to ensure all tasks were completed before the user story was marked 
 
 ### Navigation
 
+The navigation bar features on all pages on the site this allows users to easily move through the site and find the products they wish to purchase or the cocktails they wish to make. 
+
 ![Navigation Bar](static/images/navbar.PNG)
 
 ### Newsletter Sign Up
 
+Users are encouraged to sign up to GinAmore's site, giving them access to featured products and discounts. This feature was set up using [Mailchimp](https://mailchimp.com/en-gb/), a marketing platform, that can be used to communicate with customers.
+
 ![Newsletter](static/images/email_signup.PNG)
 
 ### Footer
+
+The footer of the page provides users with informational resources that help to promote trust between the customer and GinAmore.Furthermore, all of the social network features link to GinAmores personalised pages, encouraging customers to follow the company for discounts, deals and cocktail recipes.
 
 ![Footer](static/images/footer.PNG)
 
@@ -155,6 +161,8 @@ This helped to ensure all tasks were completed before the user story was marked 
 ***
 
 ### Main Image
+
+The main image on the site was carefully selected, with the aim to entice customers to explore the site further, thus improving the sites google metrics. The bold and contrasting colours within this image were then selected using Google Chromes DEV Tools and applied within the rest of the site.
 
 ![Main Image](static/images/main_image.PNG)
 
