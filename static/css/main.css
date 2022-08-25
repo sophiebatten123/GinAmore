@@ -753,6 +753,11 @@ body {
     height: 50px;
 }
 
+.border-allauth {
+    border: solid 2px #1c3a42;
+    border-radius: 5px;
+}
+
 #sign_up_image {
     height: 300px;
     border: solid white 2px;
