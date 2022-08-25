@@ -413,10 +413,6 @@ body {
     cursor: pointer;
 }
 
-#post-cocktail-review {
-    text-decoration: underline;
-}
-
 #post-cocktail-review:hover {
     cursor: pointer;
 }

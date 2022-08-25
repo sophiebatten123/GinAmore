@@ -9,14 +9,14 @@
     <div class="row">
         <div class="col-sm-12 col-md-4 cocktails-main btns">
             <a href="{{ cocktail.image.url }}" target="_blank">
-                <img class="mt-4 mb-4 w-100 cocktail-image-main" src="{{ cocktail.image.url }}" alt="{{ cocktail.name }} Image">
-                <p class="text-center text-dark"><i class="fa-solid fa-magnifying-glass"></i> Click to enlarge</p>
+                <img class="mt-4 mb-4 w-100 cocktail-image-main" src="{{ cocktail.image.url }}" alt="An image to show {{ cocktail.name }}">
+                <p class="text-center text-dark"><i class="fa-solid fa-magnifying-glass"></i> Enlarge the image above</p>
             </a>
         </div>
         <div class="col-sm-12 col-md-8">
             <div class="row mt-4">
                 <div class="col-6 mb-2">
-                    <h4 class="small-product-name"><strong>{{ cocktail.name }}</strong></h4>
+                    <h2 class="small-product-name delivery-text"><strong>{{ cocktail.name }}</strong></h2>
                 </div>
                 {% if request.user.is_superuser %}
                     <div class="col-3 btns">
@@ -60,7 +60,7 @@
             <div class="row">
                 <div class="col-sm-12 col-md-4">
                     <hr>
-                    <h5><strong>Ingredients:</strong></h5>
+                    <h3 class="delivery-text"><strong>Ingredients:</strong></h3>
                     <hr>
                     <ul>
                     {% for ingredient in ingredients %}
@@ -70,7 +70,7 @@
                 </div>
                 <div class="col-sm-12 col-md-8">
                     <hr>
-                    <h5><strong>Method:</strong></h5>
+                    <h3 class="delivery-text"><strong>Method:</strong></h3>
                     <hr>
                     {% for step in recipe %}
                         <p><strong>Step {{ forloop.counter }}:</strong> {{ step }}</p>
@@ -110,7 +110,9 @@
                     {% endif %}
                 {% endfor %}
             {% else %}
-                <p> No Reviews. </p>
+                <p class="text-center">
+                    <i class="fa-solid fa-face-sad-cry text-blue delivery-text mt-3 mb-3"></i> Looks like this product doesn't have any reviews yet! 
+                </p>
             {% endif %}
         </div>
         <div class="col-2"></div>
