@@ -87,6 +87,14 @@ body {
     z-index: 99999999999999;
 }
 
+.icon-nav {
+    margin-right: 10px;
+}
+
+.main-margin {
+    margin-right: 10px;
+}
+
 #navbarSupportedContent {
     justify-content: center;
 }
@@ -919,6 +927,15 @@ body {
     }
 }
 
+@media(max-width:800px) {
+    .icon-nav {
+        margin-right: 5px;
+    }
+    .main-margin {
+        margin-right: 5px;
+    }
+}
+
 @media(max-width:770px) {
     .small-search-show {
         display: block;
@@ -978,7 +995,7 @@ body {
 
 @media(max-width: 575px) {
     .heading-small {
-        font-size: 40px;
+        font-size: 35px;
         margin-top: 10px;
     }
     .pink-background {
@@ -1037,5 +1054,14 @@ body {
         padding-right: 4px;
         padding-left: 4px;
         font-size: 14px;
+    }
+    .icon-nav {
+        margin-right: 1px;
+    }
+    .main-margin {
+        margin-right: 1px;
+    }
+    .list-inline-item:not(:last-child) {
+        margin-right: 0;
     }
 }

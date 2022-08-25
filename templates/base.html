@@ -33,7 +33,7 @@
   <body>
     <header class="container-fluid bg_nav_color">
       <div class="row">
-        <div class="col-sm-4 col-md-6 p-0 m-0 w-50">
+        <div class="col-sm-3 col-md-6 p-0 m-0 w-50">
           <a href="{% url 'home' %}" class="nav-link text-light">
             <h1 class="heading-small">GinAmore</h1>
           </a>
@@ -46,10 +46,10 @@
             </button>
           </form>
         </div>
-        <div class="col-sm-7 col-md-3 p-0 m-0 nav-icons w-50">
+        <div class="col-sm-9 col-md-3 p-0 m-0 nav-icons w-50">
           <ul class="list-inline mb-0">
             {% if request.user.is_superuser %}
-              <li class="list-inline-item">
+              <li class="list-inline-item icon-nav">
                 <a href="" class="d-inline p-2 text-dark nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                   <div class="text-center text-light">
                     <div><i class="fa-solid fa-gears"></i></div>
@@ -62,7 +62,7 @@
                 </div>
               </li>
             {% endif %}
-            <li class="list-inline-item">
+            <li class="list-inline-item icon-nav">
               <a href="" class="d-inline p-2 text-dark nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 <div class="text-center text-light">
                   <div><i class="fa-solid fa-user"></i></div>
@@ -80,11 +80,11 @@
                 {% endif %}
               </div>
             </li>
-            <li class="list-inline-item">
+            <li class="list-inline-item icon-nav">
               <a href="{% url 'view_bag' %}" class="{% if grand_total %} text-info {% else %} text-dark {% endif %} nav-link text-dark d-inline">
                 <div class="text-center text-light">
                   <div><i class="fa-solid fa-bag-shopping"></i></div>
-                  <p class="my-0 navbar-icon-text pr-3">
+                  <p class="my-0 navbar-icon-text">
                     {% if grand_total %}
                       £{{ grand_total|floatformat:2 }}
                     {% else %}
