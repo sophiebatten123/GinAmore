@@ -412,6 +412,26 @@ Google metrics were considered when developing the site, including:
 
 The business model used for the GinAmore store would be a B2C (Business to Customer), this is due to the business selling products directly to the customer through the platform.
 
+# Social Media Platforms
+
+Market research was performed to decide on the marketing stratergy needed to promote the GinAmore brand. Based upon other similar sites such as [Edinburgh Gin](https://www.edinburghgin.com/) and [Hendricks Gin](https://www.hendricksgin.com/) all give users access to facebook, instagram, twitter and youtube from their site. Based on this and the target audience GinAmore aims to appeal for buisness pages were created for all of these as can be seen below:
+
+## Facebook
+
+![GinAmore Facebook Page](static/images/facebook.PNG)
+
+## Instagram
+
+![GinAmore Instagram Page](static/images/instagram.PNG)
+
+## YouTube
+
+![GinAmore Youtube Page](static/images/youtube.PNG)
+
+## Twitter
+
+![GinAmore Twitter Page](static/images/twitter.PNG)
+
 # Colour Scheme
 
 The colours within the site were carefully selected to mirror the premium products sold at GinAmore. The dark regal blue contrasts against the light pink making elements of importance stand out on the page. These colours were initially selected from the sites main banner image using DEV tools, allowing for all colours within the page to compliment eachother nicely.
