@@ -21,12 +21,21 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='CocktailReview',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(
+                    auto_created=True,
+                    primary_key=True,
+                    serialize=False,
+                    verbose_name='ID')),
                 ('title', models.CharField(max_length=25)),
                 ('user_review', models.TextField(max_length=250)),
                 ('date_created', models.DateTimeField(auto_now_add=True)),
-                ('cocktail', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='cocktails.cocktail')),
-                ('user', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to=settings.AUTH_USER_MODEL)),
+                ('cocktail', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE,
+                    to='cocktails.cocktail')),
+                ('user', models.ForeignKey(
+                    null=True,
+                    on_delete=django.db.models.deletion.SET_NULL,
+                    to=settings.AUTH_USER_MODEL)),
             ],
         ),
     ]

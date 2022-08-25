@@ -18,11 +18,17 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='RecipeIngredient',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(
+                    auto_created=True,
+                    primary_key=True,
+                    serialize=False,
+                    verbose_name='ID')),
                 ('name', models.CharField(max_length=254)),
                 ('quantity', models.CharField(max_length=54)),
                 ('measurement', models.CharField(max_length=54)),
-                ('cocktail', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='cocktails.cocktail')),
+                ('cocktail', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE,
+                    to='cocktails.cocktail')),
             ],
         ),
     ]

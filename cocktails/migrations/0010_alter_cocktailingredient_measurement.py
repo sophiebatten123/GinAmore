@@ -14,6 +14,8 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='cocktailingredient',
             name='measurement',
-            field=models.CharField(max_length=54, validators=[cocktails.validators.validate_measurements]),
+            field=models.CharField(
+                max_length=54,
+                validators=[cocktails.validators.validate_measurements]),
         ),
     ]
