@@ -16,7 +16,7 @@ class TestProfileViews(TestCase):
         Sets up the test profile data
         '''
         self.profile_url = reverse('profile')
-        
+
         self.client = Client()
         self.user = User.objects.create_user(
             'test',
