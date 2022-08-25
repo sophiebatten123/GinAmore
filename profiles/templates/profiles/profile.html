@@ -20,16 +20,16 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th>Order Number</th>
+                        <th class="pl-0">Order Number</th>
                         <th>Order Date</th>
                         <th>Order Total</th>
-                        <th>Order Details</th>
+                        <th class="pr-0 pl-0">Order Details</th>
                     </tr>
                 </thead>
             {% for order in orders %}
             <tr class="checkout">
                 <td>
-                    <p>{{ order.order_number|truncatechars:10 }}</p>
+                    <p class="pl-0">{{ order.order_number|truncatechars:6 }}</p>
                 </td>
                 <td>
                     <p>{{ order.date }}</p>
@@ -37,7 +37,7 @@
                 <td>
                     <p>£{{ order.grand_total }}</p>
                 </td>
-                <td>
+                <td class="pr-0 pl-0">
                     <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}">
                         <p class="gin-category">View Details <i class="fa-solid fa-arrow-right"></i></p>
                     </a>
