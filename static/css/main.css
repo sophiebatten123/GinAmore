@@ -393,10 +393,6 @@ body {
     height: 75px;
 }
 
-#post-product-review {
-    text-decoration: underline;
-}
-
 #post-product-review:hover {
     cursor: pointer;
 }

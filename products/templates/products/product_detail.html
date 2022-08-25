@@ -11,8 +11,8 @@
             {% if product.image %}
             <div class="col gin_image_container mb-4 cocktails-main btns">
                 <a href="{{ product.image.url }}" target="_blank">
-                    <img class="gin_image" src="{{ product.image.url }}" alt="{{ product.name }} Image">
-                    <p class="mt-2 text-center text-dark"><i class="fa-solid fa-magnifying-glass"></i> Click to enlarge</p>
+                    <img class="gin_image" src="{{ product.image.url }}" alt="An image to show {{ product.name }}">
+                    <p class="mt-2 text-center text-dark"><i class="fa-solid fa-magnifying-glass"></i> Enlarge the image above </p>
                 </a>
             </div>
             {% else %}
@@ -256,8 +256,8 @@
                     {% endif %}
                 {% endfor %}
             {% else %}
-                <p>
-                    No Reviews.
+                <p class="text-center">
+                    <i class="fa-solid fa-face-sad-cry text-blue delivery-text mt-3 mb-3"></i> Looks like this product doesn't have any reviews yet! 
                 </p>
             {% endif %}
         </div>
