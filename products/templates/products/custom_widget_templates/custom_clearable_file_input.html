@@ -1,13 +1,13 @@
 {% if widget.is_initial %}
     <p class="mb-2">{{ widget.initial_text }}:</p>
     <a href="{{ widget.value.url }}">
-        <img width="96" height="96" class="rounded shadow-sm" src="{{ widget.value.url }}" alt="Current Product Image">
+        <img width="96" height="96" class="rounded shadow-sm" src="{{ widget.value.url }}" alt="An image to show the current product">
     </a>
     <br>
     {{ widget.input_text }}
     <span class="btn btn-black rounded-0 btn-file mt-2 text-green pl-0">
         <i class="fa-solid fa-arrows-rotate"></i>
-        <label for="update-image">Change Image</label>
+        <label for="update-image"><strong>Change Image</strong></label>
         <input id="update-image" type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
     </span>
     <strong><p class="text-danger mt-4" id="filename-update-product"></p></strong>
@@ -15,7 +15,7 @@
 {{ widget.input_text }}
 <span class="btn btn-black rounded-0 btn-file mt-2 text-green">
     <i class="fa-solid fa-plus"></i>
-    <label for="new-image">Add Image</label>
+    <label for="new-image"><strong>Add Image</strong></label>
     <input id="new-image" type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
 </span>
 <strong><p class="text-danger mt-4" id="filename-add-product"></p></strong>

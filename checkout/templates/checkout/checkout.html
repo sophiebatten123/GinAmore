@@ -13,7 +13,7 @@
 <div class="container-fluid bg-white">
     <div class="row">
         <div class="col-md-6 pt-2 small-search-show">
-            <h3 class="mt-2 mb-2">Order Summary:</h3>
+            <h2 class="mt-2 mb-2 delivery-text-header">Order Summary:</h3>
             <table class="table">
                 <thead>
                     <tr>
@@ -27,7 +27,7 @@
             <tr>
                 <td style="width:25%">
                     <a href="{% url 'product_detail' item.product.id %}">
-                        <img class="w-100 p-2" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                        <img class="w-100 p-2" src="{{ item.product.image.url }}" alt="An image to show {{ product.name }}">
                     </a>
                 </td>
                 <td style="width:35%">
@@ -62,7 +62,7 @@
             </div>
         </div>
         <div class="col-sm-12 col-md-6 pt-2">
-            <h3>Checkout</h3>
+            <h3 class="delivery-text-header">Checkout</h3>
             <hr>
             <p>Please fill out the form below:</p>
             <form action="{% url 'checkout' %}" method="POST" id="payment_form">
@@ -113,13 +113,13 @@
             </form>
         </div>
         <div class="col-md-6 pt-2 small-search-hide">
-            <h3>Your Items</h3>
+            <h3 class="delivery-text-header">Your Items</h3>
             <hr>
             {% for item in bag_items %}
                 <div class="row">
                     <div class="col-2">
                         <a href="{% url 'product_detail' item.product.id %}">
-                            <img class="w-100 p-2" src="{{ item.product.image.url }}" alt="{{ product.name }} Image">
+                            <img class="w-100 p-2" src="{{ item.product.image.url }}" alt="An image to show {{ product.name }}">
                         </a>
                     </div>
                     <div class="col-7">
@@ -156,7 +156,7 @@
                             {% for item in wishlist_products %}
                             <div class="col-4 p-0 cocktail-checkout-images {% if forloop.counter >= 4 %}hide{% endif %}" id="slide{{ forloop.counter }}">
                                 <a href="{% url 'product_detail' item.product.id %}">
-                                    <img src="{{item.product.image.url}}" class="gin_image d-block w-100" alt="{{ item.product.name }} Image" class="main-cocktail-pictures">
+                                    <img src="{{item.product.image.url}}" class="gin_image d-block w-100" alt="An image to show {{ item.product.name }}" class="main-cocktail-pictures">
                                     <p class="text-blue white-background cocktail-name-main p-2"><strong>{{ item.product.name }} <i class="fa-solid fa-arrow-right"></i></strong></p>
                                 </a>
                             </div>
@@ -170,7 +170,7 @@
             <div class="col-12 p-2">
                 <div class="row pl-2">
                     <div class="col-12">
-                        <h3>Room for more?</h3>
+                        <h3 class="delivery-text">Room for more?</h3>
                         <hr>
                     </div>
                 </div>
@@ -179,7 +179,7 @@
                         {% for item in wishlist_products %}
                         <div class="col-4 p-0 cocktail-checkout-images {% if forloop.counter >= 4 %}hide{% endif %}" id="slide{{ forloop.counter }}">
                             <a href="{% url 'product_detail' item.product.id %}">
-                                <img src="{{item.product.image.url}}" class="gin_image d-block w-100" alt="{{ item.product.name }} Image" class="main-cocktail-pictures">
+                                <img src="{{item.product.image.url}}" class="gin_image d-block w-100" alt="An image to show {{ item.product.name }}" class="main-cocktail-pictures">
                                 <p class="text-blue white-background cocktail-name-main p-2"><strong>{{ item.product.name }} <i class="fa-solid fa-arrow-right"></i></strong></p>
                             </a>
                         </div>

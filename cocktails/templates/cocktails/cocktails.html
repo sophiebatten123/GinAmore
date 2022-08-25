@@ -40,14 +40,14 @@
                             </a>
                             <hr>
                         </div>
-                        <div class="col-6 btns">
+                        <div class="col-8 btns">
                             <a href="{% url 'cocktails' %}?category={{ cocktail.category }}">
                                 <p class="text-dark ml-2">Category:
                                     <span class="gin-category">{{ cocktail.category.friendly_name }}</span>
                                 </p>
                             </a>
                         </div>
-                        <div class="col-6">
+                        <div class="col-4">
                             <p class="ml-2"><i class="fas fa-heart heart mr-2"></i>{{ cocktail.rating }}/5</p>
                         </div>
                         <div class="col-12">

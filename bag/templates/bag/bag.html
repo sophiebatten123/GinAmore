@@ -28,7 +28,7 @@
                         {% for item in bag_items %}
                             <tr>
                                 <td class="table-image-width">
-                                    <img class="img-fluid" src="{{ item.product.image.url }}" alt="{{ item.product.name }} Image">
+                                    <img class="img-fluid" src="{{ item.product.image.url }}" alt="An image to show {{ item.product.name }}">
                                 </td>
                                 <td>
                                     <p class="table-text">{{ item.product.name }}</p>
@@ -36,7 +36,8 @@
                                 <td class="pl-0 pr-0">
                                     <form class="update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                         {% csrf_token %}
-                                        <div class="form-group">
+                                        <div class="form-group text-center">
+                                            <label for="id_qty_{{ item.item_id }}">Amount:</label>
                                             <div class="input-group center-quantity">
                                                 <div class="input-group-prepend">
                                                     <button class="decrement-qty btn btn-black rounded-0 pl-0 pr-1" aria-label="Decrement Quantity" 

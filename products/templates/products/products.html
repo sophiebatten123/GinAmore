@@ -106,14 +106,18 @@
                             </div>
                         </div>
                         <p class="mt-3 text-center">{{product.name}}</p>
-                        <p class="text-center">£{{product.price}}</p>
+                        <p class="text-center mt-2">£{{product.price}}</p>
                         <a href="{% url 'products' %}?category={{ product.category }}">
-                            <p class="gin-category text-center">{{ product.category.friendly_name }}</p>
+                            <p class="gin-category text-center mt-2">{{ product.category.friendly_name }}</p>
                         </a>
-                        <p class="text-center"><i class="fas fa-heart heart mr-2"></i>{{product.rating}}/5</p>
+                        <p class="text-center"><i class="fas fa-heart heart mr-2 mt-2"></i>{{product.rating}}/5</p>
                         <div class="row">
                             <div class="col-12 btns">
-                                <a href="{% url 'product_detail' product.id %}"><p class="text-light shop-btn text-center">Shop Now</p></a>
+                                <a href="{% url 'product_detail' product.id %}">
+                                    <p class="text-light shop-btn text-center mt-2">
+                                        Shop Now
+                                    </p>
+                                </a>
                             </div>
                         </div>
                         {% if request.user.is_superuser %}
