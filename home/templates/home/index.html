@@ -7,12 +7,12 @@
 {% block content %}
 <div class="container-fluid">
     <div class="row main-container">
-        <img class="full-width" src="{% static 'images/gin_banner.webp' %}" alt="Main Gin Image" height="350" width="100">
+        <img class="full-width" src="{% static 'images/gin_banner.webp' %}" alt="An image of different flavoured gins" height="350" width="100">
         <div class="col-6">
             <a href="{% url 'products' %}">
-                <h5 class="text-center text-blue border shop-main-btn pink-background">
+                <p class="text-center delivery-text-header text-blue border shop-main-btn pink-background">
                     <strong>Explore Our Products <i class="fa-solid fa-arrow-right"></i></strong>
-                </h5>
+                </p>
             </a>
         </div>
     </div>
@@ -32,13 +32,15 @@
 <div class="container-fluid">
     <div class="row background_temp_strip">
         <div class="col-12 text-center mt-3">
-            <h3 class="text-light">Experts in Distillery</h3>
+            <h2 class="text-light delivery-text-header">Experts in Distillery</h2>
         </div>
     </div>
     <div class="row">
         <div class="col-6 bartender small-hidden"></div>
         <div class="col-xs-12 col-sm-6 welcome">
-            <h4 class="welcome-margin small-show-heart"><i class="fas fa-heart heart"></i> Welcome Gin Lovers! <i class="fas fa-heart heart"></i></h4>
+            <p class="welcome-margin small-show-heart delivery-text">
+                <i class="fas fa-heart heart"></i> Welcome Gin Lovers! <i class="fas fa-heart heart"></i>
+            </p>
             <hr>
             <p class="mt-2">Here at GinAmore we know how important the perfect Gin and Tonic is, 
                 hence why we pride ourselves on selling only premium Gin Brands within our site. Enjoy drinking
@@ -49,7 +51,7 @@
 <div class="container-fluid">
     <div class="row background_temp_strip">
         <div class="col-12 text-center mt-3">
-            <h3 class="text-light">Our Popular Gins</h3>
+            <h2 class="text-light delivery-text-header">Our Popular Gins</h2>
         </div>
     </div>
 </div>
@@ -58,7 +60,7 @@
     {% for product in products %}
         <div class="col-sm-6 col-md-3 p-0 cocktail-main-images {% if forloop.counter >= 5 %}hide{% endif %}" id="slide{{ forloop.counter }}">
             <a href="{% url 'product_detail' product.id %}">
-                <img src="{{ product.image.url }}" class="d-block full-width main-cocktail-pictures" alt="{{ product.name }} Image">
+                <img src="{{ product.image.url }}" class="d-block full-width main-cocktail-pictures" alt="An image of {{ product.name }}">
                 <p class="text-blue white-background cocktail-name-main p-2"><strong>{{ product.name }} <i class="fa-solid fa-arrow-right"></i></strong></p>
             </a>
         </div>
@@ -68,28 +70,34 @@
 <div class="container-fluid">
     <div class="row background_temp_strip">
         <div class="col-12 text-center mt-3">
-            <h3 class="text-light">Cocktail Indulgence</h3>
+            <h2 class="text-light delivery-text-header">Cocktail Indulgence</h2>
         </div>
     </div>
     <div class="row">
         <div class="col-sm-12 col-md-4 cocktail-headings p-0">
             <a href="{% url 'cocktails' %}?category=summer_favourites">
                 <div class="summer">
-                    <h5 class="text-blue white-background ml-2 mt-2 arrow-fixed p-2"><strong>Summer Favourite Cocktails <i class="fa-solid fa-arrow-right"></i></strong></h5>
+                    <p class="text-blue delivery-text white-background ml-2 mt-2 arrow-fixed p-2">
+                        <strong>Summer Favourite Cocktails <i class="fa-solid fa-arrow-right"></i></strong>
+                    </p>
                 </div>
             </a>
         </div>
         <div class="col-sm-12 col-md-4 cocktail-headings p-0">
             <a href="{% url 'cocktails' %}?category=winter_warmers">
                 <div class="winter">
-                    <h5 class="text-blue white-background ml-2 mt-2 arrow-fixed p-2"><strong>Winter Warming Cocktails <i class="fa-solid fa-arrow-right"></i></strong></h5>
+                    <p class="text-blue delivery-text white-background ml-2 mt-2 arrow-fixed p-2">
+                        <strong>Winter Warming Cocktails <i class="fa-solid fa-arrow-right"></i></strong>
+                    </p>
                 </div>
             </a>
         </div>
         <div class="col-sm-12 col-md-4 cocktail-headings p-0">
             <a href="{% url 'cocktails' %}?category=boozy_brunches">
                 <div class="brunch">
-                    <h5 class="text-blue white-background ml-2 mt-2 arrow-fixed p-2"><strong>Boozy Brunch Cocktails <i class="fa-solid fa-arrow-right"></i></strong></h5>
+                    <p class="text-blue delivery-text white-background ml-2 mt-2 arrow-fixed p-2">
+                        <strong>Boozy Brunch Cocktails <i class="fa-solid fa-arrow-right"></i></strong>
+                    </p>
                 </div>
             </a>
         </div>
@@ -98,7 +106,7 @@
 <div class="container-fluid">
     <div class="row background_temp_strip">
         <div class="col-12 text-center mt-3">
-            <h3 class="text-light">Explore Our Products</h3>
+            <h2 class="text-light delivery-text-header">Explore Our Products</h2>
         </div>
     </div>
     <div class="row">
