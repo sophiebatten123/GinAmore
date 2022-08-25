@@ -441,7 +441,7 @@ Market research was performed to decide on the marketing stratergy needed to pro
 
 # Mailchimp Email Subscription Service
 
-Users are encouraged to signup for newsletters, discounts and information about the products sold at GinAmore. This feature allows shop owners to send marketing emails through the platform, increasing enagement within the site. Below is a screenshot of one of the subscription emails that was sent by GinAmore's shop owner:
+Users are encouraged to signup for newsletters, discounts and information about the products sold at GinAmore. The email subscription service is ran through [mailchimp](https://mailchimp.com/en-gb/), allowing shop owners to send marketing emails through the platform, increasing enagement within the site. Below is a screenshot of one of the subscription emails that was sent by GinAmore's shop owner:
 
 ![GinAmore Marketting Email](static/images/email_ginamore.PNG)
 
