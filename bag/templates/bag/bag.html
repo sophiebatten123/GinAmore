@@ -28,10 +28,14 @@
                         {% for item in bag_items %}
                             <tr>
                                 <td class="table-image-width">
-                                    <img class="img-fluid" src="{{ item.product.image.url }}" alt="An image to show {{ item.product.name }}">
+                                    <a href="{% url 'product_detail' item.product.id %}">
+                                        <img class="img-fluid" src="{{ item.product.image.url }}" alt="An image to show {{ item.product.name }}">
+                                    </a>
                                 </td>
-                                <td>
-                                    <p class="table-text">{{ item.product.name }}</p>
+                                <td class="btns">
+                                    <a href="{% url 'product_detail' item.product.id %}">
+                                        <p class="table-text text-dark">{{ item.product.name }}</p>
+                                    </a>
                                 </td>
                                 <td class="pl-0 pr-0">
                                     <form class="update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
