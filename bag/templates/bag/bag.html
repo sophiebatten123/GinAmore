@@ -77,23 +77,29 @@
             {% endif %}
             <hr>
         </div>
-        <div class="col-md-12 p-2 h-100 text-dark">
+        <div class="col-md-12 h-100 text-dark pl-0 pr-0">
             <h3>Summary</h3>
             <hr>
             <p>Total Cost: <strong>£{{ total|floatformat:2 }}</strong></p>
             {% if free_delivery_delta > 0 %}
                 <p class="text-pink">Spend an extra £{{ free_delivery_delta }} to get FREE DELIVERY!</p>
             {% endif %}
-            <a href="{% url 'products' %}" class="btn pink-btn w-50">
-                <p class="mb-0 text-center text-blue p-2">Continue Shopping</p>
-            </a>
-            <a href="{% url 'checkout' %}" class="btn pink-btn right-sort w-50">
-                <p class="mb-0 text-center text-blue p-2">Secure Checkout <i class="fa-solid fa-lock"></i></p>
-            </a>
         </div>
-        <div class="col-12">
-            <hr>
-        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12 col-md-6">
+        <a href="{% url 'products' %}" class="btn shop-btn">
+            <p class="mb-0 text-center text-white p-2">Continue Shopping</p>
+        </a>
+    </div>
+    <div class="col-sm-12 col-md-6">
+        <a href="{% url 'checkout' %}" class="btn shop-btn right-sort">
+            <p class="mb-0 text-center text-white p-2">Secure Checkout <i class="fa-solid fa-lock"></i></p>
+        </a>
+    </div>
+    <div class="col-12">
+        <hr>
     </div>
 </div>
 {% endblock %}
