@@ -310,6 +310,13 @@ Gin products can be added to a customers wishlist via the product detail pages. 
 
 # Future Features
 
+The following features would help improve the site further, given more time I would have liked to have included these elements in my current project:
+
+- Reccomended gin products within the cocktail recipe pages of the site, pointing users to mentioned gins and increasing the CTR of the site further, whilst improving sales.
+- Extended sorting capabilities of the cocktail recipes to improve UX further and help them find their favourites.
+- Improve searching to extend to cocktail recipes not only products.
+- A forum area to allowing users to share their own recipes, all with a like function for others to use.
+- An interactive star rating on the products and cocktails rather than static images.
 
 # Site Map Wireframe
 
@@ -536,56 +543,56 @@ Although the wireframes for site users and site admin are similar there are a fe
 ### Coding Languages
 ***
 
-* [HTML]()
+* [HTML](https://en.wikipedia.org/wiki/HTML)
   * HTML is the main language used accross the site and completes the structure of the webpages.
 
-* [CSS]()
+* [CSS](https://en.wikipedia.org/wiki/CSS)
   * CSS is used throughout to create custom styling to elements accross the site.
 
-* [Javascript]()
+* [Javascript](https://en.wikipedia.org/wiki/JavaScript)
   * Javascript is used within the checkout template to help with form submission and to verify the users age.
-  * [JQuery]() is used within the following webpages:
+  * [JQuery](https://jquery.com/) is used within the following webpages:
     * To update item quantity within the bag template and to update the form.
     * To display success and fail messages within form submission.
 
-* [Python]()
+* [Python](https://www.python.org/)
   * Python was used extensively on the site to handle back-end functionality.
 
 ***
 ### Frameworks and Platforms
 ***
 
-* [Django]()
+* [Django](https://www.djangoproject.com/)
   * The project was created using Django as a framework to help handle back-end functionality. 
 
-* [Github]()
+* [Github](https://github.com/)
   * Github was the hosting site for the project code.
 
-* [Gitpod]()
+* [Gitpod](https://www.gitpod.io/)
   * Gitpod has been used to commit and push code within the GitHub repository.
 
-* [Bootstrap]()
+* [Bootstrap](https://getbootstrap.com/)
   * Bootstrap was used within the site to help format the layout of elements and improve the responsiveness of the site.
 
-* [Google Fonts]()
+* [Google Fonts](https://fonts.google.com/)
   * Google Fonts was used to select the typography type for the website and imported within CSS.
 
-* [AWS S3 Buckets]()
+* [AWS S3 Buckets](https://aws.amazon.com/?nc2=h_lg)
   * AWS S3 Buckets provide storage for static and media files within the deployed Heroku site.
 
-* [Heroku]()
+* [Heroku](https://www.heroku.com/)
   * Heroku was used as a platform to deploy the site.
 
-* [Google Chrome Developer Tools]()
+* [Google Chrome Developer Tools](https://developer.chrome.com/docs/devtools/)
   * Google Chrome's Developer Tools were used to help debug errors within the code and to help style the site through the colour selector.
 
-* [Uizard Wireframe Generator]()
+* [Uizard Wireframe Generator](https://uizard.io/es/)
   * Wireframes were created and generated through Uizard.
 
-* [Font Awesome]()
+* [Font Awesome](https://fontawesome.com/)
   * Icons used accross the site were imported from Font Awesome.
 
-* [Am I Responsive]()
+* [Am I Responsive](https://amiresponsive.co.uk/)
   * The site Mock Up image was generated using Am I Responsive.
 
 [Back to top ⇧](#ginamore)
@@ -982,13 +989,12 @@ AWS_S3_OBJECT_PARAMETERS = {
 
 To handle payments within the website ensure that you have set this up a guide on how this can be done can be found [here](https://stripe.com/docs/payments/accept-a-payment#web-collect-card-details).
 
-
-
 # Credits
 
 - The images used on my site were taken from [Shutterstock](https://www.shutterstock.com/).
 - Images and video clips were also used from [Pexels](https://www.pexels.com/).
 - The icons included throughout the website were taken from [Font-Awesome](https://fontawesome.com/).
+- The [Coding Entrepreneurs](https://www.youtube.com/c/CodingEntrepreneurs) tutorial videos were used to help with building the cocktail ingredient section of my site helping me to further understand the relationship between different models.
 - The colour theme was chosen using [coolors](https://coolors.co/).
 - Help and support was given by the Code Institute Tutors.
 
