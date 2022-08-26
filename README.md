@@ -779,7 +779,62 @@ Furthermore, using the MVC framework I was able to keep track of the changes mad
 
 ### Automated Python Testing
 
-Some automated python tests were created to check that features of the site were working correctly, details of these tests can be seen below. The tests were ran using the command **ENTER COMMAND HERE**. Any testing that was not conducted using automated testing was done manually to ensure that site was fully functional upon deployment.
+Some automated python tests were created to check that features of the site were working correctly, details of these tests can be seen below. The tests were ran using the command **python3 manage.py test appname**. Any testing that was not conducted using automated testing was done manually to ensure that site was fully functional upon deployment.
+
+![Bag Testing](static/images/bag_test.PNG)
+![Product Testing](static/images/products_tests.PNG)
+![Profile Testing](static/images/profiles_test.PNG)
+
+Although not exhaustive the tests ran above test the following functionality on the site:
+
+- Test 1: Ensures the user can view products within their bag through the URL.
+- Test 2: Tests a user profile is created when a user registers for an account.
+- Test 3: Tests that a user can view all of the products at GinAmore through the URL.
+- Test 4: Ensures that users can view individual product detail information through the URL.
+- Test 5: Checks that admin can add a product to the website.
+- Test 6: Checks that admmin can edit a product within the wesbite.
+- Test 7: Tests that the product model produces the correct response.
+
+With more time I would have liked to carry out more automated testing on the site, specifically focussing on the cocktail features that were added at a later stage. All other testing was carried out manually and the purpose of this testing was around ensuring that user stories were appropriately met.
+
+# Manual User Story Testing
+
+| ID | I want to be able to...| Manual Testing |
+|----|------------------------|----------------|
+|1| View a list of all Gin products |  |
+|2| View individual Gin details | |
+|3| Identify any deals and special offers quickly on the page | |
+|4| Easily register for an account | |
+|5| Easily login/logout of my account | |
+|6| Easily recover my password if I forget it | |
+|7| Receive an email to verify I have created an account | |
+|8| Register/login to an account via social media | |
+|9| Confirm I am of legal age to drink | |
+|10| Sort through all Gin products | |
+|11| Sort based on the Gin category | |
+|12| Search a product by name and description | |
+|13| See search results quickly and easily | |
+|14| View items in my bag to be purchased | |
+|15| Receive an email to verify my order | |
+|16| View an order confirmation when my order is complete | |
+|17| Securely provide payment details | |
+|18| Enter payment information quickly | |
+|19| Adjust the quantity of items in my bag | |
+|20| Select the quantity of product to add to shopping bag | |
+|21| Quickly see the total cost of all my products | |
+|22| Easily Add Cocktail Recipes | |
+|23| Edit/Update Cocktail Recipes | |
+|24| Add a Product | |
+|25| Edit/Update a Product | |
+|26| Delete a Product | |
+|27| Rate and Review Cocktail Recipes | |
+|28| Delete a Review | |
+|29| Leave a Product Review | |
+|30| Submit cocktail recipe ideas | |
+|31| Add items to my wish list | |
+|32| Remove items from my wish list | |
+|33| View individual cocktail recipes | |
+|34| View cocktail recipes based on their category | |
 
 # Fixed Bugs and Errors
 
