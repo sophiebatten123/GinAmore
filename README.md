@@ -1,5 +1,5 @@
 [GinAmore Live Link](https://ginamore.herokuapp.com/)
-[Github Repository](https://github.com/sophiebatten123/GinAmore)
+[GitHub Repository](https://github.com/sophiebatten123/GinAmore)
 
 # GinAmore
 
@@ -7,16 +7,16 @@
 
 ![Am I Responsive?](static/images/am_i_responsive.PNG)
 
-GinAmore is an ecommerce website built using Django, Python, HTML, CSS and Javascript as part of the Code Institute Diploma in Full Stack Software Development.
+GinAmore is an ecommerce website built using Django, Python, HTML, CSS and JavaScript as part of the Code Institute Diploma in Full Stack Software Development.
 
 ## Aim
-GinAmore aims to provide users with the ability to easily purchase premium flavoured gin. It does this by providing clear and consice site navigation and checkout functionality throughout the site. GinAmore encourages users to make informed purchases allowing them to favourite items and revist them later inside their personalised wishlist. Users are given cocktail ideas that compliment with the sites products, enncouraging them to make purchases and revisit the site more regularly. Moreover, GinAmore prides itself on transpency allowing users to write reviews on products, increasing trust between the company and its clients.
+GinAmore aims to provide users with the ability to easily purchase premium flavoured gin. It does this by providing clear and concise site navigation and checkout functionality throughout the site. GinAmore encourages users to make informed purchases allowing them to favourite items and revisit them later inside their personalised wish list. Users are given cocktail ideas that compliment with the sites products, encouraging them to make purchases and revisit the site more regularly. Moreover, GinAmore prides itself on transparency allowing users to write reviews on products, increasing trust between the company and its clients.
 
 # Table of Contents:
 
 - [UX](#)
   - [User Stories](#)
-  - [Agile Planning Enviroment](agile-planning-enviroment)
+  - [Agile Planning Environment](agile-planning-environment)
   - [Design](#)
     - [GinAmore Design Principles](#)
     - [Colour Scheme](#colour-scheme)
@@ -118,9 +118,9 @@ GinAmore aims to provide users with the ability to easily purchase premium flavo
 |33| Shopper | View individual cocktail recipes | Learn how to make individual cocktails | 5 | S |
 |34| Shopper | View cocktail recipes based on their category | Choose which recipe I would like to make | 2 | Co |
 
-# Agile Planning Enviroment
+# Agile Planning Environment
 
-The story point allocation above is based upon a 100 point iteration and uses the Fibonacci Sequence. Using the MoSCoW method each user story was then been labeled as being either 'Must Have', 'Should Have', 'Could Have' or 'Wont Have', based upon its importance to the project whilst following the 60:20:20 MoSCoW format. Note that the 'Wont Have' User Story below was excluded from the 60:20:20 MoSCoW allocation.
+The story point allocation above is based upon a 100 point iteration and uses the Fibonacci Sequence. Using the MoSCoW method each user story was then been labelled as being either 'Must Have', 'Should Have', 'Could Have' or 'Wont Have', based upon its importance to the project whilst following the 60:20:20 MoSCoW format. Note that the 'Wont Have' User Story below was excluded from the 60:20:20 MoSCoW allocation.
 
 ![Acceptance Criteria](static/images/agile-screenshot.PNG)
 
@@ -152,7 +152,7 @@ Users are encouraged to sign up to GinAmore's site, giving them access to featur
 
 ### Footer
 
-The footer of the page provides users with informational resources that help to promote trust between the customer and GinAmore.Furthermore, all of the social network features link to GinAmores personalised pages, encouraging customers to follow the company for discounts, deals and cocktail recipes.
+The footer of the page provides users with informational resources that help to promote trust between the customer and GinAmore. Furthermore, all of the social network features link to GinAmore's personalised pages, encouraging customers to follow the company for discounts, deals and cocktail recipes.
 
 ![Footer](static/images/footer.PNG)
 
@@ -200,11 +200,11 @@ Within the product detail pages customers are given information about delivery a
 
 ![Delivery and Returns](static/images/delivery_returns.PNG)
 
-### Reccomended Products
+### Recommended Products
 
-Reccomended products shown on the product detail pages are based upon the category the user is currently exploring.
+Recommended products shown on the product detail pages are based upon the category the user is currently exploring.
 
-![Reccomended Products](static/images/similar_products.PNG)
+![Recommended Products](static/images/similar_products.PNG)
 
 ### Reviews
 
@@ -232,7 +232,7 @@ All cocktail recipes can be seen by users, they are also given the ability to so
 
 ### Cocktail Detail
 
-The cocktail detail page provides users with information about the cocktail including its name, rating, recipe and the ingredients. The information on the page is easy to read and each section is seperated improving the readability of content.
+The cocktail detail page provides users with information about the cocktail including its name, rating, recipe and the ingredients. The information on the page is easy to read and each section is separated improving the readability of content.
 
 ![Cocktail Details](static/images/cocktail_details.PNG)
 
@@ -304,7 +304,7 @@ Logged in users can see their previous orders within their account section in th
 ## Wishlist
 ***
 
-Gin products can be added to a customers wishlist via the product detail pages. The wishlist page allows users to save their favourites for their next visit and purchase them at a later date. They are also given the option to remove the products if they change their mind.
+Gin products can be added to a customers wish list via the product detail pages. The wish list page allows users to save their favourites for their next visit and purchase them at a later date. They are also given the option to remove the products if they change their mind.
 
 ![Wishlist](static/images/wishlist.PNG)
 
@@ -312,7 +312,7 @@ Gin products can be added to a customers wishlist via the product detail pages. 
 
 The following features would help improve the site further, given more time I would have liked to have included these elements in my current project:
 
-- Reccomended gin products within the cocktail recipe pages of the site, pointing users to mentioned gins and increasing the CTR of the site further, whilst improving sales.
+- Recommended gin products within the cocktail recipe pages of the site, pointing users to mentioned gins and increasing the CTR of the site further, whilst improving sales.
 - Extended sorting capabilities of the cocktail recipes to improve UX further and help them find their favourites.
 - Improve searching to extend to cocktail recipes not only products.
 - A forum area to allowing users to share their own recipes, all with a like function for others to use.
@@ -326,7 +326,7 @@ The following site map was created to help understand the flow of the website pr
 
 # Database Schema
 
-Entity Relationship Databases (ERD) were created to help develop this project. These were seperated into seperate database schemas: 'Gin Products' and 'Cocktail Products' due to them not being related to each other directly.
+Entity Relationship Databases (ERD) were created to help develop this project. These were separated into separate database schemas: 'Gin Products' and 'Cocktail Products' due to them not being related to each other directly.
 
 ***
 
@@ -342,8 +342,8 @@ Entity Relationship Databases (ERD) were created to help develop this project. T
 
 The site was optimized by careful selection of keywords. The following steps were taken to do this:
 
-1. The entire table consists of important relevant topics based upon my initial understanding of the buissness.
-2. Using these topics a 'brain dump' of keywords was made orientated around common topics and themes within the buissness.
+1. The entire table consists of important relevant topics based upon my initial understanding of the business.
+2. Using these topics a 'brain dump' of keywords was made orientated around common topics and themes within the business.
 3. Topics and keywords were then tried out on Google and the relevant suggestions it gave were added to the keyword list.
 2. Words crossed out in red were removed due to too having too much competition using [Wordtracker](https://www.wordtracker.com/?fpr=refer&fp_sid=bingof).
 3. Words crossed out in blue were removed due to the lack of relevance and not being specific to the site.
@@ -362,7 +362,7 @@ Words in Green denote the sites **Long Tailed Keywords"**
   - Image description alt tags contain the keywords chosen above.
   - External reliable links were included within the site to improve SEO, these include:
     - Charities that the company supports.
-    - Reccomended mixer brands.
+    - Recommended mixer brands.
     - Useful tips/advice on drinking sensibly.
   - Within the META data (screenshot)
 
@@ -374,13 +374,13 @@ A sitemap was made to list the websites important URL's to ensure that search en
 
 1. Paste the URL of the deployed site into XML-sitemaps.
 2. Download the XML sitemap file.
-3. Drag and drop this files into the projects root folder, and ensure it is labeled **sitemap.xml**
+3. Drag and drop this files into the projects root folder, and ensure it is labelled **sitemap.xml**
 
 ***
 ## robots.txt
 ***
 
-A robots.txt file was created to tell search engines where not to allowed go on the site and increase the quality of the site, ultimetly improving the SEO rating. The following steps were taken to creat this:
+A robots.txt file was created to tell search engines where not to allowed go on the site and increase the quality of the site, ultimately improving the SEO rating. The following steps were taken to create this:
 
 1. A file was added named **robots.txt**.
 2. The following code was written into this file, adding in your personalised sitemap url:
@@ -396,9 +396,9 @@ The final steps for working with these two files requires a DNS certificate for 
 ***
 ## Improving Google Metrics
 
-| Expertise | Authoritiveness | Trustworthiness |
+| Expertise | Authoritativeness | Trustworthiness |
 |-----------|-----------------|-----------------|
-| Creating engaging content to meet the users needs. | Including clear steps and examples within the recipe section of the site. | Content is proffesional and avoids typos and spelling mistakes. |
+| Creating engaging content to meet the users needs. | Including clear steps and examples within the recipe section of the site. | Content is professional and avoids typos and spelling mistakes. |
 | Included an FAQS page for users. |  | Links to privacy statements and terms and conditions is provided at the bottom. |
 | High quality images were included within the site. |  | Reviews are included on all products and cocktails. |
 
@@ -411,9 +411,9 @@ Google metrics were considered when developing the site, including:
 - Dwell Time
   - Content on the homepage is interesting and engaging to users.
 - Session Time
-  - It is made easy for users to discover more content through 'reccomneded items" sections on the page.
+  - It is made easy for users to discover more content through 'recommended items" sections on the page.
 - Pages Per Session
-  - Links were regularly included throughout the webiste to encourage users to navigate through the website more and engage with more of the content.
+  - Links were regularly included throughout the website to encourage users to navigate through the website more and engage with more of the content.
 
 # Business Model
 
@@ -421,7 +421,7 @@ The business model used for the GinAmore store would be a B2C (Business to Custo
 
 # Social Media Platforms
 
-Market research was performed to decide on the marketing stratergy needed to promote the GinAmore brand. Based upon other similar sites such as [Edinburgh Gin](https://www.edinburghgin.com/) and [Hendricks Gin](https://www.hendricksgin.com/) all give users access to facebook, instagram, twitter and youtube from their site. Based on this and the target audience GinAmore aims to appeal for buisness pages were created for all of these as can be seen below:
+Market research was performed to decide on the marketing strategy needed to promote the GinAmore brand. Based upon other similar sites such as [Edinburgh Gin](https://www.edinburghgin.com/) and [Hendricks Gin](https://www.hendricksgin.com/) all give users access to Facebook, Instagram, Twitter and YouTube from their site. Based on this and the target audience GinAmore aims to appeal for business pages were created for all of these as can be seen below:
 
 ## Facebook
 
@@ -433,7 +433,7 @@ Market research was performed to decide on the marketing stratergy needed to pro
 
 ## YouTube
 
-![GinAmore Youtube Page](static/images/youtube.PNG)
+![GinAmore YouTube Page](static/images/youtube.PNG)
 
 ## Twitter
 
@@ -441,13 +441,13 @@ Market research was performed to decide on the marketing stratergy needed to pro
 
 # Mailchimp Email Subscription Service
 
-Users are encouraged to signup for newsletters, discounts and information about the products sold at GinAmore. The email subscription service is ran through [mailchimp](https://mailchimp.com/en-gb/), allowing shop owners to send marketing emails through the platform, increasing enagement within the site. Below is a screenshot of one of the subscription emails that was sent by GinAmore's shop owner:
+Users are encouraged to signup for newsletters, discounts and information about the products sold at GinAmore. The email subscription service is ran through [Mailchimp](https://mailchimp.com/en-gb/), allowing shop owners to send marketing emails through the platform, increasing engagement within the site. Below is a screenshot of one of the subscription emails that was sent by GinAmore's shop owner:
 
-![GinAmore Marketting Email](static/images/email_ginamore.PNG)
+![GinAmore Marketing Email](static/images/email_ginamore.PNG)
 
 # Colour Scheme
 
-The colours within the site were carefully selected to mirror the premium products sold at GinAmore. The dark regal blue contrasts against the light pink making elements of importance stand out on the page. These colours were initially selected from the sites main banner image using DEV tools, allowing for all colours within the page to compliment eachother nicely.
+The colours within the site were carefully selected to mirror the premium products sold at GinAmore. The dark regal blue contrasts against the light pink making elements of importance stand out on the page. These colours were initially selected from the sites main banner image using DEV tools, allowing for all colours within the page to compliment each other nicely.
 
 ![Colour-Scheme](static/images/color-scheme.PNG)
 
@@ -560,14 +560,14 @@ Although the wireframes for site users and site admin are similar there are a fe
 ***
 
 * [HTML](https://en.wikipedia.org/wiki/HTML)
-  * HTML is the main language used accross the site and completes the structure of the webpages.
+  * HTML is the main language used across the site and completes the structure of the webpages.
 
 * [CSS](https://en.wikipedia.org/wiki/CSS)
-  * CSS is used throughout to create custom styling to elements accross the site.
+  * CSS is used throughout to create custom styling to elements across the site.
 
-* [Javascript](https://en.wikipedia.org/wiki/JavaScript)
-  * Javascript is used within the checkout template to help with form submission and to verify the users age.
-  * [JQuery](https://jquery.com/) is used within the following webpages:
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+  * JavaScript is used within the checkout template to help with form submission and to verify the users age.
+  * [jQuery](https://jquery.com/) is used within the following webpages:
     * To update item quantity within the bag template and to update the form.
     * To display success and fail messages within form submission.
 
@@ -581,8 +581,8 @@ Although the wireframes for site users and site admin are similar there are a fe
 * [Django](https://www.djangoproject.com/)
   * The project was created using Django as a framework to help handle back-end functionality. 
 
-* [Github](https://github.com/)
-  * Github was the hosting site for the project code.
+* [GitHub](https://github.com/)
+  * GitHub was the hosting site for the project code.
 
 * [Gitpod](https://www.gitpod.io/)
   * Gitpod has been used to commit and push code within the GitHub repository.
@@ -606,7 +606,7 @@ Although the wireframes for site users and site admin are similar there are a fe
   * Wireframes were created and generated through Uizard.
 
 * [Font Awesome](https://fontawesome.com/)
-  * Icons used accross the site were imported from Font Awesome.
+  * Icons used across the site were imported from Font Awesome.
 
 * [Am I Responsive](https://amiresponsive.co.uk/)
   * The site Mock Up image was generated using Am I Responsive.
@@ -625,9 +625,9 @@ When the site was ran through the validators there were no errors at the point o
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
 - [WSC HTML Validator](https://validator.w3.org/)
 
-### Javascript: JShint
+### JavaScript: JSHint
 
-JavaScript code was tested regularly both manually and automatically through [JShint](https://jshint.com/) and the [DevTools](https://developer.chrome.com/docs/devtools/). DevTools allowed me to test responses using the console log function and jShint enabled me to ensure that my code was hitting the style guidelines. Upon the launch of my project JShint showed no errors or warnings with my code.
+JavaScript code was tested regularly both manually and automatically through [JSHint](https://jshint.com/) and the [DevTools](https://developer.chrome.com/docs/devtools/). DevTools allowed me to test responses using the console log function and JSHint enabled me to ensure that my code was hitting the style guidelines. Upon the launch of my project JSHint showed no errors or warnings with my code.
 
 ### Wave Testing: Accessibility
 
@@ -642,14 +642,14 @@ It was important during development that features on the site were made accessib
 
 A lighthouse report was generated on each page of the site and the following steps were taken to improve sections based on the feedback it provided:
 - Performance 
-  - Images were convered from jpg files into webp files using:
+  - Images were converted from jpg files into WebP files using:
   - Images were reduced in size using:
   - Unnecessary script tags were removed from the sites base.html file.
 - Accessibility
   - White font colour within the pink banners were changed to blue.
   - Missing labels were added to input form elements.
   - Missing alt tags were added to images.
-  - Headers within the site were ordered based upon hierachy.
+  - Headers within the site were ordered based upon hierarchy.
 - SEO
   - Buttons were increased in size.
 - Best Practices
@@ -773,7 +773,7 @@ Python code was tested to ensure that it met [PEP8](https://pep8.org/) style gui
   - Linting Issue: handler 404 error in urls.py file.
   - Linting Issue: Line too long in settings.py file.
   - Linting Issue: Webhook and validator errors with e being assigned but never used.
-  - Linting Issue: arctictern.py file as part of Code Institues template file.
+  - Linting Issue: arctictern.py file as part of Code Institutes template file.
 
 Furthermore, using the MVC framework I was able to keep track of the changes made and ensure that they had the desired output. After each change made to the Postgres Database I referred directly to it to track the changes, ensuring that upon ‘trial runs’ information was being successfully displayed and filters were displaying alongside.
 
@@ -792,7 +792,7 @@ Although not exhaustive the tests ran above test the following functionality on 
 - Test 3: Tests that a user can view all of the products at GinAmore through the URL.
 - Test 4: Ensures that users can view individual product detail information through the URL.
 - Test 5: Checks that admin can add a product to the website.
-- Test 6: Checks that admmin can edit a product within the wesbite.
+- Test 6: Checks that admin can edit a product within the website.
 - Test 7: Tests that the product model produces the correct response.
 
 With more time I would have liked to carry out more automated testing on the site, specifically focussing on the cocktail features that were added at a later stage. All other testing was carried out manually and the purpose of this testing was around ensuring that user stories were appropriately met.
@@ -802,8 +802,8 @@ With more time I would have liked to carry out more automated testing on the sit
 | ID | I want to be able to...| Manual Testing |
 |----|------------------------|----------------|
 |1| View a list of all Gin products | A) From all pages of the site the gin drop down menu was tested to ensure it navigated to the all products page. B) The drop down gin menu was also tested from all pages of the site for users and admin when they were logged into their accounts. C) The drop down gin menu was tested on mobile devices to ensure it worked and navigated to the all products page. |
-|2| View individual Gin details | A) From the all products page on desktop and mobile each gin product was selected to ensure it displayed the products unique product detail. B) Links shown on the users wishlist were tested on mobile and desktop to ensure they navigated to that specific products detail page. C) Our popular gin products shown on the home page were selected to ensure that the links displayed the correct gin product. |
-|3| Identify any deals and special offers quickly on the page | A) From all pages of the site the delivery discount can be seen underneath the navigation menu on mobile and desktop screens. B) Items were added to the shopping bag and the delivery infromation updated to show customers how much more they needed to spend to qualify for discounts. C) Items below the £50 delivery threshold were added to the shopping bag, to test whether users are prompted to spend more in the popup area to qualify for free delivery. |
+|2| View individual Gin details | A) From the all products page on desktop and mobile each gin product was selected to ensure it displayed the products unique product detail. B) Links shown on the users wish list were tested on mobile and desktop to ensure they navigated to that specific products detail page. C) Our popular gin products shown on the home page were selected to ensure that the links displayed the correct gin product. |
+|3| Identify any deals and special offers quickly on the page | A) From all pages of the site the delivery discount can be seen underneath the navigation menu on mobile and desktop screens. B) Items were added to the shopping bag and the delivery information updated to show customers how much more they needed to spend to qualify for discounts. C) Items below the £50 delivery threshold were added to the shopping bag, to test whether users are prompted to spend more in the popup area to qualify for free delivery. |
 |4| Easily register for an account | A) [Tempail](https://tempail.com/en/) was used to create a temporary email address used to sign up for an account. B) Upon registering for an account the postgres admin database was checked using super user credentials to see if the new user details appeared and were verified. |
 |5| Easily login/logout of my account | A) Registered user details were used on the login page of the site on mobile and desktop to test the login function of the page. B) As a logged in user the logout button was clicked and then confirmed to test the whether users could logout successfully. |
 |6| Easily recover my password if I forget it | A) From the login page of the site the forgot password button was clicked and a previous user email address was entered to test whether a reset email was sent. B) The pre-existing user email was logged in successfully using the new password. |
@@ -812,29 +812,29 @@ With more time I would have liked to carry out more automated testing on the sit
 |9| Confirm I am of legal age to drink | A) Items were added to the shopping bag and the checkout button selected. I then filled in the checkout details for the user and attempted to click confirm checkout, but the button was disabled until the checkbox to confirm the users age was checked. |
 |10| Sort through all Gin products | A) On the all products page, the drop down sort function was tested on mobile and desktop to ensure that products sorted correctly on the screen. |
 |11| Sort based on the Gin category | A) On the individual category pages the sort drop down filter was tested on mobile and desktop to ensure products were ordered correctly within the category.|
-|12| Search a product by name and description | A) In the search bar product names were entered and searched to ensure they displayed the correct gin products to the user. B) In the search bar the category was entered to ensure they displaye the correct gin products to the user. |
+|12| Search a product by name and description | A) In the search bar product names were entered and searched to ensure they displayed the correct gin products to the user. B) In the search bar the category was entered to ensure they display the correct gin products to the user. |
 |13| See search results quickly and easily | A) Upon searching for an item the page was checked to ensure that it displayed the desired results. |
 |14| View items in my bag to be purchased | A) Items were added to the users shopping bag and the bag icon at the top of the page was then clicked to ensure it displays all of the relevant item details to the user. B) The bag icon was selected from multiple different pages on the site to ensure that the correct view was shown in each instance. |
-|15| Receive an email to verify my order | A) Checkout information was filled in upon adding items to the users shopping bag and the confirm checkout button was clicked. The users mail inbox was the checked to ensure that the correct confirmation details were contained on the users recieved email. |
+|15| Receive an email to verify my order | A) Checkout information was filled in upon adding items to the users shopping bag and the confirm checkout button was clicked. The users mail inbox was the checked to ensure that the correct confirmation details were contained on the users received email. |
 |16| View an order confirmation when my order is complete | A) Once checkout information was filled in and confirmed it was tested whether the confirmation screen appeared to users displaying the correct details on the page.|
-|17| Securely provide payment details | A) Payment details were added using the temporary card details 4242424242424242 through stripe, within stripe the panel was checked to ensure that the payment was successful and signals were recieved correctly. |
+|17| Securely provide payment details | A) Payment details were added using the temporary card details 4242424242424242 through stripe, within stripe the panel was checked to ensure that the payment was successful and signals were received correctly. |
 |18| Enter payment information quickly | A) Checkout details were filled in and the payment section at the bottom of the page took very little time to complete. |
 |19| Adjust the quantity of items in my bag | A) Within the shopping bag the quantity buttons were used to alter the amount of product seen within the bag. Upon clicking the refresh button the price information at the bottom of the page was checked to ensure it mirrored this alteration. B) A quantity over 50 was entered and the refresh button clicked to ensure a popup error message appeared to the user saying that the quantity must be below 50. C) The delete button was clicked on the quantity to reduce the quantity to 0 and it was ensured the product no longer appeared in the bag. |
 |20| Select the quantity of product to add to shopping bag | A) Within the product detail pages the quantity buttons were used to alter the amount of product selected by the user. Upon adding this to the shopping bag a message appeared with information on the quantity being shown to users. B) A value over 50 was entered to ensure that an error message appeared to users limiting how much product they could buy.  |
 |21| Quickly see the total cost of all my products |  A) Upon adding a product to the shopping bag it was tested that a success message appeared to users displaying all of the total cost of all their products. B) On mobile devices it was checked that the total value of all the products could also be seen on a popup message to users. |
 |22| Easily Add Cocktail Recipes |  A) As a logged in superuser the add cocktail button was selected and test cocktail details were inputted into each field. The add cocktail button was clicked and it was tested that the cocktail information was mirrored on the screen as a summary. B) Upon adding a cocktail the postgres database was checked to ensure that this had been stored correctly. C) Invalid details were inputted into the add cocktail form to ensure that the user got an error message and details were not saved within the database. |
-|23| Edit/Update Cocktail Recipes | A) |
-|24| Add a Product | |
-|25| Edit/Update a Product | |
-|26| Delete a Product | |
-|27| Rate and Review Cocktail Recipes | |
-|28| Delete a Review | |
-|29| Leave a Product Review | |
-|30| Submit cocktail recipe ideas | |
-|31| Add items to my wish list | |
-|32| Remove items from my wish list | |
-|33| View individual cocktail recipes | |
-|34| View cocktail recipes based on their category | |
+|23| Edit/Update Cocktail Recipes | A) From both the all cocktails and the cocktail detail page the edit button was clicked to ensure a prefilled edit form appeared to logged in site admin. B) Details were changed on the cocktail form and then saved, these details were then checked on the cocktail detail page. C) Invalid form data was inputted and then the save button was clicked which gave an error message to the admin user.|
+|24| Add a Product | A) As a logged in superuser the add product button was selected and test product details were inputted into each field. The add product button was clicked and it was tested that the product information was mirrored on the screen as a summary. B) Upon adding a product the postgres database was checked to ensure that this had been stored correctly. C) Invalid details were inputted into the add product form to ensure that the user got an error message and details were not saved within the database. |
+|25| Edit/Update a Product | A) From both the all products and the product detail page the edit button was clicked to ensure a prefilled edit form appeared to logged in site admin. B) Details were changed on the product form and then saved, these details were then checked on the product detail page. C) Invalid form data was inputted and then the save button was clicked which gave an error message to the admin user. |
+|26| Delete a Product | A) As a site admin the delete button was clicked and it was then checked that this product no longer appeared on the all product view. B) After deletion of a product it was also checked that this product no longer appeared in the postgres database. |
+|27| Rate and Review Cocktail Recipes | A) As a non logged in user it was tested that they were not able to leave a review and encouraged to sign in first. B) As a logged in user it was tested that a review could be left and that the review appeared on the correct product detail view. |
+|28| Delete a Review | A) As a site admin it was checked that the user could delete a review and that when the delete button was clicked it no longer appeared on the screen. B) Upon deletion it was checked that a message of confirmed deletion appeared on the screen. |
+|29| Leave a Product Review | A) As a non logged in user it was tested that they were not able to leave a review and encouraged to sign in first. B) As a logged in user it was tested that a review could be left and that the review appeared on the correct product detail view. |
+|30| Submit cocktail recipe ideas | Not within the scope of the project. MoSCoW marked W. |
+|31| Add items to my wish list | A) As a non logged in user it was tested that items could not be added to a wish list and instead users were encouraged to sign in. B) As a logged in user it was tested that upon clicking the add to wish list button the product was added to the users wish list for later viewing. C) It was tested that the wish list could be accessed for many different web pages and that the correct products appeared. |
+|32| Remove items from my wish list | A) The remove from wish list button was clicked and it was tested that when clicking this the wish list item no longer appeared on the users wish list. |
+|33| View individual cocktail recipes | A) From the all cocktails page on desktop and mobile each cocktail was selected to ensure it displayed the cocktails unique cocktail detail. C) Our cocktails pages shown on the home page were selected to ensure that the links displayed the correct cocktail category. |
+|34| View cocktail recipes based on their category | A) Using the filter drop down on the cocktails navigation section of the site it was tested that upon selection of different categories that correct cocktails appeared and were mirrored to the user. |
 
 # Fixed Bugs and Errors
 
@@ -844,7 +844,7 @@ With more time I would have liked to carry out more automated testing on the sit
 
 # Deployment
 
-## Github
+## GitHub
   * Created a new GitHub repository page using the 'Code Institute Template'.
   * Opened the new repository by clicking on the 'Gitpod' button.
   * Installed the relevant apps and packages needed to deploy to HEROKU.
@@ -862,7 +862,7 @@ Deployment of my project was scaffolded using the Code Institute's [Django Blog 
     - Search "Postgres" within the Resources tab and select the Heroku Postgres option.
 3. Create the settings.py file:
     - In Heroku navigate to the Settings tab, click on Reveal Config Vars and copy the DATABASE_URL.
-    - Within the GitPod workspace, create an env.py file within the main directory.
+    - Within the Gitpod workspace, create an env.py file within the main directory.
     - Import the env.py file within the settings.py file.
     - Create a SECRET_KEY value within the Reveal Config Vars in Heroku.
     - Add the DATABASE_URL value and your chosen SECRET_KEY value to the env.py file.
@@ -896,7 +896,7 @@ Within the Django Framework, Allauth a package that handles registration and log
 ## Forking the Repository
 
   * Log in to GitHub and locate the required GitHub repository.
-  * At the top of the Repository, above the **"Settings"** button, locate the button labeled **"Fork"**.
+  * At the top of the Repository, above the **"Settings"** button, locate the button labelled **"Fork"**.
   * You should now have a copy of the original repository within your GitHub account.
   * You can make changes to this new version whilst keeping the original version safe.
 
@@ -910,7 +910,7 @@ Within the Django Framework, Allauth a package that handles registration and log
   * Type git clone in the CLI and then paste the URL you copied earlier. This is what it should look like: $ git clone https://github.com/sophiebatten123/ginamore
   * Press Enter to create your local clone.
 
-  For more information on how to clone a repository read GitHubs [Cloning a Repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) document.
+  For more information on how to clone a repository read GitHub's [Cloning a Repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) document.
 
 [Back to top ⇧](#ginamore)
 
@@ -945,7 +945,7 @@ The deployed site uses AWS S3 Buckets to store the webpages static and media fil
   ```
 
 9. Within the **Bucket Policy** section. Click **Edit** and then **Policy Generator**. Click the **Select Type of Policy** dropdown and select **S3 Bucket Policy** and within **Principle** allow all principals by typing *.
-10. Within the **Actions** dropdown menu select **Get Object** and in the previous tab copy the **Bucket ARN number**. Paste this within the policy generator within the field labeled **Amazon Resource Name (ARN)**.
+10. Within the **Actions** dropdown menu select **Get Object** and in the previous tab copy the **Bucket ARN number**. Paste this within the policy generator within the field labelled **Amazon Resource Name (ARN)**.
 11. Click **Add statement > Generate Policy** and copy the policy that's been generated and paste this into the **Bucket Policy Editor**.
 12. Before saving, add /* at the end of your **Resource Key**, this will allow access to all resources within the bucket.
 13. Once saved, scroll down to the **Access Control List (ACL)** and click **Edit**.
