@@ -801,25 +801,25 @@ With more time I would have liked to carry out more automated testing on the sit
 
 | ID | I want to be able to...| Manual Testing |
 |----|------------------------|----------------|
-|1| View a list of all Gin products |  |
-|2| View individual Gin details | |
-|3| Identify any deals and special offers quickly on the page | |
-|4| Easily register for an account | |
-|5| Easily login/logout of my account | |
-|6| Easily recover my password if I forget it | |
-|7| Receive an email to verify I have created an account | |
-|8| Register/login to an account via social media | |
-|9| Confirm I am of legal age to drink | |
-|10| Sort through all Gin products | |
-|11| Sort based on the Gin category | |
-|12| Search a product by name and description | |
-|13| See search results quickly and easily | |
-|14| View items in my bag to be purchased | |
-|15| Receive an email to verify my order | |
-|16| View an order confirmation when my order is complete | |
-|17| Securely provide payment details | |
-|18| Enter payment information quickly | |
-|19| Adjust the quantity of items in my bag | |
+|1| View a list of all Gin products | A) From all pages of the site the gin drop down menu was tested to ensure it navigated to the all products page. B) The drop down gin menu was also tested from all pages of the site for users and admin when they were logged into their accounts. C) The drop down gin menu was tested on mobile devices to ensure it worked and navigated to the all products page. |
+|2| View individual Gin details | A) From the all products page on desktop and mobile each gin product was selected to ensure it displayed the products unique product detail. B) Links shown on the users wishlist were tested on mobile and desktop to ensure they navigated to that specific products detail page. C) Our popular gin products shown on the home page were selected to ensure that the links displayed the correct gin product. |
+|3| Identify any deals and special offers quickly on the page | A) From all pages of the site the delivery discount can be seen underneath the navigation menu on mobile and desktop screens. B) Items were added to the shopping bag and the delivery infromation updated to show customers how much more they needed to spend to qualify for discounts. C) Items below the £50 delivery threshold were added to the shopping bag, to test whether users are prompted to spend more in the popup area to qualify for free delivery. |
+|4| Easily register for an account | A) [Tempail](https://tempail.com/en/) was used to create a temporary email address used to sign up for an account. B) Upon registering for an account the postgres admin database was checked using super user credentials to see if the new user details appeared and were verified. |
+|5| Easily login/logout of my account | A) Registered user details were used on the login page of the site on mobile and desktop to test the login function of the page. B) As a logged in user the logout button was clicked and then confirmed to test the whether users could logout successfully. |
+|6| Easily recover my password if I forget it | A) From the login page of the site the forgot password button was clicked and a previous user email address was entered to test whether a reset email was sent. B) The pre-existing user email was logged in successfully using the new password. |
+|7| Receive an email to verify I have created an account | A) Upon registering for an account the mail inbox was checked to see whether a confirmation email was sent. |
+|8| Register/login to an account via social media | Next iteration. |
+|9| Confirm I am of legal age to drink | A) Items were added to the shopping bag and the checkout button selected. I then filled in the checkout details for the user and attempted to click confirm checkout, but the button was disabled until the checkbox to confirm the users age was checked. |
+|10| Sort through all Gin products | A) On the all products page, the drop down sort function was tested on mobile and desktop to ensure that products sorted correctly on the screen. |
+|11| Sort based on the Gin category | A) On the individual category pages the sort drop down filter was tested on mobile and desktop to ensure products were ordered correctly within the category.|
+|12| Search a product by name and description | A) In the search bar product names were entered and searched to ensure they displayed the correct gin products to the user. B) In the search bar the category was entered to ensure they displaye the correct gin products to the user. |
+|13| See search results quickly and easily | A) Upon searching for an item the page was checked to ensure that it displayed the desired results. |
+|14| View items in my bag to be purchased | A) Items were added to the users shopping bag and the bag icon at the top of the page was then clicked to ensure it displays all of the relevant item details to the user. B) The bag icon was selected from multiple different pages on the site to ensure that the correct view was shown in each instance. |
+|15| Receive an email to verify my order | A) Checkout information was filled in upon adding items to the users shopping bag and the confirm checkout button was clicked. The users mail inbox was the checked to ensure that the correct confirmation details were contained on the users recieved email. |
+|16| View an order confirmation when my order is complete | A) Once checkout information was filled in and confirmed it was tested whether the confirmation screen appeared to users displaying the correct details on the page.|
+|17| Securely provide payment details | A) Payment details were added using the temporary card details 4242424242424242 through stripe, within stripe the panel was checked to ensure that the payment was successful and signals were recieved correctly. |
+|18| Enter payment information quickly | A) Checkout details were filled in and the payment section at the bottom of the page took very little time to complete. |
+|19| Adjust the quantity of items in my bag |  |
 |20| Select the quantity of product to add to shopping bag | |
 |21| Quickly see the total cost of all my products | |
 |22| Easily Add Cocktail Recipes | |

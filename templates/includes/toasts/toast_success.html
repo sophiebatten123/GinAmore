@@ -30,6 +30,9 @@
             <div class="col">
                 <hr>
                 <p><strong>Total Cost: £{{ grand_total|floatformat:2 }}</strong></p>
+                {% if free_delivery_delta > 0 %}
+                    <p class="text-pink p-0">Spend £{{ free_delivery_delta }} to get FREE DELIVERY!</p>
+                {% endif %}
             </div>
         </div>
         <div class="row">
