@@ -1078,11 +1078,10 @@ To handle payments within the website ensure that you have set this up a guide o
 
 # Credits
 
-- The images used on my site were taken from [Shutterstock](https://www.shutterstock.com/).
-- Images and video clips were also used from [Pexels](https://www.pexels.com/).
+- The images used on my site were taken from [Shutterstock](https://www.shutterstock.com/) and  [Pexels](https://www.pexels.com/).
 - The icons included throughout the website were taken from [Font-Awesome](https://fontawesome.com/).
 - The [Coding Entrepreneurs](https://www.youtube.com/c/CodingEntrepreneurs) tutorial videos were used to help with building the cocktail ingredient section of my site helping me to further understand the relationship between different models.
 - The colour theme was chosen using [coolors](https://coolors.co/).
 - Help and support was given by the Code Institute Tutors.
 
-Thank you to the tutors of code institute for the help given throughout this project.
+Thank you to all those who have supported me in my journey this year! A special shout out to my partner for always being there and pushing me to keep going when things got tough. Also to the incredible tutors at Code Institute who helped me when I got stuck.
