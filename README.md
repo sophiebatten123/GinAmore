@@ -312,6 +312,7 @@ Gin products can be added to a customers wish list via the product detail pages.
 
 The following features would help improve the site further, given more time I would have liked to have included these elements in my current project:
 
+- Unfortunately due to time constraints one of the user stories, which allows users to login/register using social media platforms was not completed in this iteration. Therefore, this would be included as a future enhancement to the project.
 - Recommended gin products within the cocktail recipe pages of the site, pointing users to mentioned gins and increasing the CTR of the site further, whilst improving sales.
 - Extended sorting capabilities of the cocktail recipes to improve UX further and help them find their favourites.
 - Improve searching to extend to cocktail recipes not only products.
@@ -850,7 +851,10 @@ With more time I would have liked to carry out more automated testing on the sit
 
 | Bug/Error Identified | Reason for the Error | Fix for the Error |
 |-----------|-----------------|-----------------|
-|  |  |  |
+| Products on the all products page were all being filtered regardless of the category that was initially selected. | The filter selection option did not have the current category selection included as part of its filtering option. | Within the filtering navigation area the following line of code was added "?category={{ selected_categories }}". |
+| When adding the cocktail information as an admin user, initially ingredients were not showing as a list. | Within the cocktail model the ingredients were added as a summernote TextField, which was worked fine when adding the information via the postgres database but didn't work when adding a cocktail as a logged in admin user. | The ingredients section was made into a separate model and connected to the cocktail via a ForeignKey, this was then looped through on the templates page, creating the desired list. |
+| When an image wasn't added to the add cocktail page and the form was submitted a Server 500 error appeared to the user. | The image field was not set to required within the database. | The image field was changed to be required ensuring that the user is prompted to add an image each time. |
+| When editing a product/cocktail users were initially prompted to remove the image but were not able to change the image at the same time. | The form was requiring there to be no image selected before adding a new one. | The remove function was changed to automatically ask the user to change the image rather than remove it. |
 
 # Deployment
 
