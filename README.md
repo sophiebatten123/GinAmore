@@ -350,9 +350,13 @@ The site was optimized by careful selection of keywords. The following steps wer
 
 Words in Yellow denote the sites **"Short Tail Keywords"**
 
-Words in Green denote the sites **Long Tailed Keywords"**
+Words in Green denote the sites **Long Tail Keywords"**
 
 ![Site Optimization Keyword Selection](static/images/site_optimization.PNG)
+
+An example of how these words were used throughout the site can be seen below in the screenshot found on the websites homepage:
+
+![Keyword Optimizing](static/images/keyword_optimizing_example.PNG)
 
 ## SEO Implementations in HTML
   - Words/phrases included within semantic HTML elements were optimized using the keywords above.
@@ -444,6 +448,12 @@ Market research was performed to decide on the marketing strategy needed to prom
 Users are encouraged to signup for newsletters, discounts and information about the products sold at GinAmore. The email subscription service is ran through [Mailchimp](https://mailchimp.com/en-gb/), allowing shop owners to send marketing emails through the platform, increasing engagement within the site. Below is a screenshot of one of the subscription emails that was sent by GinAmore's shop owner:
 
 ![GinAmore Marketing Email](static/images/email_ginamore.PNG)
+
+# Confirmation Emails
+
+When customers sucessfully purchase a product they are sent an automatic email containing all of their order confirmation details. An image of what this confirmation email looks like can be seen below:
+
+![Confirmation Email](static/images/confirm_email.PNG)
 
 # Colour Scheme
 
