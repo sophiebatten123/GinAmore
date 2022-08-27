@@ -1,4 +1,4 @@
-<div class="toast mt-2 p-2" aria-live="assertive" aria-atomic="true" data-delay="10000">
+<div class="toast p-2" aria-live="assertive" aria-atomic="true" data-delay="10000">
     <div class="toast-header">
         <strong class="mr-auto">Success!</strong>
         <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
@@ -28,6 +28,10 @@
         {% endfor %}
         <div class="row">
             <div class="col">
+                <h3>Summary</h3>
+                <hr>
+                <p>Total Cost: £{{ total|floatformat:2 }}</p>
+                <p>Delivery: £{{ delivery|floatformat:2 }}</p>
                 <hr>
                 <p><strong>Total Cost: £{{ grand_total|floatformat:2 }}</strong></p>
                 {% if free_delivery_delta > 0 %}

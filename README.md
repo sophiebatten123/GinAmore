@@ -819,11 +819,11 @@ With more time I would have liked to carry out more automated testing on the sit
 |16| View an order confirmation when my order is complete | A) Once checkout information was filled in and confirmed it was tested whether the confirmation screen appeared to users displaying the correct details on the page.|
 |17| Securely provide payment details | A) Payment details were added using the temporary card details 4242424242424242 through stripe, within stripe the panel was checked to ensure that the payment was successful and signals were recieved correctly. |
 |18| Enter payment information quickly | A) Checkout details were filled in and the payment section at the bottom of the page took very little time to complete. |
-|19| Adjust the quantity of items in my bag |  |
-|20| Select the quantity of product to add to shopping bag | |
-|21| Quickly see the total cost of all my products | |
-|22| Easily Add Cocktail Recipes | |
-|23| Edit/Update Cocktail Recipes | |
+|19| Adjust the quantity of items in my bag | A) Within the shopping bag the quantity buttons were used to alter the amount of product seen within the bag. Upon clicking the refresh button the price information at the bottom of the page was checked to ensure it mirrored this alteration. B) A quantity over 50 was entered and the refresh button clicked to ensure a popup error message appeared to the user saying that the quantity must be below 50. C) The delete button was clicked on the quantity to reduce the quantity to 0 and it was ensured the product no longer appeared in the bag. |
+|20| Select the quantity of product to add to shopping bag | A) Within the product detail pages the quantity buttons were used to alter the amount of product selected by the user. Upon adding this to the shopping bag a message appeared with information on the quantity being shown to users. B) A value over 50 was entered to ensure that an error message appeared to users limiting how much product they could buy.  |
+|21| Quickly see the total cost of all my products |  A) Upon adding a product to the shopping bag it was tested that a success message appeared to users displaying all of the total cost of all their products. B) On mobile devices it was checked that the total value of all the products could also be seen on a popup message to users. |
+|22| Easily Add Cocktail Recipes |  A) As a logged in superuser the add cocktail button was selected and test cocktail details were inputted into each field. The add cocktail button was clicked and it was tested that the cocktail information was mirrored on the screen as a summary. B) Upon adding a cocktail the postgres database was checked to ensure that this had been stored correctly. C) Invalid details were inputted into the add cocktail form to ensure that the user got an error message and details were not saved within the database. |
+|23| Edit/Update Cocktail Recipes | A) |
 |24| Add a Product | |
 |25| Edit/Update a Product | |
 |26| Delete a Product | |
