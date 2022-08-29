@@ -290,12 +290,13 @@ body {
 }
 
 .gin_image_container {
+    width: 100%;
     text-align: center;
     margin: 0;
 }
 
 .gin_image {
-    width:  auto;
+    width:  300px;
     height: 400px;
     object-fit: cover;
     border: solid 2px white;
