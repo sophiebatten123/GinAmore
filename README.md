@@ -422,7 +422,18 @@ Google metrics were considered when developing the site, including:
 
 # Business Model
 
-The business model used for the GinAmore store would be a B2C (Business to Customer), this is due to the business selling products directly to the customer through the platform.
+The business model used for the GinAmore store would be a B2C (Business to Customer), this is due to the business selling products directly to the customer through the platform. The target market for these products are users:
+
+- Over the age of 18 years old.
+- Looking to purchase popular gin brands.
+
+Customers who are buying products from GinAmore should be able to:
+
+- Easily view and purchase gin products from the site.
+- Easily navigate and search for products they wish to purchase.
+- Be able to subscribe for email discounts and offers.
+
+Alongside this functionality, the user stories for this project document what is required by customers of the site.
 
 # Social Media Platforms
 
