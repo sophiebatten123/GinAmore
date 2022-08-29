@@ -262,6 +262,8 @@ The cocktail detail page provides users with information about the cocktail incl
 ## Admin
 ***
 
+The products and cocktail features of the site all follow CRUD functionality allowing the admin user to create, read, update and delete products and cocktails on the site. This functionality can all be done through the front end of the site, providing updated messages at each stage.
+
 ### Add Product
 
 Admin are able to add products on the site using the site admin button at the top of the page. Upon clicking this admin users are given a form containing vital product information as seen below.
