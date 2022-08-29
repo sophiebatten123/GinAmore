@@ -8,19 +8,19 @@
 {% block page_header %}
 {% endblock %}
 
-{% block extra_title %} | Checkout Success {%endblock %}
+{% block extra_title %} | Checkout Success {% endblock %}
 
 {% block content %}
 <div class="container-fluid bg-light">
     <div class="row pt-2">
-        <div class="col-6 mt-4">
+        <div class="col-md-12 col-lg-6 mt-2">
             <h3>Order Confirmation</h3>
             <p>Checkout Number: <span class="pink-text">{{ order.order_number }}</span></p>
         </div>
-        <div class="col-3 mt-4">
+        <div class="col-md-6 col-lg-3 mt-2">
             <p>Order Total: <strong>£{{ order.grand_total }}</strong></p>
         </div>
-        <div class="col-3 mt-4">
+        <div class="col-md-6 col-lg-3 mt-2">
             <p>{{ order.date }}</p>
         </div>
         <div class="col-12">
