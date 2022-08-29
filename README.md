@@ -312,7 +312,7 @@ Gin products can be added to a customers wish list via the product detail pages.
 
 The following features would help improve the site further, given more time I would have liked to have included these elements in my current project:
 
-- Unfortunately due to time constraints one of the user stories, which allows users to login/register using social media platforms was not completed in this iteration. Therefore, this would be included as a future enhancement to the project.
+- Due to time constraints one of the user stories, which allows users to login/register using social media platforms was not completed in this iteration. This user story was allocated as "could have" on the MoSCoW allocation with a story point of 5. Based on the time it would have taken to complete this user story and the little impact it would have had on the users experience on the site other tasks were prioritised. This would be great as a future enhancement to the project.
 - Recommended gin products within the cocktail recipe pages of the site, pointing users to mentioned gins and increasing the CTR of the site further, whilst improving sales.
 - Extended sorting capabilities of the cocktail recipes to improve UX further and help them find their favourites.
 - Improve searching to extend to cocktail recipes not only products.
