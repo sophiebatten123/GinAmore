@@ -33,7 +33,7 @@ def add_to_wishlist(request, item_id):
             else:
                 product.likes.add(request.user)
                 messages.success(
-                    request, f'{product.name} to your wishlist'
+                    request, f'{product.name} has been added to your wishlist'
                     )
                 wishlist[item_id] = product.name
 
