@@ -174,7 +174,7 @@ Users are encouraged to sign up to GinAmore's site, giving them access to featur
 
 ### Footer
 
-The footer of the page provides users with informational resources that help to promote trust between the customer and GinAmore. Furthermore, all of the social network features link to GinAmore's personalised pages, encouraging customers to follow the company for discounts, deals and cocktail recipes.
+The footer of the page provides users with informational resources that help to promote trust between the customer and GinAmore. Furthermore, all of the social network features link to GinAmore's personalised pages, encouraging customers to follow the company for discounts, deals and cocktail recipes. It also contains a sponsored link to 'Fever-Tree' tonics a company that partners with GinAmore and the image links out directly to their site. Linking to this external site improves the google metrics of the company further.
 
 ![Footer](static/images/footer.PNG)
 
