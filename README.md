@@ -136,6 +136,8 @@ GinAmore aims to provide users with the ability to easily purchase premium flavo
 |33| Shopper | View individual cocktail recipes | Learn how to make individual cocktails | 5 | S |
 |34| Shopper | View cocktail recipes based on their category | Choose which recipe I would like to make | 2 | Co |
 
+[Back to top ⇧](#ginamore)
+
 # Agile Planning Environment
 
 The story point allocation above is based upon a 100 point iteration and uses the Fibonacci Sequence. Using the MoSCoW method each user story was then been labelled as being either 'Must Have', 'Should Have', 'Could Have' or 'Wont Have', based upon its importance to the project whilst following the 60:20:20 MoSCoW format. Note that the 'Wont Have' User Story below was excluded from the 60:20:20 MoSCoW allocation.
@@ -149,6 +151,8 @@ Each of the user stories was given acceptance criteria, an example of this can b
 ![Acceptance Criteria](static/images/acceptance-criteria.PNG)
 
 This helped to ensure all tasks were completed before the user story was marked as done and ensured the website was fully functional. I also used the acceptance criteria to guide the manual testing that was performed throughout the project.
+
+[Back to top ⇧](#ginamore)
 
 # Existing Features
 
@@ -343,6 +347,8 @@ The following site map was created to help understand the flow of the website pr
 
 ![Site Map Wireframe](static/images/site_map.PNG)
 
+[Back to top ⇧](#ginamore)
+
 # Database Schema
 
 Entity Relationship Databases (ERD) were created to help develop this project. These were separated into separate database schemas: 'Gin Products' and 'Cocktail Products' due to them not being related to each other directly.
@@ -388,6 +394,8 @@ An example of how these words were used throughout the site can be seen below in
     - Recommended mixer brands.
     - Useful tips/advice on drinking sensibly.
   - Within the META data (screenshot)
+
+[Back to top ⇧](#ginamore)
 
 ***
 ## sitemap.xml
@@ -438,6 +446,8 @@ Google metrics were considered when developing the site, including:
 - Pages Per Session
   - Links were regularly included throughout the website to encourage users to navigate through the website more and engage with more of the content.
 
+[Back to top ⇧](#ginamore)
+
 # Business Model
 
 The business model used for the GinAmore store would be a B2C (Business to Customer), this is due to the business selling products directly to the customer through the platform. The target market for these products are users:
@@ -452,6 +462,8 @@ Customers who are buying products from GinAmore should be able to:
 - Be able to subscribe for email discounts and offers.
 
 Alongside this functionality, the user stories for this project document what is required by customers of the site.
+
+[Back to top ⇧](#ginamore)
 
 # Social Media Platforms
 
@@ -485,6 +497,8 @@ When customers sucessfully purchase a product they are sent an automatic email c
 
 ![Confirmation Email](static/images/confirm_email.PNG)
 
+[Back to top ⇧](#ginamore)
+
 # Colour Scheme
 
 The colours within the site were carefully selected to mirror the premium products sold at GinAmore. The dark regal blue contrasts against the light pink making elements of importance stand out on the page. These colours were initially selected from the sites main banner image using DEV tools, allowing for all colours within the page to compliment each other nicely.
@@ -500,6 +514,8 @@ The aim of the font was to create a sophisticated feel within the site, compleme
 A simplistic favicon was created in the shape of a gin bottle, using simple lines
 
 ![Favicon Icon](static/images/favicon.jpg)
+
+[Back to top ⇧](#ginamore)
 
 # Wireframes
 
@@ -549,6 +565,8 @@ Although the wireframes for site users and site admin are similar there are a fe
 
 [Edit Product Page](static/images/edit_product_desktop.PNG)
 
+[Back to top ⇧](#ginamore)
+
 ## Mobile Wireframes
 
 ***
@@ -592,6 +610,8 @@ Although the wireframes for site users and site admin are similar there are a fe
 [Add Product Page](static/images/add_product_mobile.PNG)
 
 [Edit Product Page](static/images/edit_product_mobile.PNG)
+
+[Back to top ⇧](#ginamore)
 
 # Technologies Used
 
@@ -678,6 +698,8 @@ It was important during development that features on the site were made accessib
 - Header elements were ordered within the page
 - Links were made darker to improve the contrast ratio
 
+[Back to top ⇧](#ginamore)
+
 ### Lighthouse Reports
 
 A lighthouse report was generated on each page of the site and the following steps were taken to improve sections based on the feedback it provided:
@@ -693,6 +715,8 @@ A lighthouse report was generated on each page of the site and the following ste
 - SEO
   - Buttons were increased in size.
 - Best Practices
+
+[Back to top ⇧](#ginamore)
 
 ### Automated Testing Reports
 
@@ -803,6 +827,8 @@ Attached below is a screenshot of the HTML & CSS Validator and Lighthouse Report
     <img src="static/images/lighthouse_checkout.PNG" width="500">
 </details>
 
+[Back to top ⇧](#ginamore)
+
 ## Python Testing
 
 ### Manual Python Testing
@@ -816,6 +842,8 @@ Python code was tested to ensure that it met [PEP8](https://pep8.org/) style gui
   - Linting Issue: arctictern.py file as part of Code Institutes template file.
 
 Furthermore, using the MVC framework I was able to keep track of the changes made and ensure that they had the desired output. After each change made to the Postgres Database I referred directly to it to track the changes, ensuring that upon ‘trial runs’ information was being successfully displayed and filters were displaying alongside.
+
+[Back to top ⇧](#ginamore)
 
 ### Automated Python Testing
 
@@ -836,6 +864,8 @@ Although not exhaustive the tests ran above test the following functionality on 
 - Test 7: Tests that the product model produces the correct response.
 
 With more time I would have liked to carry out more automated testing on the site, specifically focussing on the cocktail features that were added at a later stage. All other testing was carried out manually and the purpose of this testing was around ensuring that user stories were appropriately met.
+
+[Back to top ⇧](#ginamore)
 
 # Manual User Story Testing
 
@@ -876,6 +906,8 @@ With more time I would have liked to carry out more automated testing on the sit
 |33| View individual cocktail recipes | A) From the all cocktails page on desktop and mobile each cocktail was selected to ensure it displayed the cocktails unique cocktail detail. C) Our cocktails pages shown on the home page were selected to ensure that the links displayed the correct cocktail category. |
 |34| View cocktail recipes based on their category | A) Using the filter drop down on the cocktails navigation section of the site it was tested that upon selection of different categories that correct cocktails appeared and were mirrored to the user. |
 
+[Back to top ⇧](#ginamore)
+
 # Fixed Bugs and Errors
 
 | Bug/Error Identified | Reason for the Error | Fix for the Error |
@@ -884,6 +916,8 @@ With more time I would have liked to carry out more automated testing on the sit
 | When adding the cocktail information as an admin user, initially ingredients were not showing as a list. | Within the cocktail model the ingredients were added as a summernote TextField, which was worked fine when adding the information via the postgres database but didn't work when adding a cocktail as a logged in admin user. | The ingredients section was made into a separate model and connected to the cocktail via a ForeignKey, this was then looped through on the templates page, creating the desired list. |
 | When an image wasn't added to the add cocktail page and the form was submitted a Server 500 error appeared to the user. | The image field was not set to required within the database. | The image field was changed to be required ensuring that the user is prompted to add an image each time. |
 | When editing a product/cocktail users were initially prompted to remove the image but were not able to change the image at the same time. | The form was requiring there to be no image selected before adding a new one. | The remove function was changed to automatically ask the user to change the image rather than remove it. |
+
+[Back to top ⇧](#ginamore)
 
 # Deployment
 
@@ -1114,3 +1148,5 @@ To handle payments within the website ensure that you have set this up a guide o
 - Help and support was given by the Code Institute Tutors.
 
 Thank you to all those who have supported me in my journey this year! A special shout out to my partner for always being there and pushing me to keep going when things got tough. Also to the incredible tutors at Code Institute who helped me when I got stuck.
+
+[Back to top ⇧](#ginamore)
